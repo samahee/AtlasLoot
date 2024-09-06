@@ -1824,14 +1824,21 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["ZGTrash1"] = {
 		Title = AL["Trash Mobs"];
+		Next_Page = "ZGTrash2";
+		Next_Title = AL["Trash Mobs"];
+		Prev_Page = "ZGShared";
+		Prev_Title = AL["Trash Mobs"];
+	};
+	["ZGTrash2"] = {
+		Title = AL["Trash Mobs"];
 		Next_Page = "ZGEnchants";
 		Next_Title = AL["ZG Enchants"];
-		Prev_Page = "ZGShared";
-		Prev_Title = AL["Random Boss Loot"];
+		Prev_Page = "ZGTrash1";
+		Prev_Title = AL["Trash Mobs"];
 	};
 	["ZGEnchants"] = {
 		Title = AL["ZG Enchants"];
-		Prev_Page = "ZGTrash1";
+		Prev_Page = "ZGTrash2";
 		Prev_Title = AL["Trash Mobs"];
 	};
 	["BFDGhamoora"] = {
@@ -2651,16 +2658,13 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "LKHTrash";
 		Prev_Title = AL["Trash Mobs"];
 	};
-
-
 	
 	-- World Bosses
 	["AAzuregos"] = {
 		Title = AL["Azuregos"];
 		Next_Page = "DEmeriss";
 		Next_Title = AL["Emeriss"];
-		Prev_Page = "CowKing";
-		Prev_Title = AL["There Is No Cow Level"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["DEmeriss"] = {
 		Title = AL["Emeriss"];
@@ -2668,6 +2672,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Lethon"];
 		Prev_Page = "AAzuregos";
 		Prev_Title = AL["Azuregos"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["DLethon"] = {
 		Title = AL["Lethon"];
@@ -2675,6 +2680,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Taerar"];
 		Prev_Page = "DEmeriss";
 		Prev_Title = AL["Emeriss"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["DTaerar"] = {
 		Title = AL["Taerar"];
@@ -2682,6 +2688,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Ysondre"];
 		Prev_Page = "DLethon";
 		Prev_Title = AL["Lethon"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["DYsondre"] = {
 		Title = AL["Ysondre"];
@@ -2689,6 +2696,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Lord Kazzak"];
 		Prev_Page = "DTaerar";
 		Prev_Title = AL["Taerar"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["KKazzak"] = {
 		Title = AL["Lord Kazzak"];
@@ -2696,6 +2704,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Nerubian Overseer"];
 		Prev_Page = "DYsondre";
 		Prev_Title = AL["Ysondre"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["Turtlhu"] = {
 		Title = AL["Turtlhu, the Black Turtle of Doom"];
@@ -2710,6 +2719,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Dark Reaver of Karazhan"];
 		Prev_Page = "KKazzak";
 		Prev_Title = AL["Lord Kazzak"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["Reaver"] = {
 		Title = AL["Dark Reaver of Karazhan"];
@@ -2717,6 +2727,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Ostarius"];
 		Prev_Page = "Nerubian";
 		Prev_Title = AL["Nerubian Overseer"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["Ostarius"] = {
 		Title = AL["Ostarius"];
@@ -2724,6 +2735,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Concavius"];
 		Prev_Page = "Reaver";
 		Prev_Title = AL["Dark Reaver of Karazhan"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["Concavius"] = {
 		Title = AL["Concavius"];
@@ -2731,13 +2743,13 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["The Cow King"];
 		Prev_Page = "Ostarius";
 		Prev_Title = AL["Ostarius"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 	["CowKing"] = {
 		Title = AL["There Is No Cow Level"];
-		Next_Page =	"AAzuregos";
-		Next_Title = AL["Azuregos"];
 		Prev_Page = "Concavius";
 		Prev_Title = AL["Concavius"];
+		Back_Page = "WORLDBOSSMENU"
 	};
 
 	--Rare Spawns
@@ -3024,22 +3036,18 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "REPMENU";
 		Back_Title = AL["Factions"];
 	};
-	["Warderns1"] = {
+	["Wardens1"] = {
 		Title = AL["Wardens of Time"] .. ": " .. AL["Friendly"] .. " & " .. AL["Honored"];
 		Back_Page = "REPMENU";
 		Back_Title = AL["Factions"];
-		Next_Page = "Warderns2";
+		Next_Page = "Wardens2";
 		Next_Title = AL["Wardens of Time"] .. ": " .. AL["Revered"] .. " & " .. AL["Exalted"];
-		Prev_Page = "Warderns2";
-		Prev_Title = AL["Wardens of Time"] .. ": " .. AL["Revered"] .. " & " .. AL["Exalted"];
 	};
-	["Warderns2"] = {
+	["Wardens2"] = {
 		Title = AL["Wardens of Time"] .. ": " .. AL["Revered"] .. " & " .. AL["Exalted"];
 		Back_Page = "REPMENU";
 		Back_Title = AL["Factions"];
-		Next_Page = "Warderns1";
-		Next_Title = AL["Wardens of Time"] .. ": " .. AL["Friendly"] .. " & " .. AL["Honored"];
-		Prev_Page = "Warderns1";
+		Prev_Page = "Wardens1";
 		Prev_Title = AL["Wardens of Time"] .. ": " .. AL["Friendly"] .. " & " .. AL["Honored"];
 	};
 	["AQBroodRings"] = {
@@ -3253,8 +3261,6 @@ AtlasLoot_ButtonRegistry = {
 	["BRRepFriendly"] = {
 		Title = AL["Blood Ring Friendly Rewards"];
 		Back_Page = "BRRepMenu";
-		Prev_Page = "BRRepTokens";
-		Prev_Title = AL["Token of Blood Rewards"];
 		Next_Page = "BRRepHonored";
 		Next_Title = AL["Blood Ring Honored Rewards"];
 	};
@@ -3287,14 +3293,11 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "BRRepMenu";
 		Prev_Page = "BRRepExalted";
 		Prev_Title = AL["Blood Ring Exalted Rewards"];
-		Next_Page = "BRRepFriendly";
-		Next_Title = AL["Blood Ring Friendly Rewards"];
 	};
 	["ABRepFriendly"] = {
 		Back_Page = "ABRepMenu";
 		Title = AL["AB Friendly Rewards"];
 		Next_Page = "ABRepHonored2029";
-		Prev_Page = "ABRepExalted";
 	};
 	["ABRepHonored2029"] = {
 		Back_Page = "ABRepMenu";
@@ -3347,14 +3350,11 @@ AtlasLoot_ButtonRegistry = {
 	["ABRepExalted"] = {
 		Back_Page = "ABRepMenu";
 		Title = AL["AB Exalted Rewards"];
-		Prev_Page = "ABRepExalted5059";
-		Next_Page = "ABRepFriendly";
+		Prev_Page = "ABRepRevered5059";
 	};
 	["AVRepFriendly"] = {
 		Title = AL["AV Friendly Rewards"];
 		Back_Page = "AVRepMenu";
-		Prev_Page = "AVLokholarIvus";
-		Prev_Title = AL["Ivus & Lokholar"];
 		Next_Page = "AVRepHonored";
 		Next_Title = AL["AV Honored Rewards"];
 	};
@@ -3395,14 +3395,11 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "AVRepMenu";
 		Prev_Page = "AVKorrak";
 		Prev_Title = AL["Korrak the Bloodrager"];
-		Next_Page = "AVRepFriendly";
-		Next_Title = AL["AV Friendly Rewards"];
 	};
 	["WSGRepFriendly"] = {
 		Back_Page = "WSGRepMenu";
 		Title = AL["WSG Friendly Rewards"];
 		Next_Page = "WSGRepHonored1019";
-		Prev_Page = "WSGRepExalted60";
 	};
 	["WSGRepHonored1019"] = {
 		Back_Page = "WSGRepMenu";
@@ -3480,7 +3477,6 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "WSGRepMenu";
 		Title = AL["WSG 60 Exalted Rewards"];
 		Prev_Page = "WSGRepExalted5059";
-		Next_Page = "WSGRepFriendly";
 	};
 	["PvP60Accessories1"] = {
 		Title = AL["PvP Trinkets"];
@@ -3882,92 +3878,92 @@ AtlasLoot_ButtonRegistry = {
 	["DEADMINES"] = {
 		Title = AL["Defias Leather"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["WAILING"] = {
 		Title = AL["Embrace of the Viper"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["SCARLET"] = {
 		Title = AL["Chain of the Scarlet Crusade"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["BLACKROCKD"] = {
 		Title = AL["The Gladiator"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["IRONWEAVE"] = {
 		Title = AL["Ironweave Battlesuit"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["ScholoCloth"] = {
 		Title = AL["Scholomance"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["ScholoLeather"] = {
 		Title = AL["Scholomance"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["ScholoMail"] = {
 		Title = AL["Scholomance"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["ScholoPlate"] = {
 		Title = AL["Scholomance"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["STRAT"] = {
 		Title = AL["The Postmaster"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["ScourgeInvasion"] = {
 		Title = AL["Scourge Invasion"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["ShardOfGods"] = {
 		Title = AL["Shard of the Gods"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["ZGRings"] = {
-		Title = AL["Zul'Gurub"];
-		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Title = AL["Zul'Gurub Rings"];
+		Back_Page = "ZGSET";
+		Back_Title = AL["Zul'Gurub Sets"];
 	};
 	["HakkariBlades"] = {
-		Title = AL["Zul'Gurub"];
-		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Title = AL["The Twin Blades of Hakkari"];
+		Back_Page = "ZGSET";
+		Back_Title = AL["Zul'Gurub Sets"];
 	};
 	["PrimalBlessing"] = {
-		Title = AL["Zul'Gurub"];
-		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Title = AL["Primal Blessing"];
+		Back_Page = "ZGSET";
+		Back_Title = AL["Zul'Gurub Sets"];
 	};
 	["SpiritofEskhandar"] = {
 		Title = AL["Spirit of Eskhandar"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["DalRend"] = {
 		Title = AL["Dal'Rend's Arms"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["SpiderKiss"] = {
 		Title = AL["Spider's Kiss"];
 		Back_Page = "PRE60SET";
-		Back_Title = AL["Pre 60 Sets"];
+		Back_Title = AL["Sets"];
 	};
 	["SteelPlate"] = {
 		Title = AL["Steel Plate"];
@@ -4083,6 +4079,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Tabards"];
 		Back_Page = "SETMENU";
 		Back_Title = AL["Collections"];
+		Next_Page = "DonationRewards1";
+		Next_Title = AL["Tabards"];
 	};
 	["Legendaries"] = {
 		Title = AL["Legendary Items"];
@@ -4128,6 +4126,20 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "SETMENU";
 		Back_Title = AL["Collections"];
 	};
+	--donation tabards
+	["DonationRewards1"] = {
+		Title = AL["Tabards"];
+		Back_Page = "SETMENU";
+		Back_Title = AL["Collections"];
+		Prev_Page = "Tabards";
+		Prev_Title = AL["Tabards"];
+	};
+	--fashion
+	["DonationRewards2"] = {
+		Title = AL["Fashion"];
+		Back_Page = "SETMENU";
+		Back_Title = AL["Collections"];
+	};
 	["WorldEpics1"] = {
 		Title = AtlasLoot_TableNames["WorldEpics1"][1];
 		Next_Page = "WorldEpics2";
@@ -4150,21 +4162,6 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Title = AtlasLoot_TableNames["WorldEpics2"][1];
 		Back_Page = "WORLDEPICS";
 		Back_Title = AL["World Epics"];
-	};
-	["ZGTrash1"] = {
-		Title = AtlasLoot_TableNames["ZGTrash1"][1];
-		Next_Page = "ZGTrash2";
-		Next_Title = AtlasLoot_TableNames["ZGTrash2"][1];
-	};
-	["ZGTrash2"] = {
-		Title = AtlasLoot_TableNames["ZGTrash2"][1];
-		Prev_Page = "ZGTrash1";
-		Prev_Title = AtlasLoot_TableNames["ZGTrash1"][1];
-	};
-	["AQ40Trash1"] = {
-		Title = AtlasLoot_TableNames["AQ40Trash1"][1];
-		Next_Page = "AQ40Trash2";
-		Next_Title = AtlasLoot_TableNames["AQ40Trash2"][1];
 	};
 	["AQ40Trash2"] = {
 		Title = AtlasLoot_TableNames["AQ40Trash2"][1];
@@ -4194,8 +4191,6 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["WintervielSnowball"] = {
 		Title = "Snowball";
-		Next_Page = "Winterviel1";
-		Next_Title = AL["Feast of Winter Veil"];
 		Prev_Page = "Winterviel2";
 		Prev_Title = AtlasLoot_TableNames["Winterviel2"][1];
 		Back_Page = "WORLDEVENTMENU";
@@ -4279,19 +4274,27 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["World Events"];
 	};
 	["AbyssalTemplars"] = {
-		Title = AL["Abyssal Council"] .. " - " .. AL["Templars"];
-		Back_Page = "AbyssalCouncil";
-		Back_Title = AL["Abyssal Council"];
+		Title = AL["Templars"];
+		Back_Page = "WORLDEVENTMENU";
+		Back_Title = AL["World Events"];
+		Next_Page = "AbyssalDukes";
+		Next_Title = AL["Dukes"];
 	};
 	["AbyssalDukes"] = {
-		Title = AL["Abyssal Council"] .. " - " .. AL["Dukes"];
-		Back_Page = "AbyssalCouncil";
-		Back_Title = AL["Abyssal Council"];
+		Title = AL["Dukes"];
+		Back_Page = "WORLDEVENTMENU";
+		Back_Title = AL["World Events"];
+		Next_Page = "AbyssalLords";
+		Next_Title = AL["High Council"];
+		Prev_Page = "AbyssalTemplars";
+		Prev_Title = AL["Templars"];
 	};
 	["AbyssalLords"] = {
-		Title = AL["Abyssal Council"] .. " - " .. AL["High Council"];
-		Back_Page = "AbyssalCouncil";
-		Back_Title = AL["Abyssal Council"];
+		Title = AL["High Council"];
+		Back_Page = "WORLDEVENTMENU";
+		Back_Title = AL["World Events"];
+		Prev_Page = "AbyssalDukes";
+		Prev_Title = AL["Dukes"];
 	};
 	["AlchemyApprentice1"] = {
 		Title = AL["Alchemy"] .. ": " .. AL["Apprentice"];
@@ -4333,7 +4336,70 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Alchemy"];
 		Prev_Page = "AlchemyArtisan1";
 		Prev_Title = AL["Alchemy"] .. ": " .. AL["Artisan"];
+		Next_Page = "AlchemyFlasks1";
+		Next_Title = AL["Flasks"];
 	};
+	["AlchemyFlasks1"] = {
+		Title = AL["Flasks"];
+		Back_Page = "ALCHEMYMENU";
+		Back_Title = AL["Alchemy"];
+		Next_Page = "AlchemyProtectionPots1";
+		Next_Title = AL["Protection Potions"];
+		Prev_Page = "AlchemyArtisan2";
+		Prev_Title = AL["Alchemy"] .. ": " .. AL["Artisan"];
+	},
+	["AlchemyProtectionPots1"] = {
+		Title = AL["Protection Potions"];
+		Back_Page = "ALCHEMYMENU";
+		Back_Title = AL["Alchemy"];
+		Next_Page = "AlchemyHealingAndMana1";
+		Next_Title = AL["Healing and Mana Potions"];
+		Prev_Page = "AlchemyFlasks1";
+		Prev_Title = AL["Flasks"];
+	},
+	["AlchemyHealingAndMana1"] = {
+		Title = AL["Healing and Mana Potions"];
+		Back_Page = "ALCHEMYMENU";
+		Back_Title = AL["Alchemy"];
+		Next_Page = "AlchemyTransmutes1";
+		Next_Title = AL["Transmutes"];
+		Prev_Page = "AlchemyProtectionPots1";
+		Prev_Title = AL["Protection Potions"];
+	},
+	["AlchemyTransmutes1"] = {
+		Title = AL["Transmutes"];
+		Back_Page = "ALCHEMYMENU";
+		Back_Title = AL["Alchemy"];
+		Next_Page = "AlchemyDefensive1";
+		Next_Title = AL["Defensive Potions and Elixirs"];
+		Prev_Page = "AlchemyHealingAndMana1";
+		Prev_Title = AL["Healing and Mana Potions"];
+	},
+	["AlchemyDefensive1"] = {
+		Title = AL["Defensive Potions and Elixirs"];
+		Back_Page = "ALCHEMYMENU";
+		Back_Title = AL["Alchemy"];
+		Next_Page = "AlchemyOffensive1";
+		Next_Title = AL["Offensive Potions and Elixirs"];
+		Prev_Page = "AlchemyTransmutes1";
+		Prev_Title = AL["Transmutes"];
+	},
+	["AlchemyOffensive1"] = {
+		Title = AL["Offensive Potions and Elixirs"];
+		Back_Page = "ALCHEMYMENU";
+		Back_Title = AL["Alchemy"];
+		Next_Page = "AlchemyOther1";
+		Next_Title = AL["Other"];
+		Prev_Page = "AlchemyDefensive1";
+		Prev_Title = AL["Defensive Potions and Elixirs"];
+	},
+	["AlchemyOther1"] = {
+		Title = AL["Other"];
+		Back_Page = "ALCHEMYMENU";
+		Back_Title = AL["Alchemy"];
+		Prev_Page = "AlchemyOffensive1";
+		Prev_Title = AL["Offensive Potions and Elixirs"];
+	},
 	["SmithingApprentice1"] = {
 		Title = AL["Blacksmithing"] .. ": " .. AL["Apprentice"];
 		Back_Page = "SMITHINGMENU";
@@ -4419,15 +4485,168 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Blacksmithing"];
 		Prev_Page = "SmithingArtisan3";
 		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Artisan"];
-		Next_Page = "Armorsmith1";
-		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Armorsmith"];
-	};	
-	["Armorsmith1"] = {
-		Title = AL["Blacksmithing"] .. ": " .. AL["Armorsmith"];
+		Next_Page = "SmithingHelm1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Helm"];
+	};
+	["SmithingHelm1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Helm"];
 		Back_Page = "SMITHINGMENU";
 		Back_Title = AL["Blacksmithing"];
 		Prev_Page = "SmithingArtisan4";
 		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Artisan"];
+		Next_Page = "SmithingShoulders1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Shoulders"];
+	};
+	["SmithingShoulders1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Shoulders"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingHelm1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Helm"];
+		Next_Page = "SmithingChest1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Chest"];
+	};
+	["SmithingChest1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Chest"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingShoulders1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Shoulders"];
+		Next_Page = "SmithingChest2";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Chest"];
+	};
+	["SmithingChest2"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Chest"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingChest1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Chest"];
+		Next_Page = "SmithingBracers1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Bracers"];
+	};
+	["SmithingBracers1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Bracers"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingChest2";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Chest"];
+		Next_Page = "SmithingGloves1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Gloves"];
+	};
+	["SmithingGloves1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Gloves"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingBracers1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Bracers"];
+		Next_Page = "SmithingBelt1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Belt"];
+	};
+	["SmithingBelt1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Belt"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingGloves1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Gloves"];
+		Next_Page = "SmithingPants1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Pants"];
+	};
+	["SmithingPants1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Pants"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingBelt1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Belt"];
+		Next_Page = "SmithingBoots1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Boots"];
+	};
+	["SmithingBoots1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Boots"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingPants1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Pants"];
+		Next_Page = "SmithingBuckles1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Belt Buckles"];
+	};
+	["SmithingBuckles1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Belt Buckles"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingBoots1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Boots"];
+		Next_Page = "SmithingAxes1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Axes"];
+	};
+	["SmithingAxes1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Axes"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingBuckles1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Belt Buckles"];
+		Next_Page = "SmithingSwords1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Swords"];
+	};
+	["SmithingSwords1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Swords"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingAxes1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Axes"];
+		Next_Page = "SmithingMaces1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Maces"];
+	};
+	["SmithingMaces1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Maces"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingSwords1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Swords"];
+		Next_Page = "SmithingFist1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Fist"];
+	};
+	["SmithingFist1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Fist"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingMaces1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Maces"];
+		Next_Page = "SmithingDaggers1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Daggers"];
+	};
+	["SmithingDaggers1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Daggers"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingFist1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Fist"];
+		Next_Page = "SmithingMisc1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Misc"];
+	};
+	["SmithingMisc1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Misc"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingDaggers1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Daggers"];
+		Next_Page = "SmithingMisc2";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Misc"];
+	};
+	["SmithingMisc2"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Misc"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingMisc1";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Misc"];
+		Next_Page = "Armorsmith1";
+		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Armorsmith"];
+	};
+	["Armorsmith1"] = {
+		Title = AL["Blacksmithing"] .. ": " .. AL["Armorsmith"];
+		Back_Page = "SMITHINGMENU";
+		Back_Title = AL["Blacksmithing"];
+		Prev_Page = "SmithingMisc2";
+		Prev_Title = AL["Blacksmithing"] .. ": " .. AL["Misc"];
 		Next_Page = "Weaponsmith1";
 		Next_Title = AL["Blacksmithing"] .. ": " .. AL["Weaponsmith"];
 	};
@@ -4469,8 +4688,6 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Enchanting"] .. ": " .. AL["Apprentice"];
 		Back_Page = "ENCHANTINGMENU";
 		Back_Title = AL["Enchanting"];
-		Prev_Page = "EnchantingMisc1";
-		Prev_Title = AL["Enchanting"] .. ": " .. AL["Misc"];
 		Next_Page = "EnchantingJourneyman1";
 		Next_Title = AL["Enchanting"] .. ": " .. AL["Journeyman"];
 	};
@@ -4562,10 +4779,10 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "EnchantingChest1";
 		Prev_Title = AL["Enchanting"] .. ": " .. AL["Chest"];
 		Next_Page = "EnchantingGlove1";
-		Next_Title = AL["Enchanting"] .. ": " .. AL["Glove"];
+		Next_Title = AL["Enchanting"] .. ": " .. AL["Gloves"];
 	};
 	["EnchantingGlove1"] = {
-		Title = AL["Enchanting"] .. ": " .. AL["Glove"];
+		Title = AL["Enchanting"] .. ": " .. AL["Gloves"];
 		Back_Page = "ENCHANTINGMENU";
 		Back_Title = AL["Enchanting"];
 		Prev_Page = "EnchantingBracer1";
@@ -4578,7 +4795,7 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "ENCHANTINGMENU";
 		Back_Title = AL["Enchanting"];
 		Prev_Page = "EnchantingGlove1";
-		Prev_Title = AL["Enchanting"] .. ": " .. AL["Glove"];
+		Prev_Title = AL["Enchanting"] .. ": " .. AL["Gloves"];
 		Next_Page = "Enchanting2HWeapon1";
 		Next_Title = AL["Enchanting"] .. ": " .. AL["2H Weapon"];
 	};
@@ -4615,8 +4832,6 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Enchanting"];
 		Prev_Page = "EnchantingShield1";
 		Prev_Title = AL["Enchanting"] .. ": " .. AL["Shield"];
-		Next_Page = "EnchantingApprentice1";
-		Next_Title = AL["Enchanting"] .. ": " .. AL["Apprentice"];
 	};
 	["EngineeringApprentice1"] = {
 		Title = AL["Engineering"] .. ": " .. AL["Apprentice"];
@@ -4676,24 +4891,96 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Engineering"];
 		Prev_Page = "EngineeringArtisan1";
 		Prev_Title = AL["Engineering"] .. ": " .. AL["Artisan"];
-		Next_Page = "Gnomish1";
-		Next_Title = AL["Engineering"] .. ": " .. AL["Gnomish Engineering"];
+		Next_Page = "EngineeringEquipment1";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Equipment"];
 	};
-	["Gnomish1"] = {
-		Title = AL["Engineering"] .. ": " .. AL["Gnomish Engineering"];
+	["EngineeringEquipment1"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Equipment"];
 		Back_Page = "ENGINEERINGMENU";
 		Back_Title = AL["Engineering"];
 		Prev_Page = "EngineeringArtisan2";
 		Prev_Title = AL["Engineering"] .. ": " .. AL["Artisan"];
+		Next_Page = "EngineeringTrinkets1";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Trinkets"];
+	};
+	["EngineeringTrinkets1"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Trinkets"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringEquipment1";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Equipment"];
+		Next_Page = "EngineeringExplosives1";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Explosives"];
+	};
+	["EngineeringExplosives1"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Explosives"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringTrinkets1";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Equipment"];
+		Next_Page = "EngineeringWeapons1";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Weapons"];
+	};
+	["EngineeringWeapons1"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Weapons"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringExplosives1";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Explosives"];
+		Next_Page = "EngineeringParts1";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Parts"];
+	};
+	["EngineeringParts1"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Parts"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringWeapons1";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Weapons"];
+		Next_Page = "EngineeringMisc1";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Misc"];
+	};
+	["EngineeringMisc1"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Misc"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringParts1";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Parts"];
+		Next_Page = "EngineeringMisc2";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Misc"];
+	};
+	["EngineeringMisc2"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Misc"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringMisc1";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Misc"];
+		Next_Page = "EngineeringMisc3";
+		Next_Title = AL["Engineering"] .. ": " .. AL["Misc"];
+	};
+	["EngineeringMisc3"] = {
+		Title = AL["Engineering"] .. ": " .. AL["Misc"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringMisc2";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Misc"];
+		Next_Page = "Gnomish1";
+		Next_Title = AL["Gnomish Engineering"];
+	};
+	["Gnomish1"] = {
+		Title = AL["Gnomish Engineering"];
+		Back_Page = "ENGINEERINGMENU";
+		Back_Title = AL["Engineering"];
+		Prev_Page = "EngineeringMisc2";
+		Prev_Title = AL["Engineering"] .. ": " .. AL["Misc"];
 		Next_Page = "Goblin1";
-		Next_Title = AL["Engineering"] .. ": " .. AL["Goblin Engineering"];
+		Next_Title = AL["Goblin Engineering"];
 	};
 	["Goblin1"] = {
-		Title = AL["Engineering"] .. ": " .. AL["Goblin Engineering"];
+		Title = AL["Goblin Engineering"];
 		Back_Page = "ENGINEERINGMENU";
 		Back_Title = AL["Engineering"];
 		Prev_Page = "Gnomish1";
-		Prev_Title = AL["Engineering"] .. ": " .. AL["Gnomish Engineering"];
+		Prev_Title = AL["Gnomish Engineering"];
 	};
 	["LeatherApprentice1"] = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Apprentice"];
@@ -4762,15 +5049,132 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "LeatherArtisan2";
 		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Artisan"];
-		Next_Page = "Dragonscale1";
-		Next_Title = AL["Leatherworking"] .. ": " .. AL["Dragonscale Leatherworking"];
+		Next_Page = "LeatherHelm1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Helm"];
 	};
-	["Dragonscale1"] = {
-		Title = AL["Leatherworking"] .. ": " .. AL["Dragonscale Leatherworking"];
+	["LeatherHelm1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Helm"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "LeatherArtisan3";
 		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Artisan"];
+		Next_Page = "LeatherShoulders1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Shoulders"];
+	};
+	["LeatherShoulders1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Shoulders"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherHelm1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Helm"];
+		Next_Page = "LeatherCloak1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Cloak"];
+	};
+	["LeatherCloak1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Cloak"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherShoulders1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Shoulders"];
+		Next_Page = "LeatherChest1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Bracers"];
+	};
+	["LeatherChest1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Chest"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherCloak1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Cloak"];
+		Next_Page = "LeatherChest2";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Chest"];
+	};
+	["LeatherChest2"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Chest"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherChest1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Chest"];
+		Next_Page = "LeatherBracers1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Bracers"];
+	};
+	["LeatherBracers1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Bracers"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherCloak1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Cloak"];
+		Next_Page = "LeatherGloves1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Gloves"];
+	};
+	["LeatherGloves1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Gloves"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherBracers1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Bracers"];
+		Next_Page = "LeatherBelt1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
+	};
+	["LeatherBelt1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherBracers1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Bracers"];
+		Next_Page = "LeatherPants1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
+	};
+	["LeatherPants1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherBelt1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
+		Next_Page = "LeatherPants2";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Boots"];
+	};
+	["LeatherPants2"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherPants1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
+		Next_Page = "LeatherBoots1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Boots"];
+	};
+	["LeatherBoots1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Boots"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherPants1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
+		Next_Page = "LeatherBags1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Shirt"];
+	};
+	["LeatherBags1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Bags"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherBoots1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Shirt"];
+		Next_Page = "LeatherMisc1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Misc"];
+	};
+	["LeatherMisc1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Misc"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherBags1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Bags"];
+		Next_Page = "Dragonscale1";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Dragonscale Leatherworking"];
+	},
+	["Dragonscale1"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Dragonscale Leatherworking"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherMisc1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Misc"];
 		Next_Page = "Elemental1";
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Elemental Leatherworking"];
 	};
@@ -4831,8 +5235,6 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Tailoring"] .. ": " .. AL["Apprentice"];
 		Back_Page = "TAILORINGMENU";
 		Back_Title = AL["Tailoring"];
-		Prev_Page = "TailoringArtisan5";
-		Prev_Title = AL["Tailoring"] .. ": " .. AL["Artisan"];
 		Next_Page = "TailoringApprentice2";
 		Next_Title = AL["Tailoring"] .. ": " .. AL["Journeyman"];
 	};
@@ -4923,8 +5325,123 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Tailoring"];
 		Prev_Page = "TailoringArtisan4";
 		Prev_Title = AL["Tailoring"] .. ": " .. AL["Artisan"];
-		Next_Page = "TailoringApprentice1";
-		Next_Title = AL["Tailoring"] .. ": " .. AL["Apprentice"];
+		Next_Page = "TailoringHelm1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Helm"];
+	};
+	["TailoringHelm1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Helm"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringArtisan5";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Artisan"];
+		Next_Page = "TailoringShoulders1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Shoulders"];
+	};
+	["TailoringShoulders1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Shoulders"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringHelm1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Helm"];
+		Next_Page = "TailoringCloak1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Cloak"];
+	};
+	["TailoringCloak1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Cloak"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringShoulders1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Shoulders"];
+		Next_Page = "TailoringBracers1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Bracers"];
+	};
+	["TailoringChest1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Chest"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringCloak1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Cloak"];
+		Next_Page = "LeatherChest2";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Chest"];
+	};
+	["TailoringChest2"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Chest"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringChest1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Chest"];
+		Next_Page = "TailoringBracers1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Bracers"];
+	};
+	["TailoringBracers1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Bracers"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringCloak1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Cloak"];
+		Next_Page = "TailoringGloves1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Gloves"];
+	};
+	["TailoringGloves1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Gloves"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringBracers1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Bracers"];
+		Next_Page = "TailoringBelt1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Belt"];
+	};
+	["TailoringBelt1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Belt"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringBracers1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Bracers"];
+		Next_Page = "TailoringPants1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Pants"];
+	};
+	["TailoringPants1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Pants"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringBelt1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Belt"];
+		Next_Page = "TailoringBoots1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Boots"];
+	};
+	["TailoringBoots1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Boots"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringPants1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Pants"];
+		Next_Page = "TailoringShirt1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Shirt"];
+	};
+	["TailoringShirt1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Shirt"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringBoots1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Boots"];
+		Next_Page = "TailoringBags1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Bags"];
+	};
+	["TailoringBags1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Bags"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringShirt1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Shirt"];
+		Next_Page = "TailoringMisc1";
+		Next_Title = AL["Tailoring"] .. ": " .. AL["Misc"];
+	};
+	["TailoringMisc1"] = {
+		Title = AL["Tailoring"] .. ": " .. AL["Misc"];
+		Back_Page = "TAILORINGMENU";
+		Back_Title = AL["Tailoring"];
+		Prev_Page = "TailoringBags1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Bags"];
 	};
 	["CookingApprentice1"] = {
 		Title = AL["Cooking"] .. ": " .. AL["Apprentice"];
@@ -4965,21 +5482,13 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["Survival1"] = {
 		Title = AL["Survival"];
-		Back_Page = "SURVIVALMENU";
-		Back_Title = AL["Survival"];
-		Prev_Page = "Survival2";
-		Prev_Title = AL["Gardening"];
-		Next_Page = "Survival2";
-		Next_Title = AL["Gardening"];
+		Back_Page = "CRAFTINGMENU";
+		Back_Title = AL["Crafting"];
 	};
 	["Survival2"] = {
 		Title = AL["Gardening"];
-		Back_Page = "SURVIVALMENU";
-		Back_Title = AL["Survival"];
-		Prev_Page = "Survival1";
-		Prev_Title = AL["Survival"];
-		Next_Page = "Survival1";
-		Next_Title = AL["Survival"];
+		Back_Page = "CRAFTINGMENU";
+		Back_Title = AL["Crafting"];
 	};
 	["Poisons1"] = {
 		Title = AL["Poisons"];
