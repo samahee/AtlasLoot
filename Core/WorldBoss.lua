@@ -8,6 +8,8 @@ function AtlasLoot_WorldBossMenu()
 		getglobal("AtlasLootMenuItem_"..i):Hide();
 		getglobal("AtlasLootMenuItem_"..i).isheader = false;
 	end
+	AtlasLootCharDB.LastBoss = "WORLDBOSSMENU"
+	AtlasLootCharDB.LastBossText = "World Bosses"
 	getglobal("AtlasLootItemsFrame_BACK"):Hide();
 	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 	getglobal("AtlasLootItemsFrame_PREV"):Hide();

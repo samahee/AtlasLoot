@@ -69,7 +69,7 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "1";
 local VERSION_MINOR = "2";
-local VERSION_BOSSES = "4";
+local VERSION_BOSSES = "5";
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..VERSION_MAJOR.."."..VERSION_MINOR.."."..VERSION_BOSSES.."|r";
 ATLASLOOT_CURRENT_ATLAS = "1.12.0";
 ATLASLOOT_PREVIEW_ATLAS = "1.12.1";
@@ -166,6 +166,8 @@ local DefaultAtlasLootOptions = {
 };
 
 AtlasLoot_MenuList = {
+	"DUNGEONSMENU1",
+	"DUNGEONSMENU2",
 	"PVPMENU",
 	"ABRepMenu",
 	"AVRepMenu",
@@ -184,7 +186,6 @@ AtlasLoot_MenuList = {
 	"WORLDEPICS",
 	"REPMENU",
 	"WORLDEVENTMENU",
-	--"AbyssalCouncil",
 	"ALCHEMYMENU",
 	"CRAFTINGMENU",
 	"SMITHINGMENU",
@@ -195,8 +196,8 @@ AtlasLoot_MenuList = {
 	"TAILORINGMENU",
 	"CRAFTSET",
 	"COOKINGMENU",
-	"SURVIVALMENU",
 	"WORLDBOSSMENU"
+	--"AbyssalCouncil",
 };
 
 --entrance maps to instance maps NOT NEEDED FOR ATLAS 1.12
@@ -290,6 +291,7 @@ function AtlasLoot_OnVariablesLoaded()
 	if not AtlasLootCharDB["SearchResult"] then AtlasLootCharDB["SearchResult"] = {} end
 	--Add the loot browser to the special frames tables to enable closing wih the ESC key
 	tinsert(UISpecialFrames, "AtlasLootDefaultFrame");
+	tinsert(UISpecialFrames, "AtlasLootOptionsFrame")
 	--Set up options frame
 	AtlasLootOptions_OnLoad();
 	--Legacy code for those using the ultimately failed attempt at making Atlas load on demand
@@ -418,15 +420,16 @@ function AtlasLoot_OnVariablesLoaded()
 	--Position relevant UI objects for loot browser and set up menu
 	AtlasLootDefaultFrame_SelectedCategory:SetPoint("TOP", "AtlasLootDefaultFrame_Menu", "BOTTOM", 0, -4);
 	AtlasLootDefaultFrame_SelectedTable:SetPoint("TOP", "AtlasLootDefaultFrame_SubMenu", "BOTTOM", 0, -4);
-	AtlasLootDefaultFrame_SelectedCategory:SetText(AL["Choose Table ..."]);
+	AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText);
 	AtlasLootDefaultFrame_SelectedTable:SetText("");
 	AtlasLootDefaultFrame_SelectedCategory:Show();
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootDefaultFrame_SubMenu:Disable();
 	--Load the last loaded sebmenu
-	if AtlasLootCharDB["LastMenu"] then
+	--[[if AtlasLootCharDB["LastMenu"] then
+		AtlasLoot_ShowBossLoot(AtlasLootCharDB.LastBoss, AtlasLootCharDB.LastBossText, pFrame)
 		AtlasLoot_HewdropClick(AtlasLootCharDB["LastMenu"][1],AtlasLootCharDB["LastMenu"][2],AtlasLootCharDB["LastMenu"][3])
-	end
+	end]]
 end
 
 --[[
@@ -1185,10 +1188,12 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLoot_TailoringMenu();
 	elseif(dataID=="COOKINGMENU") then
 		AtlasLoot_CookingMenu();
-	elseif(dataID=="SURVIVALMENU") then
-		AtlasLoot_SurvivalMenu();
 	elseif(dataID=="WORLDBOSSMENU") then
 		AtlasLoot_WorldBossMenu();
+	elseif(dataID=="DUNGEONSMENU1") then
+		AtlasLoot_DungeonsMenu1();
+	elseif(dataID=="DUNGEONSMENU2") then
+		AtlasLoot_DungeonsMenu2();
 	else
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
@@ -1822,6 +1827,10 @@ function AtlasLoot_OpenMenu(menu_name)
 	AtlasLoot_QuickLooks:Hide();
 	AtlasLootQuickLooksButton:Hide();
 	AtlasLootServerQueryButton:Hide();
+	AtlasLootDefaultFrame_SelectedCategory:SetText(menu_name)
+	AtlasLootDefaultFrame_SubMenu:Disable();
+	AtlasLootDefaultFrame_SelectedTable:SetText("");
+	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootCharDB.LastBoss = this.lootpage;
 	AtlasLootCharDB.LastBossText = menu_name;
 	if menu_name == "Crafting" then
@@ -1842,12 +1851,10 @@ function AtlasLoot_OpenMenu(menu_name)
 	elseif menu_name == "World Bosses" then
 		AtlasLoot_WorldBossMenu()
 		CloseDropDownMenus()
+	elseif menu_name == "Dungeons & Raids" then
+		AtlasLoot_DungeonsMenu1()
+		CloseDropDownMenus()
 	end
-	AtlasLootDefaultFrame_SelectedCategory:SetText(menu_name)
-	AtlasLootDefaultFrame_SubMenu:Disable();
-	AtlasLootDefaultFrame_SelectedTable:SetText("");
-	AtlasLootDefaultFrame_SelectedTable:Show();
-
 end
 
 --[[
@@ -1879,15 +1886,20 @@ Requests the relevant loot page from a menu screen
 function AtlasLootMenuItem_OnClick()
 	if this.isheader == nil or this.isheader == false then
 		local pagename = getglobal(this:GetName().."_Name"):GetText()
-		--[[
 		for k,v in ipairs(AtlasLoot_HewdropDown) do
 			if not (type(v[1]) == "table") then
 				for k2, v2 in pairs(v) do
 					for k3, v3 in pairs(v2) do
 						for k4, v4 in pairs(v3) do
 							if not (type(v4[1]) == "table") then
-								if v4[1] == pagename then
+								if v4[1] == pagename and v4[3] ~= "Table" then
 									AtlasLoot_HewdropClick(v4[2],v4[1],v4[3])
+								end
+							else
+								for k5,v5 in pairs(v4) do
+									if v5[1] == pagename then
+										AtlasLoot_HewdropClick(v5[2],v5[1],v5[3])
+									end
 								end
 							end
 						end
@@ -1895,11 +1907,12 @@ function AtlasLootMenuItem_OnClick()
 				end
 			end
 		end
-		]]
 		CloseDropDownMenus()
 		AtlasLootCharDB.LastBoss = this.lootpage;
 		AtlasLootCharDB.LastBossText = pagename;
 		AtlasLoot_ShowBossLoot(this.lootpage, pagename, AtlasLoot_AnchorFrame);
+		AtlasLootDefaultFrame_SelectedCategory:SetText(pagename);
+		AtlasLootDefaultFrame_SelectedCategory:Show();
 	end
 end
 
@@ -1908,6 +1921,15 @@ AtlasLoot_NavButton_OnClick:
 Called when <-, -> or 'Back' are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_NavButton_OnClick()
+	if AtlasLootCharDB.LastBoss == "DUNGEONSMENU1" then
+		AtlasLoot_DungeonsMenu2()
+		AtlasLootDefaultFrame_SubMenu:Disable();
+		return
+	elseif AtlasLootCharDB.LastBoss == "DUNGEONSMENU2" then
+		AtlasLoot_DungeonsMenu1()
+		AtlasLootDefaultFrame_SubMenu:Disable();
+		return
+	end
 	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[2] and AtlasLootItemsFrame.refresh[4] then
 		if string.sub(this.lootpage, 1, 16) == "SearchResultPage" then
 			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);
@@ -1917,12 +1939,24 @@ function AtlasLoot_NavButton_OnClick()
 			AtlasLootCharDB.LastBoss = this.lootpage;
 			AtlasLootCharDB.LastBossText = this.title;
 			AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title, AtlasLootItemsFrame.refresh[4]);
+			if AtlasLootDefaultFrame_SelectedTable:GetText()~=nil then 
+				AtlasLootDefaultFrame_SelectedTable:SetText(AtlasLoot_BossName:GetText())
+			else
+				AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLoot_BossName:GetText())
+			end
 		end
 	elseif AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[2] then
 		AtlasLoot_ShowItemsFrame(this.lootpage, AtlasLootItemsFrame.refresh[2], this.title, AtlasFrame);
 	else
 		--Fallback for if the requested loot page is a menu and does not have a .refresh instance
 		AtlasLoot_ShowItemsFrame(this.lootpage, "dummy", this.title, AtlasFrame);
+	end
+	for k,v in pairs(AtlasLoot_MenuList) do
+		if this.lootpage == v then
+			AtlasLootDefaultFrame_SubMenu:Disable();
+			AtlasLootDefaultFrame_SelectedCategory:SetText(AtlasLootCharDB.LastBossText)
+			AtlasLootDefaultFrame_SelectedTable:SetText()
+		end
 	end
 end
 
@@ -2164,8 +2198,8 @@ function AtlasLootOptions_DefaultSettings()
 	AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES;
 	AtlasLootCharDB.AutoQuery = false;
 	AtlasLootCharDB.PartialMatching = true;
-	AtlasLootCharDB.LastBoss = "RFCTaragaman";
-	AtlasLootCharDB.LastBossText = AL["Taragaman the Hungerer"];
+	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1";
+	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"];
 	AtlasLootDefaultFrame:ClearAllPoints();
 	AtlasLootDefaultFrame:SetPoint("TOP", "UIParent", "TOP", 0, -30);
 	AtlasLootOptionsFrame:ClearAllPoints();
@@ -2368,7 +2402,7 @@ AtlasLoot_HewdropDown = {
 			[1] = {{ AL["Abyssal Council"], "AbyssalTemplars", "Table" },},
 			[2] = {{ AL["Children's Week"], "ChildrensWeek", "Table" },},
 			[3] = {{ AL["Elemental Invasion"], "ElementalInvasion", "Table" },},
-			[4] = {{ AL["Feast of Winter Veil"], "Winterviel", "Table" },},
+			[4] = {{ AL["Feast of Winter Veil"], "Winterviel1", "Table" },},
 			[5] = {{ AL["Gurubashi Arena Booty Run"], "GurubashiArena", "Table" },},
 			[6] = {{ AL["Hallow's End"], "Halloween1", "Table" },},
 			[7] = {{ AL["Harvest Festival"], "HarvestFestival", "Table" },},
@@ -2827,7 +2861,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Ossirian the Unscarred"], "AQ20Ossirian" },
 		{ AL["Trash Mobs"], "AQ20Trash" },
 		{ AL["Class Books"], "AQ20ClassBooks" },
-		{ AL["AQ Enchants"], "AQEnchants" },
+		{ AL["AQ Enchants"], "AQ20Enchants" },
 	},
 	["TempleofAQ"] = {
 		{ AL["The Prophet Skeram"], "AQ40Skeram" },
@@ -2890,11 +2924,11 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Ysondre"], "DYsondre" },
 		{ AL["Lord Kazzak"], "KKazzak"},
 		--{ "Turtlhu, the Black Turtle of Doom", "Turtlhu" },
-		{ "Nerubian Overseer", "Nerubian" },
-		{ "Dark Reaver of Karazhan", "Reaver" },
-		{ "Ostarius", "Ostarius" },
-		{ "Concavius", "Concavius" },
-		{ "There Is No Cow Level", "CowKing" },
+		{ AL["Nerubian Overseer"], "Nerubian" },
+		{ AL["Dark Reaver of Karazhan"], "Reaver" },
+		{ AL["Ostarius"], "Ostarius" },
+		{ AL["Concavius"], "Concavius" },
+		{ AL["There Is No Cow Level"], "CowKing" },
 	},
 	["RareSpawns"] = {
 		{ "|cffffffff[17]|cffffd200 Earthcaller Rezengal |cffffffff(Stonetalon)", "EarthcallerRezengal" },

@@ -12,6 +12,8 @@ function AtlasLoot_CraftingMenu()
 		getglobal("AtlasLootMenuItem_"..i):Hide();
 		getglobal("AtlasLootMenuItem_"..i).isheader = false;
 	end
+	AtlasLootCharDB.LastBoss = "CRAFTINGMENU"
+	AtlasLootCharDB.LastBossText = "Crafting"
 	getglobal("AtlasLootItemsFrame_BACK"):Hide();
 	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 	getglobal("AtlasLootItemsFrame_PREV"):Hide();

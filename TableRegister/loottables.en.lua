@@ -124,7 +124,7 @@ AtlasLoot_TableNames = {
 	["DMETrash"] = { AL["Trash Mobs"] .. " (" .. AL["Dire Maul (East)"] .. ")", "AtlasLootItems" },
 	["DMEShard"] = { AL["Felvine Shard"], "AtlasLootItems" },
 	["DMTome"] = { AL["A Dusty Tome"], "AtlasLootItems" },
-	["DMBooks"] = { "Dire Maul Books", "AtlasLootItems" },
+	["DMEBooks"] = { "Dire Maul Books", "AtlasLootItems" },
 	--Dire Maul North
 	["DMNGuardMoldar"] = { AL["Guard Mol'dar"], "AtlasLootItems" },
 	["DMNStomperKreeg"] = { AL["Stomper Kreeg"], "AtlasLootItems" },
@@ -136,6 +136,7 @@ AtlasLoot_TableNames = {
 	["DMNKingGordok"] = { AL["King Gordok"], "AtlasLootItems" },
 	["DMNTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Dire Maul (North)"] .. ")", "AtlasLootItems" },
 	["DMNTRIBUTERUN"] = { AL["DM North Tribute Chest"], "AtlasLootItems" },
+	["DMNBooks"] = { "Dire Maul Books", "AtlasLootItems" },
 	--Dire Maul West
 	["DMWTendrisWarpwood"] = { AL["Tendris Warpwood"], "AtlasLootItems" },
 	["DMWIllyannaRavenoak"] = { AL["Illyanna Ravenoak"], "AtlasLootItems" },
@@ -147,6 +148,7 @@ AtlasLoot_TableNames = {
 	["DMWPrinceTortheldrin"] = { AL["Prince Tortheldrin"], "AtlasLootItems" },
 	["DMWShendralarProvisioner"] = { AL["Shen'dralar Provisioner"], "AtlasLootItems" },
 	["DMWTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Dire Maul (West)"] .. ")", "AtlasLootItems" },
+	["DMWBooks"] = { "Dire Maul Books", "AtlasLootItems" },
 	--Gnomeregan
 	["GnNamdoBizzfizzle"] = { AL["Namdo Bizzfizzle"], "AtlasLootItems" },
 	["GnTechbot"] = { AL["Techbot"], "AtlasLootItems" },
@@ -248,7 +250,7 @@ AtlasLoot_TableNames = {
 	["AQ20Ossirian"] = { AL["Ossirian the Unscarred"], "AtlasLootItems" },
 	["AQ20Trash"] = { AL["Trash Mobs"] .. " (AQ20)", "AtlasLootItems" },
 	["AQ20ClassBooks"] = { "AQ Class Books", "AtlasLootItems" },
-	["AQEnchants"] = { "AQ Enchants", "AtlasLootItems" },
+	["AQ20Enchants"] = { "AQ Enchants", "AtlasLootItems" },
 	--Scarlet Monestery - Armory
 	["SMHerod"] = { AL["Herod"], "AtlasLootItems" },
 	["SMATrash"] = { AL["Trash Mobs"] .. " (" .. AL["Scarlet Monastery (Armory)"] .. ")", "AtlasLootItems" },
@@ -409,6 +411,7 @@ AtlasLoot_TableNames = {
 	["AQ40Trash1"] = { AL["Trash Mobs"] .. " (AQ40)", "AtlasLootItems" },
 	["AQ40Trash2"] = { AL["Trash Mobs"] .. " (AQ40)", "AtlasLootItems" },
 	["AQOpening"] = { "AQ Opening Quest Line", "AtlasLootItems" },
+	["AQEnchants"] = { "AQ Enchants", "AtlasLootItems" },
 	--Uldaman
 	["UldMagreganDeepshadow"] = { AL["Magregan Deepshadow"], "AtlasLootItems" },
 	["UldTabletofRyuneh"] = { "Tablet of Ryun'eh", "AtlasLootItems" },
@@ -1012,8 +1015,8 @@ AtlasLoot_TableNames = {
 	["PvP60Accessories1"] = { AL["PvP Accessories"], "AtlasLootGeneralPvPItems" },
 	["PvP60Accessories2"] = { AL["PvP Accessories - Alliance"], "AtlasLootGeneralPvPItems" },
 	["PvP60Accessories3"] = { AL["PvP Accessories - Horde"], "AtlasLootGeneralPvPItems" },
-	["PVPWeapons1"] = { AL["Rank 14 Weapons"], "AtlasLootGeneralPvPItems" },
-	["PVPWeapons2"] = { AL["Rank 14 Weapons"], "AtlasLootGeneralPvPItems" },
+	["PVPWeapons1"] = { AL["PvP Weapons"], "AtlasLootGeneralPvPItems" },
+	["PVPWeapons2"] = { AL["PvP Weapons"], "AtlasLootGeneralPvPItems" },
 	["PvPMountsPvP"] = { AL["PvP Mounts"], "AtlasLootGeneralPvPItems" },
 	--Level 60 PvP Sets
 	["PVPDruid"] = { AL["Druid"] .. " - " .. AL["PvP Sets"], "AtlasLootGeneralPvPItems" },
@@ -1031,6 +1034,8 @@ AtlasLoot_TableNames = {
 	-------------
 
 	--Menus, the entry does nothing, but makes the generalised loot table code less complex
+	["DUNGEONSMENU1"] = { "dummy", "dummy" },
+	["DUNGEONSMENU2"] = { "dummy", "dummy" },
 	["PVPMENU"] = { "dummy", "dummy" },
 	["PVPSET"] = { "dummy", "dummy" },
 	["AVRepMenu"] = { "dummy", "dummy" },
@@ -1062,7 +1067,6 @@ AtlasLoot_TableNames = {
 	["TAILORINGMENU"] = { "dummy", "dummy" },
 	["COOKINGMENU"] = { "dummy", "dummy" },
 	["FIRSTAIDMENU"] = { "dummy", "dummy" },
-	["SURVIVALMENU"] = { "dummy", "dummy" },
 	["WORLDBOSSMENU"] = { "dummy", "dummy" },
 	["WishList"] = { AL["WishList"], "AtlasLootCharDB" },
 	--If all else fails!
@@ -1242,7 +1246,7 @@ AtlasLoot_TableNamesBoss = {
 		["DMETrash"] = { AL["Trash Mobs"] .. " (" .. AL["Dire Maul (East)"] .. ")", "AtlasLootItems" },
 		["DMEShard"] = { AL["Felvine Shard"], "AtlasLootItems" },
 		["DMTome"] = { AL["A Dusty Tome"], "AtlasLootItems" },
-		["DMBooks"] = { "Dire Maul Books", "AtlasLootItems" },
+		["DMEBooks"] = { "Dire Maul Books", "AtlasLootItems" },
 	},
 	["Dire Maul North"] = {
 		["DMNGuardMoldar"] = { AL["Guard Mol'dar"], "AtlasLootItems" },
@@ -1255,6 +1259,7 @@ AtlasLoot_TableNamesBoss = {
 		["DMNKingGordok"] = { AL["King Gordok"], "AtlasLootItems" },
 		["DMNTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Dire Maul (North)"] .. ")", "AtlasLootItems" },
 		["DMNTRIBUTERUN"] = { AL["DM North Tribute Chest"], "AtlasLootItems" },
+		["DMNBooks"] = { "Dire Maul Books", "AtlasLootItems" },
 	},
 	["Dire Maul West"] = {
 		["DMWTendrisWarpwood"] = { AL["Tendris Warpwood"], "AtlasLootItems" },
@@ -1267,6 +1272,7 @@ AtlasLoot_TableNamesBoss = {
 		["DMWPrinceTortheldrin"] = { AL["Prince Tortheldrin"], "AtlasLootItems" },
 		["DMWShendralarProvisioner"] = { AL["Shen'dralar Provisioner"], "AtlasLootItems" },
 		["DMWTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Dire Maul (West)"] .. ")", "AtlasLootItems" },
+		["DMWBooks"] = { "Dire Maul Books", "AtlasLootItems" },
 	},
 	["Gnomeregan Entrance"] = {
 		["GnNamdoBizzfizzle"] = { AL["Namdo Bizzfizzle"], "AtlasLootItems" },
@@ -1381,7 +1387,7 @@ AtlasLoot_TableNamesBoss = {
 		["AQ20Ossirian"] = { AL["Ossirian the Unscarred"], "AtlasLootItems" },
 		["AQ20Trash"] = { AL["Trash Mobs"] .. " (AQ20)", "AtlasLootItems" },
 		["AQ20ClassBooks"] = { "AQ Class Books", "AtlasLootItems" },
-		["AQEnchants"] = { "AQ Enchants", "AtlasLootItems" },
+		["AQ20Enchants"] = { "AQ Enchants", "AtlasLootItems" },
 	},
 	["Scarlet Monestery - Armory"] = {
 		["SMHerod"] = { AL["Herod"], "AtlasLootItems" },
@@ -1510,6 +1516,7 @@ AtlasLoot_TableNamesBoss = {
 		["AQ40Trash1"] = { AL["Trash Mobs"] .. " (AQ40)", "AtlasLootItems" },
 		["AQ40Trash2"] = { AL["Trash Mobs"] .. " (AQ40)", "AtlasLootItems" },
 		["AQOpening"] = { "AQ Opening Quest Line", "AtlasLootItems" },
+		["AQEnchants"] = { "AQ Enchants", "AtlasLootItems" },
 	},
 	["Uldaman Entrance"] = {
 		["UldMagreganDeepshadow"] = { AL["Magregan Deepshadow"], "AtlasLootItems" },
@@ -2134,8 +2141,8 @@ AtlasLoot_TableNamesBoss = {
 		["PvP60Accessories1"] = { AL["PvP Accessories"], "AtlasLootGeneralPvPItems" },
 		["PvP60Accessories2"] = { AL["PvP Accessories - Alliance"], "AtlasLootGeneralPvPItems" },
 		["PvP60Accessories3"] = { AL["PvP Accessories - Horde"], "AtlasLootGeneralPvPItems" },
-		["PVPWeapons1"] = { AL["Rank 14 Weapons"], "AtlasLootGeneralPvPItems" },
-		["PVPWeapons2"] = { AL["Rank 14 Weapons"], "AtlasLootGeneralPvPItems" },
+		["PVPWeapons1"] = { AL["PvP Weapons"], "AtlasLootGeneralPvPItems" },
+		["PVPWeapons2"] = { AL["PvP Weapons"], "AtlasLootGeneralPvPItems" },
 		["PvPMountsPvP"] = { AL["PvP Mounts"], "AtlasLootGeneralPvPItems" },
 		--Level 60 PvP Sets
 		["PVPDruid"] = { AL["Druid"] .. " - " .. AL["PvP Sets"], "AtlasLootGeneralPvPItems" },

@@ -10,6 +10,8 @@ function AtlasLootSetMenu()
 		getglobal("AtlasLootMenuItem_"..i):Hide();
 		getglobal("AtlasLootMenuItem_"..i).isheader = false;
 	end
+	AtlasLootCharDB.LastBoss = "SETMENU"
+	AtlasLootCharDB.LastBossText = "Collections"
 	getglobal("AtlasLootItemsFrame_BACK"):Hide();
 	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 	getglobal("AtlasLootItemsFrame_PREV"):Hide();

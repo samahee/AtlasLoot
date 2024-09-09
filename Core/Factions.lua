@@ -10,6 +10,8 @@ function AtlasLootRepMenu()
 		getglobal("AtlasLootMenuItem_"..i):Hide();
 		getglobal("AtlasLootMenuItem_"..i).isheader = false;
 	end
+	AtlasLootCharDB.LastBoss = "REPMENU"
+	AtlasLootCharDB.LastBossText = "Factions"
 	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
 	getglobal("AtlasLootItemsFrame_PREV"):Hide();
 	getglobal("AtlasLootItemsFrame_BACK"):Hide();
