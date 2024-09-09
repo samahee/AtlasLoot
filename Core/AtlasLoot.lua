@@ -505,8 +505,8 @@ function AtlasLootOptions_Fresh()
 	AtlasLootCharDB.MinimapButtonPosition = 315;
 	AtlasLootCharDB.MinimapButtonRadius = 78;
 	AtlasLootCharDB.HidePanel = false;
-	AtlasLootCharDB.LastBoss = "RFCTaragaman";
-	AtlasLootCharDB.LastBossText = AL["Taragaman the Hungerer"];
+	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1";
+	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"];
 	AtlasLootCharDB.AtlasLootVersion = VERSION_MAJOR..VERSION_MINOR..VERSION_BOSSES;
 	AtlasLootCharDB.AutoQuery = false;
 	AtlasLootCharDB.PartialMatching = true;
