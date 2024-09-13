@@ -14188,6 +14188,19 @@ GetSpellInfoVanillaDB = {
 				[2] = {4234, 6},
 			},
 		},
+		[9959] = {
+			["name"] = "Blacksmithing: Heavy Mithril Breastplate",
+			["requires"] = AL["Anvil"],
+			["tools"] = {5956},
+			["castTime"] = 60,
+			["text"] = "",
+			["craftItem"] = 7930,
+			["craftQuantityMin"] = "",
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {3860, 16},
+			},
+		},
 		[9933] = {
 			["name"] = "Blacksmithing: Heavy Mithril Pants",
 			["requires"] = AL["Anvil"],
@@ -14415,19 +14428,6 @@ GetSpellInfoVanillaDB = {
 				[2] = {6037, 2},
 				[3] = {7971},
 				[4] = {7966},
-			},
-		},
-		[9959] = {
-			["name"] = "Blacksmithing: Ornate Mithril Helm",
-			["requires"] = AL["Anvil"],
-			["tools"] = {5956},
-			["castTime"] = 60,
-			["text"] = "",
-			["craftItem"] = 7930,
-			["craftQuantityMin"] = "",
-			["craftQuantityMax"] = "",
-			["reagents"] = {
-				[1] = {3860, 16},
 			},
 		},
 		[9961] = {
