@@ -3265,7 +3265,6 @@ AtlasLoot_HewdropDown_SubTables = {
 function AtlasLootItem_OnEnter()
 	local isItem, isEnchant, isSpell;
 	AtlasLootTooltip:ClearLines();
-	AtlasLoot_QueryLootPage()
 	for i=1, 30, 1 do
 		if (getglobal("AtlasLootTooltipTextRight"..i) ~= nil) then
 			getglobal("AtlasLootTooltipTextRight"..i):SetText("");
@@ -3359,6 +3358,7 @@ function AtlasLootItem_OnEnter()
 						AtlasLootTooltip:AddLine(" ");
 						AtlasLootTooltip:AddLine(AL["You can right-click to attempt to query the server.  You may be disconnected."], nil, nil, nil, 1);
 						AtlasLootTooltip:Show();
+						AtlasLoot_QueryLootPage()
 					end
 				end
 			end
