@@ -5900,8 +5900,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
-		Prev_Page = "LeatherBracers1";
-		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Bracers"];
+		Prev_Page = "LeatherGloves1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Gloves"];
 		Next_Page = "LeatherPants1";
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
 	};
@@ -5912,14 +5912,14 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "LeatherBelt1";
 		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
 		Next_Page = "LeatherPants2";
-		Next_Title = AL["Leatherworking"] .. ": " .. AL["Boots"];
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
 	};
 	["LeatherPants2"] = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "LeatherPants1";
-		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
 		Next_Page = "LeatherBoots1";
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Boots"];
 	};
@@ -5927,7 +5927,7 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Boots"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
-		Prev_Page = "LeatherPants1";
+		Prev_Page = "LeatherPants2";
 		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
 		Next_Page = "LeatherBags1";
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Shirt"];
@@ -5937,7 +5937,7 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "LeatherBoots1";
-		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Shirt"];
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Boots"];
 		Next_Page = "LeatherMisc1";
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Misc"];
 	};
@@ -6158,8 +6158,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Tailoring"] .. ": " .. AL["Bracers"];
 		Back_Page = "TAILORINGMENU";
 		Back_Title = AL["Tailoring"];
-		Prev_Page = "TailoringCloak1";
-		Prev_Title = AL["Tailoring"] .. ": " .. AL["Cloak"];
+		Prev_Page = "TailoringChest2";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Chest"];
 		Next_Page = "TailoringGloves1";
 		Next_Title = AL["Tailoring"] .. ": " .. AL["Gloves"];
 	};
@@ -6176,8 +6176,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Tailoring"] .. ": " .. AL["Belt"];
 		Back_Page = "TAILORINGMENU";
 		Back_Title = AL["Tailoring"];
-		Prev_Page = "TailoringBracers1";
-		Prev_Title = AL["Tailoring"] .. ": " .. AL["Bracers"];
+		Prev_Page = "TailoringGloves1";
+		Prev_Title = AL["Tailoring"] .. ": " .. AL["Gloves"];
 		Next_Page = "TailoringPants1";
 		Next_Title = AL["Tailoring"] .. ": " .. AL["Pants"];
 	};
