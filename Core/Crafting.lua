@@ -164,43 +164,49 @@ function AtlasLootCraftedSetMenu()
 	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\INV_Pants_Cloth_14");
 	AtlasLootMenuItem_6.lootpage="BloodvineG";
 	AtlasLootMenuItem_6:Show();
+	--Mooncloth Regalia
+	AtlasLootMenuItem_7_Name:SetText(AL["Mooncloth Regalia"]);
+	AtlasLootMenuItem_7_Extra:SetText("");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\inv_chest_cloth_08");
+	AtlasLootMenuItem_7.lootpage="MoonclothSet";
+	AtlasLootMenuItem_7:Show();
 	--Mail Blacksmithing Header
-	AtlasLootMenuItem_8_Name:SetText(RED..AL["Blacksmithing"]);
-	AtlasLootMenuItem_8_Extra:SetText(WHITE..AL["Mail"]);
-	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\Trade_BlackSmithing");
-	AtlasLootMenuItem_8.isheader = true;
-	AtlasLootMenuItem_8:Show();
-	--Bloodsoul Embrace
-	AtlasLootMenuItem_9_Name:SetText(AL["Bloodsoul Embrace"]);
-	AtlasLootMenuItem_9_Extra:SetText("");
-	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\INV_Shoulder_15");
-	AtlasLootMenuItem_9.lootpage="BloodsoulEmbrace";
+	AtlasLootMenuItem_9_Name:SetText(RED..AL["Blacksmithing"]);
+	AtlasLootMenuItem_9_Extra:SetText(WHITE..AL["Mail"]);
+	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\Trade_BlackSmithing");
+	AtlasLootMenuItem_9.isheader = true;
 	AtlasLootMenuItem_9:Show();
+	--Bloodsoul Embrace
+	AtlasLootMenuItem_10_Name:SetText(AL["Bloodsoul Embrace"]);
+	AtlasLootMenuItem_10_Extra:SetText("");
+	AtlasLootMenuItem_10_Icon:SetTexture("Interface\\Icons\\INV_Shoulder_15");
+	AtlasLootMenuItem_10.lootpage="BloodsoulEmbrace";
+	AtlasLootMenuItem_10:Show();
 	--Plate Blacksmithing header
-	AtlasLootMenuItem_11_Name:SetText(RED..AL["Blacksmithing"]);
-	AtlasLootMenuItem_11_Extra:SetText(WHITE..AL["Plate"]);
-	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\Trade_BlackSmithing");
-	AtlasLootMenuItem_11.isheader = true;
-	AtlasLootMenuItem_11:Show();
-	--Steel Plate
-	AtlasLootMenuItem_12_Name:SetText(AL["Steel Plate"]);
-	AtlasLootMenuItem_12_Extra:SetText("");
-	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\INV_Helmet_25");
-	AtlasLootMenuItem_12.lootpage="SteelPlate";
+	AtlasLootMenuItem_12_Name:SetText(RED..AL["Blacksmithing"]);
+	AtlasLootMenuItem_12_Extra:SetText(WHITE..AL["Plate"]);
+	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\Trade_BlackSmithing");
+	AtlasLootMenuItem_12.isheader = true;
 	AtlasLootMenuItem_12:Show();
-	--Imperial Plate
-	AtlasLootMenuItem_13_Name:SetText(AL["Imperial Plate"]);
+	--Steel Plate
+	AtlasLootMenuItem_13_Name:SetText(AL["Steel Plate"]);
 	AtlasLootMenuItem_13_Extra:SetText("");
-	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\INV_Belt_01");
-	AtlasLootMenuItem_13.lootpage="ImperialPlate";
+	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\INV_Helmet_25");
+	AtlasLootMenuItem_13.lootpage="SteelPlate";
 	AtlasLootMenuItem_13:Show();
-	--The Darksoul
-	AtlasLootMenuItem_14_Name:SetText(AL["The Darksoul"]);
+	--Imperial Plate
+	AtlasLootMenuItem_14_Name:SetText(AL["Imperial Plate"]);
 	AtlasLootMenuItem_14_Extra:SetText("");
-	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\INV_Shoulder_01");
-	AtlasLootMenuItem_14.lootpage="TheDarksoul";
+	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\INV_Belt_01");
+	AtlasLootMenuItem_14.lootpage="ImperialPlate";
 	AtlasLootMenuItem_14:Show();
-	AtlasLootMenuItem_14:Show();
+	--The Darksoul
+	AtlasLootMenuItem_15_Name:SetText(AL["The Darksoul"]);
+	AtlasLootMenuItem_15_Extra:SetText("");
+	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\INV_Shoulder_01");
+	AtlasLootMenuItem_15.lootpage="TheDarksoul";
+	AtlasLootMenuItem_15:Show();
+	AtlasLootMenuItem_15:Show();
 	--Leatherworking Leather Header
 	AtlasLootMenuItem_16_Name:SetText(RED..AL["Leatherworking"]);
 	AtlasLootMenuItem_16_Extra:SetText(WHITE..AL["Leather"]);

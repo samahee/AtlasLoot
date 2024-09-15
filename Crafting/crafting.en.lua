@@ -138,6 +138,19 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ 19683, "INV_Pants_Cloth_14", "=q3=Bloodvine Leggings", "=ds=#s11#, #a1#" },
 		{ 19684, "INV_Boots_Cloth_02","=q3=Bloodvine Boots", "=ds=#s12#, #a1#" },
 	};
+
+	MoonclothSet = {
+		{ 0, "", "", "" },
+		{ 0, "INV_Box_01", "=q6=#craftt6#", "" },
+		{ 0, "", "", "" },
+		{ 14140, "inv_misc_bandana_01", "=q3=Mooncloth Circlet", "=ds=#s1#, #a1#" },
+		{ 14139, "inv_shoulder_02", "=q3=Mooncloth Shoulders", "=ds=#s3#, #a1#" },
+		{ 14138, "inv_chest_cloth_08", "=q3=Mooncloth Vest", "=ds=#s5#, #a1#" },
+		{ 18486, "inv_chest_cloth_04", "=q3=Mooncloth Robe", "=ds=#s5#, #a1#" },
+		{ 18409, "inv_gauntlets_17", "=q3=Mooncloth Gloves", "=ds=#s9#, #a1#" },
+		{ 14137, "inv_pants_13", "=q3=Mooncloth Leggings", "=ds=#s11#, #a1#" },
+		{ 15802, "inv_boots_05", "=q3=Mooncloth Boots", "=ds=#s12#, #a1#" },
+	};
 	
 -----------------------------------
 --- Leatherworking Leather Sets ---
@@ -2510,7 +2523,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s45459", "inv_pants_14", "=q4=Dreamthread Kilt", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s45461", "inv_bracer_06", "=q4=Dreamthread Bracers", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s45463", "inv_gauntlets_23", "=q4=Dreamthread Gloves", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
-		{ "s45457", "INV_Shoulder_05", "=q4=Dreamthread Gloves", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "s45457", "INV_Shoulder_05", "=q4=Dreamthread Mantle", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 	};
 	TailoringHelm1 = {
 		{ "s8760", "inv_helmet_29", "=q2=Azure Silk Hood", "=ds=#sr# =so1=145 =so2=155 =so3=160 =so4=165" },
@@ -2545,7 +2558,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s18448", "inv_shoulder_02", "=q3=Mooncloth Shoulders", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
 		{ "s28482", "inv_shoulder_18", "=q3=Sylvan Shoulders", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
 		{ "s20848", "inv_shoulder_23", "=q4=Flarecore Mantle", "=ds=#sr# =so1=300 =so2=315 =so3=330 =so4=345" },
-		{ "s45457", "INV_Shoulder_05", "=q4=Dreamthread Gloves", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "s45457", "INV_Shoulder_05", "=q4=Dreamthread Mantle", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 	},
 	TailoringCloak1 = {
 		{ "s2387", "inv_misc_cape_14", "=q1=Linen Cloak", "=ds=#sr# =so1=1 =so2=35 =so3=47 =so4=60" },

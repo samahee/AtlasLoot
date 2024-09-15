@@ -4791,6 +4791,11 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "CRAFTSET";
 		Back_Title = AL["Crafted Sets"];
 	};
+	["MoonclothSet"] = {
+		Title = AL["Mooncloth Regalia"];
+		Back_Page = "CRAFTSET";
+		Back_Title = AL["Crafted Sets"];
+	};
 	["GriftersArmor"] = {
 		Title = AL["Grifter's Armor"];
 		Back_Page = "CRAFTSET";

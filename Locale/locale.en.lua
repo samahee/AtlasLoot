@@ -1544,5 +1544,6 @@ AL:RegisterTranslations("enUS", function() return {
 	["Caverns of Time"] = true,
 	["Hyjal"] = true,
 	["Dustwallow Marsh"] = true,
+	["Mooncloth Regalia"] = true,
 	} 
 end)

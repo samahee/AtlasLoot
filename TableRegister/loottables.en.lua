@@ -553,6 +553,7 @@ AtlasLoot_TableNames = {
 	["DivinersGarments"] = { AL["Diviner's Garments"], "AtlasLootCrafting" },
 	["PillagersGarb"] = { AL["Pillager's Garb"], "AtlasLootCrafting" },
 	["BloodvineG"] = { AL["Bloodvine Garb"], "AtlasLootCrafting" },
+	["MoonclothSet"] = { AL["Mooncloth Regalia"], "AtlasLootCrafting"},
 	--Crafted Sets - Leatherworking
 	["GriftersArmor"] = { AL["Grifter's Armor"], "AtlasLootCrafting" },
 	["PrimalistsTrappings"] = { AL["Primalist's Trappings"], "AtlasLootCrafting" },
@@ -1676,6 +1677,7 @@ AtlasLoot_TableNamesBoss = {
 		["DivinersGarments"] = { AL["Diviner's Garments"], "AtlasLootCrafting" },
 		["PillagersGarb"] = { AL["Pillager's Garb"], "AtlasLootCrafting" },
 		["BloodvineG"] = { AL["Bloodvine Garb"], "AtlasLootCrafting" },
+		["MoonclothSet"] = { AL["Mooncloth Regalia"], "AtlasLootCrafting"},
 	},
 	--Crafted Sets - Leatherworking
 	["Crafted Sets - Leatherworking"] = {

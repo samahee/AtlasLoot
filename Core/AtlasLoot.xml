@@ -20,7 +20,7 @@
 		</Size>
 	</Button>
 
-	<Frame name="AtlasLootDefaultFrame" toplevel="true" frameStrata="DIALOG" movable="true" enableMouseClicks="true" hidden="true" parent="UIParent" enableKeyboard="true">
+	<Frame name="AtlasLootDefaultFrame" toplevel="true" frameStrata="HIGH" movable="true" enableMouseClicks="true" hidden="true" parent="UIParent" enableKeyboard="true">
 		<Size>
 			<AbsDimension x="600" y="690"/>
 		</Size>
