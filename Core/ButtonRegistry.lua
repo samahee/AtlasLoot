@@ -5956,7 +5956,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Dragonscale Leatherworking"];
 	},
 	["Dragonscale1"] = {
-		Title = AL["Leatherworking"] .. ": " .. AL["Dragonscale Leatherworking"];
+		Title = AL["Dragonscale Leatherworking"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "LeatherMisc1";
@@ -5965,7 +5965,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Elemental Leatherworking"];
 	};
 	["Elemental1"] = {
-		Title = AL["Leatherworking"] .. ": " .. AL["Elemental Leatherworking"];
+		Title = AL["Elemental Leatherworking"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "Dragonscale1";
@@ -5974,7 +5974,7 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Tribal Leatherworking"];
 	};
 	["Tribal1"] = {
-		Title = AL["Leatherworking"] .. ": " .. AL["Tribal Leatherworking"];
+		Title = AL["Tribal Leatherworking"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "Elemental1";

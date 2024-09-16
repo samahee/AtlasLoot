@@ -776,19 +776,19 @@ function AtlasLoot_LeatherworkingMenu()
 	AtlasLootMenuItem_5.lootpage="LeatherArtisan1";
 	AtlasLootMenuItem_5:Show();
 	--Dragonscale Leatherworking
-	AtlasLootMenuItem_20_Name:SetText(AL["Leatherworking"]..": "..AL["Dragonscale Leatherworking"]);
+	AtlasLootMenuItem_20_Name:SetText(AL["Dragonscale Leatherworking"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
 	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\Icons\\INV_Misc_MonsterScales_03");
 	AtlasLootMenuItem_20.lootpage="Dragonscale1";
 	AtlasLootMenuItem_20:Show();
 	--Elemental Leatherworking
-	AtlasLootMenuItem_21_Name:SetText(AL["Leatherworking"]..": "..AL["Elemental Leatherworking"]);
+	AtlasLootMenuItem_21_Name:SetText(AL["Elemental Leatherworking"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
 	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\Icons\\Spell_Fire_Volcano");
 	AtlasLootMenuItem_21.lootpage="Elemental1";
 	AtlasLootMenuItem_21:Show();
 	--Tribal Leatherworking
-	AtlasLootMenuItem_22_Name:SetText(AL["Leatherworking"]..": "..AL["Tribal Leatherworking"]);
+	AtlasLootMenuItem_22_Name:SetText(AL["Tribal Leatherworking"]);
 	AtlasLootMenuItem_22_Extra:SetText("");
 	AtlasLootMenuItem_22_Icon:SetTexture("Interface\\Icons\\Spell_Nature_NullWard");
 	AtlasLootMenuItem_22.lootpage="Tribal1";
