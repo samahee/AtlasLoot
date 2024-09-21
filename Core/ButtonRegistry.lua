@@ -5898,6 +5898,15 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "LeatherBracers1";
 		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Bracers"];
+		Next_Page = "LeatherGloves2";
+		Next_Title = AL["Leatherworking"] .. ": " .. AL["Gloves"];
+	};
+	["LeatherGloves2"] = {
+		Title = AL["Leatherworking"] .. ": " .. AL["Gloves"];
+		Back_Page = "LEATHERWORKINGMENU";
+		Back_Title = AL["Leatherworking"];
+		Prev_Page = "LeatherGloves1";
+		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Gloves"];
 		Next_Page = "LeatherBelt1";
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
 	};
@@ -5905,7 +5914,7 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Leatherworking"] .. ": " .. AL["Belt"];
 		Back_Page = "LEATHERWORKINGMENU";
 		Back_Title = AL["Leatherworking"];
-		Prev_Page = "LeatherGloves1";
+		Prev_Page = "LeatherGloves2";
 		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Gloves"];
 		Next_Page = "LeatherPants1";
 		Next_Title = AL["Leatherworking"] .. ": " .. AL["Pants"];
@@ -5998,23 +6007,14 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Mining"];
 		Back_Page = "MININGMENU";
 		Back_Title = AL["Mining"];
-		Next_Page = "Mining2";
-		Next_Title = AL["Mining"];
-	};
-	["Mining2"] = {
-		Title = AL["Mining"];
-		Back_Page = "MININGMENU";
-		Back_Title = AL["Mining"];
 		Next_Page = "Smelting1";
-		Next_Title = AL["Smelting"];
-		Prev_Page = "Mining1";
-		Prev_Title = AL["Mining"];
+		Next_Title = AL["Mining"];
 	};
 	["Smelting1"] = {
 		Title = AL["Smelting"];
 		Back_Page = "MININGMENU";
 		Back_Title = AL["Mining"];
-		Prev_Page = "Mining2";
+		Prev_Page = "Mining1";
 		Prev_Title = AL["Mining"];
 	};
 	["TailoringApprentice1"] = {
