@@ -197,7 +197,6 @@ AtlasLoot_MenuList = {
 	"CRAFTSET",
 	"COOKINGMENU",
 	"WORLDBOSSMENU"
-	--"AbyssalCouncil",
 };
 
 --entrance maps to instance maps NOT NEEDED FOR ATLAS 1.12
@@ -3400,7 +3399,7 @@ function AtlasLootItem_OnEnter()
 					AtlasLootTooltip2:AddLine(GetSpellInfoAtlasLootDB["enchants"][spellID]["extra"], nil, nil, nil, 1);
 				end
 				if ( AtlasLootCharDB.ItemIDs ) then
-					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoVanillaDB["enchants"][spellID]["item"], nil, nil, nil, 1);
+					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"], nil, nil, nil, 1);
 				end
 				AtlasLootTooltip2:Show();
 			end
@@ -3460,7 +3459,7 @@ function AtlasLootItem_OnEnter()
 					AtlasLootTooltip2:AddLine(GetSpellInfoAtlasLootDB["craftspells"][spellID]["extra"], nil, nil, nil, 1);
 				end
 				if ( AtlasLootCharDB.ItemIDs ) then
-					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoVanillaDB["craftspells"][spellID]["craftItem"], nil, nil, nil, 1);
+					AtlasLootTooltip2:AddLine(AL["ItemID:"].." "..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"], nil, nil, nil, 1);
 				end
 				AtlasLootTooltip2:Show();
 			end
