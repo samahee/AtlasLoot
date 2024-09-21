@@ -248,7 +248,7 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 83548, "INV_Scroll_04", "=q1=Plans: Dream's Herald", "=ds=#p2# #m14#" },
 		{ 83546, "INV_Scroll_04", "=q1=Pattern: Verdant Dreamer's Breastplate", "=ds=#p2# #m14#" },
 		{ 0, "", "", "" },
-		{ 80301, "INV_Shirt_GuildTabard_01", "=q1=Cenarion Circle Tabard", "=ds=#p2# #m14#" },
+		{ 80301, "INV_Shirt_GuildTabard_01", "=q1=Cenarion Circle Tabard", "=ds=#s7#" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
@@ -724,7 +724,7 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 	};
 	Stormwind = {
 		{ 0, "INV_BannerPVP_02", "=q6=Exalted", "" },
-		{ 81225, "Ability_Mount_RidingHorse", "=q4=Armored Stormwind Warhorse", "=ds=#s7#"},
+		{ 81225, "Ability_Mount_RidingHorse", "=q4=Armored Stormwind Warhorse", "=ds=#e7#"},
 		{ 80320, "inv_misc_tournaments_tabard_human", "=q1=Stormwind Tabard", "=ds=#s7#" },
 	};
 	GnomereganExiles = {
@@ -806,7 +806,7 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 0, "Spell_Holy_MagicalSentry", "=q6=Exalted", "" },
 		{ 60724, "INV_Helmet_11", "=q4=Dalarani Conjurer's Hat", "=ds=#s1#, #a1#" },
 		{ 60725, "INV_Jewelry_Ring_34", "=q4=Ring of Flowing Leylines", "=ds=#s13#" },
-		{ 81289, "INV_Shirt_GuildTabard_01", "=q4=Dalaran Tabard", "=ds=#s13#" },
+		{ 81289, "INV_Shirt_GuildTabard_01", "=q4=Dalaran Tabard", "=ds=#s7#" },
 	};
 	Wildhammer = {
 		{ 0, "Ability_Hunter_EagleEye", "=q6=Exalted", "" },

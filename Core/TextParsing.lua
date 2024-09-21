@@ -83,7 +83,7 @@ function AtlasLoot_FixText(text)
 	text = gsub(text, "#e31#", AL["random stats"]);
 	text = gsub(text, "#e32#", AL["random resistance"]);
 	text = gsub(text, "#e33#", AL["random colour"]);
-	text = gsub(text, "#e34#", AL["toy"]);
+	text = gsub(text, "#e34#", AL["Toy"]);
 
 	-- Classes
 	text = gsub(text, "#c1#", AL["Druid"]); -- =q13=#c1#
