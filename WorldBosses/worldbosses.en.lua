@@ -233,19 +233,19 @@ AtlasLoot_Data["AtlasLootWBItems"] = {
 		{ 20520, "spell_shadow_sealofkings", "=q2=Dark Rune", "Group 3", "[2-4] 20%" },
 	};
 	CowKing = {
-		{ 60486, "inv_misc_fish_02", "=q4=There Is No Cow Level", "There Is No Cow Level", "25%" },
+		{ 60486, "inv_misc_fish_02", "=q4=Fishbringer", "#h3#, #w6#", "25%" },
 		{ 0, "", "", "", "" },
-		{ 60487, "INV_Misc_Cape_20", "=q4=There Is No Cow Level", "There Is No Cow Level", "50%" },
-		{ 60488, "INV_Misc_Cape_20", "=q4=There Is No Cow Level", "There Is No Cow Level", "50%" },
-		{ 60489, "INV_Helmet_28", "=q4=There Is No Cow Level", "There Is No Cow Level", "50%" },
-		{ 60490, "INV_Helmet_28", "=q4=There Is No Cow Level", "There Is No Cow Level", "50%" },
+		{ 60487, "INV_Misc_Cape_20", "=q4=Cloak of the Moo Lord", "#s4#", "50%" },
+		{ 60488, "INV_Misc_Cape_20", "=q4=Drape of the Herd", "#s4#", "50%" },
+		{ 60489, "INV_Helmet_28", "=q4=Cap of the Cow Savant", "#s1#, #a1#", "50%" },
+		{ 60490, "INV_Helmet_28", "=q4=Cowskin Chapeau", "#s1#, #a1#", "50%" },
 		{ 0, "", "", "", "" },
-		{ 4144, "inv_misc_book_07", "=q1=There Is No Cow Level", "There Is No Cow Level", "??%" },
+		{ 4144, "inv_misc_book_07", "=q3=Tome of Polymorph: Cow", "=ds=#e20# =q10=#c3#", "??%" },
 		{ 0, "", "", "", "" },
-		{ 60485, "spell_shadow_curseoftounges", "=q0=There Is No Cow Level", "There Is No Cow Level", "100%" },
-		{ 60491, "inv_misc_orb_05", "=q0=There Is No Cow Level", "There Is No Cow Level", "100%" },
+		{ 60485, "spell_shadow_curseoftounges", "=q0=Sealed Diablo II Lord of Destruction Collectors Edition", "#m33#", "100%" },
+		{ 60491, "inv_misc_orb_05", "=q0=The Moo Stone", "#m33#", "100%" },
 		{ 0, "", "", "", "" },
-		{ 51261, "inv_misc_bell_01", "=q1=There Is No Cow Level", "There Is No Cow Level", "100%" },
+		{ 51261, "inv_misc_bell_01", "=q2=Little Cow", "#e15#", "100%" },
 	};
 	KKazzak = {
 		{ 18546, "INV_Helmet_18", "=q4=Infernal Headcage", "=ds=#s1#, #a3#", "20%" },
