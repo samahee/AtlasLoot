@@ -74,25 +74,25 @@ function AtlasLoot_DungeonsMenu1()
 	AtlasLootMenuItem_9:Show();
 	--SM GY
 	AtlasLootMenuItem_10_Name:SetText(AL["Scarlet Monastery (Graveyard)"]);
-	AtlasLootMenuItem_10_Extra:SetText(AL["Silverpine Forest"]);
+	AtlasLootMenuItem_10_Extra:SetText(AL["Tirisfal Glades"]);
 	AtlasLootMenuItem_10_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
 	AtlasLootMenuItem_10.lootpage="SMVishas";
 	AtlasLootMenuItem_10:Show();
 	--SM Library
 	AtlasLootMenuItem_11_Name:SetText(AL["Scarlet Monastery (Library)"]);
-	AtlasLootMenuItem_11_Extra:SetText(AL["Silverpine Forest"]);
+	AtlasLootMenuItem_11_Extra:SetText(AL["Tirisfal Glades"]);
 	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
 	AtlasLootMenuItem_11.lootpage="SMHoundmasterLoksey";
 	AtlasLootMenuItem_11:Show();
 	--SM Armory
 	AtlasLootMenuItem_12_Name:SetText(AL["Scarlet Monastery (Armory)"]);
-	AtlasLootMenuItem_12_Extra:SetText(AL["Silverpine Forest"]);
+	AtlasLootMenuItem_12_Extra:SetText(AL["Tirisfal Glades"]);
 	AtlasLootMenuItem_12_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
 	AtlasLootMenuItem_12.lootpage="SMHerod";
 	AtlasLootMenuItem_12:Show();
 	--SM Cathedral
 	AtlasLootMenuItem_13_Name:SetText(AL["Scarlet Monastery (Cathedral)"]);
-	AtlasLootMenuItem_13_Extra:SetText(AL["Silverpine Forest"]);
+	AtlasLootMenuItem_13_Extra:SetText(AL["Tirisfal Glades"]);
 	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
 	AtlasLootMenuItem_13.lootpage="SMFairbanks";
 	AtlasLootMenuItem_13:Show();
@@ -194,7 +194,7 @@ function AtlasLoot_DungeonsMenu1()
 	AtlasLootMenuItem_29:Show()
 	--CoT:BM
 	AtlasLootMenuItem_30_Name:SetText(AL["Caverns of Time: Black Morass"]);
-	AtlasLootMenuItem_30_Extra:SetText(AL["Caverns of Time"]);
+	AtlasLootMenuItem_30_Extra:SetText(AL["Tanaris"]);
 	AtlasLootMenuItem_30_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
 	AtlasLootMenuItem_30.lootpage="COTBMChronar";
 	AtlasLootMenuItem_30:Show()
