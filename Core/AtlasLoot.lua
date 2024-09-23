@@ -3879,7 +3879,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 			if remoteversion > localversion then
 				AtlasLoot_updateavailable = remoteversion
 				if not alreadyshown then
-					DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
+					DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
 					alreadyshown = true
 				end
 			end
@@ -3909,7 +3909,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 					if remoteversion > localversion then
 						AtlasLoot_updateavailable = remoteversion
 						if not alreadyshown then
-							DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
+							DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
 							alreadyshown = true
 						end
 					end
@@ -3935,7 +3935,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 
 	if event == "PLAYER_ENTERING_WORLD" then
 	  if not alreadyshown and localversion < remoteversion then
-		DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
+		DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
 		AtlasLoot_updateavailable = localversion
 		alreadyshown = true
 	  end
