@@ -61,6 +61,16 @@ strtrim
 
 ]]
 
+--Bindings
+BINDING_HEADER_ATLASLOOT_TITLE = "AtlasLoot Bindings"
+BINDING_NAME_ATLASLOOT_TOGGLE = "Toggle AtlasLoot"
+BINDING_NAME_ATLASLOOT_OPTIONS = "Toggle Options"
+BINDING_NAME_ATLASLOOT_QL1 = "QuickLook 1"
+BINDING_NAME_ATLASLOOT_QL2 = "QuickLook 2"
+BINDING_NAME_ATLASLOOT_QL3 = "QuickLook 3"
+BINDING_NAME_ATLASLOOT_QL4 = "QuickLook 4"
+BINDING_NAME_ATLASLOOT_WISHLIST = "WishList"
+
 AtlasLoot = AceLibrary("AceAddon-2.0"):new("AceDB-2.0")
 
 --Instance required libraries
@@ -69,7 +79,7 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "1";
 local VERSION_MINOR = "1";
-local VERSION_BOSSES = "3";
+local VERSION_BOSSES = "4";
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..VERSION_MAJOR.."."..VERSION_MINOR.."."..VERSION_BOSSES.."|r";
 ATLASLOOT_CURRENT_ATLAS = "1.12.0";
 ATLASLOOT_PREVIEW_ATLAS = "1.12.1";
