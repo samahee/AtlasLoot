@@ -16,3 +16,5 @@ AtlasLoot Turtle WoW Edition allows you to view loot from bosses/ enchants/ craf
 
 
 ![333](https://github.com/user-attachments/assets/1d3164bf-438a-4268-85c4-35782e59ec46)
+# Thanks to original author and all contributors
+Daviesh, Pompa, Xerron, Gurky, Lexie, Shagu
