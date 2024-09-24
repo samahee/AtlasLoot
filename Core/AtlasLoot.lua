@@ -81,8 +81,8 @@ local VERSION_MAJOR = "1";
 local VERSION_MINOR = "1";
 local VERSION_BOSSES = "4";
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..VERSION_MAJOR.."."..VERSION_MINOR.."."..VERSION_BOSSES.."|r";
-ATLASLOOT_CURRENT_ATLAS = "1.12.0";
-ATLASLOOT_PREVIEW_ATLAS = "1.12.1";
+ATLASLOOT_CURRENT_ATLAS = "1.13.3";
+ATLASLOOT_PREVIEW_ATLAS = "1.13.3";
 
 --Compatibility with old EquipCompare/EQCompare
 ATLASLOOT_OPTIONS_EQUIPCOMPARE = AL["Use EquipCompare"];
@@ -140,10 +140,10 @@ StaticPopupDialogs["ATLASLOOT_SETUP"] = {
 
 --Popup Box for an old version of Atlas
 StaticPopupDialogs["ATLASLOOT_OLD_ATLAS"] = {
-	text = AL["It has been detected that your version of Atlas does not match the version that Atlasloot is tuned for ("]..ATLASLOOT_CURRENT_ATLAS..AL[").  Depending on changes, there may be the occasional error, so please visit http://www.atlasmod.com as soon as possible to update."],
+	text = AL["Incompatible Atlas Detected"],
 	button1 = AL["OK"],
 	OnAccept = function()
-		DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..RED..AL["Incompatible Atlas Detected"]);
+		DEFAULT_CHAT_FRAME:AddMessage(BLUE.."Atlas:"..WHITE.." Update your Atlas! https://github.com/Otari98/Atlas");
 	end,
 	timeout = 0,
 	whileDead = 1,
@@ -351,7 +351,7 @@ function AtlasLoot_OnVariablesLoaded()
 		end
 		--If not the expected Atlas version
 		if( ATLAS_VERSION ~= ATLASLOOT_CURRENT_ATLAS and ATLAS_VERSION ~= ATLASLOOT_PREVIEW_ATLAS ) then
---			StaticPopup_Show ("ATLASLOOT_OLD_ATLAS");
+			StaticPopup_Show ("ATLASLOOT_OLD_ATLAS");
 		end
 		Hooked_Atlas_Refresh();
 	else
@@ -3899,7 +3899,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 			if remoteversion > localversion then
 				AtlasLoot_updateavailable = remoteversion
 				if not alreadyshown then
-					DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
+					--DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
 					alreadyshown = true
 				end
 			end
@@ -3929,7 +3929,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 					if remoteversion > localversion then
 						AtlasLoot_updateavailable = remoteversion
 						if not alreadyshown then
-							DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
+							--DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
 							alreadyshown = true
 						end
 					end
@@ -3955,7 +3955,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 
 	if event == "PLAYER_ENTERING_WORLD" then
 	  if not alreadyshown and localversion < remoteversion then
-		DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
+		--DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
 		AtlasLoot_updateavailable = localversion
 		alreadyshown = true
 	  end
