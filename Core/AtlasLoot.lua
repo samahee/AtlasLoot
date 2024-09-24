@@ -1546,6 +1546,16 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				getglobal("AtlasLootItemsFrame_BACK"):Show();
 				getglobal("AtlasLootItemsFrame_BACK").lootpage = tablebase.Back_Page;
 				getglobal("AtlasLootItemsFrame_BACK").title = tablebase.Back_Title;
+				--Hide navigation buttons if we click Quicklooks in Atlas
+				if AtlasFrame and AtlasFrame:IsVisible() then
+					for i=1, 4 do
+						if AtlasLootCharDB["QuickLooks"][i] and dataID == AtlasLootCharDB["QuickLooks"][i][1] then
+							getglobal("AtlasLootItemsFrame_BACK"):Hide();
+							getglobal("AtlasLootItemsFrame_NEXT"):Hide();
+							getglobal("AtlasLootItemsFrame_PREV"):Hide();
+						end
+					end
+				end
 			end
 		end
 	end
