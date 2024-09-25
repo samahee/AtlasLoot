@@ -149,7 +149,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["It has been detected that your version of Atlas does not match the version that Atlasloot is tuned for ("] = true,
 	[").  Depending on changes, there may be the occasional error, so please visit http://www.atlasmod.com as soon as possible to update."] = true,
 	["OK"] = true,
-	["Incompatible Atlas Detected"] = true,
+	["Incompatible Atlas version detected, there may be errors, so please visit https://github.com/Otari98/Atlas as soon as possible to update."] = true,
 	["Unsafe Item"] = true,
 	["Item Unavailable"] = true,
 	["ItemID:"] = true,

@@ -78,8 +78,8 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "1";
-local VERSION_MINOR = "1";
-local VERSION_BOSSES = "4";
+local VERSION_MINOR = "2";
+local VERSION_BOSSES = "0";
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..VERSION_MAJOR.."."..VERSION_MINOR.."."..VERSION_BOSSES.."|r";
 ATLASLOOT_CURRENT_ATLAS = "1.13.3";
 ATLASLOOT_PREVIEW_ATLAS = "1.13.3";
@@ -128,7 +128,7 @@ AtlasLoot:RegisterDB("AtlasLootDB");
 
 --Popup Box for first time users
 StaticPopupDialogs["ATLASLOOT_SETUP"] = {
-	text = AL["Welcome to Atlasloot Enhanced.  Please take a moment to set your preferences."].."\n\n"..AL["New feature in 4.05.00: All professions are now included in the AtlasLoot_Crafting module."].."\n\n"..AL["New feature in 4.05.00: Advanced searching functionality is now available. You can type in a partial item name, for example typing 'elixir' gives all items in the database with 'elixir' in the name.  Big thanks to Kurax for his help."].."\n",
+	text = AL["Welcome to Atlasloot Enhanced.  Please take a moment to set your preferences."],
 	button1 = AL["Setup"],
 	OnAccept = function()
 		AtlasLootOptions_Toggle();
@@ -140,7 +140,7 @@ StaticPopupDialogs["ATLASLOOT_SETUP"] = {
 
 --Popup Box for an old version of Atlas
 StaticPopupDialogs["ATLASLOOT_OLD_ATLAS"] = {
-	text = AL["Incompatible Atlas Detected"],
+	text = AL["Incompatible Atlas version detected, there may be errors, so please visit https://github.com/Otari98/Atlas as soon as possible to update."] ,
 	button1 = AL["OK"],
 	OnAccept = function()
 		DEFAULT_CHAT_FRAME:AddMessage(BLUE.."Atlas:"..WHITE.." Update your Atlas! https://github.com/Otari98/Atlas");
@@ -3892,11 +3892,13 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 		local _,title = GetAddOnInfo("AtlasLoot")
 		local remoteversion = tonumber(remoteversion)
 		if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
+		if remoteversion < 10200 then remoteversion = 0 end
+		if remoteversion >= 10206 then remoteversion = 0 end
 		if v == "VERSION" and remoteversion and title == remotetitle then
 			if remoteversion > localversion then
 				AtlasLoot_updateavailable = remoteversion
 				if not alreadyshown then
-					--DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
+					DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
 					alreadyshown = true
 				end
 			end
@@ -3922,11 +3924,13 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 				local remoteversion = tonumber(remoteversion) or 0
 				local _,title = GetAddOnInfo("AtlasLoot")
 				if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
+				if remoteversion < 10200 then remoteversion = 0 end
+				if remoteversion >= 10206 then remoteversion = 0 end
 				if v == "VERSION" and remoteversion and title == remotetitle then
 					if remoteversion > localversion then
 						AtlasLoot_updateavailable = remoteversion
 						if not alreadyshown then
-							--DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
+							DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
 							alreadyshown = true
 						end
 					end
@@ -3952,7 +3956,7 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 
 	if event == "PLAYER_ENTERING_WORLD" then
 	  if not alreadyshown and localversion < remoteversion then
-		--DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Lexiebean/AtlasLoot/")
+		DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
 		AtlasLoot_updateavailable = localversion
 		alreadyshown = true
 	  end
