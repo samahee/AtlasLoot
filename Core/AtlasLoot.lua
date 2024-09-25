@@ -2361,7 +2361,7 @@ AtlasLoot_HewdropDown = {
 		[8] = {{AL["Dark Reaver of Karazhan"], "Reaver", "Table" },},
 		[9] = {{AL["Ostarius"], "Ostarius", "Table" },},
 		[10] = {{AL["Concavius"], "Concavius", "Table" },},
-		[11] = {{AL["There Is No Cow Level"], "CowKing", "Table" },},
+		[11] = {{AL["Moo"], "CowKing", "Table" },},
 		},
 	},
 
@@ -2958,7 +2958,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Dark Reaver of Karazhan"], "Reaver" },
 		{ AL["Ostarius"], "Ostarius" },
 		{ AL["Concavius"], "Concavius" },
-		{ AL["There Is No Cow Level"], "CowKing" },
+		{ AL["Moo"], "CowKing" },
 	},
 	["RareSpawns"] = {
 		{ "|cffffffff[17]|cffffd200 Earthcaller Rezengal |cffffffff(Stonetalon)", "EarthcallerRezengal" },

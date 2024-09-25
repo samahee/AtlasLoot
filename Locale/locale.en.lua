@@ -1237,7 +1237,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["Lethon"] = true,
 	["Taerar"] = true,
 	["Ysondre"] = true,
-	["There Is No Cow Level"] = true,
+	["Moo"] = true,
 	["Nerubian Overseer"] = true,
 	["Turtlhu, the Black Turtle of Doom"] = true,
 	["Dark Reaver of Karazhan"] = true,
