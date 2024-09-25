@@ -925,7 +925,6 @@ AtlasLoot_TableNames = {
 	["LeatherMisc1"] = { AL["Leatherworking"] .. ": " .. AL["Misc"], "AtlasLootCrafting" },
 	--Mining
 	["Mining1"] = { AL["Mining"], "AtlasLootCrafting" },
-	["Mining2"] = { AL["Mining"], "AtlasLootCrafting" },
 	["Smelting1"] = { AL["Smelting"], "AtlasLootCrafting" },
 	["Herbalism1"] = { AL["Herbalism"], "AtlasLootCrafting" },
 	["Herbalism2"] = { AL["Herbalism"], "AtlasLootCrafting" },
@@ -1064,7 +1063,6 @@ AtlasLoot_TableNames = {
 	["ENCHANTINGMENU"] = { "dummy", "dummy" },
 	["ENGINEERINGMENU"] = { "dummy", "dummy" },
 	["LEATHERWORKINGMENU"] = { "dummy", "dummy" },
-	["MININGMENU"] = { "dummy", "dummy" },
 	["TAILORINGMENU"] = { "dummy", "dummy" },
 	["COOKINGMENU"] = { "dummy", "dummy" },
 	["FIRSTAIDMENU"] = { "dummy", "dummy" },
@@ -2050,7 +2048,6 @@ AtlasLoot_TableNamesBoss = {
 		["LeatherMisc1"] = { AL["Leatherworking"] .. ": " .. AL["Misc"], "AtlasLootCrafting" },
 		--Mining
 		["Mining1"] = { AL["Mining"], "AtlasLootCrafting" },
-		["Mining2"] = { AL["Mining"], "AtlasLootCrafting" },
 		["Smelting1"] = { AL["Smelting"], "AtlasLootCrafting" },
 		["Herbalism1"] = { AL["Herbalism"], "AtlasLootCrafting" },
 		["Herbalism2"] = { AL["Herbalism"], "AtlasLootCrafting" },

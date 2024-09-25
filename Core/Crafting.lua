@@ -64,7 +64,7 @@ function AtlasLoot_CraftingMenu()
 	AtlasLootMenuItem_9_Name:SetText(AL["Mining"]);
 	AtlasLootMenuItem_9_Extra:SetText("");
 	AtlasLootMenuItem_9_Icon:SetTexture("Interface\\Icons\\Trade_Mining");
-	AtlasLootMenuItem_9.lootpage="MININGMENU";
+	AtlasLootMenuItem_9.lootpage="Mining1";
 	AtlasLootMenuItem_9:Show();
 	--Cooking
 	AtlasLootMenuItem_11_Name:SetText(AL["Cooking"]);
@@ -1025,37 +1025,5 @@ function AtlasLoot_CookingMenu()
 		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
 	end
 	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Cooking"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
-end
-
-function AtlasLoot_MiningMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
-	--Mining
-	AtlasLootMenuItem_2_Name:SetText(AL["Mining"]);
-	AtlasLootMenuItem_2_Extra:SetText("");
-	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\Trade_Mining");
-	AtlasLootMenuItem_2.lootpage = "Mining1";
-	AtlasLootMenuItem_2:Show();
-	--Smelting
-	AtlasLootMenuItem_3_Name:SetText(AL["Smelting"]);
-	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\Spell_Fire_FlameBlades");
-	AtlasLootMenuItem_3.lootpage = "Smelting1";
-	AtlasLootMenuItem_3:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Mining"]);
 	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end

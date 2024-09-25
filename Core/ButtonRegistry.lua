@@ -6005,15 +6005,15 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["Mining1"] = {
 		Title = AL["Mining"];
-		Back_Page = "MININGMENU";
-		Back_Title = AL["Mining"];
+		Back_Page = "CRAFTINGMENU";
+		Back_Title = AL["Crafting"];
 		Next_Page = "Smelting1";
 		Next_Title = AL["Mining"];
 	};
 	["Smelting1"] = {
 		Title = AL["Smelting"];
-		Back_Page = "MININGMENU";
-		Back_Title = AL["Mining"];
+		Back_Page = "CRAFTINGMENU";
+		Back_Title = AL["Crafting"];
 		Prev_Page = "Mining1";
 		Prev_Title = AL["Mining"];
 	};

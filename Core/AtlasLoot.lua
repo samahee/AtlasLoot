@@ -202,7 +202,6 @@ AtlasLoot_MenuList = {
 	"ENCHANTINGMENU",
 	"ENGINEERINGMENU",
 	"LEATHERWORKINGMENU",
-	"MININGMENU",
 	"TAILORINGMENU",
 	"CRAFTSET",
 	"COOKINGMENU",
@@ -1205,8 +1204,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLoot_EngineeringMenu();
 	elseif(dataID=="LEATHERWORKINGMENU") then
 		AtlasLoot_LeatherworkingMenu();
-	elseif(dataID=="MININGMENU") then
-		AtlasLoot_MiningMenu();
 	elseif(dataID=="TAILORINGMENU") then
 		AtlasLoot_TailoringMenu();
 	elseif(dataID=="COOKINGMENU") then
@@ -2455,7 +2452,7 @@ AtlasLoot_HewdropDown = {
 			[4] = { { (AL["Engineering"]), "ENGINEERINGMENU", "Table" }, },
 			[5] = { { (AL["Herbalism"]), "Herbalism1", "Table" }, },
 			[6] = { { (AL["Leatherworking"]), "LEATHERWORKINGMENU", "Table" }, },
-			[7] = { { (AL["Mining"]), "MININGMENU", "Table" }, },
+			[7] = { { (AL["Mining"]), "Mining1", "Table" }, },
 			[8] = { { (AL["Tailoring"]), "TAILORINGMENU", "Table" }, },
 			[9] = { { (AL["Cooking"]), "COOKINGMENU", "Table" }, },
 			[10] = { { (AL["First Aid"]), "FirstAid1", "Table" }, },
