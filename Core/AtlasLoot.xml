@@ -194,8 +194,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][1][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][1][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
@@ -239,8 +239,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][2][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][2][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
@@ -284,8 +284,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][3][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][3][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
@@ -329,8 +329,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][4][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][4][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
@@ -500,6 +500,19 @@
 						this:SetText(AL["WishList"]);
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
 					</OnShow>
+					<OnEnter>
+						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+						if this:IsEnabled() then
+							GameTooltip:ClearLines();
+							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
+							GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r");
+							GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"]);
+							GameTooltip:Show();
+						end
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
 				</Scripts>
 			</Button>
 		</Frames>
@@ -886,7 +899,7 @@
 						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
 						this:SetText(AL["Toggle AL Panel"]);
-						getglobal("AtlasLootInfo_Text2"):SetText(AL["ALT+Click to use WishList."]);
+						getglobal("AtlasLootInfo_Text2"):SetText("");
 					</OnShow>
 					<OnClick>
 						if AtlasLootCharDB.HidePanel then
@@ -1882,6 +1895,19 @@
 						this:SetText(AL["WishList"]);
 						this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );
 					</OnShow>
+					<OnEnter>
+						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+						if this:IsEnabled() then
+							GameTooltip:ClearLines();
+							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
+							GameTooltip:AddLine("|cffFFFFFF"..AL["WishList"].."|r");
+							GameTooltip:AddLine(AL["ALT+Click on item to add or remove it from WishList"]);
+							GameTooltip:Show();
+						end
+					</OnEnter>
+					<OnLeave>
+						GameTooltip:Hide();
+					</OnLeave>
 				</Scripts>
 			</Button>
 			<Button name="$parent_Options" inherits="AtlasLootPanelButtonTemplate">
@@ -1940,8 +1966,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][1][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][1][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
@@ -1991,8 +2017,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][2][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][2][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
@@ -2042,8 +2068,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][3][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][3][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
@@ -2093,8 +2119,8 @@
 						if this:IsEnabled() then
 							GameTooltip:ClearLines();
 							GameTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 5);
-							GameTooltip:AddLine(AtlasLootCharDB["QuickLooks"][4][3]);
-							GameTooltip:AddLine(AL["|cff9d9d9dALT+Click to clear|r"]);
+							GameTooltip:AddLine("|cffFFFFFF"..AtlasLootCharDB["QuickLooks"][4][3].."|r");
+							GameTooltip:AddLine(AL["ALT+Click to clear"]);
 							GameTooltip:Show();
 						end
 					</OnEnter>
