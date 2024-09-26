@@ -5265,7 +5265,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 81123, "inv_pants_mail_09", "=q3=Crimson Defender's Leggings", "=ds=#a4#, #s11#", "10%" },
 		{ 81124, "inv_helmet_19", "=q3=Helmet of the Scarlet Avenger", "=ds=#a4#, #s1#", "10%" },
 		{ 81125, "inv_misc_orb_03", "=q3=Inquisitor's Orb", "=ds=#h4#", "10%" },
-		{ 81131, "inv_helmet_19", "=q3=Helmet of the Scarlet Avenger", "=ds=#a4#, #s1#", "10%" },
+		--{ 81131, "inv_helmet_19", "=q3=Helmet of the Scarlet Avenger", "=ds=#a4#, #s1#", "10%" },
 		{ 0, "", "", "", "" },
 		{ 83575, "inv_misc_book_09", "=q3=Codex of Smite IX", "=ds=#e20#, =q9=#c5#", "10%" },
 		{ 0, "", "", "", "" },
