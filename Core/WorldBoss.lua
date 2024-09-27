@@ -75,7 +75,7 @@ function AtlasLoot_WorldBossMenu()
 	AtlasLootMenuItem_11.lootpage="Concavius";
 	AtlasLootMenuItem_11:Show();
 	--Cow level
-	AtlasLootMenuItem_13_Name:SetText(AL["There Is No Cow Level"]);
+	AtlasLootMenuItem_13_Name:SetText(AL["Moo"]);
 	AtlasLootMenuItem_13_Extra:SetText(WHITE..AL["Moomoo Grove"]);
 	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Spell_Nature_Polymorph_Cow");
 	AtlasLootMenuItem_13.lootpage="CowKing";

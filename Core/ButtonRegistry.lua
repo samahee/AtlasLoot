@@ -3525,13 +3525,13 @@ AtlasLoot_ButtonRegistry = {
 	["Concavius"] = {
 		Title = AL["Concavius"];
 		Next_Page = "CowKing";
-		Next_Title = AL["There Is No Cow Level"];
+		Next_Title = AL["Moo"];
 		Prev_Page = "Ostarius";
 		Prev_Title = AL["Ostarius"];
 		Back_Page = "WORLDBOSSMENU"
 	};
 	["CowKing"] = {
-		Title = AL["There Is No Cow Level"];
+		Title = AL["Moo"];
 		Prev_Page = "Concavius";
 		Prev_Title = AL["Concavius"];
 		Back_Page = "WORLDBOSSMENU"
@@ -6005,15 +6005,15 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["Mining1"] = {
 		Title = AL["Mining"];
-		Back_Page = "MININGMENU";
-		Back_Title = AL["Mining"];
+		Back_Page = "CRAFTINGMENU";
+		Back_Title = AL["Crafting"];
 		Next_Page = "Smelting1";
 		Next_Title = AL["Mining"];
 	};
 	["Smelting1"] = {
 		Title = AL["Smelting"];
-		Back_Page = "MININGMENU";
-		Back_Title = AL["Mining"];
+		Back_Page = "CRAFTINGMENU";
+		Back_Title = AL["Crafting"];
 		Prev_Page = "Mining1";
 		Prev_Title = AL["Mining"];
 	};
