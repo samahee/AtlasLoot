@@ -77,11 +77,11 @@ AtlasLoot = AceLibrary("AceAddon-2.0"):new("AceDB-2.0")
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 --Establish version number and compatible version of Atlas
-local VERSION_MAJOR = "1";
-local VERSION_MINOR = "2";
+local VERSION_MAJOR = "3";
+local VERSION_MINOR = "0";
 local VERSION_BOSSES = "0";
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..VERSION_MAJOR.."."..VERSION_MINOR.."."..VERSION_BOSSES.."|r";
-ATLASLOOT_CURRENT_ATLAS = "1.13.3";
+ATLASLOOT_CURRENT_ATLAS = "1.13.4";
 ATLASLOOT_PREVIEW_ATLAS = "1.13.3";
 
 --Compatibility with old EquipCompare/EQCompare
@@ -3892,8 +3892,6 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 		local _,title = GetAddOnInfo("AtlasLoot")
 		local remoteversion = tonumber(remoteversion)
 		if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
-		if remoteversion < 10200 then remoteversion = 0 end
-		if remoteversion >= 10206 then remoteversion = 0 end
 		if v == "VERSION" and remoteversion and title == remotetitle then
 			if remoteversion > localversion then
 				AtlasLoot_updateavailable = remoteversion
@@ -3924,8 +3922,6 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 				local remoteversion = tonumber(remoteversion) or 0
 				local _,title = GetAddOnInfo("AtlasLoot")
 				if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
-				if remoteversion < 10200 then remoteversion = 0 end
-				if remoteversion >= 10206 then remoteversion = 0 end
 				if v == "VERSION" and remoteversion and title == remotetitle then
 					if remoteversion > localversion then
 						AtlasLoot_updateavailable = remoteversion
