@@ -349,9 +349,9 @@ function AtlasLoot_OnVariablesLoaded()
 			AtlasLootCharDB.FirstTime = false;
 		end
 		--If not the expected Atlas version
-		if( ATLAS_VERSION ~= ATLASLOOT_CURRENT_ATLAS and ATLAS_VERSION ~= ATLASLOOT_PREVIEW_ATLAS ) then
+		--[[if( ATLAS_VERSION ~= ATLASLOOT_CURRENT_ATLAS and ATLAS_VERSION ~= ATLASLOOT_PREVIEW_ATLAS ) then
 			StaticPopup_Show ("ATLASLOOT_OLD_ATLAS");
-		end
+		end]]
 		Hooked_Atlas_Refresh();
 	else
 		--If we are not using Atlas, keep the items frame out of the way
