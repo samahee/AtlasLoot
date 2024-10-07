@@ -240,7 +240,7 @@ AtlasLoot_Data["AtlasLootWBItems"] = {
 		{ 60489, "INV_Helmet_28", "=q4=Cap of the Cow Savant", "#s1#, #a1#", "50%" },
 		{ 60490, "INV_Helmet_28", "=q4=Cowskin Chapeau", "#s1#, #a1#", "50%" },
 		{ 0, "", "", "", "" },
-		{ 4144, "inv_misc_book_07", "=q3=Tome of Polymorph: Cow", "=ds=#e20# =q10=#c3#", "??%" },
+		{ 4144, "inv_misc_book_07", "=q3=Tome of Polymorph: Cow", "=ds=#e20# =q10=#c3#", "100%" },
 		{ 0, "", "", "", "" },
 		{ 60485, "spell_shadow_curseoftounges", "=q0=Sealed Diablo II Lord of Destruction Collectors Edition", "#m33#", "100%" },
 		{ 60491, "inv_misc_orb_05", "=q0=The Moo Stone", "#m33#", "100%" },
