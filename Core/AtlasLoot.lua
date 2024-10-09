@@ -3857,7 +3857,7 @@ function AtlasLoot_GetChatLink(id)
 	local e = string.sub(d, 2)
 	return "\124"..e.."\124H"..b.."\124h["..a.."]\124h\124r"
 end
-
+--[[
 --pfUI.api.strsplit --Uses code borrowed from pfUI by Shagu
 local function AtlasLoot_strsplit(delimiter, subject)
   if not subject then return nil end
@@ -3964,3 +3964,4 @@ AtlasLoot_updater:SetScript("OnEvent", function()
 	  end
 	end
   end)
+]]
