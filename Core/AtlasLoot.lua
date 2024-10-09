@@ -3858,7 +3858,7 @@ function AtlasLoot_GetChatLink(id)
 	return "\124"..e.."\124H"..b.."\124h["..a.."]\124h\124r"
 end
 
---pfUI.api.strsplit
+--pfUI.api.strsplit --Uses code borrowed from pfUI by Shagu
 local function AtlasLoot_strsplit(delimiter, subject)
   if not subject then return nil end
   local delimiter, fields = delimiter or ":", {}
@@ -3867,9 +3867,8 @@ local function AtlasLoot_strsplit(delimiter, subject)
   return unpack(fields)
 end
 
---Update announcing code taken from pfUI
+--Update announcing code taken from pfUI by Shagu
 local major, minor, fix = AtlasLoot_strsplit(".", tostring(GetAddOnMetadata("AtlasLoot", "Version")))
-
 local alreadyshown = false
 local localversion  = tonumber(major*10000 + minor*100 + fix)
 local remoteversion = tonumber(AtlasLoot_updateavailable) or 0
@@ -3880,7 +3879,7 @@ AtlasLoot_updater = CreateFrame("Frame")
 AtlasLoot_updater:RegisterEvent("CHAT_MSG_ADDON")
 AtlasLoot_updater:RegisterEvent("CHAT_MSG_CHANNEL")
 AtlasLoot_updater:RegisterEvent("PLAYER_ENTERING_WORLD")
-AtlasLoot_updater:RegisterEvent("PARTY_MEMBERS_CHANGED")
+--AtlasLoot_updater:RegisterEvent("PARTY_MEMBERS_CHANGED") --Remove some unnecessary addon spam and allow different AtlasLoot branches to coexist
 AtlasLoot_updater:RegisterEvent("CHAT_MSG_CHANNEL_JOIN")
 
 AtlasLootUserCounter = {}
