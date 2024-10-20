@@ -961,7 +961,7 @@ AL:RegisterTranslations("deDE", function() return {
 	["Elemental Invasion"] = "Invasion der Elementare",
 	["Ethereum Prison"] = "Gefängnis des Astraleums",
 	["Feast of Winter Veil"] = "Winterhauchfest",
-	["Gurubashi Arena Booty Run"] = "Gurubashiarena",
+	["Gurubashi Arena"] = "Gurubashiarena",
 	["Hallow's End"] = "Schlotternächte",
 	["Harvest Festival"] = "Erntedankfest",
 	["Love is in the Air"] = "Herzklopfen",

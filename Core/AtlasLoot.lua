@@ -477,6 +477,7 @@ function AtlasLootOptions_Init()
 	AtlasLootOptionsFrameDefaultTT:SetChecked(AtlasLootCharDB.DefaultTT);
 	AtlasLootOptionsFrameLootlinkTT:SetChecked(AtlasLootCharDB.LootlinkTT);
 	AtlasLootOptionsFrameItemSyncTT:SetChecked(AtlasLootCharDB.ItemSyncTT);
+	AtlasLootOptionsFrameShowSource:SetChecked(AtlasLootCharDB.ShowSource);
 	AtlasLootOptionsFrameEquipCompare:SetChecked(AtlasLootCharDB.EquipCompare);
 	AtlasLootOptionsFrameOpaque:SetChecked(AtlasLootCharDB.Opaque);
 	AtlasLootOptionsFrameItemID:SetChecked(AtlasLootCharDB.ItemIDs);
@@ -504,6 +505,7 @@ function AtlasLootOptions_Fresh()
 	AtlasLootCharDB.DefaultTT = true;
 	AtlasLootCharDB.LootlinkTT = false;
 	AtlasLootCharDB.ItemSyncTT = false;
+	AtlasLootCharDB.ShowSource = true;
 	AtlasLootCharDB.EquipCompare = false;
 	AtlasLootCharDB.Opaque = false;
 	AtlasLootCharDB.ItemIDs = false;
@@ -1000,6 +1002,15 @@ function AtlasLootOptions_ItemSyncTTToggle()
 	AtlasLootCharDB.DefaultTT = false;
 	AtlasLootCharDB.LootlinkTT = false;
 	AtlasLootCharDB.ItemSyncTT = true;
+	AtlasLootOptions_Init();
+end
+
+function AtlasLootOptions_ShowSourceToggle()
+	if(AtlasLootCharDB.ShowSource) then
+		AtlasLootCharDB.ShowSource = false;
+	else
+		AtlasLootCharDB.ShowSource = true;
+	end
 	AtlasLootOptions_Init();
 end
 
@@ -2219,6 +2230,7 @@ function AtlasLootOptions_DefaultSettings()
 	AtlasLootCharDB.DefaultTT = true;
 	AtlasLootCharDB.LootlinkTT = false;
 	AtlasLootCharDB.ItemSyncTT = false;
+	AtlasLootCharDB.ShowSource = true;
 	AtlasLootCharDB.EquipCompare = false;
 	AtlasLootCharDB.Opaque = false;
 	AtlasLootCharDB.ItemIDs = false;
@@ -2304,50 +2316,50 @@ end
 AtlasLoot_HewdropDown = {
 	[1] = {
 		[AL["Dungeons & Raids"]] = {
-			[1] = {{ AL["Ragefire Chasm"], "RagefireChasm", "Submenu" },},
-			[2] = {{ AL["Wailing Caverns"], "WailingCaverns", "Submenu" },},
-			[3] = {{ AL["The Deadmines"], "Deadmines", "Submenu" },},
-			[4] = {{ AL["Shadowfang Keep"], "ShadowfangKeep", "Submenu" },},
-			[5] = {{ AL["Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" },},
-			[6] = {{ AL["The Stockade"], "TheStockade", "Submenu" },},
-			[7] = {{ AL["Gnomeregan"], "Gnomeregan", "Submenu" },},
-			[8] = {{ AL["Razorfen Kraul"], "RazorfenKraul", "Submenu" },},
-			[9] = {{ AL["The Crescent Grove"], "TheCrescentGrove", "Submenu" },},
-			[10] = {[AL["Scarlet Monastery"]] = {
-					{ AL["Scarlet Monastery (Graveyard)"], "SMGraveyard", "Submenu" },
-					{ AL["Scarlet Monastery (Library)"], "SMLibrary", "Submenu" },
-					{ AL["Scarlet Monastery (Armory)"], "SMArmory", "Submenu" },
-					{ AL["Scarlet Monastery (Cathedral)"], "SMCathedral", "Submenu" },
+			[1] = {{ AL["[13-18] Ragefire Chasm"], "RagefireChasm", "Submenu" },},
+			[2] = {{ AL["[17-24] Wailing Caverns"], "WailingCaverns", "Submenu" },},
+			[3] = {{ AL["[17-24] The Deadmines"], "Deadmines", "Submenu" },},
+			[4] = {{ AL["[22-30] Shadowfang Keep"], "ShadowfangKeep", "Submenu" },},
+			[5] = {{ AL["[23-32] Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" },},
+			[6] = {{ AL["[22-30] The Stockade"], "TheStockade", "Submenu" },},
+			[7] = {{ AL["[29-38] Gnomeregan"], "Gnomeregan", "Submenu" },},
+			[8] = {{ AL["[29-38] Razorfen Kraul"], "RazorfenKraul", "Submenu" },},
+			[9] = {{ AL["[32-38] The Crescent Grove"], "TheCrescentGrove", "Submenu" },},
+			[10] = {[AL["[27-45] Scarlet Monastery"]] = {
+					{ AL["[27-36] Scarlet Monastery (Graveyard)"], "SMGraveyard", "Submenu" },
+					{ AL["[28-39] Scarlet Monastery (Library)"], "SMLibrary", "Submenu" },
+					{ AL["[32-41] Scarlet Monastery (Armory)"], "SMArmory", "Submenu" },
+					{ AL["[35-45] Scarlet Monastery (Cathedral)"], "SMCathedral", "Submenu" },
 				},},
-			[11] = {{ AL["Razorfen Downs"], "RazorfenDowns", "Submenu" },},
-			[12] = {{ AL["Uldaman"], "Uldaman", "Submenu" },},
-			[13] = {{ AL["Gilneas City"], "GilneasCity", "Submenu" },},
-			[14] = {{ AL["Maraudon"], "Maraudon", "Submenu" },},
-			[15] = {{ AL["Zul'Farrak"], "ZulFarrak", "Submenu" },},
-			[16] = {{ AL["The Sunken Temple"], "SunkenTemple", "Submenu" },},
-			[17] = {{ AL["Hateforge Quarry"], "HateforgeQuarry", "Submenu" },},
-			[18] = {{ AL["Blackrock Depths"], "BlackrockDepths", "Submenu" },},
-			[19] = {[AL["Dire Maul"]] = {
-					{ AL["Dire Maul (East)"], "DireMaulEast", "Submenu" },
-					{ AL["Dire Maul (West)"], "DireMaulWest", "Submenu" },
-					{ AL["Dire Maul (North)"], "DireMaulNorth", "Submenu" },
+			[11] = {{ AL["[36-46] Razorfen Downs"], "RazorfenDowns", "Submenu" },},
+			[12] = {{ AL["[40-51] Uldaman"], "Uldaman", "Submenu" },},
+			[13] = {{ AL["[42-50] Gilneas City"], "GilneasCity", "Submenu" },},
+			[14] = {{ AL["[45-55] Maraudon"], "Maraudon", "Submenu" },},
+			[15] = {{ AL["[44-54] Zul'Farrak"], "ZulFarrak", "Submenu" },},
+			[16] = {{ AL["[50-60] The Sunken Temple"], "SunkenTemple", "Submenu" },},
+			[17] = {{ AL["[50-60] Hateforge Quarry"], "HateforgeQuarry", "Submenu" },},
+			[18] = {{ AL["[52-60] Blackrock Depths"], "BlackrockDepths", "Submenu" },},
+			[19] = {[AL["[55-60] Dire Maul"]] = {
+					{ AL["[55-60] Dire Maul (East)"], "DireMaulEast", "Submenu" },
+					{ AL["[57-60] Dire Maul (West)"], "DireMaulWest", "Submenu" },
+					{ AL["[57-60] Dire Maul (North)"], "DireMaulNorth", "Submenu" },
 				},},
-			[20] = {{ AL["Scholomance"], "Scholomance", "Submenu" },},
-			[21] = {{ AL["Stratholme"], "Stratholme", "Submenu" },},
-			[22] = {{ AL["Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },},
-			[23] = {{ AL["Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },},
-			[24] = {{ AL["Karazhan Crypt"], "KarazhanCrypt", "Submenu" },},
-			[25] = {{ AL["Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" },},
-			[26] = {{ AL["Stormwind Vault"], "StormwindVault", "Submenu" },},
-			[27] = {{ AL["Zul'Gurub"], "ZulGurub", "Submenu" },},
-			[28] = {{ AL["Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },},
-			[29] = {{ AL["Molten Core"], "MoltenCore", "Submenu" },},
-			[30] = {{ AL["Onyxia's Lair"], "Onyxia", "Submenu" },},
-			[31] = {{ AL["Lower Karazhan Halls"], "LowerKara", "Submenu" },},
-			[32] = {{ AL["Blackwing Lair"], "BlackwingLair", "Submenu" },},
-			[33] = {{ AL["Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
-			[34] = {{ AL["Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
-			[35] = {{ AL["Naxxramas"], "Naxxramas", "Submenu" },},
+			[20] = {{ AL["[58-60] Scholomance"], "Scholomance", "Submenu" },},
+			[21] = {{ AL["[58-60] Stratholme"], "Stratholme", "Submenu" },},
+			[22] = {{ AL["[55-60] Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },},
+			[23] = {{ AL["[58-60] Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },},
+			[24] = {{ AL["[58-60] Karazhan Crypt"], "KarazhanCrypt", "Submenu" },},
+			[25] = {{ AL["[60] Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" },},
+			[26] = {{ AL["[60] Stormwind Vault"], "StormwindVault", "Submenu" },},
+			[27] = {{ AL["[RAID] Zul'Gurub"], "ZulGurub", "Submenu" },},
+			[28] = {{ AL["[RAID] Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },},
+			[29] = {{ AL["[RAID] Molten Core"], "MoltenCore", "Submenu" },},
+			[30] = {{ AL["[RAID] Onyxia's Lair"], "Onyxia", "Submenu" },},
+			[31] = {{ AL["[RAID] Lower Karazhan Halls"], "LowerKara", "Submenu" },},
+			[32] = {{ AL["[RAID] Blackwing Lair"], "BlackwingLair", "Submenu" },},
+			[33] = {{ AL["[RAID] Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
+			[34] = {{ AL["[RAID] Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
+			[35] = {{ AL["[RAID] Naxxramas"], "Naxxramas", "Submenu" },},
 		},
 	},
 	[2] = { [AL["World Bosses"]] = {
@@ -2433,7 +2445,7 @@ AtlasLoot_HewdropDown = {
 			[2] = {{ AL["Children's Week"], "ChildrensWeek", "Table" },},
 			[3] = {{ AL["Elemental Invasion"], "ElementalInvasion", "Table" },},
 			[4] = {{ AL["Feast of Winter Veil"], "Winterviel1", "Table" },},
-			[5] = {{ AL["Gurubashi Arena Booty Run"], "GurubashiArena", "Table" },},
+			[5] = {{ AL["Gurubashi Arena"], "GurubashiArena", "Table" },},
 			[6] = {{ AL["Hallow's End"], "Halloween1", "Table" },},
 			[7] = {{ AL["Harvest Festival"], "HarvestFestival", "Table" },},
 			[8] = {{ AL["Love is in the Air"], "Valentineday", "Table" },},
@@ -2667,7 +2679,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Trash Mobs"], "SMCTrash" },
 	},
 	["Scholomance"] = {
-		{ AL["Blood Steward of Kirtonos"], "SCHOLOBlood" },
+		--{ AL["Blood Steward of Kirtonos"], "SCHOLOBlood" },
 		{ AL["Kirtonos the Herald"], "SCHOLOKirtonostheHerald" },
 		{ AL["Jandice Barov"], "SCHOLOJandiceBarov" },
 		{ AL["Lord Blackwood"].." ("..AL["Scourge Invasion"]..")", "SCHOLOLordBlackwood" },

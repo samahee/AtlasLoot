@@ -19,9 +19,9 @@ AtlasLootWBBossButtons = {
 	LordKazzak = {
 		"KKazzak";
 	};
-	Turtlhu = {
+	--[[Turtlhu = {
 		"Turtlhu";
-	};
+	};]]
 	Nerubian = {
 		"Nerubian";
 	};
@@ -151,7 +151,7 @@ AtlasLoot_Data["AtlasLootWBItems"] = {
 		{ 0, "", "", "", "" },
 		{ 51739, "inv_fabric_wool_02", "=q1=Little Ball of Spider Web", "=ds=#e15#", "100%" },
 	};
-	Turtlhu = {
+	--[[Turtlhu = {
 		{ 20633, "INV_Shoulder_29", "=q4=Unnatural Leather Spaulders", "=ds=#s3#, #a2#", "4.76%" },
 		{ 20631, "INV_Boots_Cloth_05", "=q4=Mendicant's Slippers", "=ds=#s12#, #a1#", "4.76%" },
 		{ 20634, "INV_Boots_08", "=q4=Boots of Fright", "=ds=#s12#, #a2#", "4.76%" },
@@ -179,7 +179,7 @@ AtlasLoot_Data["AtlasLootWBItems"] = {
 		{ 0, "", "", "", "" },
 		{ 50202, "INV_Egg_03", "=q3=Egg of Turtlhu", "=ds=#e15#", "100%" },
 		{ 50203, "INV_Enchant_Dustsoul", "=q2=Corrupted Sand", "=ds=#e12#", "100%" },
-	};
+	};]]
 	Ostarius = {
 		{ 83480, "inv_misc_book_07", "=q4=Tome of Infalliable Truth", "=ds=#h4#, #s15#", "17%" },
 		{ 83481, "inv_mace_08", "=q4=Failsafe Activation Key", "=ds=#h4#, #s15#", "17%" },

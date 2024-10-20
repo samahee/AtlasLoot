@@ -964,7 +964,7 @@ AL:RegisterTranslations("esES", function() return {
 	["Elemental Invasion"] = "Invasión de elementales",
 	["Ethereum Prison"] = "Prisión de los Etereum",
 	["Feast of Winter Veil"] = "Festival de Invierno",
-	["Gurubashi Arena Booty Run"] = "El cofre pirata de Gurubashi",
+	["Gurubashi Arena"] = "El cofre pirata de Gurubashi",
 	["Hallow's End"] = "Halloween",
 	["Harvest Festival"] = "Festival de la Cosecha",
 	["Love is in the Air"] = "Amor en el aire",

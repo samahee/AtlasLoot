@@ -963,7 +963,7 @@ AtlasLootBossButtons = {
 -- ItemIDs (default english)
 --------------------------------------------------------------------------------
 AtlasLoot_Data["AtlasLootItems"] = {
-	EmptyInstance = {};
+	--EmptyInstance = {};
 	VanillaKeys = {
 		{ 0, "INV_Box_01", "=q6=#e14#", "" },
 		{ 16309, "INV_Jewelry_Talisman_11", "=q3=Drakefire Amulet", "=ds=#s2#" },
@@ -3163,13 +3163,13 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61027, "INV_shoulder_24", "=q3=Epaulets of the Forgotten Past", "=ds=#s3#, #a1#", "33%" },
 		{ 61040, "INV_gauntlets_05", "=q3=Gloves of the Unknown", "=ds=#s9#, #a1#", "33%" },
 		{ 0, "", "", "" },
-		{ 61014, "INV_Enchant_ShardBrilliantLarge", "Shard of Eternity", "=ds=#s14#", "1%" },
+		{ 61014, "INV_Enchant_ShardBrilliantLarge", "Temporal Anomaly", "=ds=#s14#", "1%" },
 		{ 61043, "Spell_Shadow_SoulGem", "=q4=Eye of the Abyss", "=ds=#s2#", "1.1%" },
 		{ 51044, "INV_misc_head_dragon_black", "=q1=Antnormi's Head", "=ds=#m3#", "100%" },
 		{ 0, "", "", "", "" },
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#, Quantity of 2", "100%" },
 	};
-	COTBMInfiniteChromie = {
+	--[[COTBMInfiniteChromie = {
 		{ 50203, "INV_enchant_dustsoul", "=q2=Corrupted Sand", "=ds=#m3#, 17-23", "100%" },
 		{ 0, "", "", "" },
 		{ 50431, "INV_bracer_13", "=q3=Extremely Well Crafted Cuffs", "=ds=#s8#, #a1#", "12%" },
@@ -3182,7 +3182,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61056, "INV_boots_07", "=q3=Arcanoweave Boots", "=ds=#s12#, #a1#", "12%" },
 		{ 0, "", "", "" },
 		{ 61043, "spell_shadow_soulgem", "=q4=Eye of the Abyss", "=ds=#s2#", "1%" },
-	};
+	};]]
 	COTTrash = {
 		{ 50203, "INV_enchant_dustsoul", "=q2=Corrupted Sand", "=ds=#m3#" },
 		{ 0, "", "", "" },
@@ -4630,10 +4630,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18298, "INV_Pants_11", "=q3=Unbridled Leggings", "=ds=#s11#, #a2#", "0.75%" },
 		{ 18295, "INV_Boots_06", "=q3=Phasing Boots", "=ds=#s12#, #a1# =q2=#e32#", "0.58%" },
 		{ 0, "", "", "" },
-		{ 18333,"INV_Misc_Book_04","=q2=Libram of Focus","=ds=#e20#", "2%" },
-		{ 18334,"INV_Misc_Book_11","=q2=Libram of Protection","=ds=#e20#", "2%" },
-		{ 18332,"INV_Misc_Book_02","=q2=Libram of Rapidity","=ds=#e20#", "2%" },
-		{ 0, "", "", "" },
 		{ 18255, "INV_Misc_Food_55", "=q1=Runn Tum Tuber", "=ds=#e2#", "0.3%" },
 		{ 18297, "INV_Enchant_ShardGlimmeringSmall", "=q1=Thornling Seed", "=ds=#e15# =q7=#cb30#", "0.5%" },
 	};
@@ -4820,11 +4816,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	};
 	DMNTrash = {
 		{ 18250, "INV_Misc_Key_11", "=q2=Gordok Shackle Key", "=ds=#e14#", "4%, 13%, 25%" },
-		{ 0, "", "", "" },
-		{ 18333,"INV_Misc_Book_04","=q2=Libram of Focus","=ds=#e20#", "1%, 2%" },
-		{ 18334,"INV_Misc_Book_11","=q2=Libram of Protection","=ds=#e20#", "1%, 2%" },
-		{ 18332,"INV_Misc_Book_02","=q2=Libram of Rapidity","=ds=#e20#", "1%, 2%" },
-		{ 0, "", "", "" },
 		{ 18640, "INV_Ammo_Bullet_02", "=q1=Happy Fun Rock", "=ds=#m33#", "2%" },
 	};
 	DMNTRIBUTERUN = {
@@ -4945,10 +4936,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18340, "INV_Jewelry_Talisman_14", "=q3=Eidolon Talisman", "=ds=#s2#", "0.9-1.4%" },
 		{ 18344, "INV_Gauntlets_23", "=q3=Stonebark Gauntlets", "=ds=#s9#, #a2#", "0.29-0.66%" },
 		{ 18338, "INV_Wand_02", "=q3=Wand of Arcane Potency", "=ds=#w12#", "1.6-2%" },
-		{ 0, "", "", "" },
-		{ 18333,"INV_Misc_Book_04","=q2=Libram of Focus","=ds=#e20#", "1-2%" },
-		{ 18334,"INV_Misc_Book_11","=q2=Libram of Protection","=ds=#e20#", "1-2%" },
-		{ 18332,"INV_Misc_Book_02","=q2=Libram of Rapidity","=ds=#e20#", "1-2%" },
 	};
 	DMNBooks = {
 		{ 18401,"INV_Misc_Book_11","=q4=Foror's Compendium of Dragon Slaying","=ds=#e20# =q17=#c9#=ds=, =q16=#c4#" },
@@ -6618,7 +6605,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 92002, "INV_Misc_Book_07", "=q3=Tome of Portals: Theramore", "=ds=Alliance, #e20# =q10=#c3#" , "0.32%" },
 		{ 92004, "INV_Misc_Book_07", "=q3=Tome of Portals: Stonard", "=ds=Horde, #e20# =q10=#c3#", "0.32%" },
 		{ 0, "", "", "" },
-		{ 8547, "INV_Scroll_05", "=q3=Formula: Powerful Smelling Salts", "=ds=#p6# #m14#", "0.03%" },
+		{ 8547, "INV_Scroll_05", "=q3=Formula: Powerful Smelling Salts ", "=ds=#p6# #m14#", "0.03%" },
 		{ 61177, "INV_Scroll_05", "=q3=Recipe: Potion of Quickness", "=ds=#p1# #m14#", "0.03%" },
 		{ 61178, "INV_Scroll_05", "=q3=Plans: Thorium Spurs", "=ds=#p2# #m14#", "0.03%" },
 		{ 61180, "INV_Misc_Note_01", "=q3=Formula: Enchant Cloak - Greater Arcane Resistance", "=ds=#p4# #m14#", "0.03%" },

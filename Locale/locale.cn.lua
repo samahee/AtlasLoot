@@ -979,7 +979,7 @@ AL:RegisterTranslations("zhCN", function() return {
 	["Elemental Invasion"] = "元素入侵",
 	["Ethereum Prison"] = "复仇军监狱",
 	["Feast of Winter Veil"] = "冬幕节",
-	["Gurubashi Arena Booty Run"] = "古拉巴什竞技场",
+	["Gurubashi Arena"] = "古拉巴什竞技场",
 	["Hallow's End"] = "万圣节",
 	["Harvest Festival"] = "收获节",
 	["Love is in the Air"] = "情人节",

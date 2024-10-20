@@ -13,6 +13,7 @@
 	<Script file="Search.lua"/>
 	<Script file="WorldBoss.lua"/>
 	<Script file="Dungeons.lua"/>
+	<Script file="Tooltip.lua"/>
 
 	<Button name="AtlasLootDefaultFrameButtonTemplate" inherits="OptionsButtonTemplate" virtual="true">
 		<Size>
@@ -1470,6 +1471,24 @@
 					</OnLoad>
 					<OnClick>
 						AtlasLootOptions_DefaultTTToggle();
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="$parentShowSource" inherits="OptionsCheckButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="20" y="-220"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+						getglobal(this:GetName().."Text"):SetText(AL["Show Source on Tooltips"]);
+					</OnLoad>
+					<OnClick>
+						AtlasLootOptions_ShowSourceToggle();
 					</OnClick>
 				</Scripts>
 			</CheckButton>

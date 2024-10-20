@@ -973,7 +973,7 @@ AL:RegisterTranslations("zhTW", function() return {
 	["Elemental Invasion"] = "元素入侵",
 	["Ethereum Prison"] = "伊斯利恩監獄",
 	["Feast of Winter Veil"] = "冬幕節",
-	["Gurubashi Arena Booty Run"] = "古拉巴什競技場藏寶競技",
+	["Gurubashi Arena"] = "古拉巴什競技場藏寶競技",
 	["Hallow's End"] = "復活節",
 	["Harvest Festival"] = "收穫節",
 	["Love is in the Air"] = "愛就在你我身邊",

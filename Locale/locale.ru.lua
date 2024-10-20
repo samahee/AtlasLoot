@@ -955,7 +955,7 @@ AL:RegisterTranslations("ruRU", function() return {
 	["Elemental Invasion"] = "Elemental Invasion",
 	["Ethereum Prison"] = "Ethereum Prison",
 	["Feast of Winter Veil"] = "Feast of Winter Veil",
-	["Gurubashi Arena Booty Run"] = "Gurubashi Arena Booty Run",
+	["Gurubashi Arena"] = "Gurubashi Arena",
 	["Hallow's End"] = "Hallow's End",
 	["Harvest Festival"] = "Harvest Festival",
 	["Love is in the Air"] = "Love is in the Air",

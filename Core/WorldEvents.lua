@@ -76,8 +76,8 @@ function AtlasLootWorldEventMenu()
 	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\INV_Egg_03");
 	AtlasLootMenuItem_7.lootpage="Noblegarden";
 	AtlasLootMenuItem_7:Show();
-	--Gurubashi Arena Booty Run
-	AtlasLootMenuItem_4_Name:SetText(AL["Gurubashi Arena Booty Run"]);
+	--Gurubashi Arena
+	AtlasLootMenuItem_4_Name:SetText(AL["Gurubashi Arena"]);
 	AtlasLootMenuItem_4_Extra:SetText(ORANGE..AL["Stranglethorn Vale"]);
 	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\INV_Misc_ArmorKit_04");
 	AtlasLootMenuItem_4.lootpage="GurubashiArena";

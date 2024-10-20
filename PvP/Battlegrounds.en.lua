@@ -1581,6 +1581,6 @@ AtlasLoot_Data["AtlasLootGeneralPvPItems"] = {
 		{ 18245, "Ability_Mount_Blackdirewolf", "=q4=Horn of the Black War Wolf", "=ds=#e7#" },
 		{ 18247, "Ability_Mount_Kodo_03", "=q4=Black War Kodo", "=ds=#e7#" },
 		{ 18246, "Ability_Mount_Raptor", "=q4=Whistle of the Black War Raptor", "=ds=#e7#" },
-		{ 18248, "Ability_Mount_Undeadhorse", "=q4=Red Skeletal Warhorse", "=ds=#e7#" },
+		{ 18248, "Ability_Mount_Undeadhorse", "=q4=Armored Red Deathcharger", "=ds=#e7#" },
 	};
 };

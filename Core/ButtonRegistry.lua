@@ -1427,8 +1427,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Kirtonos the Herald"];
 		Next_Page = "SCHOLOJandiceBarov";
 		Next_Title = AL["Jandice Barov"];
-		Prev_Page = "SCHOLOBlood";
-		Prev_Title = AL["Blood Steward of Kirtonos"];
+		--Prev_Page = "SCHOLOBlood";
+		--Prev_Title = AL["Blood Steward of Kirtonos"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -5036,7 +5036,7 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["World Events"];
 	};
 	["GurubashiArena"] = {
-		Title = AL["Gurubashi Arena Booty Run"];
+		Title = AL["Gurubashi Arena"];
 		Back_Page = "WORLDEVENTMENU";
 		Back_Title = AL["World Events"];
 	};

@@ -2976,7 +2976,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s12907", "inv_helmet_49", "=q2=Gnomish Mind Control Cap", "=ds=#sr# =so1=235 =so2=255 =so3=265 =so4=275" },
 		{ "s12759", "inv_gizmo_08", "=q1=Gnomish Death Ray", "=ds=#sr# =so1=240 =so2=260 =so3=270 =so4=280" },
 		{ "s23129", "inv_misc_enggizmos_08", "=q2=World Enlarger", "=ds=#sr# =so1=260 =so2=260 =so3=265 =so4=270" },
-		{ "s23489", "inv_misc_enggizmos_12", "=q2=Ultrasafe Transporter - Gadgetzan", "=ds=#sr# =so1=260 =so2=285 =so3=295 =so4=305" },
+		{ "s23489", "inv_misc_enggizmos_12", "=q2=Ultrasafe Transporter: Gadgetzan", "=ds=#sr# =so1=260 =so2=285 =so3=295 =so4=305" },
 		{ "s23096", "inv_misc_enggizmos_13", "=q1=Alarm-O-Bot", "=ds=#sr# =so1=265 =so2=275 =so3=280 =so4=285" },
 	};
 
@@ -2993,7 +2993,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s12754", "inv_misc_bomb_04", "=q1=The Big One", "=ds=#sr# =so1=235 =so2=235 =so3=255 =so4=275" },
 		{ "s12908", "spell_fire_flamebolt", "=q1=Goblin Dragon Gun", "=ds=#sr# =so1=240 =so2=260 =so3=270 =so4=280" },
 		{ "s12758", "inv_helmet_49", "=q2=Goblin Rocket Helmet", "=ds=#sr# =so1=245 =so2=265 =so3=275 =so4=285" },
-		{ "s23486", "inv_misc_enggizmos_07", "=q2=Dimensional Ripper - Everlook", "=ds=#sr# =so1=260 =so2=285 =so3=295 =so4=305" },
+		{ "s23486", "inv_misc_enggizmos_07", "=q2=Dimensional Ripper: Everlook", "=ds=#sr# =so1=260 =so2=285 =so3=295 =so4=305" },
 		{ "s23078", "inv_misc_enggizmos_11", "=q1=Goblin Jumper Cables XL", "=ds=#sr# =so1=265 =so2=285 =so3=295 =so4=305" },
 	};
 	EngineeringEquipment1 = {
@@ -3391,8 +3391,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s24801", "inv_misc_food_64", "=q1=Smoked Desert Dumplings", "=ds=#sr# =so1=285 =so2=325 =so3=345 =so4=365" },
 		{ "s25659", "inv_misc_food_65", "=q1=Dirge's Kickin' Chimaerok Chops", "=ds=#sr# =so1=300 =so2=325 =so3=345 =so4=365" },
 		{ "s57031", "inv_misc_food_09", "=q1=Danonzo's Tel'Abim Surprise", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
-		{ "s57032", "inv_misc_food_08", "=q1=Danonzo's Tel'abim Medley", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
-		{ "s57033", "inv_drink_17", "=q1=Danonzo's Tel'abim Delight", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "s57032", "inv_misc_food_08", "=q1=Danonzo's Tel'Abim Medley", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "s57033", "inv_drink_17", "=q1=Danonzo's Tel'Abim Delight", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s46085", "inv_misc_food_64", "=q1=Gurubashi Gumbo", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s45625", "INV_Misc_Fishe_Au_Chocolate", "=q1=Le Fishe Au Chocolat", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 	};

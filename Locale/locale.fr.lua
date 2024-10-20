@@ -983,7 +983,7 @@ AL:RegisterTranslations("frFR", function() return {
 	["Elemental Invasion"] = "Invasions élémentaires",
 	["Ethereum Prison"] = "Prison de l'Ethereum",
 	["Feast of Winter Veil"] = "La fête du Voile d'hiver",
-	["Gurubashi Arena Booty Run"] = "Le coffre pirate de Gurubashi",
+	["Gurubashi Arena"] = "Le coffre pirate de Gurubashi",
 	["Hallow's End"] = "La Sanssaint",
 	["Harvest Festival"] = "La Fête des moissons",
 	["Love is in the Air"] = "De l'amour dans l'air",
