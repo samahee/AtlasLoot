@@ -1,6 +1,7 @@
 # AtlasLoot
 AtlasLoot Turtle WoW Edition allows you to view loot from bosses/ enchants/ crafted items/ reputation rewards/ PvP rewards in game!
 ## Features of this fork
+ - Option to show source and drop rate on item tooltips.
  - All professions sorted by slot/purpose.
  - New menus for dungeons/raids and world bosses.
  - Reworked menus for crafting/reputations/collections/pvp.
