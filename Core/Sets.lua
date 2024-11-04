@@ -34,12 +34,18 @@ function AtlasLootSetMenu()
 	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Shoulder_35");
 	AtlasLootMenuItem_5.lootpage="AQ40SET";
 	AtlasLootMenuItem_5:Show();
+	--Karazhan
+	AtlasLootMenuItem_6_Name:SetText(AL["Karazhan"].." "..AL["Sets"]);
+	AtlasLootMenuItem_6_Extra:SetText("");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\INV_Staff_Medivh");
+	AtlasLootMenuItem_6.lootpage="KARASET";
+	AtlasLootMenuItem_6:Show();
 	--Legendaries
-	AtlasLootMenuItem_7_Name:SetText(AL["Legendary Items"]);
-	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\INV_Staff_Medivh");
-	AtlasLootMenuItem_7.lootpage="Legendaries";
-	AtlasLootMenuItem_7:Show();
+	AtlasLootMenuItem_8_Name:SetText(AL["Legendary Items"]);
+	AtlasLootMenuItem_8_Extra:SetText("");
+	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\INV_Hammer_Unique_Sulfuras");
+	AtlasLootMenuItem_8.lootpage="Legendaries";
+	AtlasLootMenuItem_8:Show();
 	--Artifacts
 	--[[
 	AtlasLootMenuItem_8_Name:SetText(AL["Artifact Items"]);
@@ -812,5 +818,79 @@ function AtlasLootT3SetMenu()
 		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
 	end
 	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Tier 3 Sets"]);
+	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
+end
+
+function AtlasLoot_Kara40SetMenu()
+	for i = 1, 30, 1 do
+		getglobal("AtlasLootItem_"..i):Hide();
+	end
+	for i = 1, 30, 1 do
+		getglobal("AtlasLootMenuItem_"..i):Hide();
+		getglobal("AtlasLootMenuItem_"..i).isheader = false;
+	end
+	getglobal("AtlasLootItemsFrame_BACK"):Show();
+	getglobal("AtlasLootItemsFrame_BACK").lootpage = "SETMENU";
+	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
+	getglobal("AtlasLootItemsFrame_PREV"):Hide();
+	getglobal("AtlasLootServerQueryButton"):Hide();
+	--Priest
+	AtlasLootMenuItem_3_Name:SetText("|cffffffff"..AL["Priest"]);
+	AtlasLootMenuItem_3_Extra:SetText("");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\Spell_Holy_PowerWordShield");
+	AtlasLootMenuItem_3.lootpage="T35Priest";
+	AtlasLootMenuItem_3:Show();
+	--Mage
+	AtlasLootMenuItem_4_Name:SetText("|cff68ccef"..AL["Mage"]);
+	AtlasLootMenuItem_4_Extra:SetText("");
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\Spell_Frost_IceStorm");
+	AtlasLootMenuItem_4.lootpage="T35Mage";
+	AtlasLootMenuItem_4:Show();
+	--Warlock
+	AtlasLootMenuItem_5_Name:SetText("|cff9382c9"..AL["Warlock"]);
+	AtlasLootMenuItem_5_Extra:SetText("");
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\Spell_Shadow_CurseOfTounges");
+	AtlasLootMenuItem_5.lootpage="T35Warlock";
+	AtlasLootMenuItem_5:Show();
+	--Rogue
+	AtlasLootMenuItem_6_Name:SetText("|cfffff468"..AL["Rogue"]);
+	AtlasLootMenuItem_6_Extra:SetText("");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\Ability_BackStab");
+	AtlasLootMenuItem_6.lootpage="T35Rogue";
+	AtlasLootMenuItem_6:Show();
+	--Druid
+	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a"..AL["Druid"]);
+	AtlasLootMenuItem_7_Extra:SetText("");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\Spell_Nature_Regeneration");
+	AtlasLootMenuItem_7.lootpage="T35Druid";
+	AtlasLootMenuItem_7:Show();
+	--Hunter
+	AtlasLootMenuItem_18_Name:SetText("|cffaad372"..AL["Hunter"]);
+	AtlasLootMenuItem_18_Extra:SetText("");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\Ability_Hunter_RunningShot");
+	AtlasLootMenuItem_18.lootpage="T35Hunter";
+	AtlasLootMenuItem_18:Show();
+	--Shaman
+	AtlasLootMenuItem_19_Name:SetText("|cff2773ff"..AL["Shaman"]);
+	AtlasLootMenuItem_19_Extra:SetText("");
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\Icons\\Spell_FireResistanceTotem_01");
+	AtlasLootMenuItem_19.lootpage="T35Shaman";
+	AtlasLootMenuItem_19:Show();
+	--Paladin
+	AtlasLootMenuItem_20_Name:SetText("|cfff48cba"..AL["Paladin"]);
+	AtlasLootMenuItem_20_Extra:SetText("");
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\Icons\\Spell_Holy_SealOfMight");
+	AtlasLootMenuItem_20.lootpage="T35Paladin";
+	AtlasLootMenuItem_20:Show();
+	--Warrior
+	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d"..AL["Warrior"]);
+	AtlasLootMenuItem_21_Extra:SetText("");
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\Icons\\INV_Shield_05");
+	AtlasLootMenuItem_21.lootpage="T35Warrior";
+	AtlasLootMenuItem_21:Show();
+	for i = 1, 30, 1 do
+		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
+	end
+	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Karazhan"].." "..AL["Sets"]);
 	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end

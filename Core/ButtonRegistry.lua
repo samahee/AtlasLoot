@@ -49,14 +49,14 @@ AtlasLoot_ButtonRegistry = {
 	["HQHatereaverAnnihilator"] = {
 		Title = AL["Hatereaver Annihilator"];
 		Next_Page = "HQHargeshDoomcaller";
-		Next_Title = AL["Hargesh Doomcaller"];
+		Next_Title = AL["Har'gesh Doomcaller"];
 		Prev_Page = "HQCorrosis";
 		Prev_Title = AL["Corrosis"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
 	["HQHargeshDoomcaller"] = {
-		Title = AL["Hargesh Doomcaller"];
+		Title = AL["Har'gesh Doomcaller"];
 		Next_Page = "HQTrash";
 		Next_Title = AL["Trash Mobs"];
 		Prev_Page = "HQHatereaverAnnihilator";
@@ -67,7 +67,7 @@ AtlasLoot_ButtonRegistry = {
 	["HQTrash"] = {
 		Title = AL["Trash Mobs"];
 		Prev_Page = "HQHargeshDoomcaller";
-		Prev_Title = AL["Hargesh Doomcaller"];
+		Prev_Title = AL["Har'gesh Doomcaller"];
 		Back_Page = "DUNGEONSMENU1";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -4521,6 +4521,51 @@ AtlasLoot_ButtonRegistry = {
 		Back_Page = "T3SET";
 		Back_Title = AL["Tier 3 Sets"];
 	};
+	["T35Druid"] = {
+		Title = AL["Druid"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Hunter"] = {
+		Title = AL["Hunter"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Mage"] = {
+		Title = AL["Mage"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Paladin"] = {
+		Title = AL["Paladin"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Priest"] = {
+		Title = AL["Priest"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Rogue"] = {
+		Title = AL["Rogue"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Shaman"] = {
+		Title = AL["Shaman"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Warlock"] = {
+		Title = AL["Warlock"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
+	["T35Warrior"] = {
+		Title = AL["Warrior"];
+		Back_Page = "KARASET";
+		Back_Title = AL["Karazhan"].." "..AL["Sets"];
+	};
 	["AQ40Druid"] = {
 		Title = AL["Druid"];
 		Back_Page = "AQ40SET";
@@ -5988,6 +6033,182 @@ AtlasLoot_ButtonRegistry = {
 		Back_Title = AL["Leatherworking"];
 		Prev_Page = "Elemental1";
 		Prev_Title = AL["Leatherworking"] .. ": " .. AL["Elemental Leatherworking"];
+	};
+	["JewelcraftingApprentice1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Apprentice"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Next_Page = "JewelcraftingJourneyman1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+	};
+	["JewelcraftingJourneyman1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingApprentice1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Next_Page = "JewelcraftingJourneyman2";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+	};
+	["JewelcraftingJourneyman2"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingJourneyman1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Next_Page = "JewelcraftingExpert1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+	};
+	["JewelcraftingExpert1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingJourneyman2";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Journeyman"];
+		Next_Page = "JewelcraftingExpert2";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+	};
+	["JewelcraftingExpert2"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingExpert1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Next_Page = "JewelcraftingExpert3";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+	};
+	["JewelcraftingExpert3"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingExpert2";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Next_Page = "JewelcraftingArtisan1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+	};
+	["JewelcraftingArtisan1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingExpert3";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Expert"];
+		Next_Page = "JewelcraftingArtisan2";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+	};
+	["JewelcraftingArtisan2"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingArtisan1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Next_Page = "JewelcraftingGemstones1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemstones"];
+	};
+	["JewelcraftingGemstones1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Gemstones"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingArtisan2";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Artisan"];
+		Next_Page = "JewelcraftingRings1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Rings"];
+	};
+	["JewelcraftingRings1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Rings"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingGemstones1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemstones"];
+		Next_Page = "JewelcraftingRings2";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Rings"];
+	};
+	["JewelcraftingRings2"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Rings"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingRings1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Rings"];
+		Next_Page = "JewelcraftingAmulets1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Amulets"];
+	};
+	["JewelcraftingAmulets1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Amulets"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingRings2";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Rings"];
+		Next_Page = "JewelcraftingHelm1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Head"];
+	};
+	["JewelcraftingHelm1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Head"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingAmulets1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Amulets"];
+		Next_Page = "JewelcraftingBracers1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Bracers"];
+	};
+	["JewelcraftingBracers1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Bracers"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingHelm1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Head"];
+		Next_Page = "JewelcraftingOffHands1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Off-hand"];
+	};
+	["JewelcraftingOffHands1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Off-hand"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingBracers1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Bracers"];
+		Next_Page = "JewelcraftingStaves1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Staff"];
+	};
+	["JewelcraftingStaves1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Staff"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingOffHands1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Off-hand"];
+		Next_Page = "JewelcraftingTrinkets1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Trinkets"];
+	};
+	["JewelcraftingTrinkets1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Trinkets"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingStaves1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Staff"];
+		Next_Page = "JewelcraftingMisc1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Misc"];
+	};
+	["JewelcraftingMisc1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Misc"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingTrinkets1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Trinkets"];
+		Next_Page = "JewelcraftingGemology1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemology"];
+	};
+	["JewelcraftingGemology1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Gemology"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingMisc1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Misc"];
+		Next_Page = "JewelcraftingGoldsmithing1";
+		Next_Title = AL["Jewelcrafting"] .. ": " .. AL["Goldsmithing"];
+	};
+	["JewelcraftingGoldsmithing1"] = {
+		Title = AL["Jewelcrafting"] .. ": " .. AL["Goldsmithing"];
+		Back_Page = "JEWELCRAFTMENU";
+		Back_Title = AL["Jewelcrafting"];
+		Prev_Page = "JewelcraftingGemology1";
+		Prev_Title = AL["Jewelcrafting"] .. ": " .. AL["Gemology"];
 	};
 	["Herbalism1"] = {
 		Title = AL["Herbalism"];

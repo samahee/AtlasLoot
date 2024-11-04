@@ -79,7 +79,7 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "3";
 local VERSION_MINOR = "0";
-local VERSION_BOSSES = "2";
+local VERSION_BOSSES = "3";
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..VERSION_MAJOR.."."..VERSION_MINOR.."."..VERSION_BOSSES.."|r";
 ATLASLOOT_CURRENT_ATLAS = "1.13.4";
 ATLASLOOT_PREVIEW_ATLAS = "1.13.3";
@@ -187,6 +187,7 @@ AtlasLoot_MenuList = {
 	"SETMENU",
 	"AQ20SET",
 	"AQ40SET",
+	"KARASET",
 	"PRE60SET",
 	"ZGSET",
 	"T3SET",
@@ -205,7 +206,8 @@ AtlasLoot_MenuList = {
 	"TAILORINGMENU",
 	"CRAFTSET",
 	"COOKINGMENU",
-	"WORLDBOSSMENU"
+	"WORLDBOSSMENU",
+	"JEWELCRAFTMENU"
 };
 
 --entrance maps to instance maps NOT NEEDED FOR ATLAS 1.12
@@ -1173,6 +1175,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLootAQ40SetMenu();
 	elseif(dataID=="AQ20SET") then
 		AtlasLootAQ20SetMenu();
+	elseif(dataID=="KARASET") then
+		AtlasLoot_Kara40SetMenu();
 	elseif(dataID=="T3SET") then
 		AtlasLootT3SetMenu();
 	elseif(dataID=="T2SET") then
@@ -1225,6 +1229,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLoot_DungeonsMenu1();
 	elseif(dataID=="DUNGEONSMENU2") then
 		AtlasLoot_DungeonsMenu2();
+	elseif(dataID=="JEWELCRAFTMENU") then
+		AtlasLoot_JewelcraftingMenu();
 	else
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
@@ -2393,16 +2399,17 @@ AtlasLoot_HewdropDown = {
 			[2] = {{ AL["Zul'Gurub Sets"], "ZGSET", "Table" },},
 			[3] = {{ AL["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" },},
 			[4] = {{ AL["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" },},
-			[5] = {{ AL["Dungeon 1/2 Sets"], "T0SET", "Table" },},
-			[6] = {{ AL["Tier 1 Sets"], "T1SET", "Table" },},
-			[7] = {{ AL["Tier 2 Sets"], "T2SET", "Table" },},
-			[8] = {{ AL["Tier 3 Sets"], "T3SET", "Table" },},
-			[9] = {{ AL["Legendary Items"], "Legendaries", "Table" },},
-			[10] = {{ AL["World Epics"], "WORLDEPICS", "Table" },},
-			[11] = {{ AL["Rare Pets"], "RarePets1", "Table" },},
-			[12] = {{ AL["Rare Mounts"], "RareMounts", "Table" },},
-			[13] = {{ AL["Fashion"], "DonationRewards2", "Table" },},
-			[14] = {{ AL["Tabards"], "Tabards", "Table" },},
+			[5] = {{ AL["Karazhan Sets"], "KARASET", "Table" },},
+			[6] = {{ AL["Dungeon 1/2 Sets"], "T0SET", "Table" },},
+			[7] = {{ AL["Tier 1 Sets"], "T1SET", "Table" },},
+			[8] = {{ AL["Tier 2 Sets"], "T2SET", "Table" },},
+			[9] = {{ AL["Tier 3 Sets"], "T3SET", "Table" },},
+			[10] = {{ AL["Legendary Items"], "Legendaries", "Table" },},
+			[11] = {{ AL["World Epics"], "WORLDEPICS", "Table" },},
+			[12] = {{ AL["Rare Pets"], "RarePets1", "Table" },},
+			[13] = {{ AL["Rare Mounts"], "RareMounts", "Table" },},
+			[14] = {{ AL["Fashion"], "DonationRewards2", "Table" },},
+			[15] = {{ AL["Tabards"], "Tabards", "Table" },},
 			--[15] = {{ AL["Old Mounts"], "OldMounts", "Table" },},
 			--[16] = {{ AL["Unobtainable Mounts"], "UnobMounts", "Table" },},
 			},
@@ -2464,15 +2471,16 @@ AtlasLoot_HewdropDown = {
 			[4] = { { (AL["Engineering"]), "ENGINEERINGMENU", "Table" }, },
 			[5] = { { (AL["Herbalism"]), "Herbalism1", "Table" }, },
 			[6] = { { (AL["Leatherworking"]), "LEATHERWORKINGMENU", "Table" }, },
-			[7] = { { (AL["Mining"]), "Mining1", "Table" }, },
-			[8] = { { (AL["Tailoring"]), "TAILORINGMENU", "Table" }, },
-			[9] = { { (AL["Cooking"]), "COOKINGMENU", "Table" }, },
-			[10] = { { (AL["First Aid"]), "FirstAid1", "Table" }, },
-			[11] = { { (AL["Survival"]), "Survival1", "Table" }, },
-			[12] = { { (AL["Gardening"]), "Survival2", "Table" }, },
-			[13] = { { (AL["Poisons"]), "Poisons1", "Table" }, },
-			[14] = { { AL["Crafted Sets"], "CRAFTSET", "Table" },},
-			[15] = { { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
+			[7] = { { (AL["Jewelcrafting"]), "JEWELCRAFTMENU", "Table" }, },
+			[8] = { { (AL["Mining"]), "Mining1", "Table" }, },
+			[9] = { { (AL["Tailoring"]), "TAILORINGMENU", "Table" }, },
+			[10] = { { (AL["Cooking"]), "COOKINGMENU", "Table" }, },
+			[11] = { { (AL["First Aid"]), "FirstAid1", "Table" }, },
+			[12] = { { (AL["Survival"]), "Survival1", "Table" }, },
+			[13] = { { (AL["Gardening"]), "Survival2", "Table" }, },
+			[14] = { { (AL["Poisons"]), "Poisons1", "Table" }, },
+			[15] = { { AL["Crafted Sets"], "CRAFTSET", "Table" },},
+			[16] = { { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
 		},
 	},
 	[8] = {{ "Rare Spawns", "RareSpawns", "Submenu" },},
@@ -2486,7 +2494,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Engineer Figgles"], "HQEngineerFiggles" },
 		{ AL["Corrosis"], "HQCorrosis" },
 		{ AL["Hatereaver Annihilator"], "HQHatereaverAnnihilator" },
-		{ AL["Hargesh Doomcaller"], "HQHargeshDoomcaller" },
+		{ AL["Har'gesh Doomcaller"], "HQHargeshDoomcaller" },
 		{ AL["Trash Mobs"], "HQTrash" },
 	},
 	["BlackrockDepths"] = {
