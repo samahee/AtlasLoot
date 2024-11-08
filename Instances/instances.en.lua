@@ -2412,9 +2412,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21613, "INV_Boots_04", "=q4=Wormhide Boots", "=ds=#s12#, #a2#", "13%" },
 		{ 21612, "INV_Boots_Chain_08", "=q4=Wormscale Stompers", "=ds=#s12#, #a3#", "13%" },
 		{ 0,"","","" },
-		{ 20927, "INV_Qiraj_OuroHide", "=q4=Ouro's Intact Hide", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "100%" },
-		{ 20931, "INV_Qiraj_SkinSandworm", "=q4=Skin of the Great Sandworm", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%" },
-		{ 0,"","","" },
+		{ 21614, "INV_Helmet_09", "=q4=Wormhide Protector", "=ds=#s1#, #a2#" },
+		{ 55554, "INV_Gauntlets_26", "=q4=Carapace Handguards", "=ds=#s9#, #a3#" },
+		{ 55553, "inv_gauntlets_23", "=q4=Gloves of the Primordial Burrower", "=ds=#s9#, #a2#" },
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -2428,6 +2428,9 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21244, "INV_Weapon_Shortblade_35", "=q4=Blessed Qiraji Pugio", "=q1=#m4# =ds=#h1#, #w4#" },
 		{ 21272, "INV_Weapon_Rifle_11", "=q4=Blessed Qiraji Musket", "=q1=#m4# =ds=#w5#" },
 		{ 21269, "INV_Shield_23", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#" },
+		{ 0,"","","" },
+		{ 20927, "INV_Qiraj_OuroHide", "=q4=Ouro's Intact Hide", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "100%" },
+		{ 20931, "INV_Qiraj_SkinSandworm", "=q4=Skin of the Great Sandworm", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%" },
 	};
 	AQ40CThun = {
 		{ 22732, "INV_Jewelry_Necklace_AhnQiraj_04", "=q4=Mark of C'Thun", "=ds=#s2#", "21%" },
