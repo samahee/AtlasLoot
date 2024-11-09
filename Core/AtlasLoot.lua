@@ -3419,7 +3419,7 @@ function AtlasLootItem_OnEnter()
 			spellID = tonumber(string.sub(this.itemID, 2));
 			AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
 			AtlasLootTooltip:ClearLines();
-			if SetAutoloot == nil then
+			if SetAutoloot == nil or (SUPERWOW_VERSION and SUPERWOW_VERSION == "1.2") then
 				AtlasLootTooltip:SetHyperlink("enchant:"..spellID)
 			else
 				AtlasLootTooltip:SetHyperlink("spell:"..spellID);
