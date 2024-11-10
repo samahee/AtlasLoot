@@ -3534,9 +3534,16 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Moo"];
 		Prev_Page = "Concavius";
 		Prev_Title = AL["Concavius"];
+		Next_Page = "Clackora";
+		Next_Title = AL["Cla'ckora"];
 		Back_Page = "WORLDBOSSMENU"
 	};
-
+	["Clackora"] = {
+		Title = AL["Cla'ckora"];
+		Prev_Page = "CowKing";
+		Prev_Title = AL["Moo"];
+		Back_Page = "WORLDBOSSMENU"
+	};
 	--Rare Spawns
 	["EarthcallerRezengal"] = {
 		Title = AL["Earthcaller Rezengal"];

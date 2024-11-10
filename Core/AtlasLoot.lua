@@ -2380,6 +2380,7 @@ AtlasLoot_HewdropDown = {
 		[9] = {{AL["Ostarius"], "Ostarius", "Table" },},
 		[10] = {{AL["Concavius"], "Concavius", "Table" },},
 		[11] = {{AL["Moo"], "CowKing", "Table" },},
+		[12] = {{"Cla'ckora", "Clackora", "Table"},},
 		},
 	},
 
@@ -2979,6 +2980,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Ostarius"], "Ostarius" },
 		{ AL["Concavius"], "Concavius" },
 		{ AL["Moo"], "CowKing" },
+		{ "Cla'ckora", "Clackora" },
 	},
 	["RareSpawns"] = {
 		{ "|cffffffff[17]|cffffd200 Earthcaller Rezengal |cffffffff(Stonetalon)", "EarthcallerRezengal" },

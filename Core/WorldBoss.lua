@@ -80,6 +80,12 @@ function AtlasLoot_WorldBossMenu()
 	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Spell_Nature_Polymorph_Cow");
 	AtlasLootMenuItem_13.lootpage="CowKing";
 	AtlasLootMenuItem_13:Show();
+	--Cla'ckora
+	AtlasLootMenuItem_14_Name:SetText(AL["Cla'ckora"]);
+	AtlasLootMenuItem_14_Extra:SetText(WHITE..AL["Azshara"]);
+	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\INV_Misc_Birdbeck_02");
+	AtlasLootMenuItem_14.lootpage="Clackora";
+	AtlasLootMenuItem_14:Show();
 
     for i = 1, 30, 1 do
 		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();

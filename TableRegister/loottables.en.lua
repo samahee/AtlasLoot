@@ -677,6 +677,7 @@ AtlasLoot_TableNames = {
 	["DTaerar"] = { AL["Taerar"], "AtlasLootWBItems" },
 	["DYsondre"] = { AL["Ysondre"], "AtlasLootWBItems" },
 	["DTrash"] = { AL["Emerald Dragons"].." - "..AL["Trash Mobs"], "AtlasLootWBItems" },
+	["Clackora"] = { "Cla'ckora", "AtlasLootWBItems" },
 
 
 	--------------------------
@@ -1837,6 +1838,7 @@ AtlasLoot_TableNamesBoss = {
 		["DTaerar"] = { AL["Taerar"], "AtlasLootWBItems" },
 		["DYsondre"] = { AL["Ysondre"], "AtlasLootWBItems" },
 		["DTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Emerald Dragons"] .. ")", "AtlasLootWBItems" },
+		["Clackora"] = { "Cla'ckora", "AtlasLootWBItems" },
 	},
 	
 	-------------------

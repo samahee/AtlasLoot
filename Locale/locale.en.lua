@@ -1606,5 +1606,6 @@ AL:RegisterTranslations("enUS", function() return {
 	["Karazhan"] = true,
 	["Tier 3.5"] = true,
 	["Karazhan Sets"] = true,
+	["Cla'ckora"] = true,
 	} 
 end)
