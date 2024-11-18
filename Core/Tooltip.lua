@@ -392,3 +392,30 @@ end)
 AtlasLootTip:SetScript("OnShow", function()
 	AtlasLootTip.extendTooltip(GameTooltip, "GameTooltip")
 end)
+
+-- adapted from http://shagu.org/ShaguTweaks/
+AtlasLootTip.HookAddonOrVariable = function(addon, func)
+    local lurker = CreateFrame("Frame", nil)
+    lurker.func = func
+    lurker:RegisterEvent("ADDON_LOADED")
+    lurker:RegisterEvent("VARIABLES_LOADED")
+    lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
+    lurker:SetScript("OnEvent",function()
+      if IsAddOnLoaded(addon) or getglobal(addon) then
+        this:func()
+        this:UnregisterAllEvents()
+      end
+    end)
+end
+
+AtlasLootTip.HookAddonOrVariable("Tmog", function()
+    local tmog = CreateFrame("Frame", nil, TmogTooltip)
+    tmog:SetScript("OnHide", function()
+        for row=1, 30 do
+            getglobal("TmogTooltip" .. 'TextRight' .. row):SetText("")
+        end
+    end)
+    tmog:SetScript("OnShow", function()
+        AtlasLootTip.extendTooltip(TmogTooltip, "TmogTooltip")
+    end)
+end)
