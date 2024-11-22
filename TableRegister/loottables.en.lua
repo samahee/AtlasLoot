@@ -542,6 +542,8 @@ AtlasLoot_TableNames = {
 	--Turtle Wow
 	["DonationRewards1"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
 	["DonationRewards2"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
+	["DonationRewards3"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
+	["DonationRewards4"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
 	--Crafted Sets - Blacksmithing
 	["SteelPlate"] = { AL["Steel Plate"], "AtlasLootCrafting" },
 	["ImperialPlate"] = { AL["Imperial Plate"], "AtlasLootCrafting" },
@@ -1695,6 +1697,8 @@ AtlasLoot_TableNamesBoss = {
 		["WorldEpics3"] = { AL["World Epics"] .. " - " .. AL["Level 50-60"], "AtlasLootSetItems" },
 		["DonationRewards1"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
 		["DonationRewards2"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
+		["DonationRewards3"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
+		["DonationRewards4"] = {AL["Donation Rewards"], "AtlasLootSetItems" },
 	},
 	--Crafted Sets - Blacksmithing
 	["Crafted Sets - Blacksmithing"] = {

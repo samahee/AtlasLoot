@@ -4977,6 +4977,24 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Fashion"];
 		Back_Page = "SETMENU";
 		Back_Title = AL["Collections"];
+		Next_Page = "DonationRewards3";
+		Next_Title = AL["Fashion"];
+	};
+	["DonationRewards3"] = {
+		Title = AL["Fashion"];
+		Back_Page = "SETMENU";
+		Back_Title = AL["Collections"];
+		Prev_Page = "DonationRewards2";
+		Prev_Title = AL["Fashion"];
+		Next_Page = "DonationRewards4";
+		Next_Title = AL["Fashion"];
+	};
+	["DonationRewards4"] = {
+		Title = AL["Fashion"];
+		Back_Page = "SETMENU";
+		Back_Title = AL["Collections"];
+		Prev_Page = "DonationRewards3";
+		Prev_Title = AL["Fashion"];
 	};
 	["WorldEpics1"] = {
 		Title = AtlasLoot_TableNames["WorldEpics1"][1];

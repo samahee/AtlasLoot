@@ -79,7 +79,7 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "3";
 local VERSION_MINOR = "0";
-local VERSION_BOSSES = "3";
+local VERSION_BOSSES = "4";
 ATLASLOOT_VERSION = "|cffFF8400AtlasLoot TW Edition v"..VERSION_MAJOR.."."..VERSION_MINOR.."."..VERSION_BOSSES.."|r";
 ATLASLOOT_CURRENT_ATLAS = "1.13.4";
 ATLASLOOT_PREVIEW_ATLAS = "1.13.3";
