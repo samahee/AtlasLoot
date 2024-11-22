@@ -3314,6 +3314,7 @@ AtlasLoot_HewdropDown_SubTables = {
 -- Item OnEnter
 -- Called when a loot item is moused over
 --------------------------------------------------------------------------------
+local messageShown = false
 function AtlasLootItem_OnEnter()
 	local isItem, isEnchant, isSpell;
 	local id = this:GetID()
@@ -3421,10 +3422,14 @@ function AtlasLootItem_OnEnter()
 			spellID = tonumber(string.sub(this.itemID, 2));
 			AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
 			AtlasLootTooltip:ClearLines();
-			if SetAutoloot == nil or (SUPERWOW_VERSION and SUPERWOW_VERSION == "1.2") then
+			if SetAutoloot == nil or (SUPERWOW_VERSION and (tonumber(SUPERWOW_VERSION)) >= 1.2) then
 				AtlasLootTooltip:SetHyperlink("enchant:"..spellID)
 			else
 				AtlasLootTooltip:SetHyperlink("spell:"..spellID);
+				if not messageShown then
+					DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..WHITE.."Old version of SuperWoW detected, please download the latest version from https://github.com/balakethelock/SuperWoW/releases/tag/Release")
+					messageShown = true
+				end
 			end
 			if ( AtlasLootCharDB.ItemIDs ) then
 				AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID, nil, nil, nil, 1);
