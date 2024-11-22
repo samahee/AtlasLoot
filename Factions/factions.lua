@@ -359,6 +359,7 @@ AtlasLoot_Data["AtlasLootRepItems"] = {
 		{ 18399, "INV_Jewelry_Ring_28", "=q3=Ocean's Breeze", "=q1=#m4# =ds=#s13#" },
 		{ 18398, "INV_Jewelry_Ring_10", "=q3=Tidal Loop", "=q1=#m4# =ds=#s13#" },
 		{ 17333, "INV_Potion_76", "=q1=Aqual Quintessence", "=ds=#m33#" },
+		{ 91797, "INV_Scroll_03", "=q1=Recipe: Transmute Elemental Water", "=ds=#p1# #m14#" },
 		{ 0, "", "", "" },
 		{ 0, "Spell_Frost_SummonWaterElemental_2", "=q6=#r4#", "" },
 		{ 22754, "INV_Potion_83", "=q1=Eternal Quintessence", "=ds=#m33#" },
