@@ -1764,7 +1764,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19947, "INV_Gizmo_09", "=q3=Nat Pagle's Broken Reel", "=ds=#s14#", "25%" },
 		{ 19946, "INV_Spear_04", "=q3=Tigule's Harpoon", "=ds=#w7#", "25%" },
 		{ 0,"","","" },
-		{ 22739, "INV_Misc_Book_07", "=q3=Tome of Polymorph: Turtle", "=ds=#e20# =q10=#c3#" },
+		{ 22739, "INV_Misc_Book_07", "=q3=Tome of Polymorph: Turtle", "=ds=#e20# =q10=#c3#", "15%" },
+		{ 56084, "INV_Misc_Orb_01", "=q3=Middle Piece of an Ancient Idol", "=ds=#m36#" },
 	};
 	ZGThekal = {
 		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
@@ -2415,7 +2416,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21614, "INV_Helmet_09", "=q4=Wormhide Protector", "=ds=#s1#, #a2#" },
 		{ 55554, "INV_Gauntlets_26", "=q4=Carapace Handguards", "=ds=#s9#, #a3#" },
 		{ 55553, "inv_gauntlets_23", "=q4=Gloves of the Primordial Burrower", "=ds=#s9#, #a2#" },
-		{ 0,"","","" },
+		{ 55555, "INV_Hammer_25", "=q4=Ivonor, Maiden's Mallet", "=ds=#h1#, #w6#" },
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 21237, "INV_Staff_20", "=q4=Imperial Qiraji Regalia", "=ds=#m3# ", "4%" },
