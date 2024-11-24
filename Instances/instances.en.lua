@@ -3075,7 +3075,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 60496, "INV_misc_head_dragon_black", "=q1=Head of Chronar", "=ds=#m3#", "100%" },
 	};
-	COTBMHarbingerAphygth = {
+	--[[COTBMHarbingerAphygth = {
 		{ 50203, "INV_enchant_dustsoul", "=q2=Corrupted Sand", "=ds=#m3#, 15-20", "100%" },
 		{ 0, "", "", "" },
 		{ 61015, "INV_jewelry_necklace_04", "=q3=Hollowbone Choker", "=ds=#s2#", "14%" },
@@ -3087,7 +3087,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 61057, "INV_gauntlets_24", "=q3=Arcanic Gloves", "=ds=#s9#, #a2#", "14%" },
 		{ 0, "", "", "" },
 		{ 61020, "INV_Wand_02", "=q4=Lodestone", "=ds=#w12#", "2%" },
-	};
+	};]]
 	COTBMEpidamu = {
 		{ 50203, "INV_enchant_dustsoul", "=q2=Corrupted Sand", "=ds=#m3#, 15-20", "100%" },
 		{ 0, "", "", "" },
