@@ -112,7 +112,7 @@ AtlasLoot_TableNames = {
 	["DMCookie"] = { AL["The Deadmines"].." - "..AL["Cookie"], "AtlasLootItems" },
 	["DMCaptainGreenskin"] = { AL["The Deadmines"].." - "..AL["Captain Greenskin"], "AtlasLootItems" },
 	["DMVanCleef"] = { AL["The Deadmines"].." - "..AL["Edwin VanCleef"], "AtlasLootItems" },
-	["DMTrash"] = { AL["The Deadmines"].." - "..AL["Trash Mobs"] .. " (" .. AL["The Deadmines"] .. ")", "AtlasLootItems" },
+	["DMTrash"] = { AL["The Deadmines"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	--Dire Maul East
 	["DMEPusillin"] = { AL["Dire Maul (East)"].." - "..AL["Pusillin"], "AtlasLootItems" },
 	["DMEZevrimThornhoof"] = { AL["Dire Maul (East)"].." - "..AL["Zevrim Thornhoof"], "AtlasLootItems" },

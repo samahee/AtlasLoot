@@ -132,21 +132,16 @@ function GameTooltip.SetTradeTargetItem(self, index)
 	return HookSetTradeTargetItem(self, index)
 end
 
-local lastItemName, lastItemID, lastSourceStr, lastDropRate
+local lastItemID, lastSourceStr, lastDropRate
 function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
 	if AtlasLootCharDB.ShowSource ~= true then return end
 	local originalTooltip = {}
     local itemName = getglobal(tooltipTypeStr .. "TextLeft1"):GetText()
 	local line2 = getglobal(tooltipTypeStr .. "TextLeft2")
 	local craftSpell, source, sourceStr, dropRate
-	local isCraft = false
-	local isWBLoot = false
-    local isPvP = false
-	local isRepReward = false
-	local isSetPiece = false
-	local isWorldEvent = false
+	local isCraft, isWBLoot, isPvP, isRepReward, isSetPiece, isWorldEvent = false, false, false, false, false, false
 	if itemName and itemName ~= "Fashion Coin" and tooltip.itemID then
-		if itemName ~= lastItemName or tooltip.itemID ~= lastItemID then
+		if tooltip.itemID ~= lastItemID then
 			for row = 1, 30 do
 				local tooltipRowLeft = getglobal(tooltipTypeStr .. 'TextLeft' .. row)
 				if tooltipRowLeft then
@@ -207,7 +202,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
 			if not isCraft then
                 for k1,v1 in pairs(AtlasLoot_Data["AtlasLootWBItems"]) do
 					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootWBItems"][k1]) do
-						if v2[1] == tonumber(tooltip.itemID) and string.find(v2[3], itemName, 1, true) then
+						if v2[1] == tonumber(tooltip.itemID) then
 							source = k1
 							isWBLoot = true
                             if v2[5] then
@@ -224,7 +219,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
             if not isCraft and not isWBLoot then
                 for k1,v1 in pairs(AtlasLoot_Data["AtlasLootGeneralPvPItems"]) do
 					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootGeneralPvPItems"][k1]) do
-						if v2[1] == tonumber(tooltip.itemID) and string.find(v2[3], itemName, 1, true) then
+						if v2[1] == tonumber(tooltip.itemID) then
 							source = k1
 							isPvP = true
                             lastDropRate = nil
@@ -237,7 +232,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
             if not isCraft and not isWBLoot and not isPvP then
                 for k1,v1 in pairs(AtlasLoot_Data["AtlasLootBGItems"]) do
 					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootBGItems"][k1]) do
-						if v2[1] == tonumber(tooltip.itemID) and string.find(v2[3], itemName, 1, true) then
+						if v2[1] == tonumber(tooltip.itemID) then
 							source = k1
 							isRepReward = true
 							if v2[5] then
@@ -252,7 +247,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
 				-- factions
                 for k1,v1 in pairs(AtlasLoot_Data["AtlasLootRepItems"]) do
 					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootRepItems"][k1]) do
-						if v2[1] == tonumber(tooltip.itemID) and string.find(v2[3], itemName, 1, true) then
+						if v2[1] == tonumber(tooltip.itemID) then
 							source = k1
 							isRepReward = true
 							if v2[5] and source ~= "Darkmoon" and not string.find(source, "Cenarion",1,true) then
@@ -269,7 +264,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
 			if not isCraft and not isWBLoot and not isPvP and not isRepReward then
 				for k1,v1 in pairs(AtlasLoot_Data["AtlasLootSetItems"]) do
 					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootSetItems"][k1]) do
-						if v2[1] == tonumber(tooltip.itemID) and string.find(v2[3], itemName, 1, true) then
+						if v2[1] == tonumber(tooltip.itemID) then
 							source = k1
 							isSetPiece = true
 							if (source == "SpiritofEskhandar" or
@@ -316,7 +311,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
 				for k1,v1 in pairs(AtlasLoot_Data["AtlasLootItems"]) do
 					for k2,v2 in pairs(AtlasLoot_Data["AtlasLootItems"][k1]) do
 						if v2[1] ~= 0 then
-							if v2[1] == tonumber(tooltip.itemID) and string.find(v2[3], itemName,1,true) then
+							if v2[1] == tonumber(tooltip.itemID) then
 								if k1 ~= "VanillaKeys" then
 									source = k1
 								end
@@ -331,7 +326,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
 					end
 				end
 			end
-			lastItemName = itemName
+
 			lastItemID = tooltip.itemID
 			if not source then
 				lastSourceStr = nil
@@ -363,7 +358,7 @@ function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
 				end
 			end
 		
-		elseif itemName == lastItemName and tooltip.itemID == lastItemID then
+		elseif tooltip.itemID == lastItemID then
 			if lastSourceStr then
 				if line2:GetText() then
 					if lastDropRate then
