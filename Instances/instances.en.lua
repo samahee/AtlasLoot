@@ -4099,6 +4099,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 80736, "inv_chest_leather_04", "=q3=Rageboar Harness", "=ds=#s5#, #a2#", "25%" },
 		{ 80735, "inv_belt_09", "=q3=Warded Boarleather Belt", "=ds=#s10#, #a2#", "25%" },
 		{ 6690, "inv_pants_14", "=q2=Ferine Leggings", "=ds=#s11#, #a2#", "25%" },
+		{ 0, "", "", "" },
+		{ 69170, "Ability_Hunter_Pet_Boar", "=q4=Ivory Boar", "=ds=#e7#"},
 	};
 	RFKBlindHunter = {
 		{ 6695, "INV_Jewelry_Necklace_04", "=q3=Stygian Bone Amulet", "=ds=#s2#", "33%" },
