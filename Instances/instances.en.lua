@@ -526,12 +526,14 @@ AtlasLootBossButtons = {
 		"SFKWolfMasterNandos";
 		"SFKArchmageArugal";
 		"";
+		"";
 		"SFKTrash";
 	};
 	SMArmory = {
 		"VanillaKeys";
 		"";
 		"SMHerod";
+		"";
 		"";
 		"SMATrash";
 		"SCARLET";
@@ -556,6 +558,7 @@ AtlasLootBossButtons = {
 		"SMAzshir";
 		"SMFallenChampion";
 		"";
+		"";
 		"SMGTrash";
 		"SCARLET";
 	};
@@ -564,6 +567,7 @@ AtlasLootBossButtons = {
 		"SMHoundmasterLoksey";
 		"SMDoan";
 		"SMDoansBox";
+		"";
 		"";
 		"SMLTrash";
 		"SCARLET";
@@ -677,12 +681,14 @@ AtlasLootBossButtons = {
 	TheDeadmines = {
 		"";
 		"";
+		"";
 		"DMRhahkZor";
 		"DMMinerJohnson";
 		"DMSneed";		
 		"DMSneedsShredder";
 		"DMGilnid";
-		"DMDefiasGunpowder";
+		--"DMDefiasGunpowder";
+		"";
 		"DMMrSmite";
 		"DMCookie";
 		"DMCaptainGreenskin";
@@ -845,17 +851,18 @@ AtlasLootBossButtons = {
 	WailingCaverns = {
 		"";
 		"";
-		"";
 		"WCLordCobrahn";
 		"WCLadyAnacondra";
 		"WCKresh";
+		"WCDeviateFaerieDragon";
+		"";
 		"WCLordPythas";
 		"WCSkum";
+		"";
 		"WCLordSerpentis";
 		"WCVerdan";
 		"WCMutanus";
 		"";
-		"WCDeviateFaerieDragon";
 		"";
 		"WCTrash";
 		"WAILING";
