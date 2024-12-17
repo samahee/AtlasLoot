@@ -134,7 +134,10 @@ end
 
 local lastItemID, lastSourceStr, lastDropRate
 function AtlasLootTip.extendTooltip(tooltip, tooltipTypeStr)
-	if AtlasLootCharDB.ShowSource ~= true then return end
+	if AtlasLootCharDB.ShowSource ~= true or IsShiftKeyDown() then
+		return
+	end
+	
 	local originalTooltip = {}
     local itemName = getglobal(tooltipTypeStr .. "TextLeft1"):GetText()
 	local line2 = getglobal(tooltipTypeStr .. "TextLeft2")

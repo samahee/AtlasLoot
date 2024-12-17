@@ -640,11 +640,11 @@ function AtlasLoot_EnchantingMenu()
 	AtlasLootMenuItem_14.lootpage="EnchantingShield1";
 	AtlasLootMenuItem_14:Show();
 	--Enchanting Misc
-	AtlasLootMenuItem_14_Name:SetText(AL["Enchanting"]..": "..AL["Misc"]);
-	AtlasLootMenuItem_14_Extra:SetText("");
-	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\Trade_Engraving");
-	AtlasLootMenuItem_14.lootpage="EnchantingMisc1";
-	AtlasLootMenuItem_14:Show();
+	AtlasLootMenuItem_15_Name:SetText(AL["Enchanting"]..": "..AL["Misc"]);
+	AtlasLootMenuItem_15_Extra:SetText("");
+	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\Trade_Engraving");
+	AtlasLootMenuItem_15.lootpage="EnchantingMisc1";
+	AtlasLootMenuItem_15:Show();
 	for i = 1, 30, 1 do
 		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
 	end
