@@ -43,6 +43,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["Desolace"] = true,
 	["Moomoo Grove"] = true,
 	["NoticeFrame"] = " ",
+	["AL Panel"] = true,
 	["Toggle AL Panel"] = true,
 	[" is safe."] = true,
 	["Server queried for "] = true,

@@ -14,6 +14,10 @@ function AtlasLoot:ShowSearchResult()
 	AtlasLoot_ShowItemsFrame("SearchResult", "SearchResultPage"..currentPage, string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""), pFrame);
 end
 
+local function strtrim(s)
+	return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
+end
+
 function AtlasLoot:Search(Text)
 	if not Text then return end
 	Text = strtrim(Text);
@@ -24,57 +28,62 @@ function AtlasLoot:Search(Text)
 		local partial = AtlasLootCharDB.PartialMatching;
 		for dataID, data in pairs(AtlasLoot_Data[dataSource]) do
 			for _, v in ipairs(data) do
-				if type(v[1]) == "number" and v[1] > 0 then
-					local itemName = GetItemInfo(v[1]);
-					if not itemName then itemName = gsub(v[3], "=q%d=", "") end
-					local found;
-					if partial then
-						found = string.find(string.lower(itemName), text);
-					else
-						found = string.lower(itemName) == text;
-					end
-					if found then
-						local _, _, quality = string.find(v[3], "=q(%d)=");
-						if quality then itemName = "=q"..quality.."="..itemName end
-						table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], itemName, v[4], dataID.."|"..dataSource });
-					end
-				elseif (v[1] ~= nil) and (v[1] ~= "") and (string.sub(v[1], 1, 1) == "s") then 
-					local spellName
-					if not spellName then
-						if (string.sub(v[3], 1, 2) == "=d") then  
-							spellName = gsub(v[3], "=ds=", "");
+				if type(v[1]) ~= "table" then
+					-- item
+					if type(v[1]) == "number" and v[1] > 0 then
+						local itemName = GetItemInfo(v[1]);
+						if not itemName then itemName = gsub(v[3], "=q%d=", "") end
+						local found;
+						if partial then
+							found = string.find(string.lower(itemName), text);
 						else
-							spellName = gsub(v[3], "=q%d=", ""); 
+							found = string.lower(itemName) == text;
 						end
-					end
-					local found;
-					if partial then
-						found = string.find(string.lower(spellName), text);
-					else
-						found = string.lower(spellName) == text;
-					end
-					if found then
-						spellName = string.sub(v[3], 1, 4)..spellName;
-						table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], spellName, v[4], dataID.."|"..dataSource });
-					end
-				elseif (v[1] ~= nil) and (v[1] ~= "") and (string.sub(v[1], 1, 1) == "e") then 
-					local spellName
-					if not spellName then
-						if (string.sub(v[3], 1, 2) == "=d") then  
-							spellName = gsub(v[3], "=ds=", "");
+						if found then
+							local _, _, quality = string.find(v[3], "=q(%d)=");
+							if quality then itemName = "=q"..quality.."="..itemName end
+							table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], itemName, v[4], dataID.."|"..dataSource });
+						end
+					-- spell
+					elseif (v[1] ~= nil) and (v[1] ~= "") and (string.sub(v[1], 1, 1) == "s") then 
+						local spellName
+						if not spellName then
+							if (string.sub(v[3], 1, 2) == "=d") then  
+								spellName = gsub(v[3], "=ds=", "");
+							else
+								spellName = gsub(v[3], "=q%d=", ""); 
+							end
+						end
+						local found;
+						if partial then
+							found = string.find(string.lower(spellName), text);
 						else
-							spellName = gsub(v[3], "=q%d=", ""); 
+							found = string.lower(spellName) == text;
 						end
-					end
-					local found;
-					if partial then
-						found = string.find(string.lower(spellName), text);
-					else
-						found = string.lower(spellName) == text;
-					end
-					if found then
-						spellName = string.sub(v[3], 1, 4)..spellName;
-						table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], spellName, v[4], dataID.."|"..dataSource });
+						if found then
+							spellName = string.sub(v[3], 1, 4)..spellName;
+							table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], spellName, v[4], dataID.."|"..dataSource });
+						end
+					-- enchant
+					elseif (v[1] ~= nil) and (v[1] ~= "") and (string.sub(v[1], 1, 1) == "e") then 
+						local spellName
+						if not spellName then
+							if (string.sub(v[3], 1, 2) == "=d") then  
+								spellName = gsub(v[3], "=ds=", "");
+							else
+								spellName = gsub(v[3], "=q%d=", ""); 
+							end
+						end
+						local found;
+						if partial then
+							found = string.find(string.lower(spellName), text);
+						else
+							found = string.lower(spellName) == text;
+						end
+						if found then
+							spellName = string.sub(v[3], 1, 4)..spellName;
+							table.insert(AtlasLootCharDB["SearchResult"], { v[1], v[2], spellName, v[4], dataID.."|"..dataSource });
+						end
 					end
 				end
 			end

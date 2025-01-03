@@ -11,17 +11,35 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 10400, "INV_Pants_12", "=q2=Blackened Defias Leggings", "=ds=#s11#, #a2# =q7=#x9#", "1.75%" },
 		{ 10402, "INV_Boots_05", "=q2=Blackened Defias Boots", "=ds=#s12#, #a2# =q7=#x8#", "1.23%" },
 	};
+	DeadminesC = {{
+			{ 81007, "=ds=#s1#, #a2# =q7=#x96#", "20%" },
+			{ 10399, "=ds=#s5#, #a2# =q7=#x6#", "20%" },
+			{ 10401, "=ds=#s9#, #a2# =q7=#x9#", "1.75%" },
+			{ 10403, "=ds=#s10#, #a2# =q7=#x7#", "30%" },
+			{ 10400, "=ds=#s11#, #a2# =q7=#x9#", "1.75%" },
+			{ 10402, "=ds=#s12#, #a2# =q7=#x8#", "1.23%" },
+		}
+	},
 	WAILING = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s2#","" },
 		{ 0, "", "", "" },
+		{ 81006, "INV_HELMET_27", "=q2=Cowl of the Fang", "=ds=#s1#, #a1#", "5%" },
 		{ 6473, "INV_Shirt_16", "=q2=Armor of the Fang", "=ds=#s5#, #a2# =q7=#x5#", "52.05%" },
 		{ 10413, "INV_Gauntlets_18", "=q2=Gloves of the Fang", "=ds=#s9#, #a2# =q7=#x4#", "1.20%" },
 		{ 10412, "INV_Belt_30", "=q2=Belt of the Fang", "=ds=#s10#, #a2# =q7=#x2#", "8.64%" },
 		{ 10410, "INV_Pants_11", "=q3=Leggings of the Fang", "=ds=#s11#, #a2# =q7=#x1#", "16.03%" },
 		{ 10411, "INV_Boots_04", "=q2=Footpads of the Fang", "=ds=#s12#, #a2# =q7=#x3#", "19.08%" },
-		{ 81006, "INV_HELMET_27", "=q2=Cowl of the Fang", "=ds=#s1#, #a1#", "5%" },
 	};
+	WailingC = {{
+			{ 81006, "=ds=#s1#, #a1#", "5%" },
+			{ 6473, "=ds=#s5#, #a2# =q7=#x5#", "52.05%" },
+			{ 10413, "=ds=#s9#, #a2# =q7=#x4#", "1.20%" },
+			{ 10412, "=ds=#s10#, #a2# =q7=#x2#", "8.64%" },
+			{ 10410, "=ds=#s11#, #a2# =q7=#x1#", "16.03%" },
+			{ 10411, "=ds=#s12#, #a2# =q7=#x3#", "19.08%" },
+		}
+	},
 	SCARLET = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s3#","" },
@@ -33,6 +51,15 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 10330, "INV_Pants_03", "=q3=Scarlet Leggings", "=ds=#s11#, #a3# =q7=#x37#=ds=/=q7=#x65#", "13.2%"},
 		{ 10332, "INV_Boots_02", "=q3=Scarlet Boots", "=ds=#s12#, #a3#", "0.1%"},
 	};
+	ScarletC = {{
+			{ 10328, "=ds=#s5#, #a3# =q7=#x35#", "0.3%"},
+			{ 10333, "=ds=#s8#, #a3# =q7=#x38#=ds=/=q7=#x66#", "1.6%"},
+			{ 10331, "=ds=#s9#, #a3# =q7=#x36#", "1.7%" },
+			{ 10329, "=ds=#s10#, #a3# =q7=#x33#=ds=/=q7=#x39#", "1.6%"},
+			{ 10330, "=ds=#s11#, #a3# =q7=#x37#=ds=/=q7=#x65#", "13.2%"},
+			{ 10332, "=ds=#s12#, #a3#", "0.1%"},	
+		}
+	},
 	BLACKROCKD = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s4#","" },
@@ -43,6 +70,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 11728, "INV_Pants_03", "=q3=Savage Gladiator Leggings", "=ds=#s11#, #a3# =q7=#brd6#", "14.95%" },
 		{ 11731, "INV_Boots_01", "=q3=Savage Gladiator Greaves", "=ds=#s12#, #a3# =q7=#brd1#", "15.14%" },
 	};
+	BlackrockdC = {{
+			{ 11729, "=ds=#s1#, #a3# =q7=#brd5#", "10.08%" },
+			{ 11726, "=ds=#s5#, #a3# =q7=#brd3#", "14.52%" },
+			{ 11730, "=ds=#s9#, #a3# =q7=#brd2#", "14.12%"},
+			{ 11728, "=ds=#s11#, #a3# =q7=#brd6#", "14.95%" },
+			{ 11731, "=ds=#s12#, #a3# =q7=#brd1#", "15.14%" },
+		}
+	},
 	IRONWEAVE = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s5#","" },
@@ -56,6 +91,17 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22303, "INV_Pants_08", "=q3=Ironweave Pants", "=ds=#s11#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "23.33%" },
 		{ 22311,"INV_Boots_Cloth_05","=q3=Ironweave Boots", "=ds=#s12#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "12.31%" },
 	};
+	IronweaveC = {{
+			{ 22302, "=ds=#s1#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "27.72%" },
+			{ 22305, "=ds=#s3#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "30.39%" },
+			{ 22301, "=ds=#s5#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "19.00%" },
+			{ 22313, "=ds=#s8#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "18.16%" },
+			{ 22304, "=ds=#s9#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "16.24%" },
+			{ 22306, "=ds=#s10#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "20.28%" },
+			{ 22303, "=ds=#s11#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "23.33%" },
+			{ 22311, "=ds=#s12#, #a1# =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "12.31%" },
+		}
+	},
 	ScholoCloth = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s6#","" },
@@ -66,6 +112,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 14632, "INV_Pants_08", "=q3=Necropile Leggings", "=ds=#s11#, #a1#", "0.85%" },
 		{ 14631, "INV_Boots_05", "=q3=Necropile Boots", "=ds=#s12#, #a1#", "0.88%" },
 	};
+	ScholoClothC = {{
+			{ 14633, "=ds=#s3#, #a1#", "1.12%" },
+			{ 14626, "=ds=#s5#, #a1#", "1.27%" },
+			{ 14629, "=ds=#s8#, #a1#", "1.03%" },
+			{ 14632, "=ds=#s11#, #a1#", "0.85%" },
+			{ 14631, "=ds=#s12#, #a1#", "0.88%" },
+		}
+	},
 	ScholoLeather = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s7#","" },
@@ -76,6 +130,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 14638, "INV_Pants_07", "=q3=Cadaverous Leggings", "=ds=#s11#, #a2#", "1.09%" },
 		{ 14641, "INV_Boots_05", "=q3=Cadaverous Walkers", "=ds=#s12#, #a2#", "0.67%" },
 	};
+	ScholoLeatherC = {{
+			{ 14637, "=ds=#s5#, #a2#", "1.51%" },
+			{ 14640, "=ds=#s9#, #a2#", "0.82%" },
+			{ 14636, "=ds=#s10#, #a2#", "0.60%" },
+			{ 14638, "=ds=#s11#, #a2#", "1.09%" },
+			{ 14641, "=ds=#s12#, #a2#", "0.67%" },
+		}
+	},
 	ScholoMail = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s8#","" },
@@ -86,6 +148,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 14612, "INV_Pants_06", "=q3=Bloodmail Legguards", "=ds=#s11#, #a3#", "0.42%" },
 		{ 14616, "INV_Boots_01", "=q3=Bloodmail Boots", "=ds=#s12#, #a3#", "0.36%" },
 	};
+	ScholoMailC = {{
+			{ 14611, "=ds=#s5#, #a3#", "0.54%" },
+			{ 14615, "=ds=#s9#, #a3#", "0.09%" },
+			{ 14614, "=ds=#s10#, #a3#", "0.60%" },
+			{ 14612, "=ds=#s11#, #a3#", "0.42%" },
+			{ 14616, "=ds=#s12#, #a3#", "0.36%" },
+		}
+	},
 	ScholoPlate = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Box_01","=q6=#pre60s9#","" },
@@ -96,6 +166,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 14623, "INV_Pants_04", "=q3=Deathbone Legguards", "=ds=#s11#, #a4#", "1.12%" },
 		{ 14621, "INV_Boots_01", "=q3=Deathbone Sabatons", "=ds=#s12#, #a4#", "0.57%" },
 	};
+	ScholoPlateC = {{
+			{ 14624, "=ds=#s5#, #a4#", "0.45%" },
+			{ 14622, "=ds=#s9#, #a4#", "0.45%" },
+			{ 14620, "=ds=#s10#, #a4#", "0.67%" },
+			{ 14623, "=ds=#s11#, #a4#", "1.12%" },
+			{ 14621, "=ds=#s12#, #a4#", "0.57%" },
+		}
+	},
 	STRAT = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s10#", "" },
@@ -106,6 +184,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 13391, "INV_Boots_02", "=q3=The Postmaster's Treads", "=ds=#s12#, #a1#", "20.61%" },
 		{ 13392, "INV_Jewelry_Ring_23", "=q3=The Postmaster's Seal", "=ds=#s13#", "17.29%" },
 	};
+	StratC = {{
+			{ 13390, "=ds=#s1#, #a1#", "18.58%" },
+			{ 13388, "=ds=#s5#, #a1#", "17.24%" },
+			{ 13389, "=ds=#s11#, #a1#", "21.04%" },
+			{ 13391, "=ds=#s12#, #a1#", "20.61%" },
+			{ 13392, "=ds=#s13#", "17.29%" },
+		}
+	},
 	ScourgeInvasion = {
 		{ 0,"","","" },
 		{ 0, "INV_Jewelry_Talisman_13", "=q6=#pre60s11#", "=ec1=#a1#" },
@@ -133,13 +219,36 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 23090, "INV_Bracer_14", "=q3=Bracers of Undead Slaying", "=ds=#s8#, #a4#", "" },
 		{ 23078, "INV_Gauntlets_29", "=q3=Gauntlets of Undead Slaying", "=ds=#s9#, #a4#", "" },
 	};
+	ScourgeInvasionC = {{
+			{ 23085, "=ds=#s5#, #a1#", "" },
+			{ 23091, "=ds=#s8#, #a1#", "" },
+			{ 23084, "=ds=#s9#, #a1#", "" },
+		},{
+			{ 23089, "=ds=#s5#, #a2#", "" },
+			{ 23093, "=ds=#s8#, #a2#", "" },
+			{ 23081, "=ds=#s9#, #a2#", "" },
+		},{
+			{ 23088, "=ds=#s5#, #a3#", "" },
+			{ 23092, "=ds=#s8#, #a3#", "" },
+			{ 23082, "=ds=#s9#, #a3#", "" },
+		},{
+			{ 23087, "=ds=#s5#, #a4#", "" },
+			{ 23090, "=ds=#s8#, #a4#", "" },
+			{ 23078, "=ds=#s9#, #a4#", "" },
+		}
+	},
 	ShardOfGods = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s15#", "" },
 		{ 0, "", "", "" },
 		{ 17082, "INV_Misc_Orb_05", "=q4=Shard of the Flame", "=ds=#s14#", "4.46%" }, 
-		{ 17064, "INV_Misc_MonsterScales_15", "=q4=Shard of the Scale", "=ds=#s14#", "3.71%" }, 
+		{ 17064, "INV_Misc_MonsterScales_15", "=q4=Shard of the Scale", "=ds=#s14#", "3.71%" },
 	};
+	ShardOfGodsC = {{
+			{ 17082, "=ds=#s14#", "4.46%" },
+			{ 17064, "=ds=#s14#", "3.71%" },
+		}
+	},
 	ZGRings = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s16#", "" },
@@ -165,6 +274,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19905, "INV_Jewelry_Ring_46", "=q3=Zanzil's Band", "=ds=#s13#", "9.24%" },
 		{ 19893, "INV_Jewelry_Ring_46", "=q3=Zanzil's Seal", "=ds=#s13#", "10.12%" },
 	};
+	ZGRingsC = {{
+			{ 19898, "=ds=#s13#", "8.81%" },{ 19925, "=ds=#s13#", "10.36%" },
+			{ 19873, "=ds=#s13#", "10.12%" },{ 19912, "=ds=#s13#", "14.51%" },
+		},{
+			{ 19863, "=ds=#s13#", "9.72%" },{ 19920, "=ds=#s13#", "8.95%" },
+			{ 19905, "=ds=#s13#", "9.24%" },{ 19893, "=ds=#s13#", "10.12%" },
+		}
+	},
 	SpiritofEskhandar = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s20#", "" },
@@ -174,6 +291,13 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 18203, "INV_Misc_MonsterClaw_04", "=q4=Eskhandar's Right Claw", "=ds=#h3#, #w13#", "16.97%" },
 		{ 18202, "INV_Misc_MonsterClaw_04", "=q4=Eskhandar's Left Claw", "=ds=#h4#, #w13#", "12.36%" },
 	};
+	SpiritofEskhandarC = {{
+			{ 18204, "=ds=#s4#", "9.16%" },
+			{ 18205, "=ds=#s2#", "14.29% " },
+			{ 18203, "=ds=#h3#, #w13#", "16.97%" },
+			{ 18202, "=ds=#h4#, #w13#", "12.36%" },
+		}
+	},
 	HakkariBlades = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s21#", "" },
@@ -181,6 +305,11 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19865, "INV_Sword_55", "=q4=Warblade of the Hakkari", "=ds=#h3#, #w10#", "5.18%" },
 		{ 19866, "INV_Sword_55", "=q4=Warblade of the Hakkari", "=ds=#h4#, #w10#", "4.55%" },
 	};
+	HakkariBladesC = {{
+			{ 19865, "=ds=#h3#, #w10#", "5.18%" },
+			{ 19866, "=ds=#h4#, #w10#", "4.55%" },
+		}
+	},
 	PrimalBlessing = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s22#", "" },
@@ -188,6 +317,11 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19896, "INV_Weapon_Hand_01", "=q4=Thekal's Grasp", "=ds=#h3#, #w13#", "5.20%" },
 		{ 19910, "INV_Weapon_Hand_01", "=q4=Arlokk's Grasp", "=ds=#h4#, #w13#", "4.54%" },
 	};
+	PrimalBlessingC = {{
+			{ 19896, "=ds=#h3#, #w13#", "5.20%" },
+			{ 19910, "=ds=#h4#, #w13#", "4.54%" },
+		}
+	},
 	DalRend = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s23#", "" },
@@ -195,6 +329,11 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 12940, "INV_Sword_43", "=q3=Dal'Rend's Sacred Charge", "=ds=#h3#, #w10#", "6.62%" },
 		{ 12939, "INV_Sword_40", "=q3=Dal'Rend's Tribal Guardian", "=ds=#h4#, #w10#", "7.44%" },
 	};
+	DalRendC = {{
+			{ 12940, "=ds=#h3#, #w10#", "6.62%" },
+			{ 12939, "=ds=#h4#, #w10#", "7.44%" },
+		}
+	},
 	SpiderKiss = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Box_01", "=q6=#pre60s24#", "" },
@@ -202,6 +341,11 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 13218, "INV_Weapon_ShortBlade_16", "=q3=Fang of the Crystal Spider", "=ds=#h1#, #w4#", "15.46%" },
 		{ 13183, "INV_Wand_10", "=q3=Venomspitter", "=ds=#h1#, #w6#", "13.07%" },
 	};
+	SpiderKissC = {{
+			{ 13218, "=ds=#h1#, #w4#", "15.46%" },
+			{ 13183, "=ds=#h1#, #w6#", "13.07%" },
+		}
+	},
 	T35Priest = {
 		{ 47228, "inv_helmet_24", "=q4=Crown of Pestilence", "=ds=#s1#, #a1#" },
 		{ 47229, "inv_shoulder_01", "=q4=Shoulderpads of Pestilence", "=ds=#s3#, #a1#" },
@@ -217,6 +361,22 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47238, "INV_Boots_Plate_03", "=q4=Sandals of Pestilence", "=ds=#s12#, #a1#" },
 		{ 47239, "INV_BlueGem", "=q4=Pendant of Pestilence", "=ds=#s2#" },
 	};
+	T35PriestC = {{
+			{ 47228, "=ds=#s1#, #a1#" },
+			{ 47229, "=ds=#s3#, #a1#" },
+			{ 47230, "=ds=#s5#, #a1#" },
+			{ 47231, "=ds=#s11#, #a1#" },
+			{ 47232, "=ds=#s12#, #a1#" },
+			{ 47233, "=ds=#s2#" },
+		},{
+			{ 47234, "=ds=#s1#, #a1#" },
+			{ 47235, "=ds=#s3#, #a1#" },
+			{ 47236, "=ds=#s5#, #a1#" },
+			{ 47237, "=ds=#s11#, #a1#" },
+			{ 47238, "=ds=#s12#, #a1#" },
+			{ 47239, "=ds=#s2#" },
+		}
+	},
 	T35Mage = {
 		{ 47108, "inv_helmet_51", "=q4=Crown of the Guardian", "=ds=#s1#, #a1#" },
 		{ 47109, "inv_shoulder_25", "=q4=Mantle of the Guardian", "=ds=#s3#, #a1#" },
@@ -232,6 +392,22 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47118, "INV_Boots_Plate_03", "=q4=Slippers of the Guardian", "=ds=#s12#, #a1#" },
 		{ 47119, "INV_BlueGem", "=q4=Amulet of the Guardian", "=ds=#s2#" },
 	};
+	T35MageC = {{
+			{ 47108, "=ds=#s1#, #a1#" },
+			{ 47109, "=ds=#s3#, #a1#" },
+			{ 47110, "=ds=#s5#, #a1#" },
+			{ 47111, "=ds=#s11#, #a1#" },
+			{ 47112, "=ds=#s12#, #a1#" },
+			{ 47113, "=ds=#s2#" },
+		},{
+			{ 47114, "=ds=#s1#, #a1#" },
+			{ 47115, "=ds=#s3#, #a1#" },
+			{ 47116, "=ds=#s5#, #a1#" },
+			{ 47117, "=ds=#s11#, #a1#" },
+			{ 47118, "=ds=#s12#, #a1#" },
+			{ 47119, "=ds=#s2#" },
+		}
+	},
 	T35Warlock = {
 		{ 47306, "inv_helmet_24", "=q4=Nathrezim Crown", "=ds=#s1#, #a1#" },
 		{ 47307, "inv_shoulder_01", "=q4=Nathrezim Mantle", "=ds=#s3#, #a1#" },
@@ -247,6 +423,22 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47316, "INV_Boots_Plate_03", "=q4=Nathrezim Slippers", "=ds=#s12#, #a1#" },
 		{ 47317, "INV_BlueGem", "=q4=Nathrezim Pendant", "=ds=#s2#" },
 	};
+	T35WarlockC = {{
+			{ 47306, "=ds=#s1#, #a1#" },
+			{ 47307, "=ds=#s3#, #a1#" },
+			{ 47308, "=ds=#s5#, #a1#" },
+			{ 47309, "=ds=#s11#, #a1#" },
+			{ 47310, "=ds=#s12#, #a1#" },
+			{ 47311, "=ds=#s2#" },
+		},{
+			{ 47312, "=ds=#s1#, #a1#" },
+			{ 47313, "=ds=#s3#, #a1#" },
+			{ 47314, "=ds=#s5#, #a1#" },
+			{ 47315, "=ds=#s11#, #a1#" },
+			{ 47316, "=ds=#s12#, #a1#" },
+			{ 47317, "=ds=#s2#" },
+		}
+	},
 	T35Rogue = {
 		{ 47324, "inv_helmet_24", "=q4=Trickster Helmet", "=ds=#s1#, #a2#" },
 		{ 47325, "inv_shoulder_01", "=q4=Trickster Pauldrons", "=ds=#s3#, #a2#" },
@@ -255,6 +447,15 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47328, "INV_Boots_07", "=q4=Trickster Sabatons", "=ds=#s12#, #a2#" },
 		{ 47329, "INV_RedGem", "=q4=Trickster Choker", "=ds=#s2#" },
 	};
+	T35RogueC = {{
+			{ 47324, "=ds=#s1#, #a2#" },
+			{ 47325, "=ds=#s3#, #a2#" },
+			{ 47326, "=ds=#s5#, #a2#" },
+			{ 47327, "=ds=#s11#, #a2#" },
+			{ 47328, "=ds=#s12#, #a2#" },
+			{ 47329, "=ds=#s2#" },
+		}
+	},
 	T35Druid = {
 		{ 47390, "inv_helmet_24", "=q4=Helm of the Talon", "=ds=#s1#, #a2#" },
 		{ 47391, "inv_shoulder_01", "=q4=Spaulders of the Talon", "=ds=#s3#, #a2#" },
@@ -278,6 +479,29 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47406, "INV_Boots_Plate_03", "=q4=Treads of the Talon", "=ds=#s12#, #a2#" },
 		{ 47407, "INV_RedGem", "=q4=Choker of the Talon", "=ds=#s2#" },
 	};
+	T35DruidC = {{
+			{ 47390, "=ds=#s1#, #a2#" },
+			{ 47391, "=ds=#s3#, #a2#" },
+			{ 47392, "=ds=#s5#, #a2#" },
+			{ 47393, "=ds=#s11#, #a2#" },
+			{ 47394, "=ds=#s12#, #a2#" },
+			{ 47395, "=ds=#s2#" },
+		},{
+			{ 47396, "=ds=#s1#, #a2#" },
+			{ 47397, "=ds=#s3#, #a2#" },
+			{ 47398, "=ds=#s5#, #a2#" },
+			{ 47399, "=ds=#s11#, #a2#" },
+			{ 47400, "=ds=#s12#, #a2#" },
+			{ 47401, "=ds=#s2#" },
+		},{
+			{ 47402, "=ds=#s1#, #a2#" },
+			{ 47403, "=ds=#s3#, #a2#" },
+			{ 47404, "=ds=#s5#, #a2#" },
+			{ 47405, "=ds=#s11#, #a2#" },
+			{ 47406, "=ds=#s12#, #a2#" },
+			{ 47407, "=ds=#s2#" },
+		}
+	},
 	T35Hunter = {
 		{ 47318, "inv_helmet_24", "=q4=Ravenstalker Headpiece", "=ds=#s1#, #a3#" },
 		{ 47319, "inv_shoulder_01", "=q4=Ravenstalker Spaulders", "=ds=#s3#, #a3#" },
@@ -286,6 +510,15 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47322, "INV_Boots_Plate_03", "=q4=Ravenstalker Boots", "=ds=#s12#, #a3#" },
 		{ 47323, "INV_RedGem", "=q4=Ravenstalker Choker", "=ds=#s2#" },
 	};
+	T35HunterC = {{
+			{ 47318, "=ds=#s1#, #a3#" },
+			{ 47319, "=ds=#s3#, #a3#" },
+			{ 47320, "=ds=#s5#, #a3#" },
+			{ 47321, "=ds=#s11#, #a3#" },
+			{ 47322, "=ds=#s12#, #a3#" },
+			{ 47323, "=ds=#s2#" },
+		}
+	},
 	T35Shaman = {
 		{ 47180, "inv_helmet_24", "=q4=Stormhowl Crown", "=ds=#s1#, #a3#" },
 		{ 47181, "inv_shoulder_01", "=q4=Stormhowl Pauldrons", "=ds=#s3#, #a3#" },
@@ -309,6 +542,29 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47196, "INV_Boots_Plate_03", "=q4=Stormhowl Boots", "=ds=#s12#, #a3#" },
 		{ 47197, "INV_GreenGem", "=q4=Amulet of the Stormhowl", "=ds=#s2#" },
 	};
+	T35ShamanC = {{
+			{ 47180, "=ds=#s1#, #a3#" },
+			{ 47181, "=ds=#s3#, #a3#" },
+			{ 47182, "=ds=#s5#, #a3#" },
+			{ 47183, "=ds=#s11#, #a3#" },
+			{ 47184, "=ds=#s12#, #a3#" },
+			{ 47185, "=ds=#s2#" },
+		},{
+			{ 47186, "=ds=#s1#, #a3#" },
+			{ 47187, "=ds=#s3#, #a3#" },
+			{ 47188, "=ds=#s5#, #a3#" },
+			{ 47189, "=ds=#s11#, #a3#" },
+			{ 47190, "=ds=#s12#, #a3#" },
+			{ 47191, "=ds=#s2#" },
+		},{
+			{ 47192, "=ds=#s1#, #a3#" },
+			{ 47193, "=ds=#s3#, #a3#" },
+			{ 47194, "=ds=#s5#, #a3#" },
+			{ 47195, "=ds=#s11#, #a3#" },
+			{ 47196, "=ds=#s12#, #a3#" },
+			{ 47197, "=ds=#s2#" },
+		}
+	},
 	T35Paladin = {
 		{ 47060, "inv_helmet_24", "=q4=Lionheart Headpiece", "=ds=#s1#, #a4#" },
 		{ 47061, "inv_shoulder_01", "=q4=Lionheart Spaulders", "=ds=#s3#, #a4#" },
@@ -332,6 +588,29 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47076, "INV_Boots_Plate_03", "=q4=Lionheart Sabatons", "=ds=#s12#, #a4#" },
 		{ 47077, "INV_RedGem", "=q4=Lionheart Choker", "=ds=#s2#" },
 	};
+	T35PaladinC = {{
+			{ 47060, "=ds=#s1#, #a4#" },
+			{ 47061, "=ds=#s3#, #a4#" },
+			{ 47062, "=ds=#s5#, #a4#" },
+			{ 47063, "=ds=#s11#, #a4#" },
+			{ 47064, "=ds=#s12#, #a4#" },
+			{ 47065, "=ds=#s2#" },
+		},{
+			{ 47066, "=ds=#s1#, #a4#" },
+			{ 47067, "=ds=#s3#, #a4#" },
+			{ 47068, "=ds=#s5#, #a4#" },
+			{ 47069, "=ds=#s11#, #a4#" },
+			{ 47070, "=ds=#s12#, #a4#" },
+			{ 47071, "=ds=#s2#" },
+		},{
+			{ 47072, "=ds=#s1#, #a4#" },
+			{ 47073, "=ds=#s3#, #a4#" },
+			{ 47074, "=ds=#s5#, #a4#" },
+			{ 47075, "=ds=#s11#, #a4#" },
+			{ 47076, "=ds=#s12#, #a4#" },
+			{ 47077, "=ds=#s2#" },
+		}
+	},
 	T35Warrior = {
 		{ 47270, "inv_helmet_24", "=q4=Helmet of the Brotherhood", "=ds=#s1#, #a4#" },
 		{ 47271, "inv_shoulder_01", "=q4=Shoulderguards of the Brotherhood", "=ds=#s3#, #a4#" },
@@ -340,6 +619,15 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47274, "INV_Boots_07", "=q4=Greaves of the Brotherhood", "=ds=#s12#, #a4#" },
 		{ 47275, "INV_RedGem", "=q4=Choker of the Brotherhood", "=ds=#s2#" },
 	};
+	T35WarriorC = {{
+			{ 47270, "=ds=#s1#, #a4#" },
+			{ 47271, "=ds=#s3#, #a4#" },
+			{ 47272, "=ds=#s5#, #a4#" },
+			{ 47273, "=ds=#s11#, #a4#" },
+			{ 47274, "=ds=#s12#, #a4#" },
+			{ 47275, "=ds=#s2#" },
+		}
+	},
 	T3Mage = {
 		{ 22498, "INV_Crown_01", "=q4=Frostfire Circlet", "=ds=#s1#, #a1# =q7=#db4#" },
 		{ 22499, "INV_Shoulder_25", "=q4=Frostfire Shoulderpads", "=ds=#s3#, #a1# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -365,17 +653,17 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47105, "INV_Pants_Cloth_05", "=q4=Frostfire Trousers", "=ds=#s11#, #a1#" },
 		{ 47106, "INV_Boots_Fabric_01", "=q4=Frostfire Slippers", "=ds=#s12#, #a1#" },
 		{ 47107, "INV_Jewelry_Ring_51Naxxramas", "=q4=Frostfire Signet", "=ds=#s13#" },
-
-		--[[{ 70640, "INV_Crown_01", "=q4=Frostfire Coronet", "=ds=#s1#, #a1#" },
-		{ 70641, "INV_Shoulder_25", "=q4=Frostfire Shoulderpads", "=ds=#s3#, #a1#" },
-		{ 70642, "INV_Chest_Cloth_43", "=q4=Frostfire Raiments", "=ds=#s5#, #a1#" },
-		{ 70643, "INV_Bracer_13", "=q4=Frostfire Wristbands", "=ds=#s8#, #a1#" },
-		{ 70644, "INV_Gauntlets_17", "=q4=Frostfire Handguards", "=ds=#s9#, #a1#" },
-		{ 70645, "INV_Belt_03", "=q4=Frostfire Cord", "=ds=#s10#, #a1#" },
-		{ 70646, "INV_Pants_Cloth_05", "=q4=Frostfire Pants", "=ds=#s11#, #a1#" },
-		{ 70647, "INV_Boots_Fabric_01", "=q4=Frostfire Sandals", "=ds=#s12#, #a1#" },
-		{ 70648, "INV_Jewelry_Ring_51Naxxramas", "=q4=Frostfire Ring", "=ds=#s13#" },]]
 	};
+	T3MageC = {{
+			{ 22498, "=ds=#s1#, #a1#" },{ 22499, "=ds=#s3#, #a1#" },{ 22496, "=ds=#s5#, #a1#" },
+			{ 22503, "=ds=#s8#, #a1#" },{ 22501, "=ds=#s9#, #a1#" },{ 22502, "=ds=#s10#, #a1#" },
+			{ 22497, "=ds=#s11#, #a1#" },{ 22500, "=ds=#s12#, #a1#" },{ 23062, "=ds=#s13#" }
+		},{
+			{ 47099, "=ds=#s1#, #a1#" },{ 47100, "=ds=#s3#, #a1#" },{ 47101, "=ds=#s5#, #a1#" },
+			{ 47102, "=ds=#s8#, #a1#" },{ 47103, "=ds=#s9#, #a1#" },{ 47104, "=ds=#s10#, #a1#" },
+			{ 47105, "=ds=#s11#, #a1#" },{ 47106, "=ds=#s12#, #a1#" },{ 47107, "=ds=#s13#" }
+		},
+	},
 	T3Warlock = {
 		{ 22506, "INV_Crown_01", "=q4=Plagueheart Circlet", "=ds=#s1#, #a1# =q7=#db4#" },
 		{ 22507, "INV_Shoulder_25", "=q4=Plagueheart Shoulderpads", "=ds=#s3#, #a1# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -402,6 +690,16 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47304, "INV_Boots_Fabric_01", "=q4=Plagueheart Boots", "=ds=#s12#, #a1#" },
 		{ 47305, "INV_Jewelry_Ring_51Naxxramas", "=q4=Plagueheart Signet", "=ds=#s13#" },
 	};
+	T3WarlockC = {{
+			{ 22506, "=ds=#s1#, #a1#" },{ 22507, "=ds=#s3#, #a1#" },{ 22504, "=ds=#s5#, #a1#" },
+			{ 22511, "=ds=#s8#, #a1#" },{ 22509, "=ds=#s9#, #a1#" },{ 22510, "=ds=#s10#, #a1#" },
+			{ 22505, "=ds=#s11#, #a1#" },{ 22508, "=ds=#s12#, #a1#" },{ 23063, "=ds=#s13#" }
+		},{
+			{ 47297, "=ds=#s1#, #a1#" },{ 47298, "=ds=#s3#, #a1#" },{ 47299, "=ds=#s5#, #a1#" },
+			{ 47300, "=ds=#s8#, #a1#" },{ 47301, "=ds=#s9#, #a1#" },{ 47302, "=ds=#s10#, #a1#" },
+			{ 47303, "=ds=#s11#, #a1#" },{ 47304, "=ds=#s12#, #a1#" },{ 47305, "=ds=#s13#" }
+		},
+	},
 	T3Priest = {
 		{ 22514, "INV_Crown_01", "=q4=Circlet of Faith", "=ds=#s1#, #a1# =q7=#db4#" },
 		{ 22515, "INV_Shoulder_25", "=q4=Shoulderpads of Faith", "=ds=#s3#, #a1# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -428,6 +726,16 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47226, "INV_Boots_Fabric_01", "=q4=Sandals of Faith", "=ds=#s12#, #a1#" },
 		{ 47227, "INV_Jewelry_Ring_51Naxxramas", "=q4=Ring of Faith", "=ds=#s13#" },
 	};
+	T3PriestC = {{
+			{ 22514, "=ds=#s1#, #a1#" },{ 22515, "=ds=#s3#, #a1#" },{ 22512, "=ds=#s5#, #a1#" },
+			{ 22519, "=ds=#s8#, #a1#" },{ 22517, "=ds=#s9#, #a1#" },{ 22518, "=ds=#s10#, #a1#" },
+			{ 22513, "=ds=#s11#, #a1#" },{ 22516, "=ds=#s12#, #a1#" },{ 23061, "=ds=#s13#" }
+		},{
+			{ 47219, "=ds=#s1#, #a1#" },{ 47220, "=ds=#s3#, #a1#" },{ 47221, "=ds=#s5#, #a1#" },
+			{ 47222, "=ds=#s8#, #a1#" },{ 47223, "=ds=#s9#, #a1#" },{ 47224, "=ds=#s10#, #a1#" },
+			{ 47225, "=ds=#s11#, #a1#" },{ 47226, "=ds=#s12#, #a1#" },{ 47227, "=ds=#s13#" }
+		},
+	},
 	T3Rogue = {
 		{ 22478, "INV_Helmet_58", "=q4=Bonescythe Helmet", "=ds=#s1#, #a2# =q7=#db4#" },
 		{ 22479, "INV_Shoulder_29", "=q4=Bonescythe Pauldrons", "=ds=#s3#, #a2# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -439,6 +747,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22480, "INV_Boots_Plate_06", "=q4=Bonescythe Sabatons", "=ds=#s12#, #a2# =q7=#db11#=ds=, =q7=#db12#=ds=, =q7=#db3#" },
 		{ 23060, "INV_Jewelry_Ring_51Naxxramas", "=q4=Bonescythe Ring", "=ds=#s13# =q7=#db14#" },
 	};
+	T3RogueC = {{
+			{ 22478, "=ds=#s1#, #a2#" },{ 22479, "=ds=#s3#, #a2#" },{ 22476, "=ds=#s5#, #a2#" },
+			{ 22483, "=ds=#s8#, #a2#" },{ 22481, "=ds=#s9#, #a2#" },{ 22482, "=ds=#s10#, #a2#" },
+			{ 22477, "=ds=#s11#, #a2#" },{ 22480, "=ds=#s12#, #a2#" },{ 23060, "=ds=#s13#" }
+		},
+	},
 	T3Druid = {
 		{ 22490, "INV_Helmet_15", "=q4=Dreamwalker Headpiece", "=ds=#s1#, #a2# =q7=#db4#" },
 		{ 22491, "INV_Shoulder_14", "=q4=Dreamwalker Spaulders", "=ds=#s3#, #a2# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -470,6 +784,20 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47388, "INV_Boots_Chain_05", "=q4=Dreamwalker Treads", "=ds=#s12#, #a2#" },
 		{ 47389, "INV_Jewelry_Ring_51Naxxramas", "=q4=Band of the Dreamwalker", "=ds=#s13#" },
 	};
+	T3DruidC = {{
+			{ 22490, "=ds=#s1#, #a2#" },{ 22491, "=ds=#s3#, #a2#" },{ 22488, "=ds=#s5#, #a2#" },
+			{ 22495, "=ds=#s8#, #a2#" },{ 22493, "=ds=#s9#, #a2#" },{ 22494, "=ds=#s10#, #a2#" },
+			{ 22489, "=ds=#s11#, #a2#" },{ 22492, "=ds=#s12#, #a2#" },{ 23064, "=ds=#s13#" }
+		},{
+			{ 47372, "=ds=#s1#, #a2#" },{ 47373, "=ds=#s3#, #a2#" },{ 47374, "=ds=#s5#, #a2#" },
+			{ 47375, "=ds=#s8#, #a2#" },{ 47376, "=ds=#s9#, #a2#" },{ 47377, "=ds=#s10#, #a2#" },
+			{ 47378, "=ds=#s11#, #a2#" },{ 47379, "=ds=#s12#, #a2#" },{ 47380, "=ds=#s13#" }
+		},{
+			{ 47381, "=ds=#s1#, #a2#" },{ 47382, "=ds=#s3#, #a2#" },{ 47383, "=ds=#s5#, #a2#" },
+			{ 47384, "=ds=#s8#, #a2#" },{ 47385, "=ds=#s9#, #a2#" },{ 47386, "=ds=#s10#, #a2#" },
+			{ 47387, "=ds=#s11#, #a2#" },{ 47388, "=ds=#s12#, #a2#" },{ 47389, "=ds=#s13#" }
+		},
+	},
 	T3Hunter = {
 		{ 22438, "INV_Helmet_15", "=q4=Cryptstalker Headpiece", "=ds=#s1#, #a3# =q7=#db4#" },
 		{ 22439, "INV_Shoulder_14", "=q4=Cryptstalker Spaulders", "=ds=#s3#, #a3# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -481,6 +809,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22440, "INV_Boots_Chain_05", "=q4=Cryptstalker Boots", "=ds=#s12#, #a3# =q7=#db11#=ds=, =q7=#db12#=ds=, =q7=#db3#" },
 		{ 23067, "INV_Jewelry_Ring_51Naxxramas", "=q4=Ring of the Cryptstalker", "=ds=#s13# =q7=#db14#" },
 	};
+	T3HunterC = {{
+			{ 22438, "=ds=#s1#, #a3#" },{ 22439, "=ds=#s3#, #a3#" },{ 22436, "=ds=#s5#, #a3#" },
+			{ 22443, "=ds=#s8#, #a3#" },{ 22441, "=ds=#s9#, #a3#" },{ 22442, "=ds=#s10#, #a3#" },
+			{ 22437, "=ds=#s11#, #a3#" },{ 22440, "=ds=#s12#, #a3#" },{ 23067, "=ds=#s13#" }
+		},
+	},
 	T3Shaman = {
 		{ 22466, "INV_Helmet_15", "=q4=Earthshatter Headpiece", "=ds=#s1#, #a3# =q7=#db4#" },
 		{ 22467, "INV_Shoulder_14", "=q4=Earthshatter Spaulders", "=ds=#s3#, #a3# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -512,6 +846,20 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47178, "INV_Boots_Chain_05", "=q4=Earthshatter Greaves", "=ds=#s12#, #a3#" },
 		{ 47179, "INV_Jewelry_Ring_51Naxxramas", "=q4=Loop of the Earthshatterer", "=ds=#s13#" },
 	};
+	T3ShamanC = {{
+			{ 22466, "=ds=#s1#, #a3#" },{ 22467, "=ds=#s3#, #a3#" },{ 22464, "=ds=#s5#, #a3#" },
+			{ 22471, "=ds=#s8#, #a3#" },{ 22469, "=ds=#s9#, #a3#" },{ 22470, "=ds=#s10#, #a3#" },
+			{ 22465, "=ds=#s11#, #a3#" },{ 22468, "=ds=#s12#, #a3#" },{ 23065, "=ds=#s13#" }
+		},{
+			{ 47162, "=ds=#s1#, #a3#" },{ 47163, "=ds=#s3#, #a3#" },{ 47164, "=ds=#s5#, #a3#" },
+			{ 47165, "=ds=#s8#, #a3#" },{ 47166, "=ds=#s9#, #a3#" },{ 47167, "=ds=#s10#, #a3#" },
+			{ 47168, "=ds=#s11#, #a3#" },{ 47169, "=ds=#s12#, #a3#" },{ 47170, "=ds=#s13#" }
+		},{
+			{ 47171, "=ds=#s1#, #a3#" },{ 47172, "=ds=#s3#, #a3#" },{ 47173, "=ds=#s5#, #a3#" },
+			{ 47174, "=ds=#s8#, #a3#" },{ 47175, "=ds=#s9#, #a3#" },{ 47176, "=ds=#s10#, #a3#" },
+			{ 47177, "=ds=#s11#, #a3#" },{ 47178, "=ds=#s12#, #a3#" },{ 47179, "=ds=#s13#" }
+		},
+	},
 	T3Paladin = {
 		{ 22428, "INV_Helmet_15", "=q4=Redemption Helm", "=ds=#s1#, #a4# =q7=#db4#" },
 		{ 22429, "INV_Shoulder_14", "=q4=Redemption Spaulders", "=ds=#s3#, #a4# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -543,6 +891,20 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47058, "INV_Boots_Chain_05", "=q4=Redemption Sabatons", "=ds=#s12#, #a4#" },
 		{ 47059, "INV_Jewelry_Ring_51Naxxramas", "=q4=Band of Redemption", "=ds=#s13#" },
 	};
+	T3PaladinC = {{
+			{ 22428, "=ds=#s1#, #a4#" },{ 22429, "=ds=#s3#, #a4#" },{ 22425, "=ds=#s5#, #a4#" },
+			{ 22424, "=ds=#s8#, #a4#" },{ 22426, "=ds=#s9#, #a4#" },{ 22431, "=ds=#s10#, #a4#" },
+			{ 22427, "=ds=#s11#, #a4#" },{ 22430, "=ds=#s12#, #a4#" },{ 23066, "=ds=#s13#" }
+		},{
+			{ 47042, "=ds=#s1#, #a4#" },{ 47043, "=ds=#s3#, #a4#" },{ 47044, "=ds=#s5#, #a4#" },
+			{ 47045, "=ds=#s8#, #a4#" },{ 47046, "=ds=#s9#, #a4#" },{ 47047, "=ds=#s10#, #a4#" },
+			{ 47048, "=ds=#s11#, #a4#" },{ 47049, "=ds=#s12#, #a4#" },{ 47050, "=ds=#s13#" }
+		},{
+			{ 47051, "=ds=#s1#, #a4#" },{ 47052, "=ds=#s3#, #a4#" },{ 47053, "=ds=#s5#, #a4#" },
+			{ 47054, "=ds=#s8#, #a4#" },{ 47055, "=ds=#s9#, #a4#" },{ 47056, "=ds=#s10#, #a4#" },
+			{ 47057, "=ds=#s11#, #a4#" },{ 47058, "=ds=#s12#, #a4#" },{ 47059, "=ds=#s13#" },
+		}
+	},
 	T3Warrior = {
 		{ 22418, "INV_Helmet_58", "=q4=Dreadnaught Helmet", "=ds=#s1#, #a4# =q7=#db4#" },
 		{ 22419, "INV_Shoulder_29", "=q4=Dreadnaught Pauldrons", "=ds=#s3#, #a4# =q7=#db1#=ds=, =q7=#db2#=ds=, =q7=#db3#" },
@@ -569,6 +931,16 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47268, "INV_Boots_Plate_06", "=q4=Dreadnaught Sabatons", "=ds=#s12#, #a4#" },
 		{ 47269, "INV_Jewelry_Ring_51Naxxramas", "=q4=Ring of the Dreadnaught", "=ds=#s13#" },
 	};
+	T3WarriorC = {{
+			{ 22418, "=ds=#s1#, #a4#" },{ 22419, "=ds=#s3#, #a4#" },{ 22416, "=ds=#s5#, #a4#" },
+			{ 22423, "=ds=#s8#, #a4#" },{ 22421, "=ds=#s9#, #a4#" },{ 22422, "=ds=#s10#, #a4#" },
+			{ 22417, "=ds=#s11#, #a4#" },{ 22420, "=ds=#s12#, #a4#" },{ 23059, "=ds=#s13#" }
+		},{
+			{ 47261, "=ds=#s1#, #a4#" },{ 47262, "=ds=#s3#, #a4#" },{ 47263, "=ds=#s5#, #a4#" },
+			{ 47264, "=ds=#s8#, #a4#" },{ 47265, "=ds=#s9#, #a4#" },{ 47266, "=ds=#s10#, #a4#" },
+			{ 47267, "=ds=#s11#, #a4#" },{ 47268, "=ds=#s12#, #a4#" },{ 47269, "=ds=#s13#" }
+		},
+	},
 	T2Mage = {
 		{ 16914, "INV_Helmet_70", "=q4=Netherwind Crown", "=ds=#s1#, #a1# =q7=#db15#" },
 		{ 16917, "INV_Shoulder_32", "=q4=Netherwind Mantle", "=ds=#s3#, #a1# =q7=#db23#" },
@@ -593,15 +965,27 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47091, "INV_Belt_22", "=q4=Netherwind Cord", "=ds=#s10#, #a1#" },
 		{ 47092, "INV_Pants_08", "=q4=Netherwind Trousers", "=ds=#s11#, #a1#" },
 		{ 47093, "INV_Boots_07", "=q4=Netherwind Slippers", "=ds=#s12#, #a1#" },
-		--[[{ 70613, "INV_Helmet_70", "=q4=Netherwind Coronet", "=ds=#s1#, #a1#" },
-		{ 70614, "INV_Shoulder_32", "=q4=Netherwind Shoulderpads", "=ds=#s3#, #a1#" },
-		{ 70615, "INV_Chest_Cloth_03", "=q4=Netherwind Raiments", "=ds=#s5#, #a1#" },
-		{ 70616, "INV_Bracer_09", "=q4=Netherwind Bracers", "=ds=#s8#, #a1#" },
-		{ 70617, "INV_Gauntlets_14", "=q4=Netherwind Handguards", "=ds=#s9#, #a1#" },
-		{ 70618, "INV_Belt_22", "=q4=Netherwind Sash", "=ds=#s10#, #a1#" },
-		{ 70619, "INV_Pants_08", "=q4=Netherwind Pants", "=ds=#s11#, #a1#" },
-		{ 70620, "INV_Boots_07", "=q4=Netherwind Sandals", "=ds=#s12#, #a1#" },]]
 	};
+	T2MageC = {{
+			{ 16914, "=ds=#s1#, #a1# =q7=#db15#" },
+			{ 16917, "=ds=#s3#, #a1# =q7=#db23#" },
+			{ 16916, "=ds=#s5#, #a1# =q7=#db24#" },
+			{ 16918, "=ds=#s8#, #a1# =q7=#db17#" },
+			{ 16913, "=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16818, "=ds=#s10#, #a1# =q7=#db18#" },
+			{ 16915, "=ds=#s11#, #a1# =q7=#db16#" },
+			{ 16912, "=ds=#s12#, #a1# =q7=#db19#" },
+		},{
+			{ 47086, "=ds=#s1#, #a1#" },
+			{ 47087, "=ds=#s3#, #a1#" },
+			{ 47088, "=ds=#s5#, #a1#" },
+			{ 47089, "=ds=#s8#, #a1#" },
+			{ 47090, "=ds=#s9#, #a1#" },
+			{ 47091, "=ds=#s10#, #a1#" },
+			{ 47092, "=ds=#s11#, #a1#" },
+			{ 47093, "=ds=#s12#, #a1#" },
+		}
+	},
 	T2Priest = {
 		{ 16921, "INV_Helmet_24", "=q4=Halo of Transcendence", "=ds=#s1#, #a1# =q7=#db15#" },
 		{ 16924, "INV_Shoulder_02", "=q4=Pauldrons of Transcendence", "=ds=#s3#, #a1# =q7=#db23#" },
@@ -627,6 +1011,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47212, "INV_Pants_08", "=q4=Pants of Transcendence", "=ds=#s11#, #a1#" },
 		{ 47213, "INV_Boots_07", "=q4=Sandals of Transcendence", "=ds=#s12#, #a1#" },
 	};
+	T2PriestC = {{
+			{ 16921, "=ds=#s1#, #a1# =q7=#db15#" },
+			{ 16924, "=ds=#s3#, #a1# =q7=#db23#" },
+			{ 16923, "=ds=#s5#, #a1# =q7=#db24#" },
+			{ 16926, "=ds=#s8#, #a1# =q7=#db17#" },
+			{ 16920, "=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16925, "=ds=#s10#, #a1# =q7=#db18#" },
+			{ 16922, "=ds=#s11#, #a1# =q7=#db16#" },
+			{ 16919, "=ds=#s12#, #a1# =q7=#db19#" },
+		},{
+			{ 47206, "=ds=#s1#, #a1#" },
+			{ 47207, "=ds=#s3#, #a1#" },
+			{ 47208, "=ds=#s5#, #a1#" },
+			{ 47209, "=ds=#s8#, #a1#" },
+			{ 47210, "=ds=#s9#, #a1#" },
+			{ 47211, "=ds=#s10#, #a1#" },
+			{ 47212, "=ds=#s11#, #a1#" },
+			{ 47213, "=ds=#s12#, #a1#" },
+		}
+	},
 	T2Warlock = {
 		{ 16929, "INV_Helmet_08", "=q4=Nemesis Skullcap", "=ds=#s1#, #a1# =q7=#db15#" },
 		{ 16932, "INV_Shoulder_19", "=q4=Nemesis Spaulders", "=ds=#s3#, #a1# =q7=#db23#" },
@@ -652,6 +1056,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47290, "INV_Pants_07", "=q4=Nemesis Leggings", "=ds=#s11#, #a1#" },
 		{ 47291, "INV_Boots_05", "=q4=Nemesis Slippers", "=ds=#s12#, #a1#" },
 	};
+	T2WarlockC = {{
+			{ 16929, "=ds=#s1#, #a1# =q7=#db15#" },
+			{ 16932, "=ds=#s3#, #a1# =q7=#db23#" },
+			{ 16931, "=ds=#s5#, #a1# =q7=#db24#" },
+			{ 16934, "=ds=#s8#, #a1# =q7=#db17#" },
+			{ 16928, "=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16933, "=ds=#s10#, #a1# =q7=#db18#" },
+			{ 16930, "=ds=#s11#, #a1# =q7=#db16#" },
+			{ 16927, "=ds=#s12#, #a1# =q7=#db19#" },
+		},{
+			{ 47284, "=ds=#s1#, #a1#" },
+			{ 47285, "=ds=#s3#, #a1#" },
+			{ 47286, "=ds=#s5#, #a1#" },
+			{ 47287, "=ds=#s8#, #a1#" },
+			{ 47288, "=ds=#s9#, #a1#" },
+			{ 47289, "=ds=#s10#, #a1#" },
+			{ 47290, "=ds=#s11#, #a1#" },
+			{ 47291, "=ds=#s12#, #a1#" },
+		}
+	},
 	T2Rogue = {
 		{ 16908, "INV_Helmet_41", "=q4=Bloodfang Hood", "=ds=#s1#, #a2# =q7=#db15#" },
 		{ 16832, "INV_Shoulder_23", "=q4=Bloodfang Spaulders", "=ds=#s3#, #a2# =q7=#db23#" },
@@ -662,6 +1086,17 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 16909, "INV_Pants_06", "=q4=Bloodfang Pants", "=ds=#s11#, #a2# =q7=#db16#" },
 		{ 16906, "INV_Boots_08", "=q4=Bloodfang Boots", "=ds=#s12#, #a2# =q7=#db19#" },
 	};
+	T2RogueC = {{
+			{ 16908, "=ds=#s1#, #a2# =q7=#db15#" },
+			{ 16832, "=ds=#s3#, #a2# =q7=#db23#" },
+			{ 16905, "=ds=#s5#, #a2# =q7=#db24#" },
+			{ 16911, "=ds=#s8#, #a2# =q7=#db17#" },
+			{ 16907, "=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16910, "=ds=#s10#, #a2# =q7=#db18#" },
+			{ 16909, "=ds=#s11#, #a2# =q7=#db16#" },
+			{ 16906, "=ds=#s12#, #a2# =q7=#db19#" },
+		}
+	},
 	T2Druid = {
 		{ 16900, "INV_Helmet_09", "=q4=Stormrage Cover", "=ds=#s1#, #a2# =q7=#db15#" },
 		{ 16902, "INV_Shoulder_07", "=q4=Stormrage Pauldrons", "=ds=#s3#, #a2# =q7=#db23#" },
@@ -690,6 +1125,35 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47360, "INV_Pants_06", "=q4=Stormrage Pants", "=ds=#s11#, #a2#" },
 		{ 47361, "INV_Boots_08", "=q4=Stormrage Treads", "=ds=#s12#, #a2#" },
 	};
+	T2DruidC = {{
+			{ 16900, "=ds=#s1#, #a2# =q7=#db15#" },
+			{ 16902, "=ds=#s3#, #a2# =q7=#db23#" },
+			{ 16897, "=ds=#s5#, #a2# =q7=#db24#" },
+			{ 16904, "=ds=#s8#, #a2# =q7=#db17#" },
+			{ 16899, "=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16903, "=ds=#s10#, #a2# =q7=#db18#" },
+			{ 16901, "=ds=#s11#, #a2# =q7=#db16#" },
+			{ 16898, "=ds=#s12#, #a2# =q7=#db19#" },
+		},{
+			{ 47346, "=ds=#s1#, #a2#" },
+			{ 47347, "=ds=#s3#, #a2#" },
+			{ 47348, "=ds=#s5#, #a2#" },
+			{ 47349, "=ds=#s8#, #a2#" },
+			{ 47350, "=ds=#s9#, #a2#" },
+			{ 47351, "=ds=#s10#, #a2#" },
+			{ 47352, "=ds=#s11#, #a2#" },
+			{ 47353, "=ds=#s12#, #a2#" },
+		},{
+			{ 47354, "=ds=#s1#, #a2#" },
+			{ 47355, "=ds=#s3#, #a2#" },
+			{ 47356, "=ds=#s5#, #a2#" },
+			{ 47357, "=ds=#s8#, #a2#" },
+			{ 47358, "=ds=#s9#, #a2#" },
+			{ 47359, "=ds=#s10#, #a2#" },
+			{ 47360, "=ds=#s11#, #a2#" },
+			{ 47361, "=ds=#s12#, #a2#" },
+		}
+	},
 	T2Shaman = {
 		{ 16947, "INV_Helmet_69", "=q4=Helmet of Ten Storms", "=ds=#s1#, #a3# =q7=#db15#" },
 		{ 16945, "INV_Shoulder_33", "=q4=Epaulets of Ten Storms", "=ds=#s3#, #a3# =q7=#db23#" },
@@ -718,6 +1182,35 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47150, "INV_Pants_03", "=q4=Pants of Ten Storms", "=ds=#s11#, #a3#" },
 		{ 47151, "INV_Boots_Plate_06", "=q4=Boots of Ten Storms", "=ds=#s12#, #a3#" },
 	};
+	T2ShamanC = {{
+			{ 16947, "=ds=#s1#, #a3# =q7=#db15#" },
+			{ 16945, "=ds=#s3#, #a3# =q7=#db23#" },
+			{ 16950, "=ds=#s5#, #a3# =q7=#db24#" },
+			{ 16943, "=ds=#s8#, #a3# =q7=#db17#" },
+			{ 16948, "=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16944, "=ds=#s10#, #a3# =q7=#db18#" },
+			{ 16946, "=ds=#s11#, #a3# =q7=#db16#" },
+			{ 16949, "=ds=#s12#, #a3# =q7=#db19#" },
+		},{
+			{ 47136, "=ds=#s1#, #a3#" },
+			{ 47137, "=ds=#s3#, #a3#" },
+			{ 47138, "=ds=#s5#, #a3#" },
+			{ 47139, "=ds=#s8#, #a3#" },
+			{ 47140, "=ds=#s9#, #a3#" },
+			{ 47141, "=ds=#s10#, #a3#" },
+			{ 47142, "=ds=#s11#, #a3#" },
+			{ 47143, "=ds=#s12#, #a3#" },
+		},{
+			{ 47144, "=ds=#s1#, #a3#" },
+			{ 47145, "=ds=#s3#, #a3#" },
+			{ 47146, "=ds=#s5#, #a3#" },
+			{ 47147, "=ds=#s8#, #a3#" },
+			{ 47148, "=ds=#s9#, #a3#" },
+			{ 47149, "=ds=#s10#, #a3#" },
+			{ 47150, "=ds=#s11#, #a3#" },
+			{ 47151, "=ds=#s12#, #a3#" },
+		}
+	},
 	T2Hunter = {
 		{ 16939, "INV_Helmet_05", "=q4=Dragonstalker's Helm", "=ds=#s1#, #a3# =q7=#db15#" },
 		{ 16937, "INV_Shoulder_10", "=q4=Dragonstalker's Spaulders", "=ds=#s3#, #a3# =q7=#db23#" },
@@ -728,6 +1221,17 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 16938, "INV_Pants_03", "=q4=Dragonstalker's Legguards", "=ds=#s11#, #a3# =q7=#db16#" },
 		{ 16941, "INV_Boots_Plate_07", "=q4=Dragonstalker's Greaves", "=ds=#s12#, #a3# =q7=#db19#" },
 	};
+	T2HunterC = {{
+			{ 16939, "=ds=#s1#, #a3# =q7=#db15#" },
+			{ 16937, "=ds=#s3#, #a3# =q7=#db23#" },
+			{ 16942, "=ds=#s5#, #a3# =q7=#db24#" },
+			{ 16935, "=ds=#s8#, #a3# =q7=#db17#" },
+			{ 16940, "=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16936, "=ds=#s10#, #a3# =q7=#db18#" },
+			{ 16938, "=ds=#s11#, #a3# =q7=#db16#" },
+			{ 16941, "=ds=#s12#, #a3# =q7=#db19#" },
+		}
+	},
 	T2Warrior = {
 		{ 16963, "INV_Helmet_71", "=q4=Helm of Wrath", "=ds=#s1#, #a4# =q7=#db15#" },
 		{ 16961, "INV_Shoulder_34", "=q4=Pauldrons of Wrath", "=ds=#s3#, #a4# =q7=#db23#" },
@@ -753,6 +1257,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47254, "INV_Pants_04", "=q4=Leggings of Wrath", "=ds=#s11#, #a4#" },
 		{ 47255, "INV_Boots_Plate_04", "=q4=Sabatons of Wrath", "=ds=#s12#, #a4#" },
 	};
+	T2WarriorC = {{
+			{ 16963, "=ds=#s1#, #a4# =q7=#db15#" },
+			{ 16961, "=ds=#s3#, #a4# =q7=#db23#" },
+			{ 16966, "=ds=#s5#, #a4# =q7=#db24#" },
+			{ 16959, "=ds=#s8#, #a4# =q7=#db17#" },
+			{ 16964, "=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16960, "=ds=#s10#, #a4# =q7=#db18#" },
+			{ 16962, "=ds=#s11#, #a4# =q7=#db16#" },
+			{ 16965, "=ds=#s12#, #a4# =q7=#db19#" },
+		},{
+			{ 47248, "=ds=#s1#, #a4#" },
+			{ 47249, "=ds=#s3#, #a4#" },
+			{ 47250, "=ds=#s5#, #a4#" },
+			{ 47251, "=ds=#s8#, #a4#" },
+			{ 47252, "=ds=#s9#, #a4#" },
+			{ 47253, "=ds=#s10#, #a4#" },
+			{ 47254, "=ds=#s11#, #a4#" },
+			{ 47255, "=ds=#s12#, #a4#" },
+		}
+	},
 	T2Paladin = {
 		{ 16955, "INV_Helmet_74", "=q4=Judgement Crown", "=ds=#s1#, #a4# =q7=#db15#" },
 		{ 16953, "INV_Shoulder_37", "=q4=Judgement Spaulders", "=ds=#s3#, #a4# =q7=#db23#" },
@@ -781,6 +1305,35 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47030, "INV_Pants_04", "=q4=Judgement Leggings", "=ds=#s11#, #a4#" },
 		{ 47031, "INV_Boots_Plate_09", "=q4=Judgement Sabatons", "=ds=#s12#, #a4#" },
 	};
+	T2PaladinC = {{
+			{ 16955, "=ds=#s1#, #a4# =q7=#db15#" },
+			{ 16953, "=ds=#s3#, #a4# =q7=#db23#" },
+			{ 16958, "=ds=#s5#, #a4# =q7=#db24#" },
+			{ 16951, "=ds=#s8#, #a4# =q7=#db17#" },
+			{ 16956, "=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#" },
+			{ 16952, "=ds=#s10#, #a4# =q7=#db18#" },
+			{ 16954, "=ds=#s11#, #a4# =q7=#db16#" },
+			{ 16957, "=ds=#s12#, #a4# =q7=#db19#" },
+		},{
+			{ 47016, "=ds=#s1#, #a4#" },
+			{ 47017, "=ds=#s3#, #a4#" },
+			{ 47018, "=ds=#s5#, #a4#" },
+			{ 47019, "=ds=#s8#, #a4#" },
+			{ 47020, "=ds=#s9#, #a4#" },
+			{ 47021, "=ds=#s10#, #a4#" },
+			{ 47022, "=ds=#s11#, #a4#" },
+			{ 47023, "=ds=#s12#, #a4#" },
+		},{
+			{ 47024, "=ds=#s1#, #a4#" },
+			{ 47025, "=ds=#s3#, #a4#" },
+			{ 47026, "=ds=#s5#, #a4#" },
+			{ 47027, "=ds=#s8#, #a4#" },
+			{ 47028, "=ds=#s9#, #a4#" },
+			{ 47029, "=ds=#s10#, #a4#" },
+			{ 47030, "=ds=#s11#, #a4#" },
+			{ 47031, "=ds=#s12#, #a4#" },
+		}
+	},
 	T1Mage = {
 		{ 16795, "INV_Helmet_53", "=q4=Arcanist Crown", "=ds=#s1#, #a1# =q7=#db28#" },
 		{ 16797, "INV_Shoulder_02", "=q4=Arcanist Mantle", "=ds=#s3#, #a1# =q7=#db29#" },
@@ -806,6 +1359,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47084, "INV_Pants_08", "=q4=Arcanist Trousers", "=ds=#s11#, #a1#" },
 		{ 47085, "INV_Boots_07", "=q4=Arcanist Slippers", "=ds=#s12#, #a1#" },
 	};
+	T1MageC = {{
+			{ 16795, "=ds=#s1#, #a1# =q7=#db28#" },
+			{ 16797, "=ds=#s3#, #a1# =q7=#db29#" },
+			{ 16798, "=ds=#s5#, #a1# =q7=#db32#" },
+			{ 16799, "=ds=#s8#, #a1# =q7=#x34# #z1#" },
+			{ 16801, "=ds=#s10#, #a1# =q7=#db30#" },
+			{ 16802, "=ds=#s10#, #a1# =q7=#x34# #z1#" },
+			{ 16796, "=ds=#s11#, #a1# =q7=#db26#" },
+			{ 16800, "=ds=#s12#, #a1# =q7=#db25#" },
+		},{
+			{ 47078, "=ds=#s1#, #a1#" },
+			{ 47079, "=ds=#s3#, #a1#" },
+			{ 47080, "=ds=#s5#, #a1#" },
+			{ 47081, "=ds=#s8#, #a1#" },
+			{ 47082, "=ds=#s9#, #a1#" },
+			{ 47083, "=ds=#s10#, #a1#" },
+			{ 47084, "=ds=#s11#, #a1#" },
+			{ 47085, "=ds=#s12#, #a1#" },	
+		}
+	},
 	T1Priest = {
 		{ 16813, "INV_Helmet_34", "=q4=Circlet of Prophecy", "=ds=#s1#, #a1# =q7=#db28#" },
 		{ 16816, "INV_Shoulder_02", "=q4=Mantle of Prophecy", "=ds=#s3#, #a1# =q7=#db31#" },
@@ -831,6 +1404,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47204, "INV_Pants_08", "=q4=Pants of Prophecy", "=ds=#s11#, #a1#" },
 		{ 47205, "INV_Boots_07", "=q4=Sandals of Prophecy", "=ds=#s12#, #a1#" },
 	};
+	T1PriestC = {{
+			{ 16813, "=ds=#s1#, #a1# =q7=#db28#" },
+			{ 16816, "=ds=#s3#, #a1# =q7=#db31#" },
+			{ 16815, "=ds=#s5#, #a1# =q7=#db32#" },
+			{ 16819, "=ds=#s8#, #a1# =q7=#x34# #z1#" },
+			{ 16812, "=ds=#s9#, #a1# =q7=#db27#" },
+			{ 16817, "=ds=#s10#, #a1# =q7=#x34# #z1#" },
+			{ 16814, "=ds=#s11#, #a1# =q7=#db26#" },
+			{ 16811, "=ds=#s12#, #a1# =q7=#db30#" },
+		},{
+			{ 47198, "=ds=#s1#, #a1#" },
+			{ 47199, "=ds=#s3#, #a1#" },
+			{ 47200, "=ds=#s5#, #a1#" },
+			{ 47201, "=ds=#s8#, #a1#" },
+			{ 47202, "=ds=#s9#, #a1#" },
+			{ 47203, "=ds=#s10#, #a1#" },
+			{ 47204, "=ds=#s11#, #a1#" },
+			{ 47205, "=ds=#s12#, #a1#" },
+		}
+	},
 	T1Warlock = {
 		{ 16808, "INV_Helmet_08", "=q4=Felheart Horns", "=ds=#s1#, #a1# =q7=#db28#" },
 		{ 16807, "INV_Shoulder_23", "=q4=Felheart Shoulder Pads", "=ds=#s3#, #a1# =q7=#db29#" },
@@ -856,6 +1449,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47282, "INV_Pants_Cloth_14", "=q4=Felheart Leggings", "=ds=#s11#, #a1#" },
 		{ 47283, "INV_Boots_Cloth_05", "=q4=Felheart Boots", "=ds=#s12#, #a1#" },
 	};
+	T1WarlockC = {{
+			{ 16808, "=ds=#s1#, #a1# =q7=#db28#" },
+			{ 16807, "=ds=#s3#, #a1# =q7=#db29#" },
+			{ 16809, "=ds=#s5#, #a1# =q7=#db32#" },
+			{ 16804, "=ds=#s8#, #a1# =q7=#x34# #z1#" },
+			{ 16805, "=ds=#s9#, #a1# =q7=#db25#" },
+			{ 16806, "=ds=#s10#, #a1# =q7=#x34# #z1#" },
+			{ 16810, "=ds=#s11#, #a1# =q7=#db26#" },
+			{ 16803, "=ds=#s12#, #a1# =q7=#db30#" },
+		},{
+			{ 47276, "=ds=#s1#, #a1#" },
+			{ 47277, "=ds=#s3#, #a1#" },
+			{ 47278, "=ds=#s5#, #a1#" },
+			{ 47279, "=ds=#s8#, #a1#" },
+			{ 47280, "=ds=#s9#, #a1#" },
+			{ 47281, "=ds=#s10#, #a1#" },
+			{ 47282, "=ds=#s11#, #a1#" },
+			{ 47283, "=ds=#s12#, #a1#" },
+		}
+	},
 	T1Rogue = {
 		{ 16821, "INV_Helmet_41", "=q4=Nightslayer Cover", "=ds=#s1#, #a2# =q7=#db28#" },
 		{ 16823, "INV_Shoulder_25", "=q4=Nightslayer Shoulder Pads", "=ds=#s3#, #a2# =q7=#db31#" },
@@ -866,6 +1479,17 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 16822, "INV_Pants_06", "=q4=Nightslayer Pants", "=ds=#s11#, #a2# =q7=#db26#" },
 		{ 16824, "INV_Boots_08", "=q4=Nightslayer Boots", "=ds=#s12#, #a2# =q7=#db30#" },
 	};
+	T1RogueC = {{
+			{ 16821, "=ds=#s1#, #a2# =q7=#db28#" },
+			{ 16823, "=ds=#s3#, #a2# =q7=#db31#" },
+			{ 16820, "=ds=#s5#, #a2# =q7=#db32#" },
+			{ 16825, "=ds=#s8#, #a2# =q7=#x34# #z1#" },
+			{ 16826, "=ds=#s9#, #a2# =q7=#db27#" },
+			{ 16827, "=ds=#s10#, #a2# =q7=#x34# #z1#" },
+			{ 16822, "=ds=#s11#, #a2# =q7=#db26#" },
+			{ 16824, "=ds=#s12#, #a2# =q7=#db30#" },
+		}
+	},
 	T1Druid = {
 		{ 16834, "INV_Helmet_09", "=q4=Cenarion Helm", "=ds=#s1#, #a2# =q7=#db28#" },
 		{ 16836, "INV_Shoulder_07", "=q4=Cenarion Spaulders", "=ds=#s3#, #a2# =q7=#db29#" },
@@ -894,6 +1518,35 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47344, "INV_Pants_06", "=q4=Cenarion Pants", "=ds=#s11#, #a2#" },
 		{ 47345, "INV_Boots_08", "=q4=Cenarion Treads", "=ds=#s12#, #a2#" },
 	};
+	T1DruidC = {{
+			{ 16834, "=ds=#s1#, #a2# =q7=#db28#" },
+			{ 16836, "=ds=#s3#, #a2# =q7=#db29#" },
+			{ 16833, "=ds=#s5#, #a2# =q7=#db32#" },
+			{ 16830, "=ds=#s8#, #a2# =q7=#x34# #z1#" },
+			{ 16831, "=ds=#s9#, #a2# =q7=#db30#" },
+			{ 16828, "=ds=#s10#, #a2# =q7=#x34# #z1#" },
+			{ 16835, "=ds=#s11#, #a2# =q7=#db26#" },
+			{ 16829, "=ds=#s12#, #a2# =q7=#db25#" },
+		},{
+			{ 47330, "=ds=#s1#, #a2#" },
+			{ 47331, "=ds=#s3#, #a2#" },
+			{ 47332, "=ds=#s5#, #a2#" },
+			{ 47333, "=ds=#s8#, #a2#" },
+			{ 47334, "=ds=#s9#, #a2#" },
+			{ 47335, "=ds=#s10#, #a2#" },
+			{ 47336, "=ds=#s11#, #a2#" },
+			{ 47337, "=ds=#s12#, #a2#" },
+		},{
+			{ 47338, "=ds=#s1#, #a2#" },
+			{ 47339, "=ds=#s3#, #a2#" },
+			{ 47340, "=ds=#s5#, #a2#" },
+			{ 47341, "=ds=#s8#, #a2#" },
+			{ 47342, "=ds=#s9#, #a2#" },
+			{ 47343, "=ds=#s10#, #a2#" },
+			{ 47344, "=ds=#s11#, #a2#" },
+			{ 47345, "=ds=#s12#, #a2#" },
+		}
+	},
 	T1Shaman = {
 		{ 16842, "INV_Helmet_09", "=q4=Earthfury Helmet", "=ds=#s1#, #a3# =q7=#db28#" },
 		{ 16844, "INV_Shoulder_29", "=q4=Earthfury Epaulets", "=ds=#s3#, #a3# =q7=#db29#" },
@@ -922,6 +1575,35 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47134, "INV_Pants_03", "=q4=Earthfury Legplates", "=ds=#s11#, #a3#" },
 		{ 47135, "INV_Boots_Plate_06", "=q4=Earthfury Greaves", "=ds=#s12#, #a3#" },
 	};
+	T1ShamanC = {{
+			{ 16842, "=ds=#s1#, #a3# =q7=#db28#" },
+			{ 16844, "=ds=#s3#, #a3# =q7=#db29#" },
+			{ 16841, "=ds=#s5#, #a3# =q7=#db32#" },
+			{ 16840, "=ds=#s8#, #a3# =q7=#x34# #z1#" },
+			{ 16839, "=ds=#s9#, #a3# =q7=#db27#" },
+			{ 16838, "=ds=#s10#, #a3# =q7=#x34# #z1#" },
+			{ 16843, "=ds=#s11#, #a3# =q7=#db26#" },
+			{ 16837, "=ds=#s12#, #a3# =q7=#db25#" },
+		},{
+			{ 47120, "=ds=#s1#, #a3#" },
+			{ 47121, "=ds=#s3#, #a3#" },
+			{ 47122, "=ds=#s5#, #a3#" },
+			{ 47123, "=ds=#s8#, #a3#" },
+			{ 47124, "=ds=#s9#, #a3#" },
+			{ 47125, "=ds=#s10#, #a3#" },
+			{ 47126, "=ds=#s11#, #a3#" },
+			{ 47127, "=ds=#s12#, #a3#" },
+		},{
+			{ 47128, "=ds=#s1#, #a3#" },
+			{ 47129, "=ds=#s3#, #a3#" },
+			{ 47130, "=ds=#s5#, #a3#" },
+			{ 47131, "=ds=#s8#, #a3#" },
+			{ 47132, "=ds=#s9#, #a3#" },
+			{ 47133, "=ds=#s10#, #a3#" },
+			{ 47134, "=ds=#s11#, #a3#" },
+			{ 47135, "=ds=#s12#, #a3#" },
+		}
+	},
 	T1Hunter = {
 		{ 16846, "INV_Helmet_05", "=q4=Giantstalker's Helmet", "=ds=#s1#, #a3# =q7=#db28#" },
 		{ 16848, "INV_Shoulder_10", "=q4=Giantstalker's Epaulets", "=ds=#s3#, #a3# =q7=#db31#" },
@@ -932,6 +1614,17 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 16847, "INV_Pants_Mail_03", "=q4=Giantstalker's Leggings", "=ds=#s11#, #a3# =q7=#db26#" },
 		{ 16849, "INV_Boots_Chain_13", "=q4=Giantstalker's Boots", "=ds=#s12#, #a3# =q7=#db27#" },
 	};
+	T1HunterC = {{
+			{ 16846, "=ds=#s1#, #a3# =q7=#db28#" },
+			{ 16848, "=ds=#s3#, #a3# =q7=#db31#" },
+			{ 16845, "=ds=#s5#, #a3# =q7=#db32#" },
+			{ 16850, "=ds=#s8#, #a3# =q7=#x34# #z1#" },
+			{ 16852, "=ds=#s9#, #a3# =q7=#db30#" },
+			{ 16851, "=ds=#s10#, #a3# =q7=#x34# #z1#" },
+			{ 16847, "=ds=#s11#, #a3# =q7=#db26#" },
+			{ 16849, "=ds=#s12#, #a3# =q7=#db27#" },
+		}
+	},
 	T1Warrior = {
 		{ 16866, "INV_Helmet_09", "=q4=Helm of Might", "=ds=#s1#, #a4# =q7=#db28#" },
 		{ 16868, "INV_Shoulder_15", "=q4=Pauldrons of Might", "=ds=#s3#, #a4# =q7=#db31#" },
@@ -957,6 +1650,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47246, "INV_Pants_04", "=q4=Leggings of Might", "=ds=#s11#, #a4#" },
 		{ 47247, "INV_Boots_Plate_04", "=q4=Sabatons of Might", "=ds=#s12#, #a4#" },
 	};
+	T1WarriorC = {{
+			{ 16866, "=ds=#s1#, #a4# =q7=#db28#" },
+			{ 16868, "=ds=#s3#, #a4# =q7=#db31#" },
+			{ 16865, "=ds=#s5#, #a4# =q7=#db32#" },
+			{ 16861, "=ds=#s8#, #a4# =q7=#x34# #z1#" },
+			{ 16863, "=ds=#s9#, #a4# =q7=#db25#" },
+			{ 16864, "=ds=#s10#, #a4# =q7=#x34# #z1#" },
+			{ 16867, "=ds=#s11#, #a4# =q7=#db26#" },
+			{ 16862, "=ds=#s12#, #a4# =q7=#db27#" },
+		},{
+			{ 47240, "=ds=#s1#, #a4#" },
+			{ 47241, "=ds=#s3#, #a4#" },
+			{ 47242, "=ds=#s5#, #a4#" },
+			{ 47243, "=ds=#s8#, #a4#" },
+			{ 47244, "=ds=#s9#, #a4#" },
+			{ 47245, "=ds=#s10#, #a4#" },
+			{ 47246, "=ds=#s11#, #a4#" },
+			{ 47247, "=ds=#s12#, #a4#" },
+		}
+	},
 	T1Paladin = {
 		{ 16854, "INV_Helmet_05", "=q4=Lawbringer Helm", "=ds=#s1#, #a4# =q7=#db28#" },
 		{ 16856, "INV_Shoulder_20", "=q4=Lawbringer Spaulders", "=ds=#s3#, #a4# =q7=#db29#" },
@@ -985,6 +1698,35 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47014, "INV_Pants_04", "=q4=Lawbringer Leggings", "=ds=#s11#, #a4#" },
 		{ 47015, "INV_Boots_Plate_09", "=q4=Lawbringer Sabatons", "=ds=#s12#, #a4#" },
 	};
+	T1PaladinC = {{
+			{ 16854, "=ds=#s1#, #a4# =q7=#db28#" },
+			{ 16856, "=ds=#s3#, #a4# =q7=#db29#" },
+			{ 16853, "=ds=#s5#, #a4# =q7=#db32#" },
+			{ 16857, "=ds=#s8#, #a4# =q7=#x34# #z1#" },
+			{ 16860, "=ds=#s9#, #a4# =q7=#db27#" },
+			{ 16858, "=ds=#s10#, #a4# =q7=#x34# #z1#" },
+			{ 16855, "=ds=#s11#, #a4# =q7=#db26#" },
+			{ 16859, "=ds=#s12#, #a4# =q7=#db25#" },
+		},{
+			{ 47000, "=ds=#s1#, #a4#" },
+			{ 47001, "=ds=#s3#, #a4#" },
+			{ 47002, "=ds=#s5#, #a4#" },
+			{ 47003, "=ds=#s8#, #a4#" },
+			{ 47004, "=ds=#s9#, #a4#" },
+			{ 47005, "=ds=#s10#, #a4#" },
+			{ 47006, "=ds=#s11#, #a4#" },
+			{ 47007, "=ds=#s12#, #a4#" },
+		},{
+			{ 47008, "=ds=#s1#, #a4#" },
+			{ 47009, "=ds=#s3#, #a4#" },
+			{ 47010, "=ds=#s5#, #a4#" },
+			{ 47011, "=ds=#s8#, #a4#" },
+			{ 47012, "=ds=#s9#, #a4#" },
+			{ 47013, "=ds=#s10#, #a4#" },
+			{ 47014, "=ds=#s11#, #a4#" },
+			{ 47015, "=ds=#s12#, #a4#" },	
+		}
+	},
 	T0Mage = {
 		{ 0, "", "", "" },
 		{ 0, "Spell_Frost_IceStorm", "=q10=#t0s3#", "" },
@@ -1013,6 +1755,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22067, "INV_Pants_06", "=q3=Sorcerer's Leggings", "=ds=#s11#, #a1#" },
 		{ 22064, "INV_Boots_02", "=q4=Sorcerer's Boots", "=ds=#s12#, #a1#" },
 	};
+	T0MageC = {{
+			{ 16686, "=ds=#s1#, #a1#" },{ 16689, "=ds=#s3#, #a1#" },{ 16688, "=ds=#s5#, #a1#" },{ 16683, "=ds=#s8#, #a1#" },
+			{ 16684, "=ds=#s9#, #a1#" },{ 16685, "=ds=#s10#, #a1#" },{ 16687, "=ds=#s11#, #a1#" },{ 16682, "=ds=#s12#, #a1#" }
+		},{
+			{ 22065, "=ds=#s1#, #a1#" },{ 22068, "=ds=#s3#, #a1#" },{ 22069, "=ds=#s5#, #a1#" },{ 22063, "=ds=#s8#, #a1#" },
+			{ 22066, "=ds=#s9#, #a1#" },{ 22062, "=ds=#s10#, #a1#" },{ 22067, "=ds=#s11#, #a1#" },{ 22064, "=ds=#s12#, #a1#" }
+		},
+	},
 	T0Priest = {
 		{ 0, "", "", "" },
 		{ 0, "Spell_Holy_PowerWordShield", "=q9=#t0s5#", "" },
@@ -1041,6 +1791,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22085, "INV_Pants_08", "=q3=Virtuous Skirt", "=ds=#s11#, #a1#" },
 		{ 22084, "INV_Boots_05", "=q4=Virtuous Sandals", "=ds=#s12#, #a1#" },
 	};
+	T0PriestC = {{
+			{ 16693, "=ds=#s1#, #a1#" },{ 16695, "=ds=#s3#, #a1#" },{ 16690, "=ds=#s5#, #a1#" },{ 16697, "=ds=#s8#, #a1#" },
+			{ 16692, "=ds=#s9#, #a1#" },{ 16696, "=ds=#s10#, #a1#" },{ 16694, "=ds=#s11#, #a1#" },{ 16691, "=ds=#s12#, #a1#" },
+		},{
+			{ 22080, "=ds=#s1#, #a1#" },{ 22082, "=ds=#s3#, #a1#" },{ 22083, "=ds=#s5#, #a1#" },{ 22079, "=ds=#s8#, #a1#" },
+			{ 22081, "=ds=#s9#, #a1#" },{ 22078, "=ds=#s10#, #a1#" },{ 22085, "=ds=#s11#, #a1#" },{ 22084, "=ds=#s12#, #a1#" }
+		},
+	},
 	T0Warlock = {
 		{ 0, "", "", "" },
 		{ 0, "Spell_Shadow_CurseOfTounges", "=q11=#t0s8#", "" },
@@ -1069,6 +1827,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22072, "INV_Pants_08", "=q3=Deathmist Leggings", "=ds=#s11#, #a1#" },
 		{ 22076, "INV_Boots_05", "=q4=Deathmist Sandals", "=ds=#s12#, #a1#" },
 	};
+	T0WarlockC = {{
+			{ 16698, "=ds=#s1#, #a1#" },{ 16701, "=ds=#s3#, #a1#" },{ 16700, "=ds=#s5#, #a1#" },{ 16703, "=ds=#s8#, #a1#" },
+			{ 16705, "=ds=#s9#, #a1#" },{ 16702, "=ds=#s10#, #a1#" },{ 16699, "=ds=#s11#, #a1#" },{ 16704, "=ds=#s12#, #a1#" }
+		},{
+			{ 22074, "=ds=#s1#, #a1#" },{ 22073, "=ds=#s3#, #a1#" },{ 22075, "=ds=#s5#, #a1#" },{ 22071, "=ds=#s8#, #a1#" },
+			{ 22077, "=ds=#s9#, #a1#" },{ 22070, "=ds=#s10#, #a1#" },{ 22072, "=ds=#s11#, #a1#" },{ 22076, "=ds=#s12#, #a1#" }
+		},
+	},
 	T0Rogue = {
 		{ 0, "", "", "" },
 		{ 0, "Ability_BackStab", "=q12=#t0s6#", "" },
@@ -1097,6 +1863,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22007, "INV_Pants_02", "=q3=Darkmantle Pants", "=ds=#s11#, #a2#" },
 		{ 22003, "INV_Boots_08", "=q4=Darkmantle Boots", "=ds=#s12#, #a2#" },
 	};
+	T0RogueC = {{
+			{ 16707, "=ds=#s1#, #a2#" },{ 16708, "=ds=#s3#, #a2#" },{ 16721, "=ds=#s5#, #a2#" },{ 16710, "=ds=#s8#, #a2#" },
+			{ 16712, "=ds=#s9#, #a2#" },{ 16713, "=ds=#s10#, #a2#" },{ 16709, "=ds=#s11#, #a2#" },{ 16711, "=ds=#s12#, #a2#" }
+		},{
+			{ 22005, "=ds=#s1#, #a2#" },{ 22008, "=ds=#s3#, #a2#" },{ 22009, "=ds=#s5#, #a2#" },{ 22004, "=ds=#s8#, #a2#" },
+			{ 22006, "=ds=#s9#, #a2#" },{ 22002, "=ds=#s10#, #a2#" },{ 22007, "=ds=#s11#, #a2#" },{ 22003, "=ds=#s12#, #a2#" }
+		},
+	},
 	T0Druid = {
 		{ 0, "", "", "" },
 		{ 0, "Spell_Nature_Regeneration", "=q13=#t0s1#", "" },
@@ -1125,6 +1899,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22111, "INV_Pants_08", "=q3=Feralheart Kilt", "=ds=#s11#, #a2#" },
 		{ 22107, "INV_Boots_08", "=q4=Feralheart Boots", "=ds=#s12#, #a2#" },
 	};
+	T0DruidC = {{
+			{ 16720, "=ds=#s1#, #a2#" },{ 16718, "=ds=#s3#, #a2#" },{ 16706, "=ds=#s5#, #a2#" },{ 16714, "=ds=#s8#, #a2#" },
+			{ 16717, "=ds=#s9#, #a2#" },{ 16716, "=ds=#s10#, #a2#" },{ 16719, "=ds=#s11#, #a2#" },{ 16715, "=ds=#s12#, #a2#" }
+		},{
+			{ 22109, "=ds=#s1#, #a2#" },{ 22112, "=ds=#s3#, #a2#" },{ 22113, "=ds=#s5#, #a2#" },{ 22108, "=ds=#s8#, #a2#" },
+			{ 22110, "=ds=#s9#, #a2#" },{ 22106, "=ds=#s10#, #a2#" },{ 22111, "=ds=#s11#, #a2#" },{ 22107, "=ds=#s12#, #a2#" }
+		},
+	},
 	T0Hunter = {
 		{ 0, "", "", "" },
 		{ 0, "Ability_Hunter_RunningShot", "=q14=#t0s2#", "" },
@@ -1153,6 +1935,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22017, "INV_Pants_03", "=q3=Beastmaster's Pants", "=ds=#s11#, #a3#" },
 		{ 22061, "INV_Boots_Plate_07", "=q4=Beastmaster's Boots", "=ds=#s12#, #a3#" },
 	};
+	T0HunterC = {{
+			{ 16677, "=ds=#s1#, #a3#" },{ 16679, "=ds=#s3#, #a3#" },{ 16674, "=ds=#s5#, #a3#" },{ 16681, "=ds=#s8#, #a3#" },
+			{ 16676, "=ds=#s9#, #a3#" },{ 16680, "=ds=#s10#, #a3#" },{ 16678, "=ds=#s11#, #a3#" },{ 16675, "=ds=#s12#, #a3#" }
+		},{
+			{ 22013, "=ds=#s1#, #a3#" },{ 22016, "=ds=#s3#, #a3#" },{ 22060, "=ds=#s5#, #a3#" },{ 22011, "=ds=#s8#, #a3#" },
+			{ 22015, "=ds=#s9#, #a3#" },{ 22010, "=ds=#s10#, #a3#" },{ 22017, "=ds=#s11#, #a3#" },{ 22061, "=ds=#s12#, #a3#" }
+		},
+	},
 	T0Shaman = {
 		{ 0, "", "", "" },
 		{ 0, "Spell_FireResistanceTotem_01", "=q15=#t0s7#", "" },
@@ -1181,6 +1971,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22100, "INV_Pants_03", "=q3=Kilt of The Five Thunders", "=ds=#s11#, #a3#" },
 		{ 22096, "INV_Boots_Wolf", "=q4=Boots of the The Five Thunders", "=ds=#s12#, #a3#" },
 	};
+	T0ShamanC = {{
+			{ 16667, "=ds=#s1#, #a3#" },{ 16669, "=ds=#s3#, #a3#" },{ 16666, "=ds=#s5#, #a3#" },{ 16671, "=ds=#s8#, #a3#" },
+			{ 16672, "=ds=#s9#, #a3#" },{ 16673, "=ds=#s10#, #a3#" },{ 16668, "=ds=#s11#, #a3#" },{ 16670, "=ds=#s12#, #a3#" }
+		},{
+			{ 22097, "=ds=#s1#, #a3#" },{ 22101, "=ds=#s3#, #a3#" },{ 22102, "=ds=#s5#, #a3#" },{ 22095, "=ds=#s8#, #a3#" },
+			{ 22099, "=ds=#s9#, #a3#" },{ 22098, "=ds=#s10#, #a3#" },{ 22100, "=ds=#s11#, #a3#" },{ 22096, "=ds=#s12#, #a3#" }
+		},
+	},
 	T0Warrior = {
 		{ 0, "", "", "" },
 		{ 0, "INV_Shield_05", "=q17=#t0s9#", "" },
@@ -1209,6 +2007,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22000, "INV_Pants_04", "=q3=Legplates of Heroism", "=ds=#s11#, #a4#" },
 		{ 21995, "INV_Boots_Plate_03", "=q4=Boots of Heroism", "=ds=#s12#, #a4#" },
 	};
+	T0WarriorC = {{
+		{ 16731, "=ds=#s1#, #a4#" },{ 16733, "=ds=#s3#, #a4#" },{ 16730, "=ds=#s5#, #a4#" },{ 16735, "=ds=#s8#, #a4#" },
+		{ 16737, "=ds=#s9#, #a4#" },{ 16736, "=ds=#s10#, #a4#" },{ 16732, "=ds=#s11#, #a4#" },{ 16734, "=ds=#s12#, #a4#" }
+	},{
+		{ 21999, "=ds=#s1#, #a4#" },{ 22001, "=ds=#s3#, #a4#" },{ 21997, "=ds=#s5#, #a4#" },{ 21996, "=ds=#s8#, #a4#" },
+		{ 21998, "=ds=#s9#, #a4#" },{ 21994, "=ds=#s10#, #a4#" },{ 22000, "=ds=#s11#, #a4#" },{ 21995, "=ds=#s12#, #a4#" }
+	},
+	},
 	T0Paladin = {
 		{ 0, "", "", "" },
 		{ 0, "Spell_Holy_SealOfMight", "=q16=#t0s4#", "" },
@@ -1237,6 +2043,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 22092, "INV_Pants_04", "=q3=Soulforge Legplates", "=ds=#s11#, #a4#" },
 		{ 22087, "INV_Boots_Plate_03", "=q4=Soulforge Boots", "=ds=#s12#, #a4#" },
 	};
+	T0PaladinC = {{
+			{ 16727, "=ds=#s1#, #a4#" },{ 16729, "=ds=#s3#, #a4#" },{ 16726, "=ds=#s5#, #a4#" },{ 16722, "=ds=#s8#, #a4#" },
+			{ 16724, "=ds=#s9#, #a4#" },{ 16723, "=ds=#s10#, #a4#" },{ 16728, "=ds=#s11#, #a4#" },{ 16725, "=ds=#s12#, #a4#" }
+		},{
+			{ 22091, "=ds=#s1#, #a4#" },{ 22093, "=ds=#s3#, #a4#" },{ 22089, "=ds=#s5#, #a4#" },{ 22088, "=ds=#s8#, #a4#" },
+			{ 22090, "=ds=#s9#, #a4#" },{ 22086, "=ds=#s10#, #a4#" },{ 22092, "=ds=#s11#, #a4#" },{ 22087, "=ds=#s12#, #a4#" }
+		},
+	},
 	ZGMage = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Frost_IceStorm", "=q10=#zgs3#","" },
@@ -1247,6 +2061,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19845, "INV_Shoulder_17", "=q4=Zandalar Illusionist's Mantle", "=q4=#x11#=ds=, #r3#" },
 		{ 19846, "INV_Bracer_07", "=q4=Zandalar Illusionist's Wraps", "=q4=#x12#=ds=, #r2#" },
 	};
+	ZGMageC = {{
+			{ 19959, "=ds=#s14#" },
+			{ 19601, "=ds=#r5#" },
+			{ 20034, "=q4=#x10#=ds=, #r4#" },
+			{ 19845, "=q4=#x11#=ds=, #r3#" },
+			{ 19846, "=q4=#x12#=ds=, #r2#" },
+		}
+	},
 	ZGWarlock = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Shadow_CurseOfTounges", "=q11=#zgs8#","" },
@@ -1257,6 +2079,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19849, "INV_Shoulder_17", "=q4=Zandalar Demoniac's Mantle", "=q4=#x13#=ds=, #r3#" },
 		{ 19848, "INV_Bracer_07", "=q4=Zandalar Demoniac's Wraps", "=q4=#x14#=ds=, #r2#" },
 	};
+	ZGWarlockC = {{
+			{ 19957, "=ds=#s14#" },
+			{ 19605, "=ds=#r5#" },
+			{ 20033, "=q4=#x10#=ds=, #r4#" },
+			{ 19849, "=q4=#x13#=ds=, #r3#" },
+			{ 19848, "=q4=#x14#=ds=, #r2#" },
+		}
+	},
 	ZGPriest = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Holy_PowerWordShield", "=q9=#zgs5#","" },
@@ -1267,6 +2097,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19842, "INV_Belt_08", "=q4=Zandalar Confessor's Bindings", "=q4=#x13#=ds=, #r3#" },
 		{ 19843, "INV_Bracer_07", "=q4=Zandalar Confessor's Wraps", "=q4=#x14#=ds=, #r2#" },
 	};
+	ZGPriestC = {{
+			{ 19958, "=ds=#s14#" },
+			{ 19594, "=ds=#r5#" },
+			{ 19841, "=q4=#x15#=ds=, #r4#" },
+			{ 19842, "=q4=#x13#=ds=, #r3#" },
+			{ 19843, "=q4=#x14#=ds=, #r2#" }
+		},
+	},
 	ZGRogue = {
 		{ 0, "", "", "" },
 		{ 0,"Ability_BackStab", "=q12=#zgs6#","" },
@@ -1277,6 +2115,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19835, "INV_Shoulder_29", "=q4=Zandalar Madcap's Mantle", "=q4=#x16#=ds=, #r3#" },
 		{ 19836, "INV_Bracer_14", "=q4=Zandalar Madcap's Bracers", "=q4=#x17#=ds=, #r2#" },
 	};
+	ZGRogueC = {{
+			{ 19954, "=ds=#s14#" },
+			{ 19617, "=ds=#r5#" },
+			{ 19834, "=q4=#x15#=ds=, #r4#" },
+			{ 19835, "=q4=#x16#=ds=, #r3#" },
+			{ 19836, "=q4=#x17#=ds=, #r2#" },
+		}
+	},
 	ZGDruid = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Nature_Regeneration", "=q13=#zgs1#","" },
@@ -1287,6 +2133,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19839, "INV_Belt_01", "=q4=Zandalar Haruspex's Belt","=q4=#x13#=ds=, #r3#" },
 		{ 19840, "INV_Bracer_08", "=q4=Zandalar Haruspex's Bracers", "=q4=#x14#=ds=, #r2#" },
 	};
+	ZGDruidC = {{
+			{ 19955, "=ds=#s14#" },
+			{ 19613, "=ds=#r5#" },
+			{ 19838, "=q4=#x18#=ds=, #r4#" },
+			{ 19839, "=q4=#x13#=ds=, #r3#" },
+			{ 19840, "=q4=#x14#=ds=, #r2#" },
+		}
+	},
 	ZGHunter = {
 		{ 0, "", "", "" },
 		{ 0,"Ability_Hunter_RunningShot", "=q14=#zgs2#","" },
@@ -1297,6 +2151,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19832, "INV_Belt_19", "=q4=Zandalar Predator's Belt", "=q4=#x11#=ds=, #r3#" },
 		{ 19833, "INV_Bracer_18", "=q4=Zandalar Predator's Bracers", "=q4=#x12#=ds=, #r2#" },
 	};
+	ZGHunterC = {{
+			{ 19953, "=ds=#s14#" },
+			{ 19621, "=ds=#r5#" },
+			{ 19831, "=q4=#x15#=ds=, #r4#" },
+			{ 19832, "=q4=#x11#=ds=, #r3#" },
+			{ 19833, "=q4=#x12#=ds=, #r2#" },
+		}
+	},
 	ZGShaman = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_FireResistanceTotem_01", "=q15=#zgs7#","" },
@@ -1307,6 +2169,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19829, "INV_Belt_19", "=q4=Zandalar Augur's Belt", "=q4=#x16#=ds=, #r3#" },
 		{ 19830, "INV_Bracer_15", "=q4=Zandalar Augur's Bracers", "=q4=#x17#=ds=, #r2#" },
 	};
+	ZGShamanC = {{
+			{ 19956, "=ds=#s14#" },
+			{ 19609, "=ds=#r5#" },
+			{ 19828, "=q4=#x18#=ds=, #r4#" },
+			{ 19829, "=q4=#x16#=ds=, #r3#" },
+			{ 19830, "=q4=#x17#=ds=, #r2#" },
+		}
+	},
 	ZGWarrior = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Shield_05", "=q17=#zgs9#","" },
@@ -1316,6 +2186,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19823, "INV_Belt_32", "=q4=Zandalar Vindicator's Belt", "=q4=#x16#=ds=, #r3#" },
 		{ 19824, "INV_Bracer_14", "=q4=Zandalar Vindicator's Armguards", "=q4=#x17#=ds=, #r2#" },
 	};
+	ZGWarriorC = {{
+			{ 19951, "=ds=#s14#" },
+			{ 19577, "=ds=#r5#" },
+			{ 19822, "=q4=#x10#=ds=, #r4#" },
+			{ 19823, "=q4=#x16#=ds=, #r3#" },
+			{ 19824, "=q4=#x17#=ds=, #r2#" },
+		}
+	},
 	ZGPaladin = {
 		{ 0,"Spell_Holy_SealOfMight", "=q16=#zgs4#","" },
 		{ 0, "", "", "" },
@@ -1325,6 +2203,14 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 19826, "INV_Belt_32", "=q4=Zandalar Freethinker's Belt", "=q4=#x11#=ds=, #r3#" },
 		{ 19827, "INV_Bracer_14", "=q4=Zandalar Freethinker's Armguards", "=q4=#x12#=ds=, #r2#" },
 	};
+	ZGPaladinC = {{
+			{ 19952, "=ds=#s14#" },
+			{ 19588, "=ds=#r5#" },
+			{ 19825, "=q4=#x18#=ds=, #r4#" },
+			{ 19826, "=q4=#x11#=ds=, #r3#" },
+			{ 19827, "=q4=#x12#=ds=, #r2#" },
+		}
+	},
 	AQ20Mage = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Frost_IceStorm", "=q10=#aq20s3#","" },
@@ -1333,6 +2219,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21415, "INV_Misc_Cape_19", "=q4=Drape of Vaulted Secrets", "=q3=#x20#=ds=, #r4#" },
 		{ 21414, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Band of Vaulted Secrets", "=q3=#x21#=ds=, #r3#" },
 	};
+	AQ20MageC = {{
+			{ 21413, "=q4=#x19#=ds=, #r5#" },
+			{ 21415, "=q3=#x20#=ds=, #r4#" },
+			{ 21414, "=q3=#x21#=ds=, #r3#" },
+		}
+	},
 	AQ20Warlock = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Shadow_CurseOfTounges", "=q11=#aq20s8#","" },
@@ -1341,6 +2233,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21418, "INV_Misc_Cape_20", "=q4=Shroud of Unspoken Names", "=q3=#x23#=ds=, #r4#" },
 		{ 21417, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Ring of Unspoken Names", "=q3=#x22#=ds=, #r3#" },
 	};
+	AQ20WarlockC = {{
+			{ 21416, "=q4=#x19#=ds=, #r5#" },
+			{ 21418, "=q3=#x23#=ds=, #r4#" },
+			{ 21417, "=q3=#x22#=ds=, #r3#" },
+		}
+	},
 	AQ20Priest = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Holy_PowerWordShield", "=q9=#aq20s5#","" },
@@ -1349,6 +2247,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21412, "INV_Misc_Cape_16", "=q4=Shroud of Infinite Wisdom", "=q3=#x20#=ds=, #r4#" },
 		{ 21411, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Ring of Infinite Wisdom", "=q3=#x22#=ds=, #r3#" },
 	};
+	AQ20PriestC = {{
+			{ 21410, "=q4=#x19#=ds=, #r5#" },
+			{ 21412, "=q3=#x20#=ds=, #r4#" },
+			{ 21411, "=q3=#x22#=ds=, #r3#" },
+		}
+	},
 	AQ20Rogue = {
 		{ 0, "", "", "" },
 		{ 0,"Ability_BackStab", "=q12=#aq20s6#","" },
@@ -1357,6 +2261,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21406, "INV_Misc_Cape_19", "=q4=Cloak of Veiled Shadows", "=q3=#x20#=ds=, #r4#" },
 		{ 21405, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Band of Veiled Shadows", "=q3=#x22#=ds=, #r3#" },
 	};
+	AQ20RogueC = {{
+			{ 21404, "=q4=#x24#=ds=, #r5#" },
+			{ 21406, "=q3=#x20#=ds=, #r4#" },
+			{ 21405, "=q3=#x22#=ds=, #r3#" },
+		}
+	},
 	AQ20Druid = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Nature_Regeneration", "=q13=#aq20s1#","" },
@@ -1365,6 +2275,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21409, "INV_Misc_Cape_15", "=q4=Cloak of Unending Life", "=q3=#x23#=ds=, #r4#" },
 		{ 21408, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Band of Unending Life", "=q3=#x21#=ds=, #r3#" },
 	};
+	AQ20DruidC = {{
+			{ 21407, "=q4=#x19#=ds=, #r5#" },
+			{ 21409, "=q3=#x23#=ds=, #r4#" },
+			{ 21408, "=q3=#x21#=ds=, #r3#" },
+		}
+	},
 	AQ20Hunter = {
 		{ 0, "", "", "" },
 		{ 0,"Ability_Hunter_RunningShot", "=q14=#aq20s2#","" },
@@ -1373,6 +2289,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21403, "INV_Misc_Cape_15", "=q4=Cloak of the Unseen Path", "=q3=#x23#=ds=, #r4#" },
 		{ 21402, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Signet of the Unseen Path", "=q3=#x22#=ds=, #r3#" },
 	};
+	AQ20HunterC = {{
+			{ 21401, "=q4=#x24#=ds=, #r5#" },
+			{ 21403, "=q3=#x23#=ds=, #r4#" },
+			{ 21402, "=q3=#x22#=ds=, #r3#" },
+		}
+	},
 	AQ20Paladin = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_Holy_SealOfMight", "=q16=#aq20s4#","" },
@@ -1381,6 +2303,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21397, "INV_Misc_Cape_14", "=q4=Cape of Eternal Justice", "=q3=#x23#=ds=, #r4#" },
 		{ 21396, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Ring of Eternal Justice", "=q3=#x21#=ds=, #r3#" },
 	};
+	AQ20PaladinC = {{
+			{ 21395, "=q4=#x24#=ds=, #r5#" },
+			{ 21397, "=q3=#x23#=ds=, #r4#" },
+			{ 21396, "=q3=#x21#=ds=, #r3#" },
+		}
+	},
 	AQ20Shaman = {
 		{ 0, "", "", "" },
 		{ 0,"Spell_FireResistanceTotem_01", "=q15=#aq20s7#","" },
@@ -1389,6 +2317,12 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21400, "INV_Misc_Cape_16", "=q4=Cloak of the Gathering Storm", "=q3=#x23#=ds=, #r4#" },
 		{ 21399, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Ring of the Gathering Storm", "=q3=#x21#=ds=, #r3#" },
 	};
+	AQ20ShamanC = {{
+			{ 21398, "=q4=#x24#=ds=, #r5#" },
+			{ 21400, "=q3=#x23#=ds=, #r4#" },
+			{ 21399, "=q3=#x21#=ds=, #r3#" },
+		}
+	},
 	AQ20Warrior = {
 		{ 0, "", "", "" },
 		{ 0,"INV_Shield_05", "=q17=#aq20s9#","" },
@@ -1397,11 +2331,17 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 21394, "INV_Misc_Cape_20", "=q4=Drape of Unyielding Strength", "=q3=#x20#=ds=, #r4#" },
 		{ 21393, "INV_Jewelry_Ring_AhnQiraj_03", "=q4=Signet of Unyielding Strength", "=q3=#x21#=ds=, #r3#" },
 	};
+	AQ20WarriorC = {{
+			{ 21392, "=q4=#x24#=ds=, #r5#" },
+			{ 21394, "=q3=#x20#=ds=, #r4#" },
+			{ 21393, "=q3=#x21#=ds=, #r3#" },
+		}
+	},
 	AQ40Mage = {
-		{ 21343, "INV_Chest_Cloth_11", "=q4=Enigma Robes", "=q4=#x28#=ds=, #r3#" },
 		{ 21347, "INV_Helmet_06", "=q4=Enigma Circlet", "=q4=#x26#=ds=, #r2#" },
-		{ 21346, "INV_Pants_Cloth_08", "=q4=Enigma Leggings", "=q4=#x27#=ds=, #r2#" },
 		{ 21345, "INV_Shoulder_03", "=q4=Enigma Shoulderpads", "=q4=#x25#=ds=, #r1#" },
+		{ 21343, "INV_Chest_Cloth_11", "=q4=Enigma Robes", "=q4=#x28#=ds=, #r3#" },
+		{ 21346, "INV_Pants_Cloth_08", "=q4=Enigma Leggings", "=q4=#x27#=ds=, #r2#" },
 		{ 21344, "INV_Boots_Cloth_03", "=q4=Enigma Boots", "=q4=#x25#=ds=, #r1#" },
 		{ 0, "", "", "" },
 		{ 47094, "INV_Helmet_06", "=q4=Enigma Crown", "=ds=#s1#, #a1#" },
@@ -1409,27 +2349,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47096, "INV_Chest_Cloth_11", "=q4=Enigma Vestments", "=ds=#s5#, #a1#" },
 		{ 47097, "INV_Pants_Cloth_08", "=q4=Enigma Trousers", "=ds=#s11#, #a1#" },
 		{ 47098, "INV_Boots_Cloth_03", "=q4=Enigma Slippers", "=ds=#s12#, #a1#" },
-		--[[{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 70626, "INV_Helmet_06", "=q4=Enigma Coronet", "=ds=#s1#, #a1#" },
-		{ 70627, "INV_Shoulder_03", "=q4=Enigma Shoulderpads", "=ds=#s3#, #a1#" },
-		{ 70628, "INV_Chest_Cloth_11", "=q4=Enigma Raiments", "=ds=#s5#, #a1#" },
-		{ 70629, "INV_Pants_Cloth_08", "=q4=Enigma Pants", "=ds=#s11#, #a1#" },
-		{ 70630, "INV_Boots_Cloth_03", "=q4=Enigma Sandals", "=ds=#s12#, #a1#" },]]
 	};
+	AQ40MageC = {{
+			{ 21347, "=q4=#x26#=ds=, #r2#" },
+			{ 21345, "=q4=#x25#=ds=, #r1#" },
+			{ 21343, "=q4=#x28#=ds=, #r3#" },
+			{ 21346, "=q4=#x27#=ds=, #r2#" },
+			{ 21344, "=q4=#x25#=ds=, #r1#" },
+		},{
+			{ 47094, "=ds=#s1#, #a1#" },
+			{ 47095, "=ds=#s3#, #a1#" },
+			{ 47096, "=ds=#s5#, #a1#" },
+			{ 47097, "=ds=#s11#, #a1#" },
+			{ 47098, "=ds=#s12#, #a1#" },
+		}
+	},
 	AQ40Priest = {
-		{ 21351, "INV_Chest_Cloth_10", "=q4=Vestments of the Oracle", "=q4=#x28#=ds=, #r3#" },
 		{ 21348, "INV_Helmet_06", "=q4=Tiara of the Oracle", "=q4=#x26#=ds=, #r2#" },
-		{ 21352, "INV_Pants_Cloth_07", "=q4=Trousers of the Oracle","=q4=#x27#=ds=, #r2#" },
 		{ 21350, "INV_Shoulder_03", "=q4=Mantle of the Oracle", "=q4=#x29#=ds=, #r1#" },
+		{ 21351, "INV_Chest_Cloth_10", "=q4=Vestments of the Oracle", "=q4=#x28#=ds=, #r3#" },
+		{ 21352, "INV_Pants_Cloth_07", "=q4=Trousers of the Oracle","=q4=#x27#=ds=, #r2#" },
 		{ 21349, "INV_Boots_Cloth_07", "=q4=Footwraps of the Oracle", "=q4=#x29#=ds=, #r1#" },
 		{ 0, "", "", "" },
 		{ 47214, "INV_Helmet_06", "=q4=Coronet of the Oracle", "=ds=#s1#, #a1#" },
@@ -1437,27 +2376,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47216, "INV_Chest_Cloth_10", "=q4=Vestments of the Oracle", "=ds=#s5#, #a1#" },
 		{ 47217, "INV_Pants_Cloth_07", "=q4=Trousers of the Oracle", "=ds=#s11#, #a1#" },
 		{ 47218, "INV_Boots_Cloth_07", "=q4=Treads of the Oracle", "=ds=#s12#, #a1#" },
-		--[[{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 70732, "INV_Helmet_06", "=q4=Coronet of the Oracle", "=ds=#s1#, #a1#" },
-		{ 70733, "INV_Shoulder_03", "=q4=Shoulderpads of the Oracle", "=ds=#s3#, #a1#" },
-		{ 70734, "INV_Chest_Cloth_10", "=q4=Raiments of the Oracle", "=ds=#s5#, #a1#" },
-		{ 70735, "INV_Pants_Cloth_07", "=q4=Pants of the Oracle", "=ds=#s11#, #a1#" },
-		{ 70736, "INV_Boots_Cloth_07", "=q4=Sandals of the Oracle", "=ds=#s12#, #a1#" },]]
 	};
+	AQ40PriestC = {{
+			{ 21348, "=q4=#x26#=ds=, #r2#" },
+			{ 21350, "=q4=#x29#=ds=, #r1#" },
+			{ 21351, "=q4=#x28#=ds=, #r3#" },
+			{ 21352, "=q4=#x27#=ds=, #r2#" },
+			{ 21349, "=q4=#x29#=ds=, #r1#" },
+		},{
+			{ 47214, "=ds=#s1#, #a1#" },
+			{ 47215, "=ds=#s3#, #a1#" },
+			{ 47216, "=ds=#s5#, #a1#" },
+			{ 47217, "=ds=#s11#, #a1#" },
+			{ 47218, "=ds=#s12#, #a1#" },
+		}
+	},
 	AQ40Warlock = {
-		{ 21334, "INV_Chest_Cloth_12", "=q4=Doomcaller's Robes", "=q4=#x28#=ds=, #r3#" },
 		{ 21337, "INV_Helmet_06", "=q4=Doomcaller's Circlet", "=q4=#x26#=ds=, #r2#" },
-		{ 21336, "INV_Pants_Cloth_02", "=q4=Doomcaller's Trousers", "=q4=#x31#=ds=, #r2#" },
 		{ 21335, "INV_Shoulder_03", "=q4=Doomcaller's Mantle", "=q4=#x25#=ds=, #r1#" },
+		{ 21334, "INV_Chest_Cloth_12", "=q4=Doomcaller's Robes", "=q4=#x28#=ds=, #r3#" },
+		{ 21336, "INV_Pants_Cloth_02", "=q4=Doomcaller's Trousers", "=q4=#x31#=ds=, #r2#" },
 		{ 21338, "INV_Boots_Cloth_02", "=q4=Doomcaller's Footwraps", "=q4=#x25#=ds=, #r1#" },
 		{ 0, "", "", "" },
 		{ 47292, "INV_Helmet_06", "=q4=Doomcaller's Crown", "=ds=#s1#, #a1#" },
@@ -1466,18 +2404,40 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47295, "INV_Pants_Cloth_02", "=q4=Doomcaller's Leggings", "=ds=#s11#, #a1#" },
 		{ 47296, "INV_Boots_Cloth_02", "=q4=Doomcaller's Slippers", "=ds=#s12#, #a1#" },
 	};
+	AQ40WarlockC = {{
+			{ 21337, "=q4=#x26#=ds=, #r2#" },
+			{ 21335, "=q4=#x25#=ds=, #r1#" },
+			{ 21334, "=q4=#x28#=ds=, #r3#" },
+			{ 21336, "=q4=#x31#=ds=, #r2#" },
+			{ 21338, "=q4=#x25#=ds=, #r1#" },
+		},{
+			{ 47292, "=ds=#s1#, #a1#" },
+			{ 47293, "=ds=#s3#, #a1#" },
+			{ 47294, "=ds=#s5#, #a1#" },
+			{ 47295, "=ds=#s11#, #a1#" },
+			{ 47296, "=ds=#s12#, #a1#" },
+		}
+	},
 	AQ40Rogue = {
-		{ 21364, "INV_Chest_Leather_08", "=q4=Deathdealer's Vest", "=q4=#x32#=ds=, #r3#" },
 		{ 21360, "INV_Helmet_04", "=q4=Deathdealer's Helm", "=q4=#x30#=ds=, #r2#" },
-		{ 21362, "INV_Pants_Leather_07", "=q4=Deathdealer's Leggings", "=q4=#x27#=ds=, #r2#" },
 		{ 21361, "INV_Shoulder_03", "=q4=Deathdealer's Spaulders", "=q4=#x29#=ds=, #r1#" },
+		{ 21364, "INV_Chest_Leather_08", "=q4=Deathdealer's Vest", "=q4=#x32#=ds=, #r3#" },
+		{ 21362, "INV_Pants_Leather_07", "=q4=Deathdealer's Leggings", "=q4=#x27#=ds=, #r2#" },
 		{ 21359, "INV_Boots_08", "=q4=Deathdealer's Boots", "=q4=#x29#=ds=, #r1#" },
 	};
+	AQ40RogueC = {{
+			{ 21360, "=q4=#x30#=ds=, #r2#" },
+			{ 21361, "=q4=#x29#=ds=, #r1#" },
+			{ 21364, "=q4=#x32#=ds=, #r3#" },
+			{ 21362, "=q4=#x27#=ds=, #r2#" },
+			{ 21359, "=q4=#x29#=ds=, #r1#" },
+		}
+	},
 	AQ40Druid = {
-		{ 21357, "INV_Chest_Leather_08", "=q4=Genesis Vest", "=q4=#x28#=ds=, #r3#" },
 		{ 21353, "INV_Helmet_06", "=q4=Genesis Circlet", "=q4=#x30#=ds=, #r2#" },
-		{ 21356, "INV_Pants_Leather_01", "=q4=Genesis Trousers", "=q4=#x31#=ds=, #r2#" },
 		{ 21354, "INV_Shoulder_03", "=q4=Genesis Mantle", "=q4=#x25#=ds=, #r1#" },
+		{ 21357, "INV_Chest_Leather_08", "=q4=Genesis Vest", "=q4=#x28#=ds=, #r3#" },
+		{ 21356, "INV_Pants_Leather_01", "=q4=Genesis Trousers", "=q4=#x31#=ds=, #r2#" },
 		{ 21355, "INV_Boots_Cloth_07", "=q4=Genesis Slippers", "=q4=#x25#=ds=, #r1#" },
 		{ 0, "", "", "" },
 		{ 47362, "INV_Helmet_06", "=q4=Genesis Helm", "=ds=#s1#, #a2#" },
@@ -1501,11 +2461,31 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47370, "INV_Pants_Leather_01", "=q4=Genesis Pants", "=ds=#s11#, #a2#" },
 		{ 47371, "INV_Boots_Cloth_07", "=q4=Genesis Treads", "=ds=#s12#, #a2#" },
 	};
+	AQ40DruidC = {{
+			{ 21353, "=q4=#x30#=ds=, #r2#" },
+			{ 21354, "=q4=#x25#=ds=, #r1#" },
+			{ 21357, "=q4=#x28#=ds=, #r3#" },
+			{ 21356, "=q4=#x31#=ds=, #r2#" },
+			{ 21355, "=q4=#x25#=ds=, #r1#" },
+		},{
+			{ 47362, "=ds=#s1#, #a2#" },
+			{ 47363, "=ds=#s3#, #a2#" },
+			{ 47364, "=ds=#s5#, #a2#" },
+			{ 47365, "=ds=#s11#, #a2#" },
+			{ 47366, "=ds=#s12#, #a2#" },
+		},{
+			{ 47367, "=ds=#s1#, #a2#" },
+			{ 47368, "=ds=#s3#, #a2#" },
+			{ 47369, "=ds=#s5#, #a2#" },
+			{ 47370, "=ds=#s11#, #a2#" },
+			{ 47371, "=ds=#s12#, #a2#" },
+		}
+	},
 	AQ40Shaman = {
-		{ 21374, "INV_Chest_Chain_13", "=q4=Stormcaller's Hauberk", "=q4=#x32#=ds=, #r3#" },
 		{ 21372, "INV_Helmet_73", "=q4=Stormcaller's Diadem", "=q4=#x30#=ds=, #r2#" },
-		{ 21375, "INV_Pants_Mail_10", "=q4=Stormcaller's Legplates", "=q4=#x31#=ds=, #r2#" },
 		{ 21376, "INV_Shoulder_03", "=q4=Stormcaller's Epaulets", "=q4=#x25#=ds=, #r1#" },
+		{ 21374, "INV_Chest_Chain_13", "=q4=Stormcaller's Hauberk", "=q4=#x32#=ds=, #r3#" },
+		{ 21375, "INV_Pants_Mail_10", "=q4=Stormcaller's Legplates", "=q4=#x31#=ds=, #r2#" },
 		{ 21373, "INV_Boots_Chain_07", "=q4=Stormcaller's Greaves", "=q4=#x25#=ds=, #r1#" },
 		{ 0, "", "", "" },
 		{ 47152, "INV_Helmet_73", "=q4=Stormcaller's Crown", "=ds=#s1#, #a3#" },
@@ -1529,40 +2509,61 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47160, "INV_Pants_Mail_10", "=q4=Stormcaller's Pants", "=ds=#s11#, #a3#" },
 		{ 47161, "INV_Boots_Chain_07", "=q4=Stormcaller's Boots", "=ds=#s12#, #a3#" },
 	};
+	AQ40ShamanC = {{
+			{ 21372, "=q4=#x30#=ds=, #r2#" },
+			{ 21376, "=q4=#x25#=ds=, #r1#" },
+			{ 21374, "=q4=#x32#=ds=, #r3#" },
+			{ 21375, "=q4=#x31#=ds=, #r2#" },
+			{ 21373, "=q4=#x25#=ds=, #r1#" },
+		},{
+			{ 47152, "=ds=#s1#, #a3#" },
+			{ 47153, "=ds=#s3#, #a3#" },
+			{ 47154, "=ds=#s5#, #a3#" },
+			{ 47155, "=ds=#s11#, #a3#" },
+			{ 47156, "=ds=#s12#, #a3#" },
+		},{
+			{ 47157, "=ds=#s1#, #a3#" },
+			{ 47158, "=ds=#s3#, #a3#" },
+			{ 47159, "=ds=#s5#, #a3#" },
+			{ 47160, "=ds=#s11#, #a3#" },
+			{ 47161, "=ds=#s12#, #a3#" },
+		}
+	},
 	AQ40Hunter = {
-		{ 21370, "INV_Chest_Chain_04", "=q4=Striker's Hauberk", "=q4=#x32#=ds=, #r3#" },
 		{ 21366, "INV_Helmet_73", "=q4=Striker's Diadem", "=q4=#x30#=ds=, #r2#" },
-		{ 21368, "INV_Pants_Mail_11", "=q4=Striker's Leggings", "=q4=#x31#=ds=, #r2#" },
 		{ 21367, "INV_Shoulder_36", "=q4=Striker's Pauldrons", "=q4=#x29#=ds=, #r1#" },
+		{ 21370, "INV_Chest_Chain_04", "=q4=Striker's Hauberk", "=q4=#x32#=ds=, #r3#" },
+		{ 21368, "INV_Pants_Mail_11", "=q4=Striker's Leggings", "=q4=#x31#=ds=, #r2#" },
 		{ 21365, "INV_Boots_Chain_08", "=q4=Striker's Footguards", "=q4=#x29#=ds=, #r1#" },
 	};
+	AQ40HunterC = {{
+			{ 21366, "=q4=#x30#=ds=, #r2#" },
+			{ 21367, "=q4=#x29#=ds=, #r1#" },
+			{ 21370, "=q4=#x32#=ds=, #r3#" },
+			{ 21368, "=q4=#x31#=ds=, #r2#" },
+			{ 21365, "=q4=#x29#=ds=, #r1#" },
+		}
+	},
 	AQ40Warrior = {
-		{ 21331, "INV_Chest_Plate12", "=q4=Conqueror's Breastplate", "=q4=#x32#=ds=, #r3#" },
 		{ 21329, "INV_Helmet_72", "=q4=Conqueror's Crown", "=q4=#x26#=ds=, #r2#" },
-		{ 21332, "INV_Pants_Plate_03", "=q4=Conqueror's Legguards", "=q4=#x27#=ds=, #r2#" },
 		{ 21330, "INV_Shoulder_35", "=q4=Conqueror's Spaulders", "=q4=#x29#=ds=, #r1#" },
+		{ 21331, "INV_Chest_Plate12", "=q4=Conqueror's Breastplate", "=q4=#x32#=ds=, #r3#" },
+		{ 21332, "INV_Pants_Plate_03", "=q4=Conqueror's Legguards", "=q4=#x27#=ds=, #r2#" },
 		{ 21333, "INV_Boots_Plate_05", "=q4=Conqueror's Greaves", "=q4=#x29#=ds=, #r1#" },
-		--[[{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 47256, "INV_Helmet_72", "=q4=Conqueror's Crown", "=ds=#s1#, #a4#" },
-		{ 47257, "INV_Shoulder_35", "=q4=Conqueror's Pauldrons", "=ds=#s3#, #a4#" },
-		{ 47258, "INV_Chest_Plate12", "=q4=Conqueror's Chestplate", "=ds=#s5#, #a4#" },
-		{ 47259, "INV_Pants_Plate_03", "=q4=Conqueror's Leggings", "=ds=#s11#, #a4#" },
-		{ 47260, "INV_Boots_Plate_05", "=q4=Conqueror's Sabatons", "=ds=#s12#, #a4#" },]]
 	};
+	AQ40WarriorC = {{
+			{ 21329, "=q4=#x26#=ds=, #r2#" },
+			{ 21330, "=q4=#x29#=ds=, #r1#" },
+			{ 21331, "=q4=#x32#=ds=, #r3#" },
+			{ 21332, "=q4=#x27#=ds=, #r2#" },
+			{ 21333, "=q4=#x29#=ds=, #r1#" },
+		}
+	},
 	AQ40Paladin = {
-		{ 21389, "INV_Chest_Plate03", "=q4=Avenger's Chestplate", "=q4=#x32#=ds=, #r3#" },
 		{ 21387, "INV_Helmet_72", "=q4=Avenger's Crown", "=q4=#x30#=ds=, #r2#" },
-		{ 21390, "INV_Pants_Plate_02", "=q4=Avenger's Leggings", "=q4=#x31#=ds=, #r2#" },
 		{ 21391, "INV_Shoulder_35", "=q4=Avenger's Pauldrons", "=q4=#x25#=ds=, #r1#" },
+		{ 21389, "INV_Chest_Plate03", "=q4=Avenger's Chestplate", "=q4=#x32#=ds=, #r3#" },
+		{ 21390, "INV_Pants_Plate_02", "=q4=Avenger's Leggings", "=q4=#x31#=ds=, #r2#" },
 		{ 21388, "INV_Boots_Chain_07", "=q4=Avenger's Sabatons", "=q4=#x25#=ds=, #r1#" },
 		{ 0, "", "", "" },
 		{ 47032, "INV_Helmet_72", "=q4=Avenger's Helmet", "=ds=#s1#, #a4#" },
@@ -1586,6 +2587,26 @@ AtlasLoot_Data["AtlasLootSetItems"] = {
 		{ 47040, "INV_Pants_Plate_02", "=q4=Avenger's Legplates", "=ds=#s11#, #a4#" },
 		{ 47041, "INV_Boots_Chain_07", "=q4=Avenger's Boots", "=ds=#s12#, #a4#" },
 	};
+	AQ40PaladinC = {{
+			{ 21387, "=q4=#x30#=ds=, #r2#" },
+			{ 21391, "=q4=#x25#=ds=, #r1#" },
+			{ 21389, "=q4=#x32#=ds=, #r3#" },
+			{ 21390, "=q4=#x31#=ds=, #r2#" },
+			{ 21388, "=q4=#x25#=ds=, #r1#" },
+		},{
+			{ 47032, "=ds=#s1#, #a4#" },
+			{ 47033, "=ds=#s3#, #a4#" },
+			{ 47034, "=ds=#s5#, #a4#" },
+			{ 47035, "=ds=#s11#, #a4#" },
+			{ 47036, "=ds=#s12#, #a4#" },
+		},{
+			{ 47037, "=ds=#s1#, #a4#" },
+			{ 47038, "=ds=#s3#, #a4#" },
+			{ 47039, "=ds=#s5#, #a4#" },
+			{ 47040, "=ds=#s11#, #a4#" },
+			{ 47041, "=ds=#s12#, #a4#" },
+		}
+	},
 	Artifacts = {
 		{ 0, "", "", "" },
 		{ 12947, "INV_Gizmo_BronzeFramework_01", "=q19=Alex's Ring of Audacity", "=ds=#s13#" },

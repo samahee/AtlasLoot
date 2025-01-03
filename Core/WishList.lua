@@ -1,17 +1,4 @@
---[[
-File containing functions related to the wish list.
-
-Functions:
-AtlasLoot_ShowWishList()
-AtlasLoot_AddToWishlist(itemID, itemTexture, itemName, lootPage, sourcePage)
-AtlasLoot_DeleteFromWishList(itemID)
-AtlasLoot_WishListSort()
-AtlasLoot_WishListSortCheck(temp1, temp2)
-local RecursiveSearchZoneName(dataTable, zoneID)
-AtlasLoot_GetWishListSubheading(dataID)
-AtlasLoot_CategorizeWishList(wlTable)
-AtlasLoot_GetWishListPage(page)
-]]
+--File containing functions related to the wish list.
 
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
@@ -74,25 +61,23 @@ AtlasLoot_WishListSort()
 Sorts the Wishlist
 ]]
 function AtlasLoot_WishListSort()
+	local j = 0;
+	local P = 2;
+	local temp = {};
+	local check = false;
 
-	j=0;
-	P=2;
-	temp={};
-	check=false;
-
-	while(P<31) do
-		temp=AtlasLootCharDB["WishList"][P];
-		j=P;
-		check=AtlasLoot_WishListSortCheck(AtlasLootCharDB["WishList"][j-1], temp);
-		while((j>1) and check) do
-			AtlasLootCharDB["WishList"][j] = AtlasLootCharDB["WishList"][j-1];
-			j=j-1;
-			check=AtlasLoot_WishListSortCheck(AtlasLootCharDB["WishList"][j-1], temp);
+	while (P < 31) do
+		temp = AtlasLootCharDB["WishList"][P];
+		j = P;
+		check = AtlasLoot_WishListSortCheck(AtlasLootCharDB["WishList"][j - 1], temp);
+		while ((j > 1) and check) do
+			AtlasLootCharDB["WishList"][j] = AtlasLootCharDB["WishList"][j - 1];
+			j = j - 1;
+			check = AtlasLoot_WishListSortCheck(AtlasLootCharDB["WishList"][j - 1], temp);
 		end
-		AtlasLootCharDB["WishList"][j]=temp;
-		P=P+1;
+		AtlasLootCharDB["WishList"][j] = temp;
+		P = P + 1;
 	end
-
 end
 
 --[[
@@ -111,8 +96,8 @@ function AtlasLoot_WishListSortCheck(temp1, temp2)
 	elseif temp1[1] == 0 then
 		return true;
 	else
-		prefix1=string.lower(string.sub(temp1[3], 1, 10));
-		prefix2=string.lower(string.sub(temp2[3], 1, 10));
+		local prefix1=string.lower(string.sub(temp1[3], 1, 10));
+		local prefix2=string.lower(string.sub(temp2[3], 1, 10));
 		if prefix1 ~= prefix2 then
 			if prefix1 == "|cffff0000" then
 				return false;

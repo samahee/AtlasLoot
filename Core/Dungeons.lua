@@ -1,23 +1,10 @@
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
-local RED = "|cffff0000";
-local ORANGE = "|cffFF8400";
-local WHITE = "|cffFFFFFF";
-
 function AtlasLoot_DungeonsMenu1()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
+	AtlasLoot_PrepMenu(nil, AL["Dungeons & Raids"])
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU1"
 	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"]
-	getglobal("AtlasLootItemsFrame_BACK"):Hide();
-	getglobal("AtlasLootItemsFrame_NEXT"):Show();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLootItemsFrame_NEXT:Show()
     --RFC
     AtlasLootMenuItem_1_Name:SetText(AL["[13-18] Ragefire Chasm"]);
 	AtlasLootMenuItem_1_Extra:SetText(AL["Orgrimmar"]);
@@ -198,28 +185,13 @@ function AtlasLoot_DungeonsMenu1()
 	AtlasLootMenuItem_30_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalIronForge");
 	AtlasLootMenuItem_30.lootpage="COTBMChronar";
 	AtlasLootMenuItem_30:Show()
-
-    for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Dungeons & Raids"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_DungeonsMenu2()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
+	AtlasLoot_PrepMenu(nil, AL["Dungeons & Raids"])
 	AtlasLootCharDB.LastBoss = "DUNGEONSMENU2"
 	AtlasLootCharDB.LastBossText = AL["Dungeons & Raids"]
-	getglobal("AtlasLootItemsFrame_BACK"):Hide();
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Show();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLootItemsFrame_PREV:Show()
 	--SWV
     AtlasLootMenuItem_1_Name:SetText(AL["[60] Stormwind Vault"]);
 	AtlasLootMenuItem_1_Extra:SetText(AL["Stormwind"]);
@@ -280,9 +252,4 @@ function AtlasLoot_DungeonsMenu2()
 	AtlasLootMenuItem_11_Icon:SetTexture("Interface\\Icons\\Spell_Arcane_PortalOrgrimmar");
 	AtlasLootMenuItem_11.lootpage="NAXPatchwerk";
 	AtlasLootMenuItem_11:Show();
-    for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Dungeons & Raids"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end

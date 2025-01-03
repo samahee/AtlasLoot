@@ -1,19 +1,11 @@
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+
 local WHITE = "|cffFFFFFF";
+
 function AtlasLoot_WorldBossMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
+	AtlasLoot_PrepMenu(nil, AL["World Bosses"])
 	AtlasLootCharDB.LastBoss = "WORLDBOSSMENU"
-	AtlasLootCharDB.LastBossText = "World Bosses"
-	getglobal("AtlasLootItemsFrame_BACK"):Hide();
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLootCharDB.LastBossText = AL["World Bosses"]
 	--Azuregos
 	AtlasLootMenuItem_1_Name:SetText(AL["Azuregos"]);
 	AtlasLootMenuItem_1_Extra:SetText(WHITE..AL["Azshara"]);
@@ -86,10 +78,4 @@ function AtlasLoot_WorldBossMenu()
 	AtlasLootMenuItem_14_Icon:SetTexture("Interface\\Icons\\INV_Misc_Birdbeck_02");
 	AtlasLootMenuItem_14.lootpage="Clackora";
 	AtlasLootMenuItem_14:Show();
-
-    for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["World Bosses"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end

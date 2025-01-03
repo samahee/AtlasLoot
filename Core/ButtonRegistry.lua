@@ -5038,17 +5038,8 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["Winterviel2"] = {
 		Title = AtlasLoot_TableNames["Winterviel2"][1];
-		Next_Page = "WintervielSnowball";
-		Next_Title = "Snowball";
 		Prev_Page = "Winterviel1";
 		Prev_Title = AL["Feast of Winter Veil"];
-		Back_Page = "WORLDEVENTMENU";
-		Back_Title = AL["World Events"];
-	};
-	["WintervielSnowball"] = {
-		Title = "Snowball";
-		Prev_Page = "Winterviel2";
-		Prev_Title = AtlasLoot_TableNames["Winterviel2"][1];
 		Back_Page = "WORLDEVENTMENU";
 		Back_Title = AL["World Events"];
 	};

@@ -1004,15 +1004,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21986, "INV_BRD_Banner", "=q1=Banner of Provocation", "=ds=#m36#" },
 	};
 	BWLRazorgore = { --https://database.turtle-wow.org/?npc=12435
-		{ 16926, "INV_Bracer_09", "=q4=Bindings of Transcendence", "=ds=#s8#, #a1# =q9=#c5#", "11%" },
-		{ 16918, "INV_Bracer_09", "=q4=Netherwind Bindings", "=ds=#s8#, #a1# =q10=#c3#", "11%" },
-		{ 16934, "INV_Bracer_07", "=q4=Nemesis Bracers", "=ds=#s8#, #a1# =q11=#c8#", "11%" },
+		{ 16926, "INV_Bracer_09", "=q4=Bindings of Transcendence", "=ds=#s8#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47209,"=ds=#s8#, #a1# =q7=#db17#"},
+				},
+			},
+		},
+		{ 16918, "INV_Bracer_09", "=q4=Netherwind Bindings", "=ds=#s8#, #a1# =q10=#c3#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47089,"=ds=#s8#, #a1# =q7=#db17#"},
+				},
+			},
+		},
+		{ 16934, "INV_Bracer_07", "=q4=Nemesis Bracers", "=ds=#s8#, #a1# =q11=#c8#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47287,"=ds=#s8#, #a1# =q7=#db17#"},
+				},
+			},
+		},
 		{ 16911, "INV_Bracer_02", "=q4=Bloodfang Bracers", "=ds=#s8#, #a2# =q12=#c6#", "11%" },
-		{ 16904, "INV_Bracer_03", "=q4=Stormrage Bracers", "=ds=#s8#, #a2# =q13=#c1#", "11%" },
+		{ 16904, "INV_Bracer_03", "=q4=Stormrage Bracers", "=ds=#s8#, #a2# =q13=#c1#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47349,"=ds=#s8#, #a2# =q7=#db17#"},{47357,"=ds=#s8#, #a2# =q7=#db17#"},
+				},
+			},
+		},
 		{ 16935, "INV_Bracer_17", "=q4=Dragonstalker's Bracers", "=ds=#s8#, #a3# =q14=#c2#", "11%" },
-		{ 16943, "INV_Bracer_16", "=q4=Bindings of Ten Storms", "=ds=#s8#, #a3# =q15=#c7#", "11%" },
-		{ 16951, "INV_Bracer_18", "=q4=Judgement Bindings", "=ds=#s8#, #a4# =q16=#c4#", "11%" },
-		{ 16959, "INV_Bracer_19", "=q4=Bracelets of Wrath", "=ds=#s8#, #a4# =q17=#c9#", "11%" },
+		{ 16943, "INV_Bracer_16", "=q4=Bindings of Ten Storms", "=ds=#s8#, #a3# =q15=#c7#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47139,"=ds=#s8#, #a3# =q7=#db17#"},{47147,"=ds=#s8#, #a3# =q7=#db17#"},
+				},
+			},
+		},
+		{ 16951, "INV_Bracer_18", "=q4=Judgement Bindings", "=ds=#s8#, #a4# =q16=#c4#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47019,"=ds=#s8#, #a4# =q7=#db17#"},{47027,"=ds=#s8#, #a4# =q7=#db17#"},
+				},
+			},
+		},
+		{ 16959, "INV_Bracer_19", "=q4=Bracelets of Wrath", "=ds=#s8#, #a4# =q17=#c9#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47251,"=ds=#s8#, #a4# =q7=#db17#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1028,15 +1056,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19334, "INV_Sword_50", "=q4=The Untamed Blade", "=ds=#h2#, #w10#", "10%" },
 	};
 	BWLVaelastrasz = { --https://database.turtle-wow.org/?npc=13020
-		{ 16925, "INV_Belt_22", "=q4=Belt of Transcendence", "=ds=#s10#, #a1# =q9=#c5#", "11%" },
-		{ 16818, "INV_Belt_22", "=q4=Netherwind Belt", "=ds=#s10#, #a1# =q10=#c3#", "11%" },
-		{ 16933, "INV_Belt_13", "=q4=Nemesis Belt", "=ds=#s10#, #a1# =q11=#c8#", "11%" },
+		{ 16925, "INV_Belt_22", "=q4=Belt of Transcendence", "=ds=#s10#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47211,"=ds=#s10#, #a1# =q7=#db18#"},
+				},
+			},
+		},
+		{ 16818, "INV_Belt_22", "=q4=Netherwind Belt", "=ds=#s10#, #a1# =q10=#c3#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47091,"=ds=#s10#, #a1# =q7=#db18#"},
+				},
+			},
+		},
+		{ 16933, "INV_Belt_13", "=q4=Nemesis Belt", "=ds=#s10#, #a1# =q11=#c8#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47289,"=ds=#s10#, #a1# =q7=#db18#"},
+				},
+			},
+		},
 		{ 16910, "INV_Belt_23", "=q4=Bloodfang Belt", "=ds=#s10#, #a2# =q12=#c6#", "11%" },
-		{ 16903, "INV_Belt_06", "=q4=Stormrage Belt", "=ds=#s10#, #a2# =q13=#c1#", "11%" },
+		{ 16903, "INV_Belt_06", "=q4=Stormrage Belt", "=ds=#s10#, #a2# =q13=#c1#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47351,"=ds=#s10#, #a2# =q7=#db18#"},{47359,"=ds=#s10#, #a2# =q7=#db18#"},
+				},
+			},
+		},
 		{ 16936, "INV_Belt_28", "=q4=Dragonstalker's Belt", "=ds=#s10#, #a3# =q14=#c2#", "11%" },
-		{ 16944, "INV_Belt_14", "=q4=Belt of Ten Storms", "=ds=#s10#, #a3# =q15=#c7#", "11%" },
-		{ 16952, "INV_Belt_27", "=q4=Judgement Belt", "=ds=#s10#, #a4# =q16=#c4#", "11%" },
-		{ 16960, "INV_Belt_09", "=q4=Waistband of Wrath", "=ds=#s10#, #a4# =q17=#c9#", "11%" },
+		{ 16944, "INV_Belt_14", "=q4=Belt of Ten Storms", "=ds=#s10#, #a3# =q15=#c7#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47141,"=ds=#s10#, #a3# =q7=#db18#"},{47149,"=ds=#s10#, #a3# =q7=#db18#"},
+				},
+			},
+		},
+		{ 16952, "INV_Belt_27", "=q4=Judgement Belt", "=ds=#s10#, #a4# =q16=#c4#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47021,"=ds=#s10#, #a4# =q7=#db18#"},{47029,"=ds=#s10#, #a4# =q7=#db18#"},
+				},
+			},
+		},
+		{ 16960, "INV_Belt_09", "=q4=Waistband of Wrath", "=ds=#s10#, #a4# =q17=#c9#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47253,"=ds=#s10#, #a4# =q7=#db18#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1052,15 +1108,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19346, "INV_Weapon_Shortblade_29", "=q4=Dragonfang Blade", "=ds=#h1#, #w4#", "10%" },
 	};
 	BWLLashlayer = { --https://database.turtle-wow.org/?npc=12017
-		{ 16919, "INV_Boots_07", "=q4=Boots of Transcendence", "=ds=#s12#, #a1# =q9=#c5#", "11%" },
-		{ 16912, "INV_Boots_07", "=q4=Netherwind Boots", "=ds=#s12#, #a1# =q10=#c3#", "11%" },
-		{ 16927, "INV_Boots_05", "=q4=Nemesis Boots", "=ds=#s12#, #a1# =q11=#c8#", "11%" },
+		{ 16919, "INV_Boots_07", "=q4=Boots of Transcendence", "=ds=#s12#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47213,"=ds=#s12#, #a1# =q7=#db19#"},
+				},
+			},
+		},
+		{ 16912, "INV_Boots_07", "=q4=Netherwind Boots", "=ds=#s12#, #a1# =q10=#c3#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47093,"=ds=#s12#, #a1# =q7=#db19#"},
+				},
+			},
+		},
+		{ 16927, "INV_Boots_05", "=q4=Nemesis Boots", "=ds=#s12#, #a1# =q11=#c8#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47291,"=ds=#s12#, #a1# =q7=#db19#"},
+				},
+			},
+		},
 		{ 16906, "INV_Boots_08", "=q4=Bloodfang Boots", "=ds=#s12#, #a2# =q12=#c6#", "11%" },
-		{ 16898, "INV_Boots_08", "=q4=Stormrage Boots", "=ds=#s12#, #a2# =q13=#c1#", "11%" },
+		{ 16898, "INV_Boots_08", "=q4=Stormrage Boots", "=ds=#s12#, #a2# =q13=#c1#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47353,"=ds=#s12#, #a2# =q7=#db19#"},{47361,"=ds=#s12#, #a2# =q7=#db19#"},
+				},
+			},
+		},
 		{ 16941, "INV_Boots_Plate_07", "=q4=Dragonstalker's Greaves", "=ds=#s12#, #a3# =q14=#c2#", "11%" },
-		{ 16949, "INV_Boots_Plate_06", "=q4=Greaves of Ten Storms", "=ds=#s12#, #a3# =q15=#c7#", "11%" },
-		{ 16957, "INV_Boots_Plate_09", "=q4=Judgement Sabatons", "=ds=#s12#, #a4# =q16=#c4#", "11%" },
-		{ 16965, "INV_Boots_Plate_04", "=q4=Sabatons of Wrath", "=ds=#s12#, #a4# =q17=#c9#", "11%" },
+		{ 16949, "INV_Boots_Plate_06", "=q4=Greaves of Ten Storms", "=ds=#s12#, #a3# =q15=#c7#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47143,"=ds=#s12#, #a3# =q7=#db19#"},{47151,"=ds=#s12#, #a3# =q7=#db19#"},
+				},
+			},
+		},
+		{ 16957, "INV_Boots_Plate_09", "=q4=Judgement Sabatons", "=ds=#s12#, #a4# =q16=#c4#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47023,"=ds=#s12#, #a4# =q7=#db19#"},{47031,"=ds=#s12#, #a4# =q7=#db19#"},
+				},
+			},
+		},
+		{ 16965, "INV_Boots_Plate_04", "=q4=Sabatons of Wrath", "=ds=#s12#, #a4# =q17=#c9#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47255,"=ds=#s12#, #a4# =q7=#db19#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1076,15 +1160,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19351, "INV_Sword_49", "=q4=Maladath, Runed Blade of the Black Flight", "=ds=#h1#, #w10#", "10%" },
 	};
 	BWLFiremaw = { --https://database.turtle-wow.org/?npc=11983
-		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%" },
-		{ 16913, "INV_Gauntlets_14", "=q4=Netherwind Gloves", "=ds=#s9#, #a1# =q10=#c3#", "7%" },
-		{ 16928, "INV_Gauntlets_19", "=q4=Nemesis Gloves", "=ds=#s9#, #a1# =q11=#c8#", "7%" },
+		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47210,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16913, "INV_Gauntlets_14", "=q4=Netherwind Gloves", "=ds=#s9#, #a1# =q10=#c3#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47090,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16928, "INV_Gauntlets_19", "=q4=Nemesis Gloves", "=ds=#s9#, #a1# =q11=#c8#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47288,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 16907, "INV_Gauntlets_21", "=q4=Bloodfang Gloves", "=ds=#s9#, #a2# =q12=#c6#", "7%" },
-		{ 16899, "INV_Gauntlets_25", "=q4=Stormrage Handguards", "=ds=#s9#, #a2# =q13=#c1#", "7%" },
+		{ 16899, "INV_Gauntlets_25", "=q4=Stormrage Handguards", "=ds=#s9#, #a2# =q13=#c1#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47350,"=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47358,"=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 16940, "INV_Gauntlets_10", "=q4=Dragonstalker's Gauntlets", "=ds=#s9#, #a3# =q14=#c2#", "7%" },
-		{ 16948, "INV_Gauntlets_11", "=q4=Gauntlets of Ten Storms", "=ds=#s9#, #a3# =q15=#c7#", "7%" },
-		{ 16956, "INV_Gauntlets_29", "=q4=Judgement Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "7%" },
-		{ 16964, "INV_Gauntlets_10", "=q4=Gauntlets of Wrath", "=ds=#s9#, #a4# =q17=#c9#", "7%" },
+		{ 16948, "INV_Gauntlets_11", "=q4=Gauntlets of Ten Storms", "=ds=#s9#, #a3# =q15=#c7#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47140,"=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47148,"=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16956, "INV_Gauntlets_29", "=q4=Judgement Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47020,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47028,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16964, "INV_Gauntlets_10", "=q4=Gauntlets of Wrath", "=ds=#s9#, #a4# =q17=#c9#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47252,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1107,15 +1219,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19395, "INV_Misc_Gem_Topaz_02", "=q4=Rejuvenating Gem", "=ds=#s14#", "7%" },
 	};
 	BWLEbonroc = { --https://database.turtle-wow.org/?npc=14601
-		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%" },
-		{ 16913, "INV_Gauntlets_14", "=q4=Netherwind Gloves", "=ds=#s9#, #a1# =q10=#c3#", "7%" },
-		{ 16928, "INV_Gauntlets_19", "=q4=Nemesis Gloves", "=ds=#s9#, #a1# =q11=#c8#", "7%" },
+		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47210,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16913, "INV_Gauntlets_14", "=q4=Netherwind Gloves", "=ds=#s9#, #a1# =q10=#c3#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47090,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16928, "INV_Gauntlets_19", "=q4=Nemesis Gloves", "=ds=#s9#, #a1# =q11=#c8#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47288,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 16907, "INV_Gauntlets_21", "=q4=Bloodfang Gloves", "=ds=#s9#, #a2# =q12=#c6#", "7%" },
-		{ 16899, "INV_Gauntlets_25", "=q4=Stormrage Handguards", "=ds=#s9#, #a2# =q13=#c1#", "7%" },
+		{ 16899, "INV_Gauntlets_25", "=q4=Stormrage Handguards", "=ds=#s9#, #a2# =q13=#c1#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47350,"=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47358,"=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 16940, "INV_Gauntlets_10", "=q4=Dragonstalker's Gauntlets", "=ds=#s9#, #a3# =q14=#c2#", "7%" },
-		{ 16948, "INV_Gauntlets_11", "=q4=Gauntlets of Ten Storms", "=ds=#s9#, #a3# =q15=#c7#", "7%" },
-		{ 16956, "INV_Gauntlets_29", "=q4=Judgement Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "7%" },
-		{ 16964, "INV_Gauntlets_10", "=q4=Gauntlets of Wrath", "=ds=#s9#, #a4# =q17=#c9#", "7%" },
+		{ 16948, "INV_Gauntlets_11", "=q4=Gauntlets of Ten Storms", "=ds=#s9#, #a3# =q15=#c7#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47140,"=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47148,"=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16956, "INV_Gauntlets_29", "=q4=Judgement Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47020,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47028,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16964, "INV_Gauntlets_10", "=q4=Gauntlets of Wrath", "=ds=#s9#, #a4# =q17=#c9#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47252,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1137,15 +1277,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19395, "INV_Misc_Gem_Topaz_02", "=q4=Rejuvenating Gem", "=ds=#s14#", "7%" },
 	};
 	BWLFlamegor = { --https://database.turtle-wow.org/?npc=11981
-		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%" },
-		{ 16913, "INV_Gauntlets_14", "=q4=Netherwind Gloves", "=ds=#s9#, #a1# =q10=#c3#", "7%" },
-		{ 16928, "INV_Gauntlets_19", "=q4=Nemesis Gloves", "=ds=#s9#, #a1# =q11=#c8#", "7%" },
+		{ 16920, "INV_Gauntlets_14", "=q4=Handguards of Transcendence", "=ds=#s9#, #a1# =q9=#c5#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47210,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16913, "INV_Gauntlets_14", "=q4=Netherwind Gloves", "=ds=#s9#, #a1# =q10=#c3#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47090,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16928, "INV_Gauntlets_19", "=q4=Nemesis Gloves", "=ds=#s9#, #a1# =q11=#c8#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47288,"=ds=#s10#, #a1# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 16907, "INV_Gauntlets_21", "=q4=Bloodfang Gloves", "=ds=#s9#, #a2# =q12=#c6#", "7%" },
-		{ 16899, "INV_Gauntlets_25", "=q4=Stormrage Handguards", "=ds=#s9#, #a2# =q13=#c1#", "7%" },
+		{ 16899, "INV_Gauntlets_25", "=q4=Stormrage Handguards", "=ds=#s9#, #a2# =q13=#c1#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47350,"=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47358,"=ds=#s10#, #a2# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 16940, "INV_Gauntlets_10", "=q4=Dragonstalker's Gauntlets", "=ds=#s9#, #a3# =q14=#c2#", "7%" },
-		{ 16948, "INV_Gauntlets_11", "=q4=Gauntlets of Ten Storms", "=ds=#s9#, #a3# =q15=#c7#", "7%" },
-		{ 16956, "INV_Gauntlets_29", "=q4=Judgement Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "7%" },
-		{ 16964, "INV_Gauntlets_10", "=q4=Gauntlets of Wrath", "=ds=#s9#, #a4# =q17=#c9#", "7%" },
+		{ 16948, "INV_Gauntlets_11", "=q4=Gauntlets of Ten Storms", "=ds=#s9#, #a3# =q15=#c7#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47140,"=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47148,"=ds=#s10#, #a3# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16956, "INV_Gauntlets_29", "=q4=Judgement Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47020,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},{47028,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
+		{ 16964, "INV_Gauntlets_10", "=q4=Gauntlets of Wrath", "=ds=#s9#, #a4# =q17=#c9#", "7%", "", "", "", "", "", "", "", "", "", "", {{
+					{47252,"=ds=#s10#, #a4# =q7=#db20#=ds=, =q7=#db21#=ds=, =q7=#db22#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1168,15 +1336,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19431, "INV_Misc_ArmorKit_10", "=q4=Styleen's Impeding Scarab", "=ds=#s14#", "17%" },
 	};
 	BWLChromaggus = { --https://database.turtle-wow.org/?npc=14020
-		{ 16924, "INV_Shoulder_02", "=q4=Pauldrons of Transcendence", "=ds=#s3#, #a1# =q9=#c5#", "11%" },
-		{ 16917, "INV_Shoulder_32", "=q4=Netherwind Mantle", "=ds=#s3#, #a1# =q10=#c3#", "11%" },
-		{ 16932, "INV_Shoulder_19", "=q4=Nemesis Spaulders", "=ds=#s3#, #a1# =q11=#c8#", "11%" },
+		{ 16924, "INV_Shoulder_02", "=q4=Pauldrons of Transcendence", "=ds=#s3#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47207,"=ds=#s3#, #a1# =q7=#db23#"},
+				},
+			},
+		},
+		{ 16917, "INV_Shoulder_32", "=q4=Netherwind Mantle", "=ds=#s3#, #a1# =q10=#c3#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47087,"=ds=#s3#, #a1# =q7=#db23#"},
+				},
+			},
+		},
+		{ 16932, "INV_Shoulder_19", "=q4=Nemesis Spaulders", "=ds=#s3#, #a1# =q11=#c8#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47285,"=ds=#s3#, #a1# =q7=#db23#"},
+				},
+			},
+		},
 		{ 16832, "INV_Shoulder_23", "=q4=Bloodfang Spaulders", "=ds=#s3#, #a2# =q12=#c6#", "11%" },
-		{ 16902, "INV_Shoulder_07", "=q4=Stormrage Pauldrons", "=ds=#s3#, #a2# =q13=#c1#", "11%" },
+		{ 16902, "INV_Shoulder_07", "=q4=Stormrage Pauldrons", "=ds=#s3#, #a2# =q13=#c1#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47347,"=ds=#s3#, #a2# =q7=#db23#"},{47355,"=ds=#s3#, #a2# =q7=#db23#"},
+				},
+			},
+		},
 		{ 16937, "INV_Shoulder_10", "=q4=Dragonstalker's Spaulders", "=ds=#s3#, #a3# =q14=#c2#", "11%" },
-		{ 16945, "INV_Shoulder_33", "=q4=Epaulets of Ten Storms", "=ds=#s3#, #a3# =q15=#c7#", "11%" },
-		{ 16953, "INV_Shoulder_37", "=q4=Judgement Spaulders", "=ds=#s3#, #a4# =q16=#c4#", "11%" },
-		{ 16961, "INV_Shoulder_34", "=q4=Pauldrons of Wrath", "=ds=#s3#, #a4# =q17=#c9#", "11%" },
+		{ 16945, "INV_Shoulder_33", "=q4=Epaulets of Ten Storms", "=ds=#s3#, #a3# =q15=#c7#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47137,"=ds=#s3#, #a3# =q7=#db23#"},{47145,"=ds=#s3#, #a3# =q7=#db23#"},
+				},
+			},
+		},
+		{ 16953, "INV_Shoulder_37", "=q4=Judgement Spaulders", "=ds=#s3#, #a4# =q16=#c4#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47017,"=ds=#s3#, #a4# =q7=#db23#"},{47025,"=ds=#s3#, #a4# =q7=#db23#"},
+				},
+			},
+		},
+		{ 16961, "INV_Shoulder_34", "=q4=Pauldrons of Wrath", "=ds=#s3#, #a4# =q17=#c9#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47249,"=ds=#s3#, #a4# =q7=#db23#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1199,18 +1395,46 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19352, "INV_Sword_51", "=q4=Chromatically Tempered Sword", "=ds=#h1#, #w10#", "10%" },
 	};
 	BWLNefarian = { --https://database.turtle-wow.org/?npc=11583
-		{ 16923, "INV_Chest_Cloth_03", "=q4=Robes of Transcendence", "=ds=#s1#, #a1# =q9=#c5#", "11%" },
-		{ 16916, "INV_Chest_Cloth_03", "=q4=Netherwind Robes", "=ds=#s1#, #a1# =q10=#c3#", "11%" },
-		{ 16931, "INV_Chest_Leather_01", "=q4=Nemesis Robes", "=ds=#s1#, #a1# =q11=#c8#", "11%" },
+		{ 16923, "INV_Chest_Cloth_03", "=q4=Robes of Transcendence", "=ds=#s1#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47208,"=ds=#s5#, #a1# =q7=#db24#"},
+				},
+			},
+		},
+		{ 16916, "INV_Chest_Cloth_03", "=q4=Netherwind Robes", "=ds=#s1#, #a1# =q10=#c3#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47088,"=ds=#s5#, #a1# =q7=#db24#"},
+				},
+			},
+		},
+		{ 16931, "INV_Chest_Leather_01", "=q4=Nemesis Robes", "=ds=#s1#, #a1# =q11=#c8#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47286,"=ds=#s5#, #a1# =q7=#db24#"},
+				},
+			},
+		},
 		{ 16905, "INV_Chest_Cloth_07", "=q4=Bloodfang Chestpiece", "=ds=#s1#, #a2# =q12=#c6#", "11%" },
-		{ 16897, "INV_Chest_Chain_16", "=q4=Stormrage Chestguard", "=ds=#s1#, #a2# =q13=#c1#", "11%" },
+		{ 16897, "INV_Chest_Chain_16", "=q4=Stormrage Chestguard", "=ds=#s1#, #a2# =q13=#c1#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47348,"=ds=#s5#, #a2# =q7=#db24#"},{47356,"=ds=#s5#, #a2# =q7=#db24#"},
+				},
+			},
+		},
 		{ 16942, "INV_Chest_Chain_03", "=q4=Dragonstalker's Breastplate", "=ds=#s1#, #a3# =q14=#c2#", "11%" },
-		{ 16950, "INV_Chest_Chain_11", "=q4=Breastplate of Ten Storms", "=ds=#s1#, #a3# =q15=#c7#", "11%" },
-		{ 16958, "INV_Chest_Plate03", "=q4=Judgement Breastplate", "=ds=#s1#, #a4# =q16=#c4#", "11%" },
-		{ 16966, "INV_Chest_Plate16", "=q4=Breastplate of Wrath", "=ds=#s1#, #a4# =q17=#c9#", "11%" },
+		{ 16950, "INV_Chest_Chain_11", "=q4=Breastplate of Ten Storms", "=ds=#s1#, #a3# =q15=#c7#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47138,"=ds=#s5#, #a3# =q7=#db24#"},{47146,"=ds=#s5#, #a3# =q7=#db24#"},
+				},
+			},
+		},
+		{ 16958, "INV_Chest_Plate03", "=q4=Judgement Breastplate", "=ds=#s1#, #a4# =q16=#c4#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47018,"=ds=#s5#, #a4# =q7=#db24#"},{47026,"=ds=#s5#, #a4# =q7=#db24#"},
+				},
+			},
+		},
+		{ 16966, "INV_Chest_Plate16", "=q4=Breastplate of Wrath", "=ds=#s1#, #a4# =q17=#c9#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+					{47250,"=ds=#s5#, #a4# =q7=#db24#"},
+				},
+			},
+		},
 		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 19003, "INV_Misc_Head_Dragon_Black", "=q4=Head of Nefarian", "=ds=#m2#", "100%" },
+		{ 19003, "INV_Misc_Head_Dragon_Black", "=q4=Head of Nefarian (Alliance)", "=ds=#m2#", "100%" },
+		{ 19002, "INV_Misc_Head_Dragon_Black", "=q4=Head of Nefarian (Horde)", "=ds=#m2#", "100%" },
 		{ 19383,"INV_Jewelry_Necklace_18","=q4=Master Dragonslayer's Medallion","=q1=#m4# =ds=#s2#" },
 		{ 19384,"INV_Jewelry_Ring_41","=q4=Master Dragonslayer's Ring","=q1=#m4# =ds=#s13#" },
 		{ 19366,"INV_Misc_Orb_03","=q4=Master Dragonslayer's Orb","=q1=#m4# =ds=#s15#" },
@@ -1245,13 +1469,37 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19183, "INV_Misc_Dust_02", "=q1=Hourglass Sand", "=ds=#m25#", "47%" },
 	};
 	MCLucifron = { --https://database.turtle-wow.org/?npc=12118
-		{ 16800, "INV_Boots_07", "=q4=Arcanist Boots", "=ds=#s12#, #a1# =q10=#c3#", "20%" },
-		{ 16805, "INV_Gauntlets_19", "=q4=Felheart Gloves", "=ds=#s9#, #a1# =q11=#c8#", "30%" },
-		{ 16829, "INV_Boots_08", "=q4=Cenarion Boots", "=ds=#s12#, #a2# =q13=#c1#", "20%" },
-		{ 16837, "INV_Boots_Plate_06", "=q4=Earthfury Boots", "=ds=#s12#, #a3# =q15=#c7#", "20%" },
-		{ 16859, "INV_Boots_Plate_09", "=q4=Lawbringer Boots", "=ds=#s12#, #a4# =q16=#c4# ", "20%" },
-		{ 16863, "INV_Gauntlets_10", "=q4=Gauntlets of Might", "=ds=#s9#, #a4# =q17=#c9#", "30%" },
+		{ 16800, "INV_Boots_07", "=q4=Arcanist Boots", "=ds=#s12#, #a1# =q10=#c3#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47085,"=ds=#s12#, #a1# =q7=#db25#"},
+				},
+			},
+		},
+		{ 16829, "INV_Boots_08", "=q4=Cenarion Boots", "=ds=#s12#, #a2# =q13=#c1#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47337,"=ds=#s12#, #a2# =q7=#db25#"},{47345,"=ds=#s12#, #a2# =q7=#db25#"},
+				},
+			},
+		},
+		{ 16837, "INV_Boots_Plate_06", "=q4=Earthfury Boots", "=ds=#s12#, #a3# =q15=#c7#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47127,"=ds=#s12#, #a3# =q7=#db25#"},{47135,"=ds=#s12#, #a3# =q7=#db25#"},
+				},
+			},
+		},
+		{ 16859, "INV_Boots_Plate_09", "=q4=Lawbringer Boots", "=ds=#s12#, #a4# =q16=#c4# ", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47007,"=ds=#s12#, #a4# =q7=#db25#"},{47015,"=ds=#s12#, #a4# =q7=#db25#"},
+				},
+			},
+		},
 		{ 0,"","","" },
+		{ 16863, "INV_Gauntlets_10", "=q4=Gauntlets of Might", "=ds=#s9#, #a4# =q17=#c9#", "30%", "", "", "", "", "", "", "", "", "", "", {{
+					{47244,"=ds=#s9#, #a4# =q7=#db25#"},
+				},
+			},
+		},
+		{ 16805, "INV_Gauntlets_19", "=q4=Felheart Gloves", "=ds=#s9#, #a1# =q11=#c8#", "30%", "", "", "", "", "", "", "", "", "", "", {{
+					{47280,"=ds=#s9#, #a1# =q7=#db25#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1277,15 +1525,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 16665, "INV_Misc_Book_11", "=q2=Tome of Tranquilizing Shot", "=ds=#e20# =q14=#c2#", "100%" },
 	};
 	MCMagmadar = { --https://database.turtle-wow.org/?npc=11982
-		{ 16814, "INV_Pants_08", "=q4=Pants of Prophecy", "=ds=#s11#, #a1# =q9=#c5#", "20%" },
-		{ 16796, "INV_Pants_08", "=q4=Arcanist Leggings", "=ds=#s11#, #a1# =q10=#c3#", "20%" },
-		{ 16810, "INV_Pants_Cloth_14", "=q4=Felheart Pants", "=ds=#s11#, #a1# =q11=#c8#", "20%" },
+		{ 16814, "INV_Pants_08", "=q4=Pants of Prophecy", "=ds=#s11#, #a1# =q9=#c5#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47204,"=ds=#s11#, #a1# =q7=#db26#"},
+				},
+			},
+		},
+		{ 16796, "INV_Pants_08", "=q4=Arcanist Leggings", "=ds=#s11#, #a1# =q10=#c3#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47084,"=ds=#s11#, #a1# =q7=#db26#"},
+				},
+			},
+		},
+		{ 16810, "INV_Pants_Cloth_14", "=q4=Felheart Pants", "=ds=#s11#, #a1# =q11=#c8#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47282,"=ds=#s11#, #a1# =q7=#db26#"},
+				},
+			},
+		},
+		{ 16835, "INV_Pants_06", "=q4=Cenarion Leggings", "=ds=#s11#, #a2# =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47336,"=ds=#s11#, #a2# =q7=#db26#"},{47344,"=ds=#s11#, #a2# =q7=#db26#"}
+				},
+			},
+		},
+		{ 16843, "INV_Pants_03", "=q4=Earthfury Legguards", "=ds=#s11#, #a3# =q15=#c7#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47126,"=ds=#s11#, #a3# =q7=#db26#"},{47134,"=ds=#s11#, #a3# =q7=#db26#"}
+				},
+			},
+		},
+		{ 16855, "INV_Pants_04", "=q4=Lawbringer Legplates", "=ds=#s11#, #a4# =q16=#c4#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47006,"=ds=#s11#, #a4# =q7=#db26#"},{47014,"=ds=#s11#, #a4# =q7=#db26#"}
+				},
+			},
+		},
+		{ 16867, "INV_Pants_04", "=q4=Legplates of Might", "=ds=#s11#, #a4# =q17=#c9#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47246,"=ds=#s11#, #a4# =q7=#db26#"},
+				},
+			},
+		},
 		{ 16822, "INV_Pants_06", "=q4=Nightslayer Pants", "=ds=#s11#, #a2# =q12=#c6#", "20%" },
-		{ 16835, "INV_Pants_06", "=q4=Cenarion Leggings", "=ds=#s11#, #a2# =q13=#c1#", "17%" },
 		{ 16847, "INV_Pants_Mail_03", "=q4=Giantstalker's Leggings", "=ds=#s11#, #a3# =q14=#c2#", "17%" },
-		{ 16843, "INV_Pants_03", "=q4=Earthfury Legguards", "=ds=#s11#, #a3# =q15=#c7#", "17%" },
-		{ 16855, "INV_Pants_04", "=q4=Lawbringer Legplates", "=ds=#s11#, #a4# =q16=#c4#", "17%" },
-		{ 16867, "INV_Pants_04", "=q4=Legplates of Might", "=ds=#s11#, #a4# =q17=#c9#", "17%" },
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1309,13 +1585,29 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18822, "INV_Sword_28", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "5%" },
 	};
 	MCGehennas = { --https://database.turtle-wow.org/?npc=12259
-		{ 16812, "INV_Gauntlets_14", "=q4=Gloves of Prophecy", "=ds=#s9#, #a1# =q9=#c5#", "25%" },
+		{ 16812, "INV_Gauntlets_14", "=q4=Gloves of Prophecy", "=ds=#s9#, #a1# =q9=#c5#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47202,"=ds=#s9#, #a1# =q7=#db27#"},
+				},
+			},
+		},
+		{ 16839, "INV_Gauntlets_11", "=q4=Earthfury Gloves", "=ds=#s9#, #a3# =q15=#c7#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47124,"=ds=#s9#, #a3# =q7=#db27#"},{47132,"=ds=#s9#, #a3# =q7=#db27#"},
+				},
+			},
+		},
+		{ 16860, "INV_Gauntlets_29", "=q4=Lawbringer Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47004,"=ds=#s9#, #a4# =q7=#db27#"},{47012,"=ds=#s9#, #a4# =q7=#db27#"},
+				},
+			},
+		},
 		{ 16826, "INV_Gauntlets_21", "=q4=Nightslayer Gloves", "=ds=#s9#, #a2# =q12=#c6#", "25%" },
-		{ 16849, "INV_Boots_Chain_13", "=q4=Giantstalker's Boots", "=ds=#s12#, #a3# =q14=#c2#", "25%" },
-		{ 16839, "INV_Gauntlets_11", "=q4=Earthfury Gloves", "=ds=#s9#, #a3# =q15=#c7#", "25%" },
-		{ 16860, "INV_Gauntlets_29", "=q4=Lawbringer Gauntlets", "=ds=#s9#, #a4# =q16=#c4#", "25%" },
-		{ 16862, "INV_Boots_Plate_04", "=q4=Sabatons of Might", "=ds=#s12#, #a4# =q17=#c9#", "25%" },
 		{ 0,"","","" },
+		{ 16862, "INV_Boots_Plate_04", "=q4=Sabatons of Might", "=ds=#s12#, #a4# =q17=#c9#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47247,"=ds=#s12#, #a4#"},
+				},
+			},
+		},
+		{ 16849, "INV_Boots_Chain_13", "=q4=Giantstalker's Boots", "=ds=#s12#, #a3# =q14=#c2#", "25%" },
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1336,15 +1628,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18878, "INV_Weapon_ShortBlade_07", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "5%" },
 	};
 	MCGarr = { --https://database.turtle-wow.org/?npc=12057
-		{ 16813, "INV_Helmet_34", "=q4=Circlet of Prophecy", "=ds=#s1#, #a1# =q9=#c5#", "20%" },
-		{ 16795, "INV_Helmet_53", "=q4=Arcanist Crown", "=ds=#s1#, #a1# =q10=#c3#", "20%" },
-		{ 16808, "INV_Helmet_08", "=q4=Felheart Horns", "=ds=#s1#, #a1# =q11=#c8#", "20%" },
+		{ 16813, "INV_Helmet_34", "=q4=Circlet of Prophecy", "=ds=#s1#, #a1# =q9=#c5#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47198,"=ds=#s1#, #a1# =q7=#db28#"},
+				},
+			},
+		},
+		{ 16795, "INV_Helmet_53", "=q4=Arcanist Crown", "=ds=#s1#, #a1# =q10=#c3#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47078,"=ds=#s1#, #a1# =q7=#db28#"},
+				},
+			},
+		},
+		{ 16808, "INV_Helmet_08", "=q4=Felheart Horns", "=ds=#s1#, #a1# =q11=#c8#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47276,"=ds=#s1#, #a1# =q7=#db28#"},
+				},
+			},
+		},
 		{ 16821, "INV_Helmet_41", "=q4=Nightslayer Cover", "=ds=#s1#, #a2# =q12=#c6#", "20%" },
-		{ 16834, "INV_Helmet_09", "=q4=Cenarion Helm", "=ds=#s1#, #a2# =q13=#c1#", "17%" },
+		{ 16834, "INV_Helmet_09", "=q4=Cenarion Helm", "=ds=#s1#, #a2# =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47330,"=ds=#s1#, #a2# =q7=#db28#"},{47338,"=ds=#s1#, #a2# =q7=#db28#"},
+				},
+			},
+		},
 		{ 16846, "INV_Helmet_05", "=q4=Giantstalker's Helmet", "=ds=#s1#, #a3# =q14=#c2#", "17%" },
-		{ 16842, "INV_Helmet_09", "=q4=Earthfury Helmet", "=ds=#s1#, #a3# =q15=#c7#", "17%" },
-		{ 16854, "INV_Helmet_05", "=q4=Lawbringer Helm", "=ds=#s1#, #a4# =q16=#c4#", "17%" },
-		{ 16866, "INV_Helmet_09", "=q4=Helm of Might", "=ds=#s1#, #a4# =q17=#c9#", "17%" },
+		{ 16842, "INV_Helmet_09", "=q4=Earthfury Helmet", "=ds=#s1#, #a3# =q15=#c7#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47120,"=ds=#s1#, #a3# =q7=#db28#"},{47128,"=ds=#s1#, #a3# =q7=#db28#"},
+				},
+			},
+		},
+		{ 16854, "INV_Helmet_05", "=q4=Lawbringer Helm", "=ds=#s1#, #a4# =q16=#c4#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47000,"=ds=#s1#, #a4# =q7=#db28#"},{47008,"=ds=#s1#, #a4# =q7=#db28#"},
+				},
+			},
+		},
+		{ 16866, "INV_Helmet_09", "=q4=Helm of Might", "=ds=#s1#, #a4# =q17=#c9#", "17%", "", "", "", "", "", "", "", "", "", "", {{
+					{47240,"=ds=#s1#, #a4# =q7=#db28#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1368,13 +1688,29 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18822, "INV_Sword_28", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "5%" },
 	};
 	MCShazzrah = { --https://database.turtle-wow.org/?npc=12264
-		{ 16811, "INV_Boots_07", "=q4=Boots of Prophecy", "=ds=#s12#, #a1# =q9=#c5#", "25%" },
-		{ 16801, "INV_Gauntlets_14", "=q4=Arcanist Gloves", "=ds=#s9#, #a1# =q10=#c3#", "33%" },
-		{ 16803, "INV_Boots_Cloth_05", "=q4=Felheart Slippers", "=ds=#s12#, #a1# =q11=#c8#", "25%" },
+		{ 16811, "INV_Boots_07", "=q4=Boots of Prophecy", "=ds=#s12#, #a1# =q9=#c5#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47205,"=ds=#s12#, #a1# =q7=#db30#"},
+				},
+			},
+		},
+		{ 16803, "INV_Boots_Cloth_05", "=q4=Felheart Slippers", "=ds=#s12#, #a1# =q11=#c8#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47283,"=ds=#s12#, #a1# =q7=#db30#"},
+				},
+			},
+		},
 		{ 16824, "INV_Boots_08", "=q4=Nightslayer Boots", "=ds=#s12#, #a2# =q12=#c6#", "25%" },
-		{ 16831, "INV_Gauntlets_07", "=q4=Cenarion Gloves", "=ds=#s9#, #a2# =q13=#c1#", "33%" },
-		{ 16852, "INV_Gauntlets_10", "=q4=Giantstalker's Gloves", "=ds=#s9#, #a3# =q14=#c2#", "33%" },
 		{ 0,"","","" },
+		{ 16831, "INV_Gauntlets_07", "=q4=Cenarion Gloves", "=ds=#s9#, #a2# =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {{
+					{47334,"=ds=#s9#, #a2# =q7=#db30#"},{47342,"=ds=#s9#, #a2# =q7=#db30#"},
+				},
+			},
+		},
+		{ 16801, "INV_Gauntlets_14", "=q4=Arcanist Gloves", "=ds=#s9#, #a1# =q10=#c3#", "33%", "", "", "", "", "", "", "", "", "", "", {{
+					{47082,"=ds=#s10#, #a1# =q7=#db30#"},
+				},
+			},
+		},
+		{ 16852, "INV_Gauntlets_10", "=q4=Giantstalker's Gloves", "=ds=#s9#, #a3# =q14=#c2#", "33%" },
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1395,11 +1731,31 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18878, "INV_Weapon_ShortBlade_07", "=q4=Sorcerous Dagger", "=ds=#h3#, #w4#", "3%" },
 	};
 	MCGeddon = { --https://database.turtle-wow.org/?npc=12056
-		{ 16797, "INV_Shoulder_02", "=q4=Arcanist Mantle", "=ds=#s3#, #a1# =q10=#c3#", "33%" },
-		{ 16807, "INV_Shoulder_23", "=q4=Felheart Shoulder Pads", "=ds=#s3#, #a1# =q11=#c8#", "33%" },
-		{ 16836, "INV_Shoulder_07", "=q4=Cenarion Spaulders", "=ds=#s3#, #a2# =q13=#c1#", "30%" },
-		{ 16844, "INV_Shoulder_29", "=q4=Earthfury Epaulets", "=ds=#s3#, #a3# =q15=#c7#", "30%" },
-		{ 16856, "INV_Shoulder_20", "=q4=Lawbringer Spaulders", "=ds=#s3#, #a4# =q16=#c4#", "60%" },
+		{ 16797, "INV_Shoulder_02", "=q4=Arcanist Mantle", "=ds=#s3#, #a1# =q10=#c3#", "33%", "", "", "", "", "", "", "", "", "", "", {{
+					{47079,"=ds=#s3#, #a1# =q7=#db29#"},
+				},
+			},
+		},
+		{ 16807, "INV_Shoulder_23", "=q4=Felheart Shoulder Pads", "=ds=#s3#, #a1# =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {{
+					{47277,"=ds=#s3#, #a1# =q7=#db29#"},
+				},
+			},
+		},
+		{ 16836, "INV_Shoulder_07", "=q4=Cenarion Spaulders", "=ds=#s3#, #a2# =q13=#c1#", "30%", "", "", "", "", "", "", "", "", "", "", {{
+					{47331,"=ds=#s3#, #a2# =q7=#db29#"},{47339,"=ds=#s3#, #a2# =q7=#db29#"},
+				},
+			},
+		},
+		{ 16844, "INV_Shoulder_29", "=q4=Earthfury Epaulets", "=ds=#s3#, #a3# =q15=#c7#", "30%", "", "", "", "", "", "", "", "", "", "", {{
+					{47121,"=ds=#s3#, #a3# =q7=#db29#"},{47129,"=ds=#s3#, #a3# =q7=#db29#"},
+				},
+			},
+		},
+		{ 16856, "INV_Shoulder_20", "=q4=Lawbringer Spaulders", "=ds=#s3#, #a4# =q16=#c4#", "60%", "", "", "", "", "", "", "", "", "", "", {{
+					{47001,"=ds=#s3#, #a4# =q7=#db29#"},{47009,"=ds=#s3#, #a4# =q7=#db29#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1424,15 +1780,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18822, "INV_Sword_28", "=q4=Obsidian Edged Blade", "=ds=#h2#, #w10#", "4%" },
 	};
 	MCGolemagg = { --https://database.turtle-wow.org/?npc=11988
-		{ 16815, "INV_Chest_Cloth_03", "=q4=Robes of Prophecy", "=ds=#s5#, #a1# =q9=#c5#", "25%" },
-		{ 16798, "INV_Chest_Cloth_03", "=q4=Arcanist Robes", "=ds=#s5#, #a1# =q10=#c3#", "25%" },
-		{ 16809, "INV_Chest_Cloth_09", "=q4=Felheart Robes", "=ds=#s5#, #a1# =q11=#c8#", "25%" },
+		{ 16815, "INV_Chest_Cloth_03", "=q4=Robes of Prophecy", "=ds=#s5#, #a1# =q9=#c5#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47200,"=ds=#s5#, #a1# =q7=#db32#"},
+				},
+			},
+		},
+		{ 16798, "INV_Chest_Cloth_03", "=q4=Arcanist Robes", "=ds=#s5#, #a1# =q10=#c3#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{47080,"=ds=#s5#, #a1# =q7=#db32#"},
+				},
+			},
+		},
+		{ 16809, "INV_Chest_Cloth_09", "=q4=Felheart Robes", "=ds=#s5#, #a1# =q11=#c8#", "25%", "", "", "", "", "", "", "", "", "", "", {{
+					{16809,"=ds=#s5#, #a1# =q7=#db32#"},
+				},
+			},
+		},
 		{ 16820, "INV_Chest_Cloth_07", "=q4=Nightslayer Chestpiece", "=ds=#s5#, #a2# =q12=#c6#", "25%" },
-		{ 16833, "INV_Chest_Cloth_06", "=q4=Cenarion Vestments", "=ds=#s5#, #a2# =q13=#c1#", "20%" },
+		{ 16833, "INV_Chest_Cloth_06", "=q4=Cenarion Vestments", "=ds=#s5#, #a2# =q13=#c1#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47332,"=ds=#s5#, #a2# =q7=#db32#"},{47340,"=ds=#s5#, #a2# =q7=#db32#"},
+				},
+			},
+		},
 		{ 16845, "INV_Chest_Chain_03", "=q4=Giantstalker's Breastplate", "=ds=#s5#, #a3# =q14=#c2#", "20%" },
-		{ 16841, "INV_Chest_Chain_11", "=q4=Earthfury Chestpiece", "=ds=#s5#, #a3# =q15=#c7#", "20%" },
-		{ 16853, "INV_Chest_Plate03", "=q4=Lawbringer Chestguard", "=ds=#s5#, #a4# =q16=#c4#", "20%" },
-		{ 16865, "INV_Chest_Plate16", "=q4=Breastplate of Might", "=ds=#s5#, #a4# =q17=#c9#", "20%" },
+		{ 16841, "INV_Chest_Chain_11", "=q4=Earthfury Chestpiece", "=ds=#s5#, #a3# =q15=#c7#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47122,"=ds=#s5#, #a3# =q7=#db32#"},{47130,"=ds=#s5#, #a3# =q7=#db32#"},
+				},
+			},
+		},
+		{ 16853, "INV_Chest_Plate03", "=q4=Lawbringer Chestguard", "=ds=#s5#, #a4# =q16=#c4#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47002,"=ds=#s5#, #a4# =q7=#db32#"},{47010,"=ds=#s5#, #a4# =q7=#db32#"},
+				},
+			},
+		},
+		{ 16865, "INV_Chest_Plate16", "=q4=Breastplate of Might", "=ds=#s5#, #a4# =q17=#c9#", "20%", "", "", "", "", "", "", "", "", "", "", {{
+					{47242,"=ds=#s5#, #a4# =q7=#db32#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1455,10 +1839,18 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18842, "INV_Staff_13", "=q4=Staff of Dominance", "=ds=#w9#", "25%" },
 	};
 	MCSulfuron = { --https://database.turtle-wow.org/?npc=12098
-		{ 16816, "INV_Shoulder_02", "=q4=Mantle of Prophecy", "=ds=#s3#, #a1# =q9=#c5#", "33%" },
+		{ 16816, "INV_Shoulder_02", "=q4=Mantle of Prophecy", "=ds=#s3#, #a1# =q9=#c5#", "33%", "", "", "", "", "", "", "", "", "", "", {{
+					{47199,"=ds=#s3#, #a1# =q7=#db31#"},
+				},
+			},
+		},
 		{ 16823, "INV_Shoulder_25", "=q4=Nightslayer Shoulder Pads", "=ds=#s3#, #a2# =q12=#c6#", "30%" },
 		{ 16848, "INV_Shoulder_10", "=q4=Giantstalker's Epaulets", "=ds=#s3#, #a3# =q14=#c2#", "33%" },
-		{ 16868, "INV_Shoulder_15", "=q4=Pauldrons of Might", "=ds=#s3#, #a4# =q17=#c9#", "30%" },
+		{ 16868, "INV_Shoulder_15", "=q4=Pauldrons of Might", "=ds=#s3#, #a4# =q17=#c9#", "30%", "", "", "", "", "", "", "", "", "", "", {{
+					{47241,"=ds=#s3#, #a4# =q7=#db31#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1509,15 +1901,43 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18609, "INV_Staff_12", "=q4=Anathema", "=q1=#m4# =ds=#w9# =q9=#c5#" },
 	};
 	MCRagnaros = { --https://database.turtle-wow.org/?npc=11502
-		{ 16922, "INV_Pants_08", "=q4=Leggings of Transcendence", "=ds=#s11#, #a1# =q9=#c5#", "13%" },
-		{ 16915, "INV_Pants_08", "=q4=Netherwind Pants", "=ds=#s11#, #a1# =q10=#c3#", "13%" },
-		{ 16930, "INV_Pants_07", "=q4=Nemesis Leggings", "=ds=#s11#, #a1# =q11=#c8#", "13%" },
+		{ 16922, "INV_Pants_08", "=q4=Leggings of Transcendence", "=ds=#s11#, #a1# =q9=#c5#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47212,"=ds=#s11#, #a1# =q7=#db16#"},
+				},
+			},
+		},
+		{ 16915, "INV_Pants_08", "=q4=Netherwind Pants", "=ds=#s11#, #a1# =q10=#c3#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47092,"=ds=#s11#, #a1# =q7=#db16#"},
+				},
+			},
+		},
+		{ 16930, "INV_Pants_07", "=q4=Nemesis Leggings", "=ds=#s11#, #a1# =q11=#c8#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47290,"=ds=#s11#, #a1# =q7=#db16#"},
+				},
+			},
+		},
 		{ 16909, "INV_Pants_06", "=q4=Bloodfang Pants", "=ds=#s11#, #a2# =q12=#c6#", "13%" },
-		{ 16901, "INV_Pants_06", "=q4=Stormrage Legguards", "=ds=#s11#, #a2# =q13=#c1#", "13%" },
+		{ 16901, "INV_Pants_06", "=q4=Stormrage Legguards", "=ds=#s11#, #a2# =q13=#c1#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47352,"=ds=#s11#, #a2# =q7=#db16#"},{47360,"=ds=#s11#, #a2# =q7=#db16#"},
+				},
+			},
+		},
 		{ 16938, "INV_Pants_03", "=q4=Dragonstalker's Legguards", "=ds=#s11#, #a3# =q14=#c2#", "13%" },
-		{ 16946, "INV_Pants_03", "=q4=Legplates of Ten Storms", "=ds=#s11#, #a3# =q15=#c7#", "13%" },
-		{ 16954, "INV_Pants_04", "=q4=Judgement Legplates", "=ds=#s11#, #a4# =q16=#c4#", "13%" },
-		{ 16962, "INV_Pants_04", "=q4=Legplates of Wrath", "=ds=#s11#, #a4# =q17=#c9#", "13%" },
+		{ 16946, "INV_Pants_03", "=q4=Legplates of Ten Storms", "=ds=#s11#, #a3# =q15=#c7#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47142,"=ds=#s11#, #a3# =q7=#db16#"},{47150,"=ds=#s11#, #a3# =q7=#db16#"},
+				},
+			},
+		},
+		{ 16954, "INV_Pants_04", "=q4=Judgement Legplates", "=ds=#s11#, #a4# =q16=#c4#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47022,"=ds=#s11#, #a4# =q7=#db16#"},{47030,"=ds=#s11#, #a4# =q7=#db16#"},
+				},
+			},
+		},
+		{ 16962, "INV_Pants_04", "=q4=Legplates of Wrath", "=ds=#s11#, #a4# =q17=#c9#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47254,"=ds=#s11#, #a4# =q7=#db16#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 17204, "INV_Misc_Gem_Pearl_05", "=q5=Eye of Sulfuras", "=q1=#m31#", "6%" },
 		{ 17182, "INV_Hammer_Unique_Sulfuras", "=q5=Sulfuras, Hand of Ragnaros", "=ds=#h2#, #w6#" },
@@ -1539,30 +1959,86 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 17076, "INV_Sword_12", "=q4=Bonereaver's Edge", "=ds=#h2#, #w10#", "8%" },
 	};
 	MCTrashMobs = {
-		{ 16817, "INV_Belt_22", "=q4=Girdle of Prophecy", "=ds=#s10#, #a1# =q9=#c5#", "0.3%" },
-		{ 16802, "INV_Belt_30", "=q4=Arcanist Belt", "=ds=#s10#, #a1# =q10=#c3#", "0.3%" },
-		{ 16806, "INV_Belt_13", "=q4=Felheart Belt", "=ds=#s10#, #a1# =q11=#c8#", "0.3%" },
+		{ 16817, "INV_Belt_22", "=q4=Girdle of Prophecy", "=ds=#s10#, #a1# =q9=#c5#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47203,"=ds=#s10#, #a1# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16802, "INV_Belt_30", "=q4=Arcanist Belt", "=ds=#s10#, #a1# =q10=#c3#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47083,"=ds=#s10#, #a1# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16806, "INV_Belt_13", "=q4=Felheart Belt", "=ds=#s10#, #a1# =q11=#c8#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47281,"=ds=#s10#, #a1# =q7=#x34# #z1#"},
+				},
+			},
+		},
 		{ 16827, "INV_Belt_23", "=q4=Nightslayer Belt", "=ds=#s10#, #a2# =q12=#c6#", "0.3%" },
-		{ 16828, "INV_Belt_06", "=q4=Cenarion Belt", "=ds=#s10#, #a2# =q13=#c1#", "0.3%" },
+		{ 16828, "INV_Belt_06", "=q4=Cenarion Belt", "=ds=#s10#, #a2# =q13=#c1#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47335,"=ds=#s10#, #a2# =q7=#x34# #z1#"},{47343,"=ds=#s10#, #a2# =q7=#x34# #z1#"},
+				},
+			},
+		},
 		{ 16851, "INV_Belt_28", "=q4=Giantstalker's Belt", "=ds=#s10#, #a3# =q14=#c2#", "0.3%" },
-		{ 16838, "INV_Belt_14", "=q4=Earthfury Belt", "=ds=#s10#, #a3# =q15=#c7#", "0.3%" },
-		{ 16858, "INV_Belt_27", "=q4=Lawbringer Belt", "=ds=#s10#, #a4# =q16=#c4#", "0.3%" },
-		{ 16864, "INV_Belt_09", "=q4=Belt of Might", "=ds=#s10#, #a4# =q17=#c9#", "0.3%" },
+		{ 16838, "INV_Belt_14", "=q4=Earthfury Belt", "=ds=#s10#, #a3# =q15=#c7#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47125,"=ds=#s10#, #a3# =q7=#x34# #z1#"},{47133,"=ds=#s10#, #a3# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16858, "INV_Belt_27", "=q4=Lawbringer Belt", "=ds=#s10#, #a4# =q16=#c4#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47005,"=ds=#s10#, #a4# =q7=#x34# #z1#"},{47013,"=ds=#s10#, #a4# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16864, "INV_Belt_09", "=q4=Belt of Might", "=ds=#s10#, #a4# =q17=#c9#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47245,"=ds=#s10#, #a4# =q7=#x34# #z1#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 81260, "INV_Axe_23", "=q4=Lavashard Axe", "=ds=#h1#, #w1#", "0.2%" },
 		{ 17011, "Spell_Nature_Earthquake","=q3=Lava Core","=ds=#m31#", "15%" },
 		{ 17010, "Spell_Fire_FlameBolt","=q3=Fiery Core","=ds=#m31#", "35%" },
 		{ 11382, "INV_Misc_Gem_Bloodstone_03","=q2=Blood of the Mountain","=ds=#m31# =q7=#x63#", "0.02%" },
 		{ 17012, "INV_Ammo_FireTar","=q1=Core Leather","=ds=#m31#" },
-		{ 16819, "INV_Bracer_09", "=q4=Vambraces of Prophecy", "=ds=#s8#, #a1# =q9=#c5#", "0.3%" },
-		{ 16799, "INV_Belt_29", "=q4=Arcanist Bindings", "=ds=#s8#, #a1# =q10=#c3#", "0.3%" },
-		{ 16804, "INV_Bracer_07", "=q4=Felheart Bracers", "=ds=#s8#, #a1# =q11=#c8#", "0.3%" },
+		{ 16819, "INV_Bracer_09", "=q4=Vambraces of Prophecy", "=ds=#s8#, #a1# =q9=#c5#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47201,"=ds=#s8#, #a1# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16799, "INV_Belt_29", "=q4=Arcanist Bindings", "=ds=#s8#, #a1# =q10=#c3#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47081,"=ds=#s8#, #a1# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16804, "INV_Bracer_07", "=q4=Felheart Bracers", "=ds=#s8#, #a1# =q11=#c8#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47279,"=ds=#s8#, #a1# =q7=#x34# #z1#"},
+				},
+			},
+		},
 		{ 16825, "INV_Bracer_02", "=q4=Nightslayer Bracelets", "=ds=#s8#, #a2# =q12=#c6#", "0.3%" },
-		{ 16830, "INV_Bracer_03", "=q4=Cenarion Bracers", "=ds=#s8#, #a2# =q13=#c1#", "0.3%" },
+		{ 16830, "INV_Bracer_03", "=q4=Cenarion Bracers", "=ds=#s8#, #a2# =q13=#c1#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47333,"=ds=#s8#, #a2# =q7=#x34# #z1#"},{47341,"=ds=#s8#, #a2# =q7=#x34# #z1#"},
+				},
+			},
+		},
 		{ 16850, "INV_Bracer_17", "=q4=Giantstalker's Bracers", "=ds=#s8#, #a3# =q14=#c2#", "0.3%" },
-		{ 16840, "INV_Bracer_16", "=q4=Earthfury Bracers", "=ds=#s8#, #a3# =q15=#c7#", "0.3%" },
-		{ 16857, "INV_Bracer_18", "=q4=Lawbringer Bracers", "=ds=#s8#, #a4# =q16=#c4#", "0.3%" },
-		{ 16861, "INV_Bracer_19", "=q4=Bracers of Might", "=ds=#s8#, #a4# =q17=#c9#", "0.3%" },
+		{ 16840, "INV_Bracer_16", "=q4=Earthfury Bracers", "=ds=#s8#, #a3# =q15=#c7#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47123,"=ds=#s8#, #a3# =q7=#x34# #z1#"},{47131,"=ds=#s8#, #a3# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16857, "INV_Bracer_18", "=q4=Lawbringer Bracers", "=ds=#s8#, #a4# =q16=#c4#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47003,"=ds=#s8#, #a4# =q7=#x34# #z1#"},{47011,"=ds=#s8#, #a4# =q7=#x34# #z1#"},
+				},
+			},
+		},
+		{ 16861, "INV_Bracer_19", "=q4=Bracers of Might", "=ds=#s8#, #a4# =q17=#c9#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{
+					{47243,"=ds=#s8#, #a4# =q7=#x34# #z1#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 81261, "inv_boots_02", "=q4=Boots of Blistering Flames", "=ds=#s12#, #a1#", "0.2%" },
 		{ 81262, "inv_helmet_10", "=q4=Core Forged Helmet", "=ds=#s1#, #a4#", "0.2%" },
@@ -1602,21 +2078,49 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18260, "INV_Misc_Note_01", "=q3=Formula: Enchant Weapon - Healing Power", "=ds=#p4# #m14#", "1%" },
 	};
 	Onyxia = {
-		{ 16921, "INV_Helmet_24", "=q4=Halo of Transcendence", "=ds=#s1#, #a1# =q9=#c5#", "13%" },
-		{ 16914, "INV_Helmet_70", "=q4=Netherwind Crown", "=ds=#s1#, #a1# =q10=#c3#", "13%" },
-		{ 16929, "INV_Helmet_08", "=q4=Nemesis Skullcap", "=ds=#s1#, #a1# =q11=#c8#", "13%" },
+		{ 16921, "INV_Helmet_24", "=q4=Halo of Transcendence", "=ds=#s1#, #a1# =q9=#c5#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47206,"=ds=#s1#, #a1# =q7=#db15#"},
+				},
+			},
+		},
+		{ 16914, "INV_Helmet_70", "=q4=Netherwind Crown", "=ds=#s1#, #a1# =q10=#c3#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47086,"=ds=#s1#, #a1# =q7=#db15#"},
+				},
+			},
+		},
+		{ 16929, "INV_Helmet_08", "=q4=Nemesis Skullcap", "=ds=#s1#, #a1# =q11=#c8#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47284,"=ds=#s1#, #a1# =q7=#db15#"},
+				},
+			},
+		},
 		{ 16908, "INV_Helmet_41", "=q4=Bloodfang Hood", "=ds=#s1#, #a2# =q12=#c6#", "13%" },
-		{ 16900, "INV_Helmet_09", "=q4=Stormrage Cover", "=ds=#s1#, #a2# =q13=#c1#", "13%" },
+		{ 16900, "INV_Helmet_09", "=q4=Stormrage Cover", "=ds=#s1#, #a2# =q13=#c1#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47346,"=ds=#s1#, #a2# =q7=#db15#"},{47354,"=ds=#s1#, #a2# =q7=#db15#"},
+				},
+			},
+		},
 		{ 16939, "INV_Helmet_05", "=q4=Dragonstalker's Helm", "=ds=#s1#, #a3# =q14=#c2#", "13%" },
-		{ 16947, "INV_Helmet_69", "=q4=Helmet of Ten Storms", "=ds=#s1#, #a3# =q15=#c7#", "13%" },
-		{ 16955, "INV_Helmet_74", "=q4=Judgement Crown", "=ds=#s1#, #a4# =q16=#c4#", "13%" },
-		{ 16963, "INV_Helmet_71", "=q4=Helm of Wrath", "=ds=#s1#, #a4# =q17=#c9#", "13%" },
+		{ 16947, "INV_Helmet_69", "=q4=Helmet of Ten Storms", "=ds=#s1#, #a3# =q15=#c7#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47136,"=ds=#s1#, #a3# =q7=#db15#"},{47144,"=ds=#s1#, #a3# =q7=#db15#"},
+				},
+			},
+		},		
+		{ 16955, "INV_Helmet_74", "=q4=Judgement Crown", "=ds=#s1#, #a4# =q16=#c4#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47016,"=ds=#s1#, #a4# =q7=#db15#"},{47024,"=ds=#s1#, #a4# =q7=#db15#"},
+				},
+			},
+		},
+		{ 16963, "INV_Helmet_71", "=q4=Helm of Wrath", "=ds=#s1#, #a4# =q17=#c9#", "13%", "", "", "", "", "", "", "", "", "", "", {{
+					{47248,"=ds=#s1#, #a4# =q7=#db15#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 18423, "INV_Misc_Head_Dragon_01", "=q4=Head of Onyxia", "=ds=#m2#", "100%" },
+		{ 18422, "INV_Misc_Head_Dragon_01", "=q4=Head of Onyxia", "=ds=#m2#", "100%" },
 		{ 18404, "INV_Jewelry_Necklace_09", "=q4=Onyxia Tooth Pendant", "=q1=#m4# =ds=#s2#" },
 		{ 18403, "INV_Jewelry_Ring_27", "=q4=Dragonslayer's Signet", "=q1=#m4# =ds=#s13#" },
 		{ 18406, "Spell_Shadow_LifeDrain", "=q4=Onyxia Blood Talisman", "=q1=#m4# =ds=#s14#" },
-		{ 15138,"INV_Misc_Cape_05","=q3=Onyxia Scale Cloak","=q1=#m4# =ds=#s4# =q5=LW #m14#" },
 		{ 18705, "Spell_Holy_DispelMagic", "=q4=Mature Black Dragon Sinew", "=ds=#m3# =q14=#c2#", "	40%%" },
 		{ 18713, "INV_Weapon_Bow_01", "=q4=Rhok'delar, Longbow of the Ancient Keepers", "=q1=#m4# =ds=#w2# =q14=#c2#" },
 		{ 0,"","","" },
@@ -1630,19 +2134,55 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 17966,"INV_Misc_Bag_22","=q2=Onyxia Hide Backpack","=ds=#m12# #e10#", "100%" },
 		{ 17962,"INV_Misc_Bag_10_Blue","=q2=Blue Sack of Gems","=ds=#m23# =q2=#e33#", "100%" },
-		{ 0,"","","" },
 		{ 15410, "INV_Misc_MonsterScales_07","=q3=Scale of Onyxia", "=ds=#e12# =q5=Skinning (315)" },
+		{ 15138,"INV_Misc_Cape_05","=q3=Onyxia Scale Cloak","=q1=#m4# =ds=#s4# =q5=LW #m14#" },
 	};
 	ZGJeklik = { --https://database.turtle-wow.org/?npc=14517
-		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%" },
-		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%" },
-		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%" },
-		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
-		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
+		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
+				},
+			},
+		},
+		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19841,"=q4=#x15#=ds=, #r4#"},{19834,"=q4=#x15#=ds=, #r4#"},{19831,"=q4=#x15#=ds=, #r4#"},
+				},
+			},
+		},
+		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{20033,"=q4=#x10#=ds=, #r4#"},{20034,"=q4=#x10#=ds=, #r4#"},{19822,"=q4=#x10#=ds=, #r4#"},
+				},
+			},
+		},
+		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19828,"=q4=#x18#=ds=, #r4#"},{19825,"=q4=#x18#=ds=, #r4#"},{19838,"=q4=#x18#=ds=, #r4#"},
+				},
+			},
+		},
+		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19830,"=q4=#x17#=ds=, #r2#"},{19836,"=q4=#x17#=ds=, #r2#"},{19824,"=q4=#x17#=ds=, #r2#"},
+				},
+			},
+		},
+		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19827,"=q4=#x12#=ds=, #r2#"},{19846,"=q4=#x12#=ds=, #r2#"},{19833,"=q4=#x12#=ds=, #r2#"},
+				},
+			},
+		},
+		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19843,"=q4=#x14#=ds=, #r2#"},{19848,"=q4=#x14#=ds=, #r2#"},{19840,"=q4=#x14#=ds=, #r2#"},
+				},
+			},
+		},
+		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19829,"=q4=#x16#=ds=, #r3#"},{19835,"=q4=#x16#=ds=, #r3#"},{19823,"=q4=#x16#=ds=, #r3#"},
+				},
+			},
+		},
+		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19842,"=q4=#x13#=ds=, #r3#"},{19849,"=q4=#x13#=ds=, #r3#"},{19839,"=q4=#x13#=ds=, #r3#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1659,15 +2199,51 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19915, "INV_Shield_22", "=q3=Zulian Defender", "=ds=#w8#", "14%" },
 	};
 	ZGVenoxis = { --https://database.turtle-wow.org/?npc=14507
-		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%" },
-		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%" },
-		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%" },
-		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
-		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
+		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19841,"=q4=#x15#=ds=, #r4#"},{19834,"=q4=#x15#=ds=, #r4#"},{19831,"=q4=#x15#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{20033,"=q4=#x10#=ds=, #r4#"},{20034,"=q4=#x10#=ds=, #r4#"},{19822,"=q4=#x10#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19828,"=q4=#x18#=ds=, #r4#"},{19825,"=q4=#x18#=ds=, #r4#"},{19838,"=q4=#x18#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19830,"=q4=#x17#=ds=, #r2#"},{19836,"=q4=#x17#=ds=, #r2#"},{19824,"=q4=#x17#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19827,"=q4=#x12#=ds=, #r2#"},{19846,"=q4=#x12#=ds=, #r2#"},{19833,"=q4=#x12#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19843,"=q4=#x14#=ds=, #r2#"},{19848,"=q4=#x14#=ds=, #r2#"},{19840,"=q4=#x14#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19829,"=q4=#x16#=ds=, #r3#"},{19835,"=q4=#x16#=ds=, #r3#"},{19823,"=q4=#x16#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19842,"=q4=#x13#=ds=, #r3#"},{19849,"=q4=#x13#=ds=, #r3#"},{19839,"=q4=#x13#=ds=, #r3#"},
+			},
+		},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1683,15 +2259,51 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19900, "INV_Axe_34", "=q3=Zulian Stone Axe", "=ds=#h2#, #w1#", "17%" },
 	};
 	ZGMarli = { --https://database.turtle-wow.org/?npc=14510
-		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%" },
-		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%" },
-		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%" },
-		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
-		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
+		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+			{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
+		},
+		},
+		},
+		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19841,"=q4=#x15#=ds=, #r4#"},{19834,"=q4=#x15#=ds=, #r4#"},{19831,"=q4=#x15#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{20033,"=q4=#x10#=ds=, #r4#"},{20034,"=q4=#x10#=ds=, #r4#"},{19822,"=q4=#x10#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19828,"=q4=#x18#=ds=, #r4#"},{19825,"=q4=#x18#=ds=, #r4#"},{19838,"=q4=#x18#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19830,"=q4=#x17#=ds=, #r2#"},{19836,"=q4=#x17#=ds=, #r2#"},{19824,"=q4=#x17#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19827,"=q4=#x12#=ds=, #r2#"},{19846,"=q4=#x12#=ds=, #r2#"},{19833,"=q4=#x12#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19843,"=q4=#x14#=ds=, #r2#"},{19848,"=q4=#x14#=ds=, #r2#"},{19840,"=q4=#x14#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19829,"=q4=#x16#=ds=, #r3#"},{19835,"=q4=#x16#=ds=, #r3#"},{19823,"=q4=#x16#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19842,"=q4=#x13#=ds=, #r3#"},{19849,"=q4=#x13#=ds=, #r3#"},{19839,"=q4=#x13#=ds=, #r3#"},
+			},
+		},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1709,17 +2321,61 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 81003, "inv_misc_monsterclaw_03", "=q3=Ancient Hakkari Flayer", "=ds=#h3#, #w13#", "10%" },
 	};
 	ZGMandokir = { --https://database.turtle-wow.org/?npc=11382
-		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%" },
-		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%" },
-		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%" },
-		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
-		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
+		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19841,"=q4=#x15#=ds=, #r4#"},{19834,"=q4=#x15#=ds=, #r4#"},{19831,"=q4=#x15#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{20033,"=q4=#x10#=ds=, #r4#"},{20034,"=q4=#x10#=ds=, #r4#"},{19822,"=q4=#x10#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19828,"=q4=#x18#=ds=, #r4#"},{19825,"=q4=#x18#=ds=, #r4#"},{19838,"=q4=#x18#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19830,"=q4=#x17#=ds=, #r2#"},{19836,"=q4=#x17#=ds=, #r2#"},{19824,"=q4=#x17#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19827,"=q4=#x12#=ds=, #r2#"},{19846,"=q4=#x12#=ds=, #r2#"},{19833,"=q4=#x12#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19843,"=q4=#x14#=ds=, #r2#"},{19848,"=q4=#x14#=ds=, #r2#"},{19840,"=q4=#x14#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19829,"=q4=#x16#=ds=, #r3#"},{19835,"=q4=#x16#=ds=, #r3#"},{19823,"=q4=#x16#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19842,"=q4=#x13#=ds=, #r3#"},{19849,"=q4=#x13#=ds=, #r3#"},{19839,"=q4=#x13#=ds=, #r3#"},
+			},
+		},
+		},
 		{ 0,"","","" },
-		{ 22637,"INV_ZulGurubTrinket","=q3=Primal Hakkari Idol","=ds=#e16#", "100%" },
+		{ 22637,"INV_ZulGurubTrinket","=q3=Primal Hakkari Idol","=ds=#e16#", "100%","", "", "", "", "", "", "", "", "", "", {{
+					{19789,"=ds=#s1#/#s11# #e11# =q9=#c5#"},{19787,"=ds=#s1#/#s11# #e11# =q10=#c5#"},{19788,"=ds=#s1#/#s11# #e11# =q11=#c5#"}
+				},{
+					{19784,"=ds=#s1#/#s11# #e11# =q12=#c5#"},{19790,"=ds=#s1#/#s11# #e11# =q13=#c5#"},{19785,"=ds=#s1#/#s11# #e11# =q14=#c5#"}
+				},{
+					{19786,"=ds=#s1#/#s11# #e11# =q15=#c5#"},{19783,"=ds=#s1#/#s11# #e11# =q16=#c5#"},{19782,"=ds=#s1#/#s11# #e11# =q17=#c5#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1743,26 +2399,46 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19961, "INV_Mace_04", "=q3=Gri'lek's Grinder", "=ds=#h1#, #w6#", "43%" },
 		{ 19962, "INV_Axe_24", "=q3=Gri'lek's Carver", "=ds=#h2#, #w1#", "43%" },
 		{ 0,"","","" },
-		{ 19939, "INV_Potion_26", "=q2=Gri'lek's Blood", "=ds=#m3#", "100%" },
+		{ 19939, "INV_Potion_26", "=q2=Gri'lek's Blood", "=ds=#m3#", "100%","", "", "", "", "", "", "", "", "", "", {{
+					{19959,"=ds=#s14#"},{19957,"=ds=#s14#"},{19958,"=ds=#s14#"},{19954,"=ds=#s14#"},{19955,"=ds=#s14#"},
+					{19953,"=ds=#s14#"},{19956,"=ds=#s14#"},{19951,"=ds=#s14#"},{19952,"=ds=#s14#"},
+				},
+			},
+		},
 	};
 	ZGHazzarah = { --https://database.turtle-wow.org/?npc=15083
 		{ 19967, "INV_Wand_05", "=q3=Thoughtblighter", "=ds=#w12#", "45%" },
 		{ 19968, "INV_Sword_01", "=q3=Fiery Retributer", "=ds=#h3#, #w10#", "40%" },
 		{ 0,"","","" },
-		{ 19942, "INV_Misc_Bandage_16", "=q2=Hazza'rah's Dream Thread", "=ds=#m3#", "100%" },
+		{ 19942, "INV_Misc_Bandage_16", "=q2=Hazza'rah's Dream Thread", "=ds=#m3#", "100%","", "", "", "", "", "", "", "", "", "", {{
+					{19959,"=ds=#s14#"},{19957,"=ds=#s14#"},{19958,"=ds=#s14#"},{19954,"=ds=#s14#"},{19955,"=ds=#s14#"},
+					{19953,"=ds=#s14#"},{19956,"=ds=#s14#"},{19951,"=ds=#s14#"},{19952,"=ds=#s14#"},
+				},
+			},
+		},
 	};
 	ZGRenataki = { --https://database.turtle-wow.org/?npc=15084
 		{ 19964, "INV_Sword_37", "=q3=Renataki's Soul Conduit", "=ds=#h3#, #w10#", "40%" },
 		{ 19963, "INV_Spear_03", "=q3=Pitchfork of Madness", "=ds=#w7#", "45%" },
 		{ 0,"","","" },
-		{ 19940, "INV_Misc_MonsterFang_01", "=q2=Renataki's Tooth", "=ds=#m3#", "100%" },
+		{ 19940, "INV_Misc_MonsterFang_01", "=q2=Renataki's Tooth", "=ds=#m3#", "100%","", "", "", "", "", "", "", "", "", "", {{
+					{19959,"=ds=#s14#"},{19957,"=ds=#s14#"},{19958,"=ds=#s14#"},{19954,"=ds=#s14#"},{19955,"=ds=#s14#"},
+					{19953,"=ds=#s14#"},{19956,"=ds=#s14#"},{19951,"=ds=#s14#"},{19952,"=ds=#s14#"},
+				},
+			},
+		},
 	};
 
 	ZGWushoolay = { --https://database.turtle-wow.org/?npc=15085
 		{ 19993, "INV_Waepon_Bow_ZulGrub_D_02", "=q3=Hoodoo Hunting Bow", "=ds=#w2#", "45%" },
 		{ 19965, "INV_Sword_37", "=q3=Wushoolay's Poker", "=ds=#h3#, #w4#", "40%" },
 		{ 0,"","","" },
-		{ 19941, "INV_Misc_MonsterTail_02", "=q2=Wushoolay's Mane", "=ds=#m3#", "100%" },
+		{ 19941, "INV_Misc_MonsterTail_02", "=q2=Wushoolay's Mane", "=ds=#m3#", "100%","", "", "", "", "", "", "", "", "", "", {{
+					{19959,"=ds=#s14#"},{19957,"=ds=#s14#"},{19958,"=ds=#s14#"},{19954,"=ds=#s14#"},{19955,"=ds=#s14#"},
+					{19953,"=ds=#s14#"},{19956,"=ds=#s14#"},{19951,"=ds=#s14#"},{19952,"=ds=#s14#"},
+				},
+			},
+		},
 	};
 	ZGGahzranka = { --https://database.turtle-wow.org/?npc=15114
 		{ 19945, "INV_Helmet_46", "=q4=Foror's Eyepatch", "=ds=#s1#, #a2#", "25%" },
@@ -1775,15 +2451,51 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 56084, "INV_Misc_Orb_01", "=q3=Middle Piece of an Ancient Idol", "=ds=#m36#" },
 	};
 	ZGThekal = {
-		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%" },
-		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%" },
-		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%" },
-		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
-		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
+		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
+				},
+			},
+		},
+		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19841,"=q4=#x15#=ds=, #r4#"},{19834,"=q4=#x15#=ds=, #r4#"},{19831,"=q4=#x15#=ds=, #r4#"},
+				},
+			},
+		},
+		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{20033,"=q4=#x10#=ds=, #r4#"},{20034,"=q4=#x10#=ds=, #r4#"},{19822,"=q4=#x10#=ds=, #r4#"},
+				},
+			},
+		},
+		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19828,"=q4=#x18#=ds=, #r4#"},{19825,"=q4=#x18#=ds=, #r4#"},{19838,"=q4=#x18#=ds=, #r4#"},
+				},
+			},
+		},
+		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19830,"=q4=#x17#=ds=, #r2#"},{19836,"=q4=#x17#=ds=, #r2#"},{19824,"=q4=#x17#=ds=, #r2#"},
+				},
+			},
+		},
+		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19827,"=q4=#x12#=ds=, #r2#"},{19846,"=q4=#x12#=ds=, #r2#"},{19833,"=q4=#x12#=ds=, #r2#"},
+				},
+			},
+		},
+		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19843,"=q4=#x14#=ds=, #r2#"},{19848,"=q4=#x14#=ds=, #r2#"},{19840,"=q4=#x14#=ds=, #r2#"},
+				},
+			},
+		},
+		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19829,"=q4=#x16#=ds=, #r3#"},{19835,"=q4=#x16#=ds=, #r3#"},{19823,"=q4=#x16#=ds=, #r3#"},
+				},
+			},
+		},
+		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+					{19842,"=q4=#x13#=ds=, #r3#"},{19849,"=q4=#x13#=ds=, #r3#"},{19839,"=q4=#x13#=ds=, #r3#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1801,15 +2513,51 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19901, "INV_Sword_35", "=q3=Zulian Slicer", "=ds=#h1#, #w10#", "14%" },
 	};
 	ZGArlokk = { --https://database.turtle-wow.org/?npc=14515
-		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%" },
-		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%" },
-		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%" },
-		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
-		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
+		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19841,"=q4=#x15#=ds=, #r4#"},{19834,"=q4=#x15#=ds=, #r4#"},{19831,"=q4=#x15#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{20033,"=q4=#x10#=ds=, #r4#"},{20034,"=q4=#x10#=ds=, #r4#"},{19822,"=q4=#x10#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19828,"=q4=#x18#=ds=, #r4#"},{19825,"=q4=#x18#=ds=, #r4#"},{19838,"=q4=#x18#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19830,"=q4=#x17#=ds=, #r2#"},{19836,"=q4=#x17#=ds=, #r2#"},{19824,"=q4=#x17#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19827,"=q4=#x12#=ds=, #r2#"},{19846,"=q4=#x12#=ds=, #r2#"},{19833,"=q4=#x12#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19843,"=q4=#x14#=ds=, #r2#"},{19848,"=q4=#x14#=ds=, #r2#"},{19840,"=q4=#x14#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19829,"=q4=#x16#=ds=, #r3#"},{19835,"=q4=#x16#=ds=, #r3#"},{19823,"=q4=#x16#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19842,"=q4=#x13#=ds=, #r3#"},{19849,"=q4=#x13#=ds=, #r3#"},{19839,"=q4=#x13#=ds=, #r3#"},
+			},
+		},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1825,17 +2573,61 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19914, "INV_Misc_Bag_14", "=q3=Panther Hide Sack", "=ds=#m12# #e10#", "12%" },
 	};
 	ZGJindo = { --https://database.turtle-wow.org/?npc=11380
-		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%" },
-		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%" },
-		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%" },
-		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%" },
-		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
-		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%" },
-		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%" },
+		{ 19721, "INV_Shoulder_19", "=q4=Primal Hakkari Shawl", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19826,"=q4=#x11#=ds=, #r3#"},{19832,"=q4=#x11#=ds=, #r3#"},{19845,"=q4=#x11#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19724, "INV_Chest_Chain_12", "=q4=Primal Hakkari Aegis", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19841,"=q4=#x15#=ds=, #r4#"},{19834,"=q4=#x15#=ds=, #r4#"},{19831,"=q4=#x15#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19723, "INV_Shirt_07", "=q4=Primal Hakkari Kossack", "=q17=#c9#=ds=, =q10=#c3#=ds=, =q11=#c8#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{20033,"=q4=#x10#=ds=, #r4#"},{20034,"=q4=#x10#=ds=, #r4#"},{19822,"=q4=#x10#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19722, "INV_Banner_01", "=q4=Primal Hakkari Tabard", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19828,"=q4=#x18#=ds=, #r4#"},{19825,"=q4=#x18#=ds=, #r4#"},{19838,"=q4=#x18#=ds=, #r4#"},
+			},
+		},
+		},
+		{ 19717, "INV_Bracer_18", "=q4=Primal Hakkari Armsplint", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19830,"=q4=#x17#=ds=, #r2#"},{19836,"=q4=#x17#=ds=, #r2#"},{19824,"=q4=#x17#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19716, "INV_Bracer_05", "=q4=Primal Hakkari Bindings", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q10=#c3#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19827,"=q4=#x12#=ds=, #r2#"},{19846,"=q4=#x12#=ds=, #r2#"},{19833,"=q4=#x12#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19718, "INV_Bracer_14", "=q4=Primal Hakkari Stanchion", "=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19843,"=q4=#x14#=ds=, #r2#"},{19848,"=q4=#x14#=ds=, #r2#"},{19840,"=q4=#x14#=ds=, #r2#"},
+			},
+		},
+		},
+		{ 19719, "INV_Belt_12", "=q4=Primal Hakkari Girdle", 	"=q17=#c9#=ds=, =q12=#c6#=ds=, =q15=#c7#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19829,"=q4=#x16#=ds=, #r3#"},{19835,"=q4=#x16#=ds=, #r3#"},{19823,"=q4=#x16#=ds=, #r3#"},
+			},
+		},
+		},
+		{ 19720, "INV_Belt_07", "=q4=Primal Hakkari Sash", 	"=q9=#c5#=ds=, =q11=#c8#=ds=, =q13=#c1#", "11%","", "", "", "", "", "", "", "", "", "", {{
+				{19842,"=q4=#x13#=ds=, #r3#"},{19849,"=q4=#x13#=ds=, #r3#"},{19839,"=q4=#x13#=ds=, #r3#"},
+			},
+		},
+		},
 		{ 0,"","","" },
-		{ 22637,"INV_ZulGurubTrinket","=q3=Primal Hakkari Idol","=ds=#e16#", "100%" },
+		{ 22637,"INV_ZulGurubTrinket","=q3=Primal Hakkari Idol","=ds=#e16#", "100%","", "", "", "", "", "", "", "", "", "", {{
+					{19789,"=ds=#s1#/#s11# #e11# =q9=#c5#"},{19787,"=ds=#s1#/#s11# #e11# =q10=#c5#"},{19788,"=ds=#s1#/#s11# #e11# =q11=#c5#"}
+				},{
+					{19784,"=ds=#s1#/#s11# #e11# =q12=#c5#"},{19790,"=ds=#s1#/#s11# #e11# =q13=#c5#"},{19785,"=ds=#s1#/#s11# #e11# =q14=#c5#"}
+				},{
+					{19786,"=ds=#s1#/#s11# #e11# =q15=#c5#"},{19783,"=ds=#s1#/#s11# #e11# =q16=#c5#"},{19782,"=ds=#s1#/#s11# #e11# =q17=#c5#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -1995,12 +2787,41 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
+		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21402,"=q3=#x22#=ds=, #r3#"},
+					{21405,"=q3=#x22#=ds=, #r3#"},
+					{21411,"=q3=#x22#=ds=, #r3#"},
+					{21417,"=q3=#x22#=ds=, #r3#"},
+				}
+			}
+		},
+		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21393,"=q3=#x21#=ds=, #r3#"},
+					{21396,"=q3=#x21#=ds=, #r3#"},
+					{21399,"=q3=#x21#=ds=, #r3#"},
+					{21414,"=q3=#x21#=ds=, #r3#"},
+					{21408,"=q3=#x21#=ds=, #r3#"},
+				}
+			}
+		},
 		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "25%" },
-		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "25%" },
-		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "25%" },
-		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "25%" },
+		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21394,"=q3=#x20#=ds=, #r4#"},
+					{21406,"=q3=#x20#=ds=, #r4#"},
+					{21412,"=q3=#x20#=ds=, #r4#"},
+					{21415,"=q3=#x20#=ds=, #r4#"},
+				}
+			}
+		},
+		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21397,"=q3=#x23#=ds=, #r4#"},
+					{21403,"=q3=#x23#=ds=, #r4#"},
+					{21400,"=q3=#x23#=ds=, #r4#"},
+					{21418,"=q3=#x23#=ds=, #r4#"},
+					{21409,"=q3=#x23#=ds=, #r4#"},
+				}
+			}
+		},
 	};
 	AQ20CAPTAIN = {
 		{ 21809, "INV_Jewelry_Necklace_14", "=q3=Fury of the Forgotten Swarm", "=ds=#s2#", "3-13%" },
@@ -2010,6 +2831,7 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	AQ20Rajaxx = {
 		{ 21493, "INV_Boots_08", "=q4=Boots of the Vanguard", "=ds=#s12#, #a2#", "17%" },
 		{ 21492, "INV_Sword_56", "=q4=Manslayer of the Qiraji", "=ds=#h2#, #w10#", "17%" },
+		{ 81004, "inv_weapon_shortblade_27", "=q4=Sandswept Obsidian Dagger", "=ds=#h1#, #w4#", "10%" },
 		{ 0,"","","" },
 		{ 21496, "INV_Bracer_13", "=q3=Bracers of Qiraji Command", "=ds=#s8#, #a1#", "17%" },
 		{ 21494, "INV_Belt_25", "=q3=Southwind's Grasp", "=ds=#s10#, #a2#", "17%" },
@@ -2022,15 +2844,41 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
+		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21402,"=q3=#x22#=ds=, #r3#"},
+					{21405,"=q3=#x22#=ds=, #r3#"},
+					{21411,"=q3=#x22#=ds=, #r3#"},
+					{21417,"=q3=#x22#=ds=, #r3#"},
+				}
+			}
+		},
+		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21393,"=q3=#x21#=ds=, #r3#"},
+					{21396,"=q3=#x21#=ds=, #r3#"},
+					{21399,"=q3=#x21#=ds=, #r3#"},
+					{21414,"=q3=#x21#=ds=, #r3#"},
+					{21408,"=q3=#x21#=ds=, #r3#"},
+				}
+			}
+		},
 		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "25%" },
-		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "25%" },
-		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "25%" },
-		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "25%" },
-		{ 0, "", "", "" },
-		{ 81004, "inv_weapon_shortblade_27", "=q4=Sandswept Obsidian Dagger", "=ds=#h1#, #w4#", "10%" },
+		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21394,"=q3=#x20#=ds=, #r4#"},
+					{21406,"=q3=#x20#=ds=, #r4#"},
+					{21412,"=q3=#x20#=ds=, #r4#"},
+					{21415,"=q3=#x20#=ds=, #r4#"},
+				}
+			}
+		},
+		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21397,"=q3=#x23#=ds=, #r4#"},
+					{21403,"=q3=#x23#=ds=, #r4#"},
+					{21400,"=q3=#x23#=ds=, #r4#"},
+					{21418,"=q3=#x23#=ds=, #r4#"},
+					{21409,"=q3=#x23#=ds=, #r4#"},
+				}
+			}
+		},
 	};
 	AQ20Moam = {
 		{ 21472, "INV_Helmet_62", "=q4=Dustwind Turban", "=ds=#s1#, #a1#", "25%" },
@@ -2048,15 +2896,44 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21477, "INV_Jewelry_Ring_AhnQiraj_04", "=q3=Ring of Fury", "=ds=#s13#", "11%" },
 		{ 21473, "INV_Misc_Eye_01", "=q3=Eye of Moam", "=ds=#s14#", "11%" },
 		{ 0, "", "", "" },
-		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "25%" },
-		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "25%" },
-		{ 0, "", "", "" },
-		{ 0, "", "", "" },
-		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "25%" },
-		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "25%" },
+		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21402,"=q3=#x22#=ds=, #r3#"},
+					{21405,"=q3=#x22#=ds=, #r3#"},
+					{21411,"=q3=#x22#=ds=, #r3#"},
+					{21417,"=q3=#x22#=ds=, #r3#"},
+				}
+			}
+		},
+		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21393,"=q3=#x21#=ds=, #r3#"},
+					{21396,"=q3=#x21#=ds=, #r3#"},
+					{21399,"=q3=#x21#=ds=, #r3#"},
+					{21414,"=q3=#x21#=ds=, #r3#"},
+					{21408,"=q3=#x21#=ds=, #r3#"},
+				}
+			}
+		},
 		{ 0, "", "", "" },
 		{ 22220, "INV_Scroll_05", "=q3=Plans: Black Grasp of the Destroyer", "=ds=#p2# #m14#", "15%" },
 		{ 22194, "INV_Gauntlets_31", "=q4=Black Grasp of the Destroyer", "=ds=#s9#, #a3#" },
+		{ 0, "", "", "" },
+		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21410,"=q4=#x19#=ds=, #r5#"},
+					{21413,"=q4=#x19#=ds=, #r5#"},
+					{21416,"=q4=#x19#=ds=, #r5#"},
+					{21407,"=q4=#x19#=ds=, #r5#"},
+				}
+			}
+		},
+		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "25%", "", "", "", "", "", "", "", "", "", "",{{
+					{21392,"=q4=#x24#=ds=, #r5#"},
+					{21395,"=q4=#x24#=ds=, #r5#"},
+					{21401,"=q4=#x24#=ds=, #r5#"},
+					{21404,"=q4=#x24#=ds=, #r5#"},
+					{21398,"=q4=#x24#=ds=, #r5#"},
+				}
+			}
+		},
 	};
 	AQ20Buru = {
 		{ 21487, "INV_Gauntlets_12", "=q4=Slimy Scaled Gauntlets", "=ds=#s9#, #a3#", "14%" },
@@ -2074,12 +2951,59 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%" },
-		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "17%" },
-		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "17%" },
-		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%" },
-		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "17%" },
-		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "17%" },
+		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21402,"=q3=#x22#=ds=, #r3#"},
+					{21405,"=q3=#x22#=ds=, #r3#"},
+					{21411,"=q3=#x22#=ds=, #r3#"},
+					{21417,"=q3=#x22#=ds=, #r3#"},
+				}
+			}
+		},
+		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21393,"=q3=#x21#=ds=, #r3#"},
+					{21396,"=q3=#x21#=ds=, #r3#"},
+					{21399,"=q3=#x21#=ds=, #r3#"},
+					{21414,"=q3=#x21#=ds=, #r3#"},
+					{21408,"=q3=#x21#=ds=, #r3#"},
+				}
+			}
+		},
+		{ 0, "", "", "" },
+		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21394,"=q3=#x20#=ds=, #r4#"},
+					{21406,"=q3=#x20#=ds=, #r4#"},
+					{21412,"=q3=#x20#=ds=, #r4#"},
+					{21415,"=q3=#x20#=ds=, #r4#"},
+				}
+			}
+		},
+		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21397,"=q3=#x23#=ds=, #r4#"},
+					{21403,"=q3=#x23#=ds=, #r4#"},
+					{21400,"=q3=#x23#=ds=, #r4#"},
+					{21418,"=q3=#x23#=ds=, #r4#"},
+					{21409,"=q3=#x23#=ds=, #r4#"},
+				}
+			}
+		},
+		{ 0, "", "", "" },
+		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21410,"=q4=#x19#=ds=, #r5#"},
+					{21413,"=q4=#x19#=ds=, #r5#"},
+					{21416,"=q4=#x19#=ds=, #r5#"},
+					{21407,"=q4=#x19#=ds=, #r5#"},
+				}
+			}
+		},
+		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21392,"=q4=#x24#=ds=, #r5#"},
+					{21395,"=q4=#x24#=ds=, #r5#"},
+					{21401,"=q4=#x24#=ds=, #r5#"},
+					{21404,"=q4=#x24#=ds=, #r5#"},
+					{21398,"=q4=#x24#=ds=, #r5#"},
+				}
+			}
+		},
 	};
 	AQ20Ayamiss = {
 		{ 21479, "INV_Gauntlets_31", "=q4=Gauntlets of the Immovable", "=ds=#s9#, #a4#", "13%" },
@@ -2097,12 +3021,59 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
-		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%" },
-		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "17%" },
-		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "17%" },
-		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%" },
-		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "17%" },
-		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "17%" },
+		{ 20888, "INV_Qiraj_RingCeremonial", "=q3=Qiraji Ceremonial Ring", "=q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q11=#c8#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21402,"=q3=#x22#=ds=, #r3#"},
+					{21405,"=q3=#x22#=ds=, #r3#"},
+					{21411,"=q3=#x22#=ds=, #r3#"},
+					{21417,"=q3=#x22#=ds=, #r3#"},
+				}
+			}
+		},
+		{ 20884, "INV_Qiraj_RingMagisterial", "=q3=Qiraji Magisterial Ring", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21393,"=q3=#x21#=ds=, #r3#"},
+					{21396,"=q3=#x21#=ds=, #r3#"},
+					{21399,"=q3=#x21#=ds=, #r3#"},
+					{21414,"=q3=#x21#=ds=, #r3#"},
+					{21408,"=q3=#x21#=ds=, #r3#"},
+				}
+			}
+		},
+		{ 0, "", "", "" },
+		{ 20885, "INV_Qiraj_DrapeMartial", "=q3=Qiraji Martial Drape", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21394,"=q3=#x20#=ds=, #r4#"},
+					{21406,"=q3=#x20#=ds=, #r4#"},
+					{21412,"=q3=#x20#=ds=, #r4#"},
+					{21415,"=q3=#x20#=ds=, #r4#"},
+				}
+			}
+		},
+		{ 20889, "INV_Bracer_18", "=q3=Qiraji Regal Drape", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21397,"=q3=#x23#=ds=, #r4#"},
+					{21403,"=q3=#x23#=ds=, #r4#"},
+					{21400,"=q3=#x23#=ds=, #r4#"},
+					{21418,"=q3=#x23#=ds=, #r4#"},
+					{21409,"=q3=#x23#=ds=, #r4#"},
+				}
+			}
+		},
+		{ 0, "", "", "" },
+		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21410,"=q4=#x19#=ds=, #r5#"},
+					{21413,"=q4=#x19#=ds=, #r5#"},
+					{21416,"=q4=#x19#=ds=, #r5#"},
+					{21407,"=q4=#x19#=ds=, #r5#"},
+				}
+			}
+		},
+		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "17%", "", "", "", "", "", "", "", "", "", "",{{
+					{21392,"=q4=#x24#=ds=, #r5#"},
+					{21395,"=q4=#x24#=ds=, #r5#"},
+					{21401,"=q4=#x24#=ds=, #r5#"},
+					{21404,"=q4=#x24#=ds=, #r5#"},
+					{21398,"=q4=#x24#=ds=, #r5#"},
+				}
+			}
+		},
 	};
 	AQ20Ossirian = {
 		{ 21460, "INV_Helmet_09", "=q4=Helm of Domination", "=ds=#s1#, #a4#", "15%" },
@@ -2120,18 +3091,29 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21452, "INV_Staff_12", "=q4=Staff of the Ruins", "=ds=#w9#", "18%" },
 		{ 0,"","","" },
 		{ 0,"","","" },
-		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "50%" },
-		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "50%" },
-		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 0,"","","" },
-		{ 0,"","","" },
 		{ 21220, "Ability_Hunter_Pet_Owl", "=q4=Head of Ossirian the Unscarred", "=ds=#m2#", "100%" },
 		{ 21504, "INV_Jewelry_Necklace_AhnQiraj_03", "=q4=Charm of the Shifting Sands", "=q1=#m4# =ds=#s2#" },
 		{ 21507, "INV_Jewelry_Necklace_AhnQiraj_03", "=q4=Amulet of the Shifting Sands", "=q1=#m4# =ds=#s2#" },
 		{ 21505, "INV_Jewelry_Necklace_AhnQiraj_03", "=q4=Choker of the Shifting Sands", "=q1=#m4# =ds=#s2#" },
 		{ 21506, "INV_Jewelry_Necklace_AhnQiraj_03", "=q4=Pendant of the Shifting Sands", "=q1=#m4# =ds=#s2#" },
+		{ 0,"","","" },
+		{ 20890, "INV_Qiraj_HiltOrnate", "=q4=Qiraji Ornate Hilt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "50%", "", "", "", "", "", "", "", "", "", "",{{
+					{21410,"=q4=#x19#=ds=, #r5#"},
+					{21413,"=q4=#x19#=ds=, #r5#"},
+					{21416,"=q4=#x19#=ds=, #r5#"},
+					{21407,"=q4=#x19#=ds=, #r5#"},
+				}
+			}
+		},
+		{ 20886, "INV_Qiraj_HiltSpiked", "=q4=Qiraji Spiked Hilt", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "50%", "", "", "", "", "", "", "", "", "", "",{{
+					{21392,"=q4=#x24#=ds=, #r5#"},
+					{21395,"=q4=#x24#=ds=, #r5#"},
+					{21401,"=q4=#x24#=ds=, #r5#"},
+					{21404,"=q4=#x24#=ds=, #r5#"},
+					{21398,"=q4=#x24#=ds=, #r5#"},
+				}
+			}
+		},
 	};
 	AQ20Andorov = {
 		{ 22221, "INV_Scroll_03", "=q1=Plans: Obsidian Mail Tunic", "=ds=#p2# #m14#" },
@@ -2334,8 +3316,54 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21625, "INV_Misc_AhnQirajTrinket_06", "=q4=Scarab Brooch", "=ds=#s14#", "14%" },
 		{ 22399, "INV_Relics_IdolofHealth", "=q4=Idol of Health", "=ds=#s16#, #e16# =q13=#c1#", "14%" },
 		{ 0,"","","" },
-		{ 20928, "INV_Qiraj_BindingsCommand", "=q4=Qiraji Bindings of Command", "=q17=#c9#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "100%" },
-		{ 20932, "INV_Qiraj_BindingsDominance", "=q4=Qiraji Bindings of Dominance", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%" },
+		{ 20928, "INV_Qiraj_BindingsCommand", "=q4=Qiraji Bindings of Command", "=q17=#c9#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21330,"=q4=#x29#=ds=, #r1#"},
+					{21367,"=q4=#x29#=ds=, #r1#"},
+					{21361,"=q4=#x29#=ds=, #r1#"},
+					{21350,"=q4=#x29#=ds=, #r1#"},
+					{47215,"=q4=#x29#=ds=, #r1#"},
+				},{
+					{21333,"=q4=#x29#=ds=, #r1#"},
+					{21365,"=q4=#x29#=ds=, #r1#"},
+					{21359,"=q4=#x29#=ds=, #r1#"},
+					{21349,"=q4=#x29#=ds=, #r1#"},
+					{47218,"=q4=#x29#=ds=, #r1#"},
+				},
+			},
+		},
+		{ 20932, "INV_Qiraj_BindingsDominance", "=q4=Qiraji Bindings of Dominance", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21391,"=q4=#x25#=ds=, #r1#"},
+					{47033,"=q4=#x25#=ds=, #r1#"},
+					{47038,"=q4=#x25#=ds=, #r1#"},
+					{21376,"=q4=#x25#=ds=, #r1#"},
+					{47153,"=q4=#x25#=ds=, #r1#"},
+					{47158,"=q4=#x25#=ds=, #r1#"}
+				},{
+					{21345,"=q4=#x25#=ds=, #r1#"},
+					{47095,"=q4=#x25#=ds=, #r1#"},
+					{21335,"=q4=#x25#=ds=, #r1#"},
+					{47293,"=q4=#x25#=ds=, #r1#"},
+					{21354,"=q4=#x25#=ds=, #r1#"},
+					{47363,"=q4=#x25#=ds=, #r1#"},
+					{47368,"=q4=#x25#=ds=, #r1#"},
+				},{
+					{21388,"=q4=#x25#=ds=, #r1#"},
+					{47036,"=q4=#x25#=ds=, #r1#"},
+					{47041,"=q4=#x25#=ds=, #r1#"},
+					{21373,"=q4=#x25#=ds=, #r1#"},
+					{47156,"=q4=#x25#=ds=, #r1#"},
+					{47161,"=q4=#x25#=ds=, #r1#"}
+				},{
+					{21344,"=q4=#x25#=ds=, #r1#"},
+					{47098,"=q4=#x25#=ds=, #r1#"},
+					{21338,"=q4=#x25#=ds=, #r1#"},
+					{47296,"=q4=#x25#=ds=, #r1#"},
+					{21355,"=q4=#x25#=ds=, #r1#"},
+					{47366,"=q4=#x25#=ds=, #r1#"},
+					{47371,"=q4=#x25#=ds=, #r1#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -2360,8 +3388,54 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21616, "INV_Weapon_Bow_14", "=q4=Huhuran's Stinger", "=ds=#w2#", "17%" },
 		{ 0,"","","" },
 		{ 0,"","","" },
-		{ 20928, "INV_Qiraj_BindingsCommand", "=q4=Qiraji Bindings of Command", "=q17=#c9#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "100%" },
-		{ 20932, "INV_Qiraj_BindingsDominance", "=q4=Qiraji Bindings of Dominance", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%" },
+				{ 20928, "INV_Qiraj_BindingsCommand", "=q4=Qiraji Bindings of Command", "=q17=#c9#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q9=#c5#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21330,"=q4=#x29#=ds=, #r1#"},
+					{21367,"=q4=#x29#=ds=, #r1#"},
+					{21361,"=q4=#x29#=ds=, #r1#"},
+					{21350,"=q4=#x29#=ds=, #r1#"},
+					{47215,"=q4=#x29#=ds=, #r1#"},
+				},{
+					{21333,"=q4=#x29#=ds=, #r1#"},
+					{21365,"=q4=#x29#=ds=, #r1#"},
+					{21359,"=q4=#x29#=ds=, #r1#"},
+					{21349,"=q4=#x29#=ds=, #r1#"},
+					{47218,"=q4=#x29#=ds=, #r1#"},
+				},
+			},
+		},
+		{ 20932, "INV_Qiraj_BindingsDominance", "=q4=Qiraji Bindings of Dominance", "=q16=#c4#=ds=, =q15=#c7#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21391,"=q4=#x25#=ds=, #r1#"},
+					{47033,"=q4=#x25#=ds=, #r1#"},
+					{47038,"=q4=#x25#=ds=, #r1#"},
+					{21376,"=q4=#x25#=ds=, #r1#"},
+					{47153,"=q4=#x25#=ds=, #r1#"},
+					{47158,"=q4=#x25#=ds=, #r1#"}
+				},{
+					{21345,"=q4=#x25#=ds=, #r1#"},
+					{47095,"=q4=#x25#=ds=, #r1#"},
+					{21335,"=q4=#x25#=ds=, #r1#"},
+					{47293,"=q4=#x25#=ds=, #r1#"},
+					{21354,"=q4=#x25#=ds=, #r1#"},
+					{47363,"=q4=#x25#=ds=, #r1#"},
+					{47368,"=q4=#x25#=ds=, #r1#"},
+				},{
+					{21388,"=q4=#x25#=ds=, #r1#"},
+					{47036,"=q4=#x25#=ds=, #r1#"},
+					{47041,"=q4=#x25#=ds=, #r1#"},
+					{21373,"=q4=#x25#=ds=, #r1#"},
+					{47156,"=q4=#x25#=ds=, #r1#"},
+					{47161,"=q4=#x25#=ds=, #r1#"}
+				},{
+					{21344,"=q4=#x25#=ds=, #r1#"},
+					{47098,"=q4=#x25#=ds=, #r1#"},
+					{21338,"=q4=#x25#=ds=, #r1#"},
+					{47296,"=q4=#x25#=ds=, #r1#"},
+					{21355,"=q4=#x25#=ds=, #r1#"},
+					{47366,"=q4=#x25#=ds=, #r1#"},
+					{47371,"=q4=#x25#=ds=, #r1#"},
+				},
+			},
+		},
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -2380,7 +3454,22 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	};
 	AQ40Emperors = {
 		{ 0, "INV_Box_01", "=q6=Emperor Vek'lor", "" },
-		{ 20930, "INV_Bracer_18", "=q4=Vek'lor's Diadem", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#=ds=, =q13=#c1#", "100%" },
+		{ 20930, "INV_Bracer_18", "=q4=Vek'lor's Diadem", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#=ds=, =q13=#c1#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21387,"=ds=#s1#, #a4#"},
+					{47032,"=ds=#s1#, #a4#"},
+					{47037,"=ds=#s1#, #a4#"},
+					{21366,"=ds=#s1#, #a4#"},
+					{21360,"=ds=#s1#, #a4#"}
+				},{
+					{21372,"=ds=#s1#, #a4#"},
+					{47152,"=ds=#s1#, #a4#"},
+					{47157,"=ds=#s1#, #a4#"},
+					{21353,"=ds=#s1#, #a4#"},
+					{47362,"=ds=#s1#, #a4#"},
+					{47367,"=ds=#s1#, #a4#"},
+				},
+			},
+		},
 		{ 21602, "INV_Bracer_13", "=q4=Qiraji Execution Bracers", "=ds=#s8#, #a2#", "17%" },
 		{ 21599, "INV_Gauntlets_28", "=q4=Vek'lor's Gloves of Devastation", "=ds=#s9#, #a3#", "17%" },
 		{ 21598, "INV_Belt_31", "=q4=Royal Qiraji Belt", "=ds=#s10#, #a4#", "17%" },
@@ -2395,7 +3484,18 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21272, "INV_Weapon_Rifle_11", "=q4=Blessed Qiraji Musket", "=q1=#m4# =ds=#w5#" },
 		{ 21269, "INV_Shield_23", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#" },
 		{ 0, "INV_Box_01", "=q6=Emperor Vek'nilash", "" },
-		{ 20926, "INV_Bracer_18", "=q4=Vek'nilash's Circlet", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "100%" },
+		{ 20926, "INV_Bracer_18", "=q4=Vek'nilash's Circlet", "=q17=#c9#=ds=, =q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21329,"=q4=#x26#=ds=, #r2#"},
+					{21348,"=q4=#x26#=ds=, #r2#"},
+					{47214,"=q4=#x26#=ds=, #r2#"},
+					{21347,"=q4=#x26#=ds=, #r2#"},
+					{47094,"=q4=#x26#=ds=, #r2#"}
+				},{
+					{21337,"=q4=#x26#=ds=, #r2#"},
+					{47292,"=q4=#x26#=ds=, #r2#"},
+				},
+			},
+		},
 		{ 21608, "INV_Jewelry_Necklace_AhnQiraj_01", "=q4=Amulet of Vek'nilash", "=ds=#s2#", "14%" },
 		{ 21604, "INV_Bracer_13", "=q4=Bracelets of Royal Redemption", "=ds=#s8#, #a1#", "14%" },
 		{ 21605, "INV_Gauntlets_19", "=q4=Gloves of the Hidden Temple", "=ds=#s9#, #a2#", "14%" },
@@ -2437,8 +3537,34 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21272, "INV_Weapon_Rifle_11", "=q4=Blessed Qiraji Musket", "=q1=#m4# =ds=#w5#" },
 		{ 21269, "INV_Shield_23", "=q4=Blessed Qiraji Bulwark", "=q1=#m4# =ds=#w8#" },
 		{ 0,"","","" },
-		{ 20927, "INV_Qiraj_OuroHide", "=q4=Ouro's Intact Hide", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "100%" },
-		{ 20931, "INV_Qiraj_SkinSandworm", "=q4=Skin of the Great Sandworm", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%" },
+		{ 20927, "INV_Qiraj_OuroHide", "=q4=Ouro's Intact Hide", "=q17=#c9#=ds=, =q12=#c6#=ds=, =q9=#c5#=ds=, =q10=#c3#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21332,"=q4=#x27#=ds=, #r2#"},
+					{21362,"=q4=#x27#=ds=, #r2#"},
+					{21352,"=q4=#x27#=ds=, #r2#"},
+					{47217,"=q4=#x27#=ds=, #r2#"},
+					{21346,"=q4=#x27#=ds=, #r2#"},
+					{47097,"=q4=#x27#=ds=, #r2#"},
+				},
+			},
+		},
+		{ 20931, "INV_Qiraj_SkinSandworm", "=q4=Skin of the Great Sandworm", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21390,"=q4=#x31#=ds=, #r2#"},
+					{47035,"=q4=#x31#=ds=, #r2#"},
+					{47040,"=q4=#x31#=ds=, #r2#"},
+					{21368,"=q4=#x31#=ds=, #r2#"}
+				},{
+					{21375,"=q4=#x31#=ds=, #r2#"},
+					{47155,"=q4=#x31#=ds=, #r2#"},
+					{47160,"=q4=#x31#=ds=, #r2#"},
+					{21336,"=q4=#x31#=ds=, #r2#"},
+					{47295,"=q4=#x31#=ds=, #r2#"}
+				},{
+					{21356,"=q4=#x31#=ds=, #r2#"},
+					{47365,"=q4=#x31#=ds=, #r2#"},
+					{47370,"=q4=#x31#=ds=, #r2#"},
+				}
+			},
+		},
 	};
 	AQ40CThun = {
 		{ 22732, "INV_Jewelry_Necklace_AhnQiraj_04", "=q4=Mark of C'Thun", "=ds=#s2#", "21%" },
@@ -2456,8 +3582,34 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21134, "INV_Axe_24", "=q4=Dark Edge of Insanity", "=ds=#h2#, #w1#", "8%" },
 		{ 60003, "INV_WEAPON_HAND_07", "=q4=Remnants of an Old God", "=ds=#h3#, #w13#", "8%" },
 		{ 41077, "INV_Helmet_Illidari_01", "=q4=Yshgo'lar, Cowl of Fanatical Devotion", "=ds=#s1#, #a1#", "8%" },
-		{ 20929, "INV_Qiraj_CarapaceOldGod", "=q4=Carapace of the Old God", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "100%" },
-		{ 20933, "INV_Qiraj_HuskOldGod", "=q4=Husk of the Old God", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%" },
+		{ 20929, "INV_Qiraj_CarapaceOldGod", "=q4=Carapace of the Old God", "=q17=#c9#=ds=, =q16=#c4#=ds=, =q14=#c2#=ds=, =q12=#c6#=ds=, =q15=#c7#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21331,"=q4=#x32#=ds=, #r3#"},
+					{21370,"=q4=#x32#=ds=, #r3#"},
+					{21364,"=q4=#x32#=ds=, #r3#"},
+					{21389,"=q4=#x32#=ds=, #r3#"},
+					{47034,"=q4=#x32#=ds=, #r3#"},
+					{47039,"=q4=#x32#=ds=, #r3#"}
+				},{
+					{21374,"=q4=#x32#=ds=, #r3#"},
+					{47154,"=q4=#x32#=ds=, #r3#"},
+					{47159,"=q4=#x32#=ds=, #r3#"},
+				}
+			},
+		},
+		{ 20933, "INV_Qiraj_HuskOldGod", "=q4=Husk of the Old God", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "100%", "", "", "", "", "", "", "", "", "", "",{{
+					{21351,"=q4=#x28#=ds=, #r3#"},
+					{47216,"=q4=#x28#=ds=, #r3#"},
+					{21343,"=q4=#x28#=ds=, #r3#"},
+					{47096,"=q4=#x28#=ds=, #r3#"},
+					{21334,"=q4=#x28#=ds=, #r3#"},
+					{47294,"=q4=#x28#=ds=, #r3#"}
+				},{
+					{21357,"=q4=#x28#=ds=, #r3#"},
+					{47364,"=q4=#x28#=ds=, #r3#"},
+					{47369,"=q4=#x28#=ds=, #r3#"},
+				}
+			},
+		},
 		{ 0,"","","" },
 		{ 21221, "Spell_Shadow_DetectInvisibility", "=q4=Eye of C'Thun", "=ds=#m2#", "100%" },
 		{ 21712, "INV_Jewelry_Necklace_AhnQiraj_02", "=q4=Amulet of the Fallen God", "=q1=#m4# =ds=#s2#" },
@@ -2479,7 +3631,6 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 21837, "INV_Hammer_11", "=q4=Anubisath Warhammer", "=ds=#h1#, #w6#", "0.12% to 0.32%" },
 		{ 21836, "INV_Jewelry_Ring_34", "=q4=Ritssyn's Ring of Chaos", "=ds=#s13#", "0.08% to 0.34%" },
 		{ 21891, "INV_Misc_AhnQirajTrinket_04", "=q4=Shard of the Fallen Star", "=ds=#s14#", "0.11% to 0.82%" },
-		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
 		{ 0,"","","" },
@@ -6081,9 +7232,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "20%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22368, "INV_Misc_Desecrated_ClothShoulder", "=q4=Desecrated Shoulderpads", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22361, "INV_Misc_Desecrated_MailShoulder", "=q4=Desecrated Spaulders", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22354, "INV_Misc_Desecrated_PlateShoulder", "=q4=Desecrated Pauldrons", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22368, "INV_Misc_Desecrated_ClothShoulder", "=q4=Desecrated Shoulderpads", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22515,"=ds=#s3#, #a1#"},{47220,"=ds=#s3#, #a1#"},{22499,"=ds=#s3#, #a1#"},{47100,"=ds=#s3#, #a1#"},
+			{22507,"=ds=#s3#, #a1#"},{47298,"=ds=#s3#, #a1#"}},
+			},
+		},
+		{ 22361, "INV_Misc_Desecrated_MailShoulder", "=q4=Desecrated Spaulders", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22429,"=ds=#s1#, #a4#"},{47043,"=ds=#s3#, #a4#"},{47052,"=ds=#s3#, #a4#"}},
+			{{22467,"=ds=#s1#, #a3#"},{47163,"=ds=#s3#, #a3#"},{47172,"=ds=#s3#, #a3#"},{22439,"=ds=#s1#, #a3#"}},
+			{{22491,"=ds=#s1#, #a2#"},{47373,"=ds=#s3#, #a2#"},{47382,"=ds=#s3#, #a2#"}},
+			},
+		},
+		{ 22354, "INV_Misc_Desecrated_PlateShoulder", "=q4=Desecrated Pauldrons", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22419,"=ds=#s3#, #a4#"},{47262,"=ds=#s3#, #a4#"},{22479,"=ds=#s3#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 22960, "INV_Misc_Cape_Naxxramas_02", "=q4=Cloak of Suturing", "=ds=#s4#", "20%" },
 		{ 22961, "INV_Jewelry_Ring_49Naxxramas", "=q4=Band of Reanimation", "=ds=Ring", "20%" },
@@ -6095,9 +7258,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "20%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22368, "INV_Misc_Desecrated_ClothShoulder", "=q4=Desecrated Shoulderpads", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22361, "INV_Misc_Desecrated_MailShoulder", "=q4=Desecrated Spaulders", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22354, "INV_Misc_Desecrated_PlateShoulder", "=q4=Desecrated Pauldrons", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22368, "INV_Misc_Desecrated_ClothShoulder", "=q4=Desecrated Shoulderpads", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22515,"=ds=#s3#, #a1#"},{47220,"=ds=#s3#, #a1#"},{22499,"=ds=#s3#, #a1#"},{47100,"=ds=#s3#, #a1#"},
+			{22507,"=ds=#s3#, #a1#"},{47298,"=ds=#s3#, #a1#"}},
+			},
+		},
+		{ 22361, "INV_Misc_Desecrated_MailShoulder", "=q4=Desecrated Spaulders", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22429,"=ds=#s1#, #a4#"},{47043,"=ds=#s3#, #a4#"},{47052,"=ds=#s3#, #a4#"}},
+			{{22467,"=ds=#s1#, #a3#"},{47163,"=ds=#s3#, #a3#"},{47172,"=ds=#s3#, #a3#"},{22439,"=ds=#s1#, #a3#"}},
+			{{22491,"=ds=#s1#, #a2#"},{47373,"=ds=#s3#, #a2#"},{47382,"=ds=#s3#, #a2#"}},
+			},
+		},
+		{ 22354, "INV_Misc_Desecrated_PlateShoulder", "=q4=Desecrated Pauldrons", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22419,"=ds=#s3#, #a4#"},{47262,"=ds=#s3#, #a4#"},{22479,"=ds=#s3#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 22968, "INV_Shoulder_14", "=q4=Glacial Mantle", "=ds=#s3#, #a1#", "20%" },
 		{ 22967, "INV_Shoulder_14", "=q4=Icy Scale Spaulders", "=ds=#s3#, #a3#", "20%" },
@@ -6121,26 +7296,86 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
 		{ 0, "", "", "" },
-		{ 22368, "INV_Misc_Desecrated_ClothShoulder", "=q4=Desecrated Shoulderpads", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%" },
-		{ 22369, "INV_Misc_Desecrated_ClothBracer", "=q4=Desecrated Bindings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%" },
-		{ 22370, "INV_Misc_Desecrated_ClothBelt", "=q4=Desecrated Belt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%" },
-		{ 22372, "INV_Misc_Desecrated_ClothBoots", "=q4=Desecrated Sandals", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%" },
-		{ 22361, "INV_Misc_Desecrated_MailShoulder", "=q4=Desecrated Spaulders", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%" },
-		{ 22362, "INV_Misc_Desecrated_MailBracer", "=q4=Desecrated Wristguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%" },
-		{ 22363, "INV_Misc_Desecrated_MailBelt", "=q4=Desecrated Girdle", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%" },
-		{ 22365, "INV_Misc_Desecrated_MailBoots", "=q4=Desecrated Boots", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%" },
-		{ 22354, "INV_Misc_Desecrated_PlateShoulder", "=q4=Desecrated Pauldrons", "=q17=#c9#=ds=, =q12=#c6#", "8%" },
-		{ 22355, "INV_Misc_Desecrated_PlateBracer", "=q4=Desecrated Bracers", "=q17=#c9#=ds=, =q12=#c6#", "8%" },
-		{ 22356, "INV_Misc_Desecrated_PlateBelt", "=q4=Desecrated Waistguard", "=q17=#c9#=ds=, =q12=#c6#", "8%" },
-		{ 22358, "INV_Misc_Desecrated_PlateBoots", "=q4=Desecrated Sabatons", "=q17=#c9#=ds=, =q12=#c6#", "8%" },
+		{ 22368, "INV_Misc_Desecrated_ClothShoulder", "=q4=Desecrated Shoulderpads", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22515,"=ds=#s3#, #a1#"},{47220,"=ds=#s3#, #a1#"},{22499,"=ds=#s3#, #a1#"},{47100,"=ds=#s3#, #a1#"},
+			{22507,"=ds=#s3#, #a1#"},{47298,"=ds=#s3#, #a1#"}},
+			},
+		},
+		{ 22369, "INV_Misc_Desecrated_ClothBracer", "=q4=Desecrated Bindings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22519,"=ds=#s8#, #a1#"},{47222,"=ds=#s8#, #a1#"},{22503,"=ds=#s8#, #a1#"},{47102,"=ds=#s8#, #a1#"},
+			{22511,"=ds=#s8#, #a1#"},{22511,"=ds=#s8#, #a1#"}},
+			},
+		},
+		{ 22370, "INV_Misc_Desecrated_ClothBelt", "=q4=Desecrated Belt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22518,"=ds=#s10#, #a1#"},{47224,"=ds=#s10#, #a1#"},{22502,"=ds=#s10#, #a1#"},{47104,"=ds=#s10#, #a1#"},
+			{22510,"=ds=#s10#, #a1#"},{22510,"=ds=#s10#, #a1#"}},
+			},
+		},
+		{ 22372, "INV_Misc_Desecrated_ClothBoots", "=q4=Desecrated Sandals", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22516,"=ds=#s12#, #a1#"},{47226,"=ds=#s12#, #a1#"},{22500,"=ds=#s12#, #a1#"},{47106,"=ds=#s12#, #a1#"},
+			{22508,"=ds=#s12#, #a1#"},{47304,"=ds=#s12#, #a1#"}},
+			},
+		},
+		{ 22361, "INV_Misc_Desecrated_MailShoulder", "=q4=Desecrated Spaulders", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22429,"=ds=#s1#, #a4#"},{47043,"=ds=#s3#, #a4#"},{47052,"=ds=#s3#, #a4#"}},
+			{{22467,"=ds=#s1#, #a3#"},{47163,"=ds=#s3#, #a3#"},{47172,"=ds=#s3#, #a3#"},{22439,"=ds=#s1#, #a3#"}},
+			{{22491,"=ds=#s1#, #a2#"},{47373,"=ds=#s3#, #a2#"},{47382,"=ds=#s3#, #a2#"}},
+			},
+		},
+		{ 22362, "INV_Misc_Desecrated_MailBracer", "=q4=Desecrated Wristguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22424,"=ds=#s8#, #a4#"},{47045,"=ds=#s8#, #a4#"},{47054,"=ds=#s8#, #a4#"}},
+			{{22471,"=ds=#s8#, #a3#"},{47165,"=ds=#s8#, #a3#"},{47174,"=ds=#s8#, #a3#"},{22443,"=ds=#s8#, #a3#"}},
+			{{22495,"=ds=#s8#, #a2#"},{47375,"=ds=#s8#, #a2#"},{47384,"=ds=#s8#, #a2#"}},
+			},
+		},
+		{ 22363, "INV_Misc_Desecrated_MailBelt", "=q4=Desecrated Girdle", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22431,"=ds=#s10#, #a4#"},{47047,"=ds=#s10#, #a4#"},{47056,"=ds=#s10#, #a4#"}},
+			{{22470,"=ds=#s10#, #a3#"},{47167,"=ds=#s10#, #a3#"},{47176,"=ds=#s10#, #a3#"},{22442,"=ds=#s10#, #a3#"}},
+			{{22494,"=ds=#s10#, #a2#"},{47377,"=ds=#s10#, #a2#"},{47386,"=ds=#s10#, #a2#"}},
+			},
+		},
+		{ 22365, "INV_Misc_Desecrated_MailBoots", "=q4=Desecrated Boots", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22430,"=ds=#s12#, #a4#"},{47049,"=ds=#s12#, #a4#"},{47058,"=ds=#s12#, #a4#"}},
+			{{22468,"=ds=#s12#, #a3#"},{47169,"=ds=#s12#, #a3#"},{47178,"=ds=#s12#, #a3#"},{22440,"=ds=#s12#, #a3#"}},
+			{{22492,"=ds=#s12#, #a2#"},{47379,"=ds=#s12#, #a2#"},{47388,"=ds=#s12#, #a2#"}},
+			},
+		},
+		{ 22354, "INV_Misc_Desecrated_PlateShoulder", "=q4=Desecrated Pauldrons", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22419,"=ds=#s3#, #a4#"},{47262,"=ds=#s3#, #a4#"},{22479,"=ds=#s3#, #a2#"}},
+			},
+		},
+		{ 22355, "INV_Misc_Desecrated_PlateBracer", "=q4=Desecrated Bracers", "=q17=#c9#=ds=, =q12=#c6#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22423,"=ds=#s8#, #a4#"},{47264,"=ds=#s8#, #a4#"},{22483,"=ds=#s8#, #a2#"}},
+			},
+		},
+		{ 22356, "INV_Misc_Desecrated_PlateBelt", "=q4=Desecrated Waistguard", "=q17=#c9#=ds=, =q12=#c6#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22422,"=ds=#s10#, #a4#"},{47266,"=ds=#s10#, #a4#"},{22482,"=ds=#s10#, #a2#"}},
+			},
+		},
+		{ 22358, "INV_Misc_Desecrated_PlateBoots", "=q4=Desecrated Sabatons", "=q17=#c9#=ds=, =q12=#c6#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22420,"=ds=#s12#, #a4#"},{47268,"=ds=#s12#, #a4#"},{22480,"=ds=#s12#, #a2#"}},
+			},
+		},
 	};
 	NAXThaddius = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22367, "INV_Misc_Desecrated_ClothHelm", "=q4=Desecrated Circlet", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22360, "INV_Misc_Desecrated_MailHelm", "=q4=Desecrated Headpiece", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22353, "INV_Misc_Desecrated_PlateHelm", "=q4=Desecrated Helmet", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22367, "INV_Misc_Desecrated_ClothHelm", "=q4=Desecrated Circlet", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22514,"=ds=#s1#, #a1#"},{47219,"=ds=#s1#, #a1#"},{22498,"=ds=#s1#, #a1#"},{47099,"=ds=#s1#, #a1#"},
+			{22506,"=ds=#s1#, #a1#"},{47297,"=ds=#s1#, #a1#"},},
+			},
+		},
+		{ 22360, "INV_Misc_Desecrated_MailHelm", "=q4=Desecrated Headpiece", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22428,"=ds=#s1#, #a4#"},{47042,"=ds=#s1#, #a4#"},{47051,"=ds=#s1#, #a4#"}},
+			{{22466,"=ds=#s1#, #a3#"},{47162,"=ds=#s1#, #a3#"},{47171,"=ds=#s1#, #a3#"},{22438,"=ds=#s1#, #a3#"}},
+			{{22490,"=ds=#s1#, #a2#"},{47372,"=ds=#s1#, #a2#"},{47381,"=ds=#s1#, #a2#"}},
+			},
+		},
+		{ 22353, "INV_Misc_Desecrated_PlateHelm", "=q4=Desecrated Helmet", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22418,"=ds=#s1#, #a4#"},{47261,"=ds=#s1#, #a4#"},{22478,"=ds=#s1#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 23000, "INV_Chest_Chain_15", "=q4=Plated Abomination Ribcage", "=ds=#s5#, #a4#", "20%" },
 		{ 23070, "INV_Pants_08", "=q4=Leggings of Polarity", "=ds=#s11#, #a1#", "20%" },
@@ -6152,9 +7387,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "20%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22369, "INV_Misc_Desecrated_ClothBracer", "=q4=Desecrated Bindings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22362, "INV_Misc_Desecrated_MailBracer", "=q4=Desecrated Wristguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22355, "INV_Misc_Desecrated_PlateBracer", "=q4=Desecrated Bracers", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22369, "INV_Misc_Desecrated_ClothBracer", "=q4=Desecrated Bindings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22519,"=ds=#s8#, #a1#"},{47222,"=ds=#s8#, #a1#"},{22503,"=ds=#s8#, #a1#"},{47102,"=ds=#s8#, #a1#"},
+			{22511,"=ds=#s8#, #a1#"},{22511,"=ds=#s8#, #a1#"}},
+			},
+		},
+		{ 22362, "INV_Misc_Desecrated_MailBracer", "=q4=Desecrated Wristguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22424,"=ds=#s8#, #a4#"},{47045,"=ds=#s8#, #a4#"},{47054,"=ds=#s8#, #a4#"}},
+			{{22471,"=ds=#s8#, #a3#"},{47165,"=ds=#s8#, #a3#"},{47174,"=ds=#s8#, #a3#"},{22443,"=ds=#s8#, #a3#"}},
+			{{22495,"=ds=#s8#, #a2#"},{47375,"=ds=#s8#, #a2#"},{47384,"=ds=#s8#, #a2#"}},
+			},
+		},
+		{ 22355, "INV_Misc_Desecrated_PlateBracer", "=q4=Desecrated Bracers", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22423,"=ds=#s8#, #a4#"},{47264,"=ds=#s8#, #a4#"},{22483,"=ds=#s8#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 22935, "INV_Jewelry_Amulet_04", "=q4=Touch of Frost", "=ds=#s2#", "20%" },
 		{ 22938, "INV_Misc_Cape_Naxxramas_02", "=q4=Cryptfiend Silk Cloak", "=ds=#s4#", "20%" },
@@ -6166,9 +7413,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22369, "INV_Misc_Desecrated_ClothBracer", "=q4=Desecrated Bindings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22362, "INV_Misc_Desecrated_MailBracer", "=q4=Desecrated Wristguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22355, "INV_Misc_Desecrated_PlateBracer", "=q4=Desecrated Bracers", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22369, "INV_Misc_Desecrated_ClothBracer", "=q4=Desecrated Bindings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22519,"=ds=#s8#, #a1#"},{47222,"=ds=#s8#, #a1#"},{22503,"=ds=#s8#, #a1#"},{47102,"=ds=#s8#, #a1#"},
+			{22511,"=ds=#s8#, #a1#"},{22511,"=ds=#s8#, #a1#"}},
+			},
+		},
+		{ 22362, "INV_Misc_Desecrated_MailBracer", "=q4=Desecrated Wristguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22424,"=ds=#s8#, #a4#"},{47045,"=ds=#s8#, #a4#"},{47054,"=ds=#s8#, #a4#"}},
+			{{22471,"=ds=#s8#, #a3#"},{47165,"=ds=#s8#, #a3#"},{47174,"=ds=#s8#, #a3#"},{22443,"=ds=#s8#, #a3#"}},
+			{{22495,"=ds=#s8#, #a2#"},{47375,"=ds=#s8#, #a2#"},{47384,"=ds=#s8#, #a2#"}},
+			},
+		},
+		{ 22355, "INV_Misc_Desecrated_PlateBracer", "=q4=Desecrated Bracers", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22423,"=ds=#s8#, #a4#"},{47264,"=ds=#s8#, #a4#"},{22483,"=ds=#s8#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 22943, "INV_Jewelry_Necklace_29Naxxramas", "=q4=Malice Stone Pendant", "=ds=#s2#", "20%" },
 		{ 22941, "INV_Shoulder_07", "=q4=Polar Shoulder Pads", "=ds=#s3#, #a2#", "20%" },
@@ -6180,9 +7439,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22371, "INV_Misc_Desecrated_ClothGlove", "=q4=Desecrated Gloves", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22364, "INV_Misc_Desecrated_MailGlove", "=q4=Desecrated Handguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22357, "INV_Misc_Desecrated_PlateGloves", "=q4=Desecrated Gauntlets", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22371, "INV_Misc_Desecrated_ClothGlove", "=q4=Desecrated Gloves", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22517,"=ds=#s9#, #a1#"},{47223,"=ds=#s9#, #a1#"},{22501,"=ds=#s9#, #a1#"},
+			{47103,"=ds=#s9#, #a1#"},{22509,"=ds=#s9#, #a1#"},{47301,"=ds=#s9#, #a1#"}},
+			},
+		},
+		{ 22364, "INV_Misc_Desecrated_MailGlove", "=q4=Desecrated Handguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22426,"=ds=#s9#, #a4#"},{47046,"=ds=#s9#, #a4#"},{47055,"=ds=#s9#, #a4#"}},
+			{{22469,"=ds=#s9#, #a3#"},{47166,"=ds=#s9#, #a3#"},{47175,"=ds=#s9#, #a3#"},{22441,"=ds=#s9#, #a3#"}},
+			{{22493,"=ds=#s9#, #a2#"},{47376,"=ds=#s9#, #a2#"},{47385,"=ds=#s9#, #a2#"}},
+			},
+		},
+		{ 22357, "INV_Misc_Desecrated_PlateGloves", "=q4=Desecrated Gauntlets", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22421,"=ds=#s9#, #a4#"},{47265,"=ds=#s9#, #a4#"},{22481,"=ds=#s9#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 22947, "INV_Jewelry_Necklace_28Naxxramas", "=q4=Pendant of Forgotten Names", "=ds=#s2#", "20%" },
 		{ 23220, "INV_Chest_Cloth_46", "=q4=Crystal Webbed Robe", "=ds=#s5#, #a1#", "20%" },
@@ -6194,9 +7465,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22372, "INV_Misc_Desecrated_ClothBoots", "=q4=Desecrated Sandals", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22365, "INV_Misc_Desecrated_MailBoots", "=q4=Desecrated Boots", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22358, "INV_Misc_Desecrated_PlateBoots", "=q4=Desecrated Sabatons", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22372, "INV_Misc_Desecrated_ClothBoots", "=q4=Desecrated Sandals", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22516,"=ds=#s12#, #a1#"},{47226,"=ds=#s12#, #a1#"},{22500,"=ds=#s12#, #a1#"},{47106,"=ds=#s12#, #a1#"},
+			{22508,"=ds=#s12#, #a1#"},{47304,"=ds=#s12#, #a1#"}},
+			},
+		},
+		{ 22365, "INV_Misc_Desecrated_MailBoots", "=q4=Desecrated Boots", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22430,"=ds=#s12#, #a4#"},{47049,"=ds=#s12#, #a4#"},{47058,"=ds=#s12#, #a4#"}},
+			{{22468,"=ds=#s12#, #a3#"},{47169,"=ds=#s12#, #a3#"},{47178,"=ds=#s12#, #a3#"},{22440,"=ds=#s12#, #a3#"}},
+			{{22492,"=ds=#s12#, #a2#"},{47379,"=ds=#s12#, #a2#"},{47388,"=ds=#s12#, #a2#"}},
+			},
+		},
+		{ 22358, "INV_Misc_Desecrated_PlateBoots", "=q4=Desecrated Sabatons", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22420,"=ds=#s12#, #a4#"},{47268,"=ds=#s12#, #a4#"},{22480,"=ds=#s12#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 23017, "INV_Misc_Cape_Naxxramas_01", "=q4=Veil of Eclipse", "=ds=#s4#", "17%" },
 		{ 23219, "INV_Belt_13", "=q4=Girdle of the Mentor", "=ds=#s10#, #a4#", "17%" },
@@ -6209,9 +7492,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22372, "INV_Misc_Desecrated_ClothBoots", "=q4=Desecrated Sandals", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22365, "INV_Misc_Desecrated_MailBoots", "=q4=Desecrated Boots", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22358, "INV_Misc_Desecrated_PlateBoots", "=q4=Desecrated Sabatons", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22372, "INV_Misc_Desecrated_ClothBoots", "=q4=Desecrated Sandals", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22516,"=ds=#s12#, #a1#"},{47226,"=ds=#s12#, #a1#"},{22500,"=ds=#s12#, #a1#"},{47106,"=ds=#s12#, #a1#"},
+			{22508,"=ds=#s12#, #a1#"},{47304,"=ds=#s12#, #a1#"}},
+			},
+		},
+		{ 22365, "INV_Misc_Desecrated_MailBoots", "=q4=Desecrated Boots", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22430,"=ds=#s12#, #a4#"},{47049,"=ds=#s12#, #a4#"},{47058,"=ds=#s12#, #a4#"}},
+			{{22468,"=ds=#s12#, #a3#"},{47169,"=ds=#s12#, #a3#"},{47178,"=ds=#s12#, #a3#"},{22440,"=ds=#s12#, #a3#"}},
+			{{22492,"=ds=#s12#, #a2#"},{47379,"=ds=#s12#, #a2#"},{47388,"=ds=#s12#, #a2#"}},
+			},
+		},
+		{ 22358, "INV_Misc_Desecrated_PlateBoots", "=q4=Desecrated Sabatons", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22420,"=ds=#s12#, #a4#"},{47268,"=ds=#s12#, #a4#"},{22480,"=ds=#s12#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 23032, "INV_Helmet_53", "=q4=Glacial Headdress", "=ds=#s1#, #a1#", "20%" },
 		{ 23020, "INV_Helmet_04", "=q4=Polar Helmet", "=ds=#s1#, #a2#", "20%" },
@@ -6223,9 +7518,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22351, "INV_Misc_Desecrated_ClothChest", "=q4=Desecrated Robe", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22350, "INV_Misc_Desecrated_MailChest", "=q4=Desecrated Tunic", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22349, "INV_Misc_Desecrated_PlateChest", "=q4=Desecrated Breastplate", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22351, "INV_Misc_Desecrated_ClothChest", "=q4=Desecrated Robe", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22512,"=ds=#s5#, #a1#"},{47221,"=ds=#s5#, #a1#"},{22496,"=ds=#s5#, #a1#"},
+			{47101,"=ds=#s5#, #a1#"},{22504,"=ds=#s5#, #a1#"},{47299,"=ds=#s5#, #a1#"}},
+			},
+		},
+		{ 22350, "INV_Misc_Desecrated_MailChest", "=q4=Desecrated Tunic", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22425,"=ds=#s5#, #a4#"},{47044,"=ds=#s5#, #a4#"},{47053,"=ds=#s5#, #a4#"}},
+			{{22464,"=ds=#s5#, #a3#"},{47164,"=ds=#s5#, #a3#"},{47173,"=ds=#s5#, #a3#"},{22436,"=ds=#s5#, #a3#"}},
+			{{22488,"=ds=#s5#, #a2#"},{47374,"=ds=#s5#, #a2#"},{47383,"=ds=#s5#, #a2#"}},
+			},
+		},
+		{ 22349, "INV_Misc_Desecrated_PlateChest", "=q4=Desecrated Breastplate", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22416,"=ds=#s5#, #a4#"},{47263,"=ds=#s5#, #a4#"},{22476,"=ds=#s5#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 23071, "INV_Pants_Leather_09", "=q4=Leggings of Apocalypse", "=ds=#s11#, #a2#", "17%" },
 		{ 23025, "INV_Jewelry_Ring_48Naxxramas", "=q4=Seal of the Damned", "=ds=#s13#", "17%" },
@@ -6238,9 +7545,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22370, "INV_Misc_Desecrated_ClothBelt", "=q4=Desecrated Belt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22363, "INV_Misc_Desecrated_MailBelt", "=q4=Desecrated Girdle", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22356, "INV_Misc_Desecrated_PlateBelt", "=q4=Desecrated Waistguard", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22370, "INV_Misc_Desecrated_ClothBelt", "=q4=Desecrated Belt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22518,"=ds=#s10#, #a1#"},{47224,"=ds=#s10#, #a1#"},{22502,"=ds=#s10#, #a1#"},{47104,"=ds=#s10#, #a1#"},
+			{22510,"=ds=#s10#, #a1#"},{22510,"=ds=#s10#, #a1#"}},
+			},
+		},
+		{ 22363, "INV_Misc_Desecrated_MailBelt", "=q4=Desecrated Girdle", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22431,"=ds=#s10#, #a4#"},{47047,"=ds=#s10#, #a4#"},{47056,"=ds=#s10#, #a4#"}},
+			{{22470,"=ds=#s10#, #a3#"},{47167,"=ds=#s10#, #a3#"},{47176,"=ds=#s10#, #a3#"},{22442,"=ds=#s10#, #a3#"}},
+			{{22494,"=ds=#s10#, #a2#"},{47377,"=ds=#s10#, #a2#"},{47386,"=ds=#s10#, #a2#"}},
+			},
+		},
+		{ 22356, "INV_Misc_Desecrated_PlateBelt", "=q4=Desecrated Waistguard", "=q17=#c9#=ds=, =q12=#c6#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22422,"=ds=#s10#, #a4#"},{47266,"=ds=#s10#, #a4#"},{22482,"=ds=#s10#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 23030, "INV_Misc_Cape_Naxxramas_01", "=q4=Cloak of the Scourge", "=ds=#s4#", "14%" },
 		{ 23031, "INV_Jewelry_Ring_53Naxxramas", "=q4=Band of the Inevitable", "=ds=#s13#", "14%" },
@@ -6254,9 +7573,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22370, "INV_Misc_Desecrated_ClothBelt", "=q4=Desecrated Belt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22363, "INV_Misc_Desecrated_MailBelt", "=q4=Desecrated Girdle", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22356, "INV_Misc_Desecrated_PlateBelt", "=q4=Desecrated Waistguard", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22370, "INV_Misc_Desecrated_ClothBelt", "=q4=Desecrated Belt", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22518,"=ds=#s10#, #a1#"},{47224,"=ds=#s10#, #a1#"},{22502,"=ds=#s10#, #a1#"},{47104,"=ds=#s10#, #a1#"},
+			{22510,"=ds=#s10#, #a1#"},{22510,"=ds=#s10#, #a1#"}},
+			},
+		},
+		{ 22363, "INV_Misc_Desecrated_MailBelt", "=q4=Desecrated Girdle", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22431,"=ds=#s10#, #a4#"},{47047,"=ds=#s10#, #a4#"},{47056,"=ds=#s10#, #a4#"}},
+			{{22470,"=ds=#s10#, #a3#"},{47167,"=ds=#s10#, #a3#"},{47176,"=ds=#s10#, #a3#"},{22442,"=ds=#s10#, #a3#"}},
+			{{22494,"=ds=#s10#, #a2#"},{47377,"=ds=#s10#, #a2#"},{47386,"=ds=#s10#, #a2#"}},
+			},
+		},
+		{ 22356, "INV_Misc_Desecrated_PlateBelt", "=q4=Desecrated Waistguard", "=q17=#c9#=ds=, =q12=#c6#", "8%", "", "", "", "", "", "", "", "", "", "", {
+			{{22422,"=ds=#s10#, #a4#"},{47266,"=ds=#s10#, #a4#"},{22482,"=ds=#s10#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 23035, "INV_Helmet_50", "=q4=Preceptor's Hat", "=ds=#s1#, #a1#", "20%" },
 		{ 23033, "INV_Helmet_20", "=q4=Icy Scale Coif", "=ds=#s1#, #a3#", "20%" },
@@ -6268,9 +7599,21 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22726, "INV_Qiraj_JewelBlessed", "=q5=Splinter of Atiesh", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#=ds=, =q13=#c1#", "30%" },
 		{ 22727, "INV_Staff_20", "=q5=Frame of Atiesh", "=ds=#m2#" },
 		{ 0, "", "", "" },
-		{ 22366, "INV_Misc_Desecrated_ClothPants", "=q4=Desecrated Leggings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 22359, "INV_Misc_Desecrated_MailPants", "=q4=Desecrated Legguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
-		{ 22352, "INV_Misc_Desecrated_PlatePants", "=q4=Desecrated Legplates", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
+		{ 22366, "INV_Misc_Desecrated_ClothPants", "=q4=Desecrated Leggings", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22513,"=ds=#s11#, #a1#"},{47225,"=ds=#s11#, #a1#"},{22497,"=ds=#s11#, #a1#"},
+			{47105,"=ds=#s11#, #a1#"},{22505,"=ds=#s11#, #a1#"},{47303,"=ds=#s11#, #a1#"}},
+			},
+		},
+		{ 22359, "INV_Misc_Desecrated_MailPants", "=q4=Desecrated Legguards", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22427,"=ds=#s11#, #a4#"},{47048,"=ds=#s11#, #a4#"},{47057,"=ds=#s11#, #a4#"}},
+			{{22465,"=ds=#s11#, #a3#"},{47168,"=ds=#s11#, #a3#"},{47177,"=ds=#s11#, #a3#"},{22437,"=ds=#s11#, #a3#"}},
+			{{22489,"=ds=#s11#, #a2#"},{47378,"=ds=#s11#, #a2#"},{47387,"=ds=#s11#, #a2#"}},
+			},
+		},
+		{ 22352, "INV_Misc_Desecrated_PlatePants", "=q4=Desecrated Legplates", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+			{{22417,"=ds=#s11#, #a4#"},{47267,"=ds=#s11#, #a4#"},{22477,"=ds=#s11#, #a2#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 23038, "INV_Jewelry_Ring_48Naxxramas", "=q4=Band of Unnatural Forces", "=ds=#s13#", "20%" },
 		{ 23037, "INV_Jewelry_Ring_52Naxxramas", "=q4=Ring of Spiritual Fervor", "=ds=#s13#", "20%" },
@@ -6315,9 +7658,22 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 22520, "INV_Misc_Urn_01", "=q4=The Phylactery of Kel'Thuzad", "=ds=#m2#", "100%" },
 		{ 23207, "INV_Misc_Token_ArgentDawn3", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
 		{ 23206, "INV_Misc_Token_ArgentDawn2", "=q4=Mark of the Champion", "=q1=#m4# =ds=#s14#" },
-		{ 55581, "INV_Jewelry_Ring_15", "=q4=Desecrated Ring", "=q17=#c9#=ds=, =q12=#c6#", "33%" },
-		{ 55582, "INV_Jewelry_Ring_27", "=q4=Desecrated Loop", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%" },
-		{ 55583, "INV_Jewelry_Ring_16", "=q4=Desecrated Signet", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%" },
+		{ 55581, "INV_Jewelry_Ring_15", "=q4=Desecrated Ring", "=q17=#c9#=ds=, =q12=#c6#", "33%", "", "", "", "", "", "", "", "", "", "", {
+				{{23059,"=ds=#s13# =q7=#db14#"},{47269,"=ds=#s13# =q7=#db14#"},{23060,"=ds=#s13# =q7=#db14#"}},
+			},
+		},
+		{ 55582, "INV_Jewelry_Ring_27", "=q4=Desecrated Loop", "=q9=#c5#=ds=, =q10=#c3#=ds=, =q11=#c8#", "33%", "", "", "", "", "", "", "", "", "", "", {
+				{{23061,"=ds=#s13# =q7=#db14#"},{47227,"=ds=#s13# =q7=#db14#"},
+				{23062,"=ds=#s13# =q7=#db14#"},{47107,"=ds=#s13# =q7=#db14#"},
+				{23063,"=ds=#s13# =q7=#db14#"},{47305,"=ds=#s13# =q7=#db14#"}},
+			},
+		},
+		{ 55583, "INV_Jewelry_Ring_16", "=q4=Desecrated Signet", "=q16=#c4#=ds=, =q14=#c2#=ds=, =q15=#c7#=ds=, =q13=#c1#", "33%", "", "", "", "", "", "", "", "", "", "", {
+				{{23066,"=ds=#s13# =q7=#db14#"},{47050,"=ds=#s13# =q7=#db14#"},{47059,"=ds=#s13# =q7=#db14#"}},
+				{{23065,"=ds=#s13# =q7=#db14#"},{47170,"=ds=#s13# =q7=#db14#"},{47179,"=ds=#s13# =q7=#db14#"},{23067,"=ds=#s13# =q7=#db14#"}},
+				{{23064,"=ds=#s13# =q7=#db14#"},{47380,"=ds=#s13# =q7=#db14#"},{47389,"=ds=#s13# =q7=#db14#"}},
+			},
+		},
 		{ 0, "", "", "" },
 		{ 81283, "INV_Misc_Ribbon_01", "=q2=Mr. Bigglesworth", "=ds=#e15#", "100%" },
 		{ 0, "", "", "" },

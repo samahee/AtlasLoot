@@ -5,19 +5,9 @@ local ORANGE = "|cffFF8400";
 local WHITE = "|cffFFFFFF";
 
 function AtlasLoot_CraftingMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
+	AtlasLoot_PrepMenu(nil, AL["Crafting"])
 	AtlasLootCharDB.LastBoss = "CRAFTINGMENU"
-	AtlasLootCharDB.LastBossText = "Crafting"
-	getglobal("AtlasLootItemsFrame_BACK"):Hide();
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLootCharDB.LastBossText = AL["Crafting"]
 	--Alchemy
 	AtlasLootMenuItem_1_Name:SetText(AL["Alchemy"]);
 	AtlasLootMenuItem_1_Extra:SetText("");
@@ -114,26 +104,10 @@ function AtlasLoot_CraftingMenu()
 	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\INV_Hammer_Unique_Sulfuras");
 	AtlasLootMenuItem_18.lootpage="CraftedWeapons1";
 	AtlasLootMenuItem_18:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Crafting"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLootCraftedSetMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Crafted Sets"])
 	--Tailoring Header
 	AtlasLootMenuItem_1_Name:SetText(RED..AL["Tailoring"]);
 	AtlasLootMenuItem_1_Extra:SetText("");
@@ -297,26 +271,10 @@ function AtlasLootCraftedSetMenu()
 	AtlasLootMenuItem_29_Icon:SetTexture("Interface\\Icons\\INV_Pants_03");
 	AtlasLootMenuItem_29.lootpage="BlackDragonM";
 	AtlasLootMenuItem_29:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Crafted Sets"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_AlchemyMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Alchemy"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Alchemy"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -383,26 +341,10 @@ function AtlasLoot_AlchemyMenu()
 	AtlasLootMenuItem_13_Icon:SetTexture("Interface\\Icons\\Trade_Alchemy");
 	AtlasLootMenuItem_13.lootpage="AlchemyOther1";
 	AtlasLootMenuItem_13:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Alchemy"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_SmithingMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Blacksmithing"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Blacksmithing"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -547,26 +489,10 @@ function AtlasLoot_SmithingMenu()
 	AtlasLootMenuItem_28_Icon:SetTexture("Interface\\Icons\\INV_Sword_41");
 	AtlasLootMenuItem_28.lootpage="Swordsmith1";
 	AtlasLootMenuItem_28:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Blacksmithing"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_EnchantingMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Enchanting"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Enchanting"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -645,26 +571,10 @@ function AtlasLoot_EnchantingMenu()
 	AtlasLootMenuItem_15_Icon:SetTexture("Interface\\Icons\\Trade_Engraving");
 	AtlasLootMenuItem_15.lootpage="EnchantingMisc1";
 	AtlasLootMenuItem_15:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Enchanting"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_EngineeringMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Engineering"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Engineering"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -737,26 +647,10 @@ function AtlasLoot_EngineeringMenu()
 	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\Trade_Engineering");
 	AtlasLootMenuItem_18.lootpage="Goblin1";
 	AtlasLootMenuItem_18:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Engineering"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_LeatherworkingMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Leatherworking"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Leatherworking"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -799,7 +693,6 @@ function AtlasLoot_LeatherworkingMenu()
 	AtlasLootMenuItem_22_Icon:SetTexture("Interface\\Icons\\Spell_Nature_NullWard");
 	AtlasLootMenuItem_22.lootpage="Tribal1";
 	AtlasLootMenuItem_22:Show();
-
 	--Leatherworking Helm
 	AtlasLootMenuItem_7_Name:SetText(AL["Leatherworking"]..": "..AL["Helm"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
@@ -866,26 +759,10 @@ function AtlasLoot_LeatherworkingMenu()
 	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\INV_Misc_ArmorKit_17");
 	AtlasLootMenuItem_18.lootpage="LeatherMisc1";
 	AtlasLootMenuItem_18:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Leatherworking"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_TailoringMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Tailoring"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Tailoring"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -983,26 +860,10 @@ function AtlasLoot_TailoringMenu()
 	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\Icons\\Trade_Tailoring");
 	AtlasLootMenuItem_19.lootpage="TailoringMisc1";
 	AtlasLootMenuItem_19:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Tailoring"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_CookingMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Cooking"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Cooking"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -1027,26 +888,10 @@ function AtlasLoot_CookingMenu()
 	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\INV_Misc_Food_15");
 	AtlasLootMenuItem_5.lootpage="CookingArtisan1";
 	AtlasLootMenuItem_5:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Cooking"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLoot_JewelcraftingMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "CRAFTINGMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("CRAFTINGMENU", AL["Jewelcrafting"])
 	--Apprentice
 	AtlasLootMenuItem_2_Name:SetText(AL["Jewelcrafting"]..": "..AL["Apprentice"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -1137,9 +982,4 @@ function AtlasLoot_JewelcraftingMenu()
 	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Ring_03");
 	AtlasLootMenuItem_18.lootpage="JewelcraftingGoldsmithing1";
 	AtlasLootMenuItem_18:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Jewelcrafting"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end

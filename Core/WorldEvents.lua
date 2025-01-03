@@ -3,19 +3,9 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 local ORANGE = "|cffFF8400";
 
 function AtlasLootWorldEventMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
+	AtlasLoot_PrepMenu(nil, AL["World Events"])
 	AtlasLootCharDB.LastBoss = "WORLDEVENTMENU"
-	AtlasLootCharDB.LastBossText = "World Events"
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootItemsFrame_BACK"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLootCharDB.LastBossText = AL["World Events"]
 	--Abyssal Council
 	AtlasLootMenuItem_2_Name:SetText(AL["Abyssal Council"]);
 	AtlasLootMenuItem_2_Extra:SetText(ORANGE..AL["Silithus"]);
@@ -94,47 +84,4 @@ function AtlasLootWorldEventMenu()
 	AtlasLootMenuItem_8_Icon:SetTexture("Interface\\Icons\\INV_Fishingpole_01");
 	AtlasLootMenuItem_8.lootpage="FishingExtravaganza";
 	AtlasLootMenuItem_8:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["World Events"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
-end
-
-function AtlasLootAbyssalCouncilMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "WORLDEVENTMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
-	--Templars
-	AtlasLootMenuItem_2_Name:SetText(AL["Abyssal Council"].." - "..AL["Templars"]);
-	AtlasLootMenuItem_2_Extra:SetText("");
-	AtlasLootMenuItem_2_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Talisman_05");
-	AtlasLootMenuItem_2.lootpage="AbyssalTemplars";
-	AtlasLootMenuItem_2:Show();
-	--Dukes
-	AtlasLootMenuItem_3_Name:SetText(AL["Abyssal Council"].." - "..AL["Dukes"]);
-	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Ring_36");
-	AtlasLootMenuItem_3.lootpage="AbyssalDukes";
-	AtlasLootMenuItem_3:Show();
-	--High Council
-	AtlasLootMenuItem_4_Name:SetText(AL["Abyssal Council"].." - "..AL["High Council"]);
-	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\INV_Staff_13");
-	AtlasLootMenuItem_4.lootpage="AbyssalLords";
-	AtlasLootMenuItem_4:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Abyssal Council"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end

@@ -1864,6 +1864,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s45475", "inv_bracer_12", "=q4=Dreamhide Bracers", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s45473", "inv_shoulder_18", "=q4=Dreamhide Mantle", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 		{ "s45483", "INV_Bracer_07", "=q4=Inscribed Runic Bracers", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
+		{ "s45455", "INV_Misc_MonsterScales_04", "=q2=Dreamhide", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },
 	};
 
 	Dragonscale1 = {
@@ -2227,9 +2228,9 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s3818", "inv_misc_pelt_wolf_02", "=q1=Cured Heavy Hide", "=ds=#sr# =so1=150 =so2=160 =so3=165 =so4=170" },
 		{ "s10482", "inv_misc_pelt_bear_01", "=q1=Cured Thick Hide", "=ds=#sr# =so1=200 =so2=200 =so3=200 =so4=200" },
 		{ "s19047", "inv_misc_pelt_bear_03", "=q1=Cured Rugged Hide", "=ds=#sr# =so1=250 =so2=250 =so3=255 =so4=260" },
+		{ "s45455", "INV_Misc_MonsterScales_04", "=q2=Dreamhide", "=ds=#sr# =so1=300 =so2=320 =so3=330 =so4=340" },		
 		{ "", "", ""},
 		{ "s23190", "inv_misc_throwingball_01", "=q1=Heavy Leather Ball", "=ds=#sr# =so1=150 =so2=150 =so3=155 =so4=160" },
-		{ "", "", ""},
 		{ "", "", ""},
 		{ "s2152", "inv_misc_armorkit_17", "=q1=Light Armor Kit", "=ds=#sr# =so1=1 =so2=30 =so3=45 =so4=60" },
 		{ "s2165", "inv_misc_armorkit_15", "=q1=Medium Armor Kit", "=ds=#sr# =so1=100 =so2=115 =so3=122 =so4=130" },
@@ -2528,6 +2529,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s45461", "inv_bracer_06", "=q4=Dreamthread Bracers", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s45463", "inv_gauntlets_23", "=q4=Dreamthread Gloves", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
 		{ "s45457", "INV_Shoulder_05", "=q4=Dreamthread Mantle", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300" },
+		{ "s45453", "INV_Misc_Herb_18", "=q2=Dreamthread", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300"},
 	};
 	TailoringHelm1 = {
 		{ "s8760", "inv_helmet_29", "=q2=Azure Silk Hood", "=ds=#sr# =so1=145 =so2=155 =so3=160 =so4=165" },
@@ -2797,6 +2799,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s3865", "inv_fabric_mageweave_03", "=q1=Bolt of Mageweave", "=ds=#sr# =so1=175 =so2=180 =so3=182 =so4=185" },
 		{ "s18401", "inv_fabric_purplefire_02", "=q1=Bolt of Runecloth", "=ds=#sr# =so1=250 =so2=255 =so3=257 =so4=260" },
 		{ "s18560", "inv_fabric_moonrag_01", "=q1=Mooncloth", "=ds=#sr# =so1=250 =so2=290 =so3=305 =so4=320" },
+		{ "s45453", "INV_Misc_Herb_18", "=q2=Dreamthread", "=ds=#sr# =so1=300 =so2=300 =so3=300 =so4=300"},
 	},
 
 -----------------

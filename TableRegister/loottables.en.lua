@@ -752,7 +752,6 @@ AtlasLoot_TableNames = {
 	["Winterviel"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
 	["Winterviel1"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
 	["Winterviel2"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
-	["WintervielSnowball"] = { AL["Feast of Winter Veil"].." - Snowball", "AtlasLootWorldEvents" },
 	--Other
 	["ElementalInvasion"] = { AL["Elemental Invasion"], "AtlasLootWorldEvents" },
 	["FishingExtravaganza"] = { AL["Stranglethorn Fishing Extravaganza"], "AtlasLootWorldEvents" },
@@ -1908,7 +1907,6 @@ AtlasLoot_TableNamesBoss = {
 		["Valentineday"] = { AL["Love is in the Air"], "AtlasLootWorldEvents" },
 		["Winterviel1"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
 		["Winterviel2"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
-		["WintervielSnowball"] = { "Snowball", "AtlasLootWorldEvents" },
 		--Other
 		["ElementalInvasion"] = { AL["Elemental Invasion"], "AtlasLootWorldEvents" },
 		["FishingExtravaganza"] = { AL["Stranglethorn Fishing Extravaganza"], "AtlasLootWorldEvents" },

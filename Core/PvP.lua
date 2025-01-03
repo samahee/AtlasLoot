@@ -4,19 +4,9 @@ local RED = "|cffff0000";
 local ORANGE = "|cffFF8400";
 
 function AtlasLootPvPMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
+	AtlasLoot_PrepMenu(nil, AL["PvP Rewards"])
 	AtlasLootCharDB.LastBoss = "PVPMENU"
-	AtlasLootCharDB.LastBossText = "PvP Rewards"
-	getglobal("AtlasLootItemsFrame_BACK"):Hide();
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLootCharDB.LastBossText = AL["PvP Rewards"]
 	-- Alterac Valley Rewards
 	AtlasLootMenuItem_2_Name:SetText(AL["Alterac Valley"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -65,26 +55,10 @@ function AtlasLootPvPMenu()
 	AtlasLootMenuItem_22_Icon:SetTexture("Interface\\Icons\\INV_Sword_11");
 	AtlasLootMenuItem_22.lootpage="PVPWeapons1";
 	AtlasLootMenuItem_22:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["PvP Rewards"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLootBRRepMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "PVPMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("PVPMENU", AL["Blood Ring"])
 	--Friendly
 	AtlasLootMenuItem_2_Name:SetText("Friendly Reputation Rewards");
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -115,27 +89,10 @@ function AtlasLootBRRepMenu()
 	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\inv_jewelry_talisman_04");
 	AtlasLootMenuItem_6.lootpage="BRRepTokens";
 	AtlasLootMenuItem_6:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Blood Ring"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLootWSGRepMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "PVPMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
-	
+	AtlasLoot_PrepMenu("PVPMENU", AL["Warsong Gulch"])
 	--Friendly Header
 	AtlasLootMenuItem_2_Name:SetText(RED..AL["Friendly"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -244,26 +201,10 @@ function AtlasLootWSGRepMenu()
 	AtlasLootMenuItem_22_Icon:SetTexture("Interface\\Icons\\INV_Misc_Rune_07");
 	AtlasLootMenuItem_22.lootpage="WSGRepRevered5059";
 	AtlasLootMenuItem_22:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Warsong Gulch"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLootABRepMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "PVPMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("PVPMENU", AL["Arathi Basin"])
 	--Friendly Header
 	AtlasLootMenuItem_2_Name:SetText(RED..AL["Friendly"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -348,26 +289,10 @@ function AtlasLootABRepMenu()
 	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Amulet_07");
 	AtlasLootMenuItem_21.lootpage="ABRepRevered5059";
 	AtlasLootMenuItem_21:Show();							 
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Arathi Basin"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLootAVRepMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "PVPMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("PVPMENU", AL["Alterac Valley"])
 	--Friendly
 	AtlasLootMenuItem_2_Name:SetText(AL["Friendly Reputation Rewards"]);
 	AtlasLootMenuItem_2_Extra:SetText("");
@@ -404,83 +329,62 @@ function AtlasLootAVRepMenu()
 	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Necklace_21");
 	AtlasLootMenuItem_7.lootpage="AVLokholarIvus";
 	AtlasLootMenuItem_7:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Alterac Valley"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
 
 function AtlasLootPVPSetMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
-	getglobal("AtlasLootItemsFrame_BACK"):Show();
-	getglobal("AtlasLootItemsFrame_BACK").lootpage = "PVPMENU";
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
+	AtlasLoot_PrepMenu("PVPMENU", AL["PvP Armor Sets"])
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff"..AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\Icons\\Spell_Holy_PowerWordShield");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest")
 	AtlasLootMenuItem_3.lootpage="PVPPriest";
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef"..AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\Icons\\Spell_Frost_IceStorm");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
 	AtlasLootMenuItem_4.lootpage="PVPMage";
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9"..AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\Icons\\Spell_Shadow_CurseOfTounges");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
 	AtlasLootMenuItem_5.lootpage="PVPWarlock";
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468"..AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\Icons\\Ability_BackStab");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue")
 	AtlasLootMenuItem_6.lootpage="PVPRogue";
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a"..AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\Icons\\Spell_Nature_Regeneration");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid")
 	AtlasLootMenuItem_7.lootpage="PVPDruid";
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372"..AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\Icons\\Ability_Hunter_RunningShot");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter")
 	AtlasLootMenuItem_18.lootpage="PVPHunter";
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff"..AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\Icons\\Spell_FireResistanceTotem_01");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
 	AtlasLootMenuItem_19.lootpage="PVPShaman";
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba"..AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\Icons\\Spell_Holy_SealOfMight");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin")
 	AtlasLootMenuItem_20.lootpage="PVPPaladin";
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d"..AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\Icons\\INV_Shield_05");
+	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior")
 	AtlasLootMenuItem_21.lootpage="PVPWarrior";
 	AtlasLootMenuItem_21:Show();
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["PvP Armor Sets"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end

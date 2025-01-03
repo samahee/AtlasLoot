@@ -1,21 +1,9 @@
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
-local ORANGE = "|cffFF8400";
-
 function AtlasLootRepMenu()
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootItem_"..i):Hide();
-	end
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i):Hide();
-		getglobal("AtlasLootMenuItem_"..i).isheader = false;
-	end
+	AtlasLoot_PrepMenu(nil, AL["Factions"])
 	AtlasLootCharDB.LastBoss = "REPMENU"
 	AtlasLootCharDB.LastBossText = "Factions"
-	getglobal("AtlasLootItemsFrame_NEXT"):Hide();
-	getglobal("AtlasLootItemsFrame_PREV"):Hide();
-	getglobal("AtlasLootItemsFrame_BACK"):Hide();
-	getglobal("AtlasLootServerQueryButton"):Hide();
 	--Argent Dawn
 	AtlasLootMenuItem_1_Name:SetText(AL["Argent Dawn"]);
 	AtlasLootMenuItem_1_Extra:SetText("");
@@ -184,10 +172,4 @@ function AtlasLootRepMenu()
 	AtlasLootMenuItem_30_Icon:SetTexture("Interface\\Icons\\INV_Misc_Foot_Centaur");
 	AtlasLootMenuItem_30.lootpage="ThunderBluff";
 	AtlasLootMenuItem_30:Show();
-
-	for i = 1, 30, 1 do
-		getglobal("AtlasLootMenuItem_"..i.."_Extra"):Show();
-	end
-	AtlasLoot_BossName:SetText("|cffFFFFFF"..AL["Factions"]);
-	AtlasLoot_SetItemInfoFrame(AtlasLoot_AnchorFrame);
 end
