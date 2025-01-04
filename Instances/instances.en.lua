@@ -526,14 +526,14 @@ AtlasLootBossButtons = {
 		"SFKWolfMasterNandos";
 		"SFKArchmageArugal";
 		"";
-		"";
+		"";--SFKPrelate
 		"SFKTrash";
 	};
 	SMArmory = {
 		"VanillaKeys";
 		"";
 		"SMHerod";
-		"";
+		"";--SMQuartermaster
 		"";
 		"SMATrash";
 		"SCARLET";
@@ -557,7 +557,7 @@ AtlasLootBossButtons = {
 		"SMIronspine";
 		"SMAzshir";
 		"SMFallenChampion";
-		"";
+		"";--SMDukeDreadmoore
 		"";
 		"SMGTrash";
 		"SCARLET";
@@ -567,7 +567,7 @@ AtlasLootBossButtons = {
 		"SMHoundmasterLoksey";
 		"SMDoan";
 		"SMDoansBox";
-		"";
+		"";--SMBrotherWystan
 		"";
 		"SMLTrash";
 		"SCARLET";
@@ -681,14 +681,14 @@ AtlasLootBossButtons = {
 	TheDeadmines = {
 		"";
 		"";
-		"";
+		"";--DMJaredVoss
 		"DMRhahkZor";
 		"DMMinerJohnson";
 		"DMSneed";		
 		"DMSneedsShredder";
 		"DMGilnid";
 		--"DMDefiasGunpowder";
-		"";
+		"";--DMHarvester
 		"DMMrSmite";
 		"DMCookie";
 		"DMCaptainGreenskin";
@@ -855,10 +855,10 @@ AtlasLootBossButtons = {
 		"WCLadyAnacondra";
 		"WCKresh";
 		"WCDeviateFaerieDragon";
-		"";
+		"";--WCZandara
 		"WCLordPythas";
 		"WCSkum";
-		"";
+		"";--WCVangros
 		"WCLordSerpentis";
 		"WCVerdan";
 		"WCMutanus";
@@ -3916,6 +3916,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{	 0, "", "", "" },
 		{ 80710, "INV_SHOULDER_18", "=q2=Turtle Scale Shoulderguards", "=ds=#s3#, #a3#", "33%" },
 	};
+	-- WCZandara = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	WCLordPythas = {
 		{ 6472, "INV_Wand_10", "=q3=Stinging Viper", "=ds=#h1#, #w6#", "33%" },
 		{ 6473, "INV_Shirt_16", "=q2=Armor of the Fang", "=ds=#s5#, #a2#", "33%" },
@@ -3928,6 +3936,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 80712, "INV_PANTS_08", "=q3=Charged Leggings", "=ds=#s11#, #a1#", "33%" },
 	};
+	-- WCVangros = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	WCLordSerpentis = {
 		{ 6469, "INV_Weapon_Bow_10", "=q3=Venomstrike", "=ds=#w2#", "25%" },
 		{ 5970, "INV_Gauntlets_19", "=q2=Serpent Gloves", "=ds=#s9#, #a1#", "25%" },
@@ -4503,6 +4519,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 60572, "INV_Shoulder_23", "=q3=Incendosaur Skin Pauldrons", "=ds=#s3#, #a2#, From Elites Outside Dungeon", "0.1%" },
 		{ 60612, "INV_Helmet_47", "=q3=Mixologist Goggles", "=ds=#s1#, #a2#", "0.0025%" },
 	};
+	-- DMJaredVoss = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	DMRhahkZor = {
 		{ 872, "INV_ThrowingAxe_01", "=q2=Rockslicer", "=ds=#h2#, #w1#", "5%" },
 		{ 5187, "INV_Hammer_09", "=q1=Rhahk'Zor's Hammer", "=ds=#h2#, #w6#", "95%" },
@@ -4530,6 +4554,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 	DMDefiasGunpowder = {
 		{ 5397, "INV_Misc_Ammo_Gunpowder_01", "=q1=Defias Gunpowder", "=ds=#m8#", "100%" },
 	};
+	-- DMHarvester = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	DMMrSmite = {
 		{ 7230, "INV_Hammer_09", "=q3=Smite's Mighty Hammer", "=ds=#h2#, #w6#", "20%" },
 		{ 5192, "INV_Sword_24", "=q2=Thief's Blade", "=ds=#h1#, #w10#", "30%" },
@@ -5060,6 +5092,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "INV_Box_01", "=q6=#cb1#", "" },
 		{ 7146, "INV_Misc_Key_01", "=q2=The Scarlet Key", "=ds=#e14#" },
 	};
+	-- SMBrotherWystan = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	SMHerod = {
 		{ 7719, "INV_Helmet_25", "=q3=Raging Berserker's Helm", "=ds=#s1#, #a3#", "25%" },
 		{ 7718, "INV_Shoulder_01", "=q3=Herod's Shoulder", "=ds=#s3#, #a3#", "25%" },
@@ -5068,6 +5108,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "1%" },
 	};
+	-- SMQuartermaster = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	SMFairbanks = {
 		{ 19507, "INV_Shoulder_27", "=q2=Inquisitor's Shawl", "=ds=#s3#, #a1#", "33%" },
 		{ 19508, "INV_Bracer_11", "=q2=Branded Leather Bracers", "=ds=#s8#, #a2#", "33%" },
@@ -5099,6 +5147,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0, "", "", "" },
 		{ 51217, "INV_misc_ribbon_01", "=q2=Fashion Coin", "=ds=#e27#", "1%" },
 	};
+	-- SMDukeDreadmoore = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	SMIronspine = {
 		{ 7688, "INV_Chest_Plate15", "=q3=Ironspine's Ribcage", "=ds=#s5#, #a3#", "33%" },
 		{ 7687, "INV_Hammer_19", "=q3=Ironspine's Fist", "=ds=#h1#, #w6#", "33%" },
@@ -5682,6 +5738,14 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 6340, "INV_Misc_Pelt_Wolf_02", "=q2=Fenrus' Hide", "=ds=#s4#", "50%" },
 		{ 3230, "INV_Bracer_07", "=q2=Black Wolf Bracers", "=ds=#s8#, #a2#", "50%" },
 	};
+	-- SFKPrelate = {
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- 	{ 0, "", "", "" },
+	-- };
 	SFKArugalsVoidwalker = {
 		{ 5943, "INV_Bracer_03", "=q2=Rift Bracers", "=ds=#s8#, #a3#", "3%" },
 	};
