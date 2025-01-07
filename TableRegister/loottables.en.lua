@@ -506,11 +506,9 @@ AtlasLoot_TableNames = {
 	["LKHMoroes"] = { AL["Lower Karazhan Halls"].." - "..AL["Moroes"], "AtlasLootItems" },
 	["LKHTrash"] = { AL["Lower Karazhan Halls"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	["LKHEnchants"] = { AL["Lower Karazhan Halls"].." - ".."Enchants", "AtlasLootItems" },
-
 	------------
 	--- Sets ---
 	------------
-
 	--Vanilla WoW Sets
 	["DEADMINES"] = { AL["The Deadmines"], "AtlasLootSetItems" },
 	["WAILING"] = { AL["Wailing Caverns"], "AtlasLootSetItems" },
@@ -652,39 +650,31 @@ AtlasLoot_TableNames = {
 	------------------------
 	--- Misc Collections ---
 	------------------------
-
 	["CraftedWeapons1"] = { AL["Crafted Epic Weapons"], "AtlasLootCrafting" },
 	["WorldEpics1"] = { AL["World Epics"] .. " - " .. AL["Level 30-39"], "AtlasLootSetItems" },
 	["WorldEpics2"] = { AL["World Epics"] .. " - " .. AL["Level 40-49"], "AtlasLootSetItems" },
 	["WorldEpics3"] = { AL["World Epics"] .. " - " .. AL["Level 50-60"], "AtlasLootSetItems" },
-
 	--------------------
 	--- World Bosses ---
 	--------------------
-
-	--Azuregos
-	["AAzuregos"] = { AL["Azuregos"], "AtlasLootWBItems" },
-	["ASpiritA"] = { AL["Spirit of Azuregos"], "AtlasLootWBItems" },
+	["AAzuregos"] = { AL["Azshara"].. " - " ..AL["Azuregos"], "AtlasLootWBItems" },
+	["ASpiritA"] = { AL["Azshara"].. " - " ..AL["Spirit of Azuregos"], "AtlasLootWBItems" },
 	--["Turtlhu"] = { "Turtlhu, the Black Turtle of Doom", "AtlasLootWBItems" },
-	["Nerubian"] = { "Nerubian Overseer", "AtlasLootWBItems" },
-	["Reaver"] = { "Dark Reaver of Karazhan", "AtlasLootWBItems" },
-	["Ostarius"] = { "Ostarius", "AtlasLootWBItems" },
-	["Concavius"] = { "Concavius", "AtlasLootWBItems" },
-	["CowKing"] = { "Moo", "AtlasLootWBItems" },
-	--Doom Lord Kazzak
-	["KKazzak"] = { AL["Lord Kazzak"], "AtlasLootWBItems" },
-	--Emrald Dragons
-	["DEmeriss"] = { AL["Emeriss"], "AtlasLootWBItems" },
-	["DLethon"] = { AL["Lethon"], "AtlasLootWBItems" },
-	["DTaerar"] = { AL["Taerar"], "AtlasLootWBItems" },
-	["DYsondre"] = { AL["Ysondre"], "AtlasLootWBItems" },
-	["DTrash"] = { AL["Emerald Dragons"].." - "..AL["Trash Mobs"], "AtlasLootWBItems" },
-	["Clackora"] = { "Cla'ckora", "AtlasLootWBItems" },
-
-
-	--------------------------
-	--- Rare Spawns (1.16) ---
-	--------------------------
+	["Nerubian"] = { AL["Eastern Plaguelands"].. " - " ..AL["Nerubian Overseer"], "AtlasLootWBItems" },
+	["Reaver"] = { AL["Deadwind Pass"].. " - " ..AL["Dark Reaver of Karazhan"], "AtlasLootWBItems" },
+	["Ostarius"] = { AL["Tanaris"].. " - " ..AL["Ostarius"], "AtlasLootWBItems" },
+	["Concavius"] = { AL["Desolace"].. " - " ..AL["Concavius"], "AtlasLootWBItems" },
+	["CowKing"] = { AL["Moomoo Grove"].. " - " ..AL["Moo"], "AtlasLootWBItems" },
+	["KKazzak"] = { AL["Blasted Lands"].. " - " ..AL["Lord Kazzak"], "AtlasLootWBItems" },
+	["DEmeriss"] = { AL["Ashenvale"].."/"..AL["Duskwood"].."/"..AL["Feralas"].."/"..AL["Hinterlands"].. " - " ..AL["Emeriss"], "AtlasLootWBItems" },
+	["DLethon"] = { AL["Ashenvale"].."/"..AL["Duskwood"].."/"..AL["Feralas"].."/"..AL["Hinterlands"].. " - " ..AL["Lethon"], "AtlasLootWBItems" },
+	["DTaerar"] = { AL["Ashenvale"].."/"..AL["Duskwood"].."/"..AL["Feralas"].."/"..AL["Hinterlands"].. " - " ..AL["Taerar"], "AtlasLootWBItems" },
+	["DYsondre"] = { AL["Ashenvale"].."/"..AL["Duskwood"].."/"..AL["Feralas"].."/"..AL["Hinterlands"].. " - " ..AL["Ysondre"], "AtlasLootWBItems" },
+	["DTrash"] = { AL["Emerald Dragons"].. " - " ..AL["Trash Mobs"], "AtlasLootWBItems" },
+	["Clackora"] = { AL["Azshara"].. " - " ..AL["Cla'ckora"], "AtlasLootWBItems" },
+	-------------------
+	--- Rare Spawns ---
+	-------------------
 	["Tarangos"] = { "Tarangos The Dampener", "AtlasLootWBItems" },
 	["Kargron"] = { "Blademaster Kargron", "AtlasLootWBItems" },
 	["Xalvic"] = { "Xalvic Blackclaw", "AtlasLootWBItems" },
@@ -696,10 +686,6 @@ AtlasLoot_TableNames = {
 	["Jalakar"] = { "Jal'akar Dire Troll", "AtlasLootWBItems" },
 	["Ashbeard"] = { "Explorer Ashbeard", "AtlasLootWBItems" },
 	["AdmiralBareanWestwind"] = { "Admiral Barean Westwind", "AtlasLootWBItems" },
-	
-	--------------------------
-	--- Rare Spawns (1.17) ---
-	--------------------------
 	["EarthcallerRezengal"] = { "Earthcaller Rezengal", "AtlasLootWBItems" },
 	["ShadeMage"] = { "Shade Mage", "AtlasLootWBItems" },
 	["GraypawAlpha"] = { "Graypaw Alpha", "AtlasLootWBItems" },
@@ -725,21 +711,13 @@ AtlasLoot_TableNames = {
 	["M0L1Y"] = { "M-0L1Y", "AtlasLootWBItems" },
 	["WidowoftheWoods"] = { "Widow of the Woods", "AtlasLootWBItems" },
 	["KinTozo"] = { "Kin'Tozo", "AtlasLootWBItems" },
-	
-	----------------------------
-	--- Rare Spawns (1.17.1) ---
-	----------------------------
 	["ProfessorLysander"] = { "Professor Lysander", "AtlasLootWBItems" },
-
 	--------------
 	--- Events ---
 	--------------
-
-	--Abyssal Council
 	["AbyssalTemplars"] = { "Abyssal Council - Templars", "AtlasLootWorldEvents" },
 	["AbyssalDukes"] = { "Abyssal Council - Dukes", "AtlasLootWorldEvents" },
 	["AbyssalLords"] = { "Abyssal Council - Lords", "AtlasLootWorldEvents" },
-	--Seasonal
 	["ChildrensWeek"] = { AL["Children's Week"], "AtlasLootWorldEvents" },
 	["Halloween1"] = { AL["Hallow's End"], "AtlasLootWorldEvents" },
 	["Halloween2"] = { AL["Hallow's End"], "AtlasLootWorldEvents" },
@@ -752,60 +730,40 @@ AtlasLoot_TableNames = {
 	["Winterviel"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
 	["Winterviel1"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
 	["Winterviel2"] = { AL["Feast of Winter Veil"], "AtlasLootWorldEvents" },
-	--Other
 	["ElementalInvasion"] = { AL["Elemental Invasion"], "AtlasLootWorldEvents" },
 	["FishingExtravaganza"] = { AL["Stranglethorn Fishing Extravaganza"], "AtlasLootWorldEvents" },
 	["GurubashiArena"] = { AL["Gurubashi Arena"], "AtlasLootWorldEvents" },
 	["ScourgeInvasionEvent1"] = { AL["Scourge Invasion"], "AtlasLootWorldEvents" },
 	["ScourgeInvasionEvent2"] = { AL["Scourge Invasion Bosses"], "AtlasLootWorldEvents" },
-
 	------------------------
 	--- Classic Factions ---
 	------------------------
-
 	--Argent Dawn
 	["Argent1"] = { AL["Argent Dawn"] .. " - Token Hand-ins", "AtlasLootRepItems" },
 	["Argent2"] = { AL["Argent Dawn"], "AtlasLootRepItems" },
 	["Argent3"] = { AL["Argent Dawn"], "AtlasLootRepItems" },
-	--Bloodsail Buccaneers
 	["Bloodsail1"] = { AL["Bloodsail Buccaneers"], "AtlasLootRepItems" },
-	--Brood of Nozdormu
 	["AQBroodRings"] = { AL["Brood of Nozdormu"], "AtlasLootRepItems" },
-	--Cenarion Circle
 	["Cenarion1"] = { AL["Cenarion Circle"] .. " - " .. AL["Friendly"], "AtlasLootRepItems" },
 	["Cenarion2"] = { AL["Cenarion Circle"] .. " - " .. AL["Honored"], "AtlasLootRepItems" },
 	["Cenarion3"] = { AL["Cenarion Circle"] .. " - " .. AL["Revered"], "AtlasLootRepItems" },
 	["Cenarion4"] = { AL["Cenarion Circle"] .. " - " .. AL["Exalted"], "AtlasLootRepItems" },
-	--The Darkmoon Faire
 	["Darkmoon"] = { AL["Darkmoon Faire"], "AtlasLootRepItems" },
-	--The Defilers
 	["Defilers"] = { AL["The Defilers"], "AtlasLootRepItems" },
-	--Frostwolf Clan
 	["Frostwolf1"] = { AL["Frostwolf Clan"], "AtlasLootRepItems" },
-	--Hydraxian Waterlords
 	["WaterLords1"] = { AL["Hydraxian Waterlords"], "AtlasLootRepItems" },
-	--Gelkis Clan Centaur
 	["GelkisClan1"] = { AL["Gelkis Clan Centaur"], "AtlasLootRepItems" },
-	--The League of Arathor
 	["LeagueofArathor"] = { AL["The League of Arathor"], "AtlasLootRepItems" },
-	--Magram Clan Centaur
 	["MagramClan1"] = { AL["Magram Clan Centaur"], "AtlasLootRepItems" },
-	--Stormpike Guard
 	["Stormpike1"] = { AL["Stormpike Guard"], "AtlasLootRepItems" },
-	--Thorium Brotherhood
 	["Thorium1"] = { AL["Thorium Brotherhood"] .. " - " .. AL["Friendly"] .. "/" .. AL["Honored"], "AtlasLootRepItems" },
 	["Thorium2"] = { AL["Thorium Brotherhood"] .. " - " .. AL["Revered"] .. "/" .. AL["Exalted"], "AtlasLootRepItems" },
-	--Timbermaw Hold
 	["Timbermaw"] = { AL["Timbermaw Hold"], "AtlasLootRepItems" },
-	--Wardens of Time
 	["Wardens1"] = { AL["Wardens of Time"] .. " - " .. AL["Friendly"] .. " & " .. AL["Honored"], "AtlasLootRepItems" },
 	["Wardens2"] = { AL["Wardens of Time"] .. " - " .. AL["Revered"] .. " & " .. AL["Exalted"], "AtlasLootRepItems" },
-	--Wintersaber Trainers
 	["Wintersaber1"] = { AL["Wintersaber Trainers"], "AtlasLootRepItems" },
-	--Zandalar Tribe
 	["Zandalar1"] = { AL["Zandalar Tribe"] .. " - " .. AL["Friendly"] .. "/" .. AL["Honored"], "AtlasLootRepItems" },
 	["Zandalar2"] = { AL["Zandalar Tribe"] .. " - " .. AL["Revered"] .. "/" .. AL["Exalted"], "AtlasLootRepItems" },
-
 	["Helf"] = { AL["Silvermoon Remnant"], "AtlasLootRepItems" },
 	["Helf2"] = { AL["Silvermoon Remnant"], "AtlasLootRepItems" },
 	["Helf3"] = { AL["Silvermoon Remnant"], "AtlasLootRepItems" },
@@ -823,11 +781,9 @@ AtlasLoot_TableNames = {
 	["ThunderBluff"] = { AL["Thunder Bluff"], "AtlasLootRepItems" },
 	["Dalaran"] = { AL["Dalaran"], "AtlasLootRepItems" },
 	["Wildhammer"] = { AL["Wildhammer Clan"], "AtlasLootRepItems" },
-
 	--------------
 	--- Trades ---
 	--------------
-
 	--Alchemy
 	["AlchemyApprentice1"] = { AL["Alchemy"] .. ": " .. AL["Apprentice"], "AtlasLootCrafting" },
 	["AlchemyJourneyman1"] = { AL["Alchemy"] .. ": " .. AL["Journeyman"], "AtlasLootCrafting" },
@@ -999,13 +955,9 @@ AtlasLoot_TableNames = {
 	["Survival2"] = { AL["Gardening"], "AtlasLootCrafting" },
 	--Poisons
 	["Poisons1"] = { AL["Rogue"] .. " - " .. AL["Poisons"], "AtlasLootCrafting" },
-	
-
 	-----------
 	--- PvP ---
 	-----------
-
-	--Battlegrounds
 	--Blood Ring
 	["BRRepFriendly"] = { AL["Blood Ring"] .. " - " .. AL["Friendly"], "AtlasLootBGItems" },
 	["BRRepHonored"] = { AL["Blood Ring"] .. " - " .. AL["Honored"], "AtlasLootBGItems" },
@@ -1062,11 +1014,9 @@ AtlasLoot_TableNames = {
 	["PVPShaman"] = { "PvP "..AL["Rank 7-13"], "AtlasLootGeneralPvPItems" },
 	["PVPWarlock"] = { "PvP "..AL["Rank 7-13"], "AtlasLootGeneralPvPItems" },
 	["PVPWarrior"] = { "PvP "..AL["Rank 7-13"], "AtlasLootGeneralPvPItems" },
-
 	-------------
 	--- Other ---
 	-------------
-
 	--Menus, the entry does nothing, but makes the generalised loot table code less complex
 	["DUNGEONSMENU1"] = { "dummy", "dummy" },
 	["DUNGEONSMENU2"] = { "dummy", "dummy" },
@@ -1076,22 +1026,21 @@ AtlasLoot_TableNames = {
 	["ABRepMenu"] = { "dummy", "dummy" },
 	["WSGRepMenu"] = { "dummy", "dummy" },
 	["BRRepMenu"] = { "dummy", "dummy" },
-	["AQ40SET"] = { "dummy", "dummy" },
-	["AQ20SET"] = { "dummy", "dummy" },
-	["ZGSET"] = { "dummy", "dummy" },
 	["PRE60SET"] = { "dummy", "dummy" },
-	["T3SET"] = { "dummy", "dummy" },
-	["T2SET"] = { "dummy", "dummy" },
-	["T1SET"] = { "dummy", "dummy" },
+	["ZGSET"] = { "dummy", "dummy" },
+	["AQ20SET"] = { "dummy", "dummy" },
+	["AQ40SET"] = { "dummy", "dummy" },
+	["KARASET"] = { "dummy", "dummy" },
 	["T0SET"] = { "dummy", "dummy" },
+	["T1SET"] = { "dummy", "dummy" },
+	["T2SET"] = { "dummy", "dummy" },
+	["T3SET"] = { "dummy", "dummy" },
 	["REPMENU"] = { "dummy", "dummy" },
 	["SETMENU"] = { "dummy", "dummy" },
 	["WORLDEPICS"] = { "dummy", "dummy" },
 	["WORLDEVENTMENU"] = { "dummy", "dummy" },
-	["AbyssalCouncil"] = { "dummy", "dummy" },
 	["ALCHEMYMENU"] = { "dummy", "dummy" },
 	["CRAFTSET"] = { "dummy", "dummy" },
-	["HONORMENU"] = { "dummy", "dummy" },
 	["CRAFTINGMENU"] = { "dummy", "dummy" },
 	["SMITHINGMENU"] = { "dummy", "dummy" },
 	["ENCHANTINGMENU"] = { "dummy", "dummy" },
@@ -1102,11 +1051,9 @@ AtlasLoot_TableNames = {
 	["FIRSTAIDMENU"] = { "dummy", "dummy" },
 	["WORLDBOSSMENU"] = { "dummy", "dummy" },
 	["JEWELCRAFTMENU"] = { "dummy", "dummy" },
-	["KARASET"] = { "dummy", "dummy" },
 	["WishList"] = { AL["WishList"], "AtlasLootCharDB" },
 	--If all else fails!
 	["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" },
-
 };
 
 AtlasLoot_TableNamesBoss = {
@@ -1423,6 +1370,7 @@ AtlasLoot_TableNamesBoss = {
 		["AQ20Trash"] = { AL["Trash Mobs"] .. " (AQ20)", "AtlasLootItems" },
 		["AQ20ClassBooks"] = { "AQ Class Books", "AtlasLootItems" },
 		["AQ20Enchants"] = { "AQ Enchants", "AtlasLootItems" },
+		["AQ20SET"] = { AL["Ruins of Ahn'Qiraj Sets"], "AtlasLootSetItems"},
 	},
 	["Scarlet Monestery - Armory"] = {
 		["SMHerod"] = { AL["Herod"], "AtlasLootItems" },
@@ -1640,6 +1588,7 @@ AtlasLoot_TableNamesBoss = {
 		["ZGTrash1"] = { AL["Trash Mobs"] .. " (" .. AL["Zul'Gurub"] .. ")", "AtlasLootItems" },
 		["ZGTrash2"] = { AL["Trash Mobs"] .. " (" .. AL["Zul'Gurub"] .. ")", "AtlasLootItems" },
 		["ZGEnchants"] = { "ZG Enchants", "AtlasLootItems" },
+		["ZGSET"] = { AL["Zul'Gurub Sets"], "AtlasLootSetItems"}
 	},
 	["Emerald Sanctum"] = {
 		["ESErennius"] = { AL["Erennius"], "AtlasLootItems" },
@@ -1841,7 +1790,7 @@ AtlasLoot_TableNamesBoss = {
 		["DTaerar"] = { AL["Taerar"], "AtlasLootWBItems" },
 		["DYsondre"] = { AL["Ysondre"], "AtlasLootWBItems" },
 		["DTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Emerald Dragons"] .. ")", "AtlasLootWBItems" },
-		["Clackora"] = { "Cla'ckora", "AtlasLootWBItems" },
+		["Clackora"] = { AL["Cla'ckora"], "AtlasLootWBItems" },
 	},
 	
 	-------------------

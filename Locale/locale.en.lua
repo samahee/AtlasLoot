@@ -1609,5 +1609,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["Tier 3.5"] = true,
 	["Karazhan Sets"] = true,
 	["Cla'ckora"] = true,
-	} 
+	["Hinterlands"] = true,
+	["Duskwood"] = true,
+	}
 end)

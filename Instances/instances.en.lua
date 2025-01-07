@@ -1395,39 +1395,39 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19352, "INV_Sword_51", "=q4=Chromatically Tempered Sword", "=ds=#h1#, #w10#", "10%" },
 	};
 	BWLNefarian = { --https://database.turtle-wow.org/?npc=11583
-		{ 16923, "INV_Chest_Cloth_03", "=q4=Robes of Transcendence", "=ds=#s1#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+		{ 16923, "INV_Chest_Cloth_03", "=q4=Robes of Transcendence", "=ds=#s5#, #a1# =q9=#c5#", "11%", "", "", "", "", "", "", "", "", "", "", {{
 					{47208,"=ds=#s5#, #a1# =q7=#db24#"},
 				},
 			},
 		},
-		{ 16916, "INV_Chest_Cloth_03", "=q4=Netherwind Robes", "=ds=#s1#, #a1# =q10=#c3#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+		{ 16916, "INV_Chest_Cloth_03", "=q4=Netherwind Robes", "=ds=#s5#, #a1# =q10=#c3#", "11%", "", "", "", "", "", "", "", "", "", "", {{
 					{47088,"=ds=#s5#, #a1# =q7=#db24#"},
 				},
 			},
 		},
-		{ 16931, "INV_Chest_Leather_01", "=q4=Nemesis Robes", "=ds=#s1#, #a1# =q11=#c8#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+		{ 16931, "INV_Chest_Leather_01", "=q4=Nemesis Robes", "=ds=#s5#, #a1# =q11=#c8#", "11%", "", "", "", "", "", "", "", "", "", "", {{
 					{47286,"=ds=#s5#, #a1# =q7=#db24#"},
 				},
 			},
 		},
-		{ 16905, "INV_Chest_Cloth_07", "=q4=Bloodfang Chestpiece", "=ds=#s1#, #a2# =q12=#c6#", "11%" },
-		{ 16897, "INV_Chest_Chain_16", "=q4=Stormrage Chestguard", "=ds=#s1#, #a2# =q13=#c1#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+		{ 16905, "INV_Chest_Cloth_07", "=q4=Bloodfang Chestpiece", "=ds=#s5#, #a2# =q12=#c6#", "11%" },
+		{ 16897, "INV_Chest_Chain_16", "=q4=Stormrage Chestguard", "=ds=#s5#, #a2# =q13=#c1#", "11%", "", "", "", "", "", "", "", "", "", "", {{
 					{47348,"=ds=#s5#, #a2# =q7=#db24#"},{47356,"=ds=#s5#, #a2# =q7=#db24#"},
 				},
 			},
 		},
-		{ 16942, "INV_Chest_Chain_03", "=q4=Dragonstalker's Breastplate", "=ds=#s1#, #a3# =q14=#c2#", "11%" },
-		{ 16950, "INV_Chest_Chain_11", "=q4=Breastplate of Ten Storms", "=ds=#s1#, #a3# =q15=#c7#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+		{ 16942, "INV_Chest_Chain_03", "=q4=Dragonstalker's Breastplate", "=ds=#s5#, #a3# =q14=#c2#", "11%" },
+		{ 16950, "INV_Chest_Chain_11", "=q4=Breastplate of Ten Storms", "=ds=#s5#, #a3# =q15=#c7#", "11%", "", "", "", "", "", "", "", "", "", "", {{
 					{47138,"=ds=#s5#, #a3# =q7=#db24#"},{47146,"=ds=#s5#, #a3# =q7=#db24#"},
 				},
 			},
 		},
-		{ 16958, "INV_Chest_Plate03", "=q4=Judgement Breastplate", "=ds=#s1#, #a4# =q16=#c4#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+		{ 16958, "INV_Chest_Plate03", "=q4=Judgement Breastplate", "=ds=#s5#, #a4# =q16=#c4#", "11%", "", "", "", "", "", "", "", "", "", "", {{
 					{47018,"=ds=#s5#, #a4# =q7=#db24#"},{47026,"=ds=#s5#, #a4# =q7=#db24#"},
 				},
 			},
 		},
-		{ 16966, "INV_Chest_Plate16", "=q4=Breastplate of Wrath", "=ds=#s1#, #a4# =q17=#c9#", "11%", "", "", "", "", "", "", "", "", "", "", {{
+		{ 16966, "INV_Chest_Plate16", "=q4=Breastplate of Wrath", "=ds=#s5#, #a4# =q17=#c9#", "11%", "", "", "", "", "", "", "", "", "", "", {{
 					{47250,"=ds=#s5#, #a4# =q7=#db24#"},
 				},
 			},
