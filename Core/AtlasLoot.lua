@@ -1088,6 +1088,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	elseif(dataID=="JEWELCRAFTMENU") then
 		AtlasLoot_JewelcraftingMenu();
 	else
+		AtlasLoot_QueryLootPage()
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
@@ -1195,9 +1196,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				end
 				if iconFrame:GetTexture() == nil then
 					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
-				-- 	itemButton.itemTexture = "Interface\\Icons\\INV_Misc_QuestionMark";
-				-- else
-				-- 	itemButton.itemTexture = iconFrame:GetTexture();
 				end
 				--Set the name and description of the item
 				nameFrame:SetText(text);
@@ -1325,25 +1323,16 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				if itemButton.container then
 					border:Show()
 				end
-				--itemButton.iteminfo = {};
 				local spellID
 				if isItem then
-					--itemButton.iteminfo.idcore = dataSource[dataID][i][1];
-					--_, _, _, _, _, _, _, itemButton.iteminfo.icontexture = GetItemInfo(dataSource[dataID][i][1]);
-					--itemButton.storeID = dataSource[dataID][i][1];
 					itemButton.dressingroomID = dataSource[dataID][i][1];
-					--itemButton.extraText = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()
 				elseif isEnchant then
 					spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					--itemButton.iteminfo.idcore = dataSource[dataID][i][2];
-					--_, _, _, _, _, _, _, _, itemButton.iteminfo.icontexture = GetItemInfo(dataSource[dataID][i][2]);
-					--itemButton.storeID = dataSource[dataID][i][2];
 					if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
 						itemButton.dressingroomID = GetSpellInfoAtlasLootDB["enchants"][spellID]["item"];
 					else
 						itemButton.dressingroomID = spellID;
 					end
-					--itemButton.extraText = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()
 					if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
 						if not GetItemInfo(GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]) then
 							GameTooltip:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]..":0:0:0");
@@ -1351,11 +1340,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					end
 				elseif isSpell then
 					spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					--itemButton.iteminfo.idcore = dataSource[dataID][i][1];
-					--_, _, _, _, _, _, _, _, itemButton.iteminfo.icontexture = GetItemInfo(dataSource[dataID][i][1]);
-					--itemButton.storeID = dataSource[dataID][i][1];
 					itemButton.dressingroomID = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"];
-					--itemButton.extraText = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()
 					if GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"] ~= "" then
 						if not GetItemInfo(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]) then
 							GameTooltip:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]..":0:0:0");
@@ -1384,14 +1369,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					local droprate = dataSource[dataID][i][5];
 					if droprate and string.find(droprate, "%%") then itemButton.droprate = droprate end
 				end
-				--itemButton.i = 1;
 				itemButton:Show();
-				--If the item is not in cache, querying the server may cause a disconnect
-				--Show a red box around the item to indicate this to the user
-				if((not GetItemInfo(dataSource[dataID][i][1])) and (dataSource[dataID][i][1] ~= 0) and isItem) then
-					getglobal("AtlasLootItem_"..i.."_Unsafe"):Show();
-				else
-					getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
+				if MouseIsOver(itemButton) then
+					itemButton:Hide()
+					itemButton:Show()
 				end
 			else
 				getglobal("AtlasLootItem_"..i):Hide();
@@ -1458,34 +1439,14 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	end
 	local subMenu = nil
 	local bossName = ""
-	local category = ""
-	for k, v in pairs(AtlasLoot_HewdropDown_SubTables) do
+	for k in pairs(AtlasLoot_HewdropDown_SubTables) do
 		if subMenu then
 			break
 		end
-		for i, n in pairs(AtlasLoot_HewdropDown_SubTables[k]) do
+		for _, n in pairs(AtlasLoot_HewdropDown_SubTables[k]) do
 			if n[2] == dataID then
 				subMenu = AtlasLoot_HewdropDown_SubTables[k]
 				bossName = n[1]
-				-- for k1, v1 in pairs(AtlasLoot_HewdropDown) do
-				-- 	for k2, v2 in pairs(AtlasLoot_HewdropDown[k1]) do
-				-- 		for k3, v3 in pairs(AtlasLoot_HewdropDown[k1][k2]) do
-				-- 			if type(v3[1]) == "string" then
-				-- 				if v3[2] == k then
-				-- 					category = v3[1]
-				-- 					break
-				-- 				end
-				-- 			elseif type(v3[1] == "table") then
-				-- 				for k4, v4 in pairs(v3[1]) do
-				-- 					if v4[2] == k then
-				-- 						category = v4[1]
-				-- 						break
-				-- 					end
-				-- 				end
-				-- 			end
-				-- 		end
-				-- 	end
-				-- end
 				break
 			end
 		end
@@ -1499,7 +1460,6 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLootDefaultFrame_SubMenu:Disable()
 		AtlasLootDefaultFrame_SelectedTable:Hide()
 	end
-	--AtlasLootDefaultFrame_SelectedCategory:SetText(category)
 	--Anchor the item frame where it is supposed to be
 	AtlasLoot_SetItemInfoFrame(pFrame);
 	AtlasLootItemsFrameContainer:Hide()
@@ -3267,21 +3227,11 @@ function AtlasLootItem_OnEnter()
 						if( this.droprate ~= nil) then
 							AtlasLootTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0);
 						end
-						--QuestTest_TooltipUpdate(AtlasLootTooltip,"item:"..this.itemID..":0:0:0")
-						AtlasLootTooltip:Show();
 					else
-						--[[AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
-						AtlasLootTooltip:ClearLines();
-						AtlasLootTooltip:AddLine(RED..AL["Item Unavailable"], nil, nil, nil, 1);
-						AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
-						AtlasLootTooltip:AddLine(AL["This item is unsafe.  To view this item without the risk of disconnection, you need to have first seen it in the game world. This is a restriction enforced by Blizzard since Patch 1.10."], nil, nil, nil, 1);
-						AtlasLootTooltip:AddLine(" ");
-						AtlasLootTooltip:AddLine(AL["You can right-click to attempt to query the server.  You may be disconnected."], nil, nil, nil, 1);
-						AtlasLootTooltip:Show();]]
 						AtlasLoot_QueryLootPage()
 						getglobal("AtlasLootItem_"..id.."_Unsafe"):Hide();
-						AtlasLootTooltip:Show();
 					end
+					AtlasLootTooltip:Show();
 				end
 			end
 		elseif isEnchant then
@@ -3497,11 +3447,7 @@ function AtlasLootItem_OnClick(arg1)
 		end
 	elseif isEnchant then
 		if IsShiftKeyDown() then
-			--[[if ChatFrameEditBox:IsVisible() then
-				ChatFrameEditBox:Insert(color.."|Henchant:"..string.sub(this.itemID, 2)..":0:0:0|h["..name.."]|h|r");
-			else]]
-				AtlasLoot_SayItemReagents(this.itemID)
-			--end
+			AtlasLoot_SayItemReagents(this.itemID)
 		elseif(IsAltKeyDown() and (this.itemID ~= 0)) then
 			if dataID == "WishList" then
 				AtlasLoot_DeleteFromWishList(this.itemID);
@@ -3777,14 +3723,15 @@ AtlasLoot_QueryLootPage()
 Querys all valid items on the current loot page.
 ]]
 function AtlasLoot_QueryLootPage()
-	local i=1;
-	while i<31 do
+	for i = 1, 30 do
 		local button = getglobal("AtlasLootItem_"..i);
 		local queryitem = button.itemID;
-		if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") and (string.sub(queryitem, 1, 1) ~= "e") then
-			GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0");
+		if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and
+			(string.sub(queryitem, 1, 1) ~= "s") and (string.sub(queryitem, 1, 1) ~= "e") then
+			if not GetItemInfo(queryitem) then
+				GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0");
+			end
 		end
-		i=i+1;
 	end
 end
 

@@ -1607,11 +1607,9 @@ AtlasLoot_TableNamesBoss = {
 		["LKHTrash"] = { AL["Trash Mobs"], "AtlasLootItems" },
 		["LKHEchants"] = { AL["LKH Enchants"], "AtlasLootItems" },
 	},
-
 	------------
 	--- Sets ---
 	------------
-
 	["Sets"] = {
 		["DEADMINES"] = { AL["Set: "] .. AL["Defias Leather"], "AtlasLootSetItems" },
 		["WAILING"] = { AL["Set: "] .. AL["Embrace of the Viper"], "AtlasLootSetItems" },
@@ -1764,15 +1762,9 @@ AtlasLoot_TableNamesBoss = {
 		["T35Warlock"] = { AL["Karazhan"].." - "..AL["Tier 3.5"].." "..AL["Set"], "AtlasLootSetItems" },
 		["T35Warrior"] = { AL["Karazhan"].." - "..AL["Tier 3.5"].." "..AL["Set"], "AtlasLootSetItems" },
 	},
-	------------------------
-	--- Misc Collections ---
-	------------------------
-
-
 	--------------------
 	--- World Bosses ---
 	--------------------
-
 	["WorldBosses"] = {
 		["AAzuregos"] = { AL["Azuregos"], "AtlasLootWBItems" },
 		["ASpiritA"] = { AL["Spirit of Azuregos"], "AtlasLootWBItems" },
@@ -1792,7 +1784,6 @@ AtlasLoot_TableNamesBoss = {
 		["DTrash"] = { AL["Trash Mobs"] .. " (" .. AL["Emerald Dragons"] .. ")", "AtlasLootWBItems" },
 		["Clackora"] = { AL["Cla'ckora"], "AtlasLootWBItems" },
 	},
-	
 	-------------------
 	--- Rare Spawns ---
 	-------------------
@@ -1835,11 +1826,9 @@ AtlasLoot_TableNamesBoss = {
 		["KinTozo"] = { "Kin'Tozo", "AtlasLootWBItems" },
 		["ProfessorLysander"] = { "Professor Lysander", "AtlasLootWBItems" },
 	},
-
 	--------------
 	--- Events ---
 	--------------
-
 	["World Events"] = {
 		["AbyssalTemplars"] = { "Abyssal Council - Templars", "AtlasLootWorldEvents" },
 		["AbyssalDukes"] = { "Abyssal Council - Dukes", "AtlasLootWorldEvents" },
@@ -1863,7 +1852,6 @@ AtlasLoot_TableNamesBoss = {
 		["ScourgeInvasionEvent1"] = { AL["Scourge Invasion"], "AtlasLootWorldEvents" },
 		["ScourgeInvasionEvent2"] = { AL["Scourge Invasion Bosses"], "AtlasLootWorldEvents" },
 	},
-
 	------------------------
 	--- Classic Factions ---
 	------------------------
@@ -1893,7 +1881,6 @@ AtlasLoot_TableNamesBoss = {
 		["GelkisClan1"] = { AL["Gelkis Clan Centaur"], "AtlasLootRepItems" },
 		--The League of Arathor
 		["LeagueofArathor"] = { AL["The League of Arathor"], "AtlasLootRepItems" },
-
 		--Magram Clan Centaur
 		["MagramClan1"] = { AL["Magram Clan Centaur"], "AtlasLootRepItems" },
 		--Stormpike Guard
@@ -1930,7 +1917,6 @@ AtlasLoot_TableNamesBoss = {
 		["Dalaran"] = { AL["Dalaran"], "AtlasLootRepItems" },
 		["Wildhammer"] = { AL["Wildhammer Clan"], "AtlasLootRepItems" },
 	},
-
 	--------------
 	--- Trades ---
 	--------------
@@ -2109,11 +2095,9 @@ AtlasLoot_TableNamesBoss = {
 		--Poisons
 		["Poisons1"] = { AL["Rogue"] .. ": " .. AL["Poisons"], "AtlasLootCrafting" },
 	},
-
 	-----------
 	--- PvP ---
 	-----------
-
 	["Battlegrounds"] = {
 		--Blood Ring
 		["BRRepFriendly"] = { AL["Blood Ring"] .. " " .. AL["Friendly Rewards"], "AtlasLootBGItems" },
