@@ -2660,7 +2660,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Isalien"], "DMEIsalien" },
 		{ AL["Alzzin the Wildshaper"], "DMEAlzzin" },
 		{ AL["Trash Mobs"], "DMETrash" },
-		{ AL["Dire Maul Books"], "DMBooks" },
+		{ AL["Dire Maul Books"], "DMEBooks" },
 	},
 	["DireMaulWest"] = {
 		{ AL["Tendris Warpwood"], "DMWTendrisWarpwood" },
@@ -2672,7 +2672,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Lord Hel'nurath"].." ("..AL["Rare"]..")", "DMWHelnurath" },
 		{ AL["Prince Tortheldrin"], "DMWPrinceTortheldrin" },
 		{ AL["Trash Mobs"], "DMWTrash" },
-		{ AL["Dire Maul Books"], "DMBooks" },
+		{ AL["Dire Maul Books"], "DMWBooks" },
 	},
 	["DireMaulNorth"] = {
 		{ AL["Guard Mol'dar"], "DMNGuardMoldar" },
@@ -2685,7 +2685,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["King Gordok"], "DMNKingGordok" },
 		{ AL["Tribute Run"], "DMNTRIBUTERUN" },
 		{ AL["Trash Mobs"], "DMNTrash" },
-		{ AL["Dire Maul Books"], "DMBooks" },
+		{ AL["Dire Maul Books"], "DMNBooks" },
 	},
 	["Maraudon"] = {
 		{ AL["Noxxion"], "MaraNoxxion" },
@@ -2802,7 +2802,6 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Taerar"], "DTaerar" },
 		{ AL["Ysondre"], "DYsondre" },
 		{ AL["Lord Kazzak"], "KKazzak"},
-		--{ "Turtlhu, the Black Turtle of Doom", "Turtlhu" },
 		{ AL["Nerubian Overseer"], "Nerubian" },
 		{ AL["Dark Reaver of Karazhan"], "Reaver" },
 		{ AL["Ostarius"], "Ostarius" },

@@ -659,7 +659,6 @@ AtlasLoot_TableNames = {
 	--------------------
 	["AAzuregos"] = { AL["Azshara"].. " - " ..AL["Azuregos"], "AtlasLootWBItems" },
 	["ASpiritA"] = { AL["Azshara"].. " - " ..AL["Spirit of Azuregos"], "AtlasLootWBItems" },
-	--["Turtlhu"] = { "Turtlhu, the Black Turtle of Doom", "AtlasLootWBItems" },
 	["Nerubian"] = { AL["Eastern Plaguelands"].. " - " ..AL["Nerubian Overseer"], "AtlasLootWBItems" },
 	["Reaver"] = { AL["Deadwind Pass"].. " - " ..AL["Dark Reaver of Karazhan"], "AtlasLootWBItems" },
 	["Ostarius"] = { AL["Tanaris"].. " - " ..AL["Ostarius"], "AtlasLootWBItems" },
@@ -1768,15 +1767,12 @@ AtlasLoot_TableNamesBoss = {
 	["WorldBosses"] = {
 		["AAzuregos"] = { AL["Azuregos"], "AtlasLootWBItems" },
 		["ASpiritA"] = { AL["Spirit of Azuregos"], "AtlasLootWBItems" },
-		--["Turtlhu"] = { "Turtlhu, the Black Turtle of Doom", "AtlasLootWBItems" },
 		["Nerubian"] = { "Nerubian Overseer", "AtlasLootWBItems" },
 		["Reaver"] = { "Dark Reaver of Karazhan", "AtlasLootWBItems" },
 		["Ostarius"] = { "Ostarius", "AtlasLootWBItems" },
 		["Concavius"] = { "Concavius", "AtlasLootWBItems" },
 		["CowKing"] = { "Moo", "AtlasLootWBItems" },
-		--Doom Lord Kazzak
 		["KKazzak"] = { AL["Lord Kazzak"], "AtlasLootWBItems" },
-		--Emrald Dragons
 		["DEmeriss"] = { AL["Emeriss"], "AtlasLootWBItems" },
 		["DLethon"] = { AL["Lethon"], "AtlasLootWBItems" },
 		["DTaerar"] = { AL["Taerar"], "AtlasLootWBItems" },
