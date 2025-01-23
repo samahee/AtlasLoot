@@ -185,6 +185,13 @@ function AtlasLootTip.extendTooltip(tooltip)
 			for k,v in pairs(GetSpellInfoAtlasLootDB["craftspells"]) do
 				if v["craftItem"] == itemID then
 					craftSpell = "s"..tostring(k)
+					break
+				end
+			end
+			for k, v in pairs(GetSpellInfoAtlasLootDB["enchants"]) do
+				if v["item"] and v["item"] == itemID then
+					craftSpell = "e"..tostring(k)
+					break
 				end
 			end
 			for k1, v1 in pairs(AtlasLoot_Data["AtlasLootCrafting"]) do
@@ -192,7 +199,7 @@ function AtlasLootTip.extendTooltip(tooltip)
 					break
 				end
 				for k2, v2 in pairs(AtlasLoot_Data["AtlasLootCrafting"][k1]) do
-					if v2[1] ~= 0 and v2[1] ~= "" and string.sub(v2[1], 1, 1) ~= "e" then
+					if v2[1] ~= 0 and v2[1] ~= "" --[[and string.sub(v2[1], 1, 1) ~= "e"]] then
 						if (v2[1] == craftSpell or v2[1] == itemID) and
 							(strfind(k1, "Apprentice", 1, true) or
 								strfind(k1, "Journeyman", 1, true) or
@@ -220,6 +227,19 @@ function AtlasLootTip.extendTooltip(tooltip)
 							source = k1
 							isCraft = true
 							lastDropRate = nil
+							-- if strfind(k1, "Apprentice", 1, true) then
+							-- 	dropRate = "1-75"
+							-- 	lastDropRate = dropRate
+							-- elseif strfind(k1, "Journeyman", 1, true) then
+							-- 	dropRate = "75-150"
+							-- 	lastDropRate = dropRate
+							-- elseif strfind(k1, "Expert", 1, true) then
+							-- 	dropRate = "150-225"
+							-- 	lastDropRate = dropRate
+							-- elseif strfind(k1, "Artisan", 1, true) then
+							-- 	dropRate = "225-300"
+							-- 	lastDropRate = dropRate
+							-- end
 							break
 						end
 					end
@@ -235,7 +255,7 @@ function AtlasLootTip.extendTooltip(tooltip)
 						if v2[1] == itemID then
 							source = k1
 							isWBLoot = true
-                            if v2[5] then
+                            if v2[5] and v2[5] ~= "" then
                                 dropRate = v2[5]
                                 lastDropRate = dropRate
                             else
@@ -273,7 +293,7 @@ function AtlasLootTip.extendTooltip(tooltip)
 						if v2[1] == itemID then
 							source = k1
 							isRepReward = true
-							if v2[5] then
+							if v2[5] and v2[5] ~= "" then
 								dropRate = v2[5]
 								lastDropRate = dropRate
 							else
@@ -292,7 +312,7 @@ function AtlasLootTip.extendTooltip(tooltip)
 						if v2[1] == itemID then
 							source = k1
 							isRepReward = true
-							if v2[5] and source ~= "Darkmoon" and not strfind(source, "Cenarion",1,true) then
+							if v2[5] and v2[5] ~= "" --[[and source ~= "Darkmoon" and not strfind(source, "Cenarion",1,true)]] then
 								dropRate = v2[5]
 								lastDropRate = dropRate
 							else
@@ -333,7 +353,7 @@ function AtlasLootTip.extendTooltip(tooltip)
 						if v2[1] == itemID then
 							source = k1
 							isWorldEvent = true
-							if v2[5] then
+							if v2[5] and v2[5] ~= "" then
 								dropRate = v2[5]
 								lastDropRate = dropRate
 							else
@@ -355,7 +375,7 @@ function AtlasLootTip.extendTooltip(tooltip)
 							if k1 ~= "VanillaKeys" then
 								source = k1
 							end
-							if v2[5] then
+							if v2[5] and v2[5] ~= "" then
 								dropRate = v2[5]
 								lastDropRate = dropRate
 							else
@@ -447,6 +467,15 @@ AtlasLootTip:SetScript("OnHide", function()
 end)
 
 AtlasLootTip:SetScript("OnShow", function()
+	if aux_frame and aux_frame:IsVisible() then
+        if GetMouseFocus():GetParent() then
+            if GetMouseFocus():GetParent().row then
+                if GetMouseFocus():GetParent().row.record.item_id then
+                    GameTooltip.itemID = GetMouseFocus():GetParent().row.record.item_id
+                end
+            end
+        end
+    end
 	AtlasLootTip.extendTooltip(GameTooltip)
 end)
 
