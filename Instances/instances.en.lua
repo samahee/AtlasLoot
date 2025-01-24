@@ -1435,14 +1435,13 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 0,"","","" },
 		{ 19003, "INV_Misc_Head_Dragon_Black", "=q4=Head of Nefarian (Alliance)", "=ds=#m2#", "100%" },
 		{ 19002, "INV_Misc_Head_Dragon_Black", "=q4=Head of Nefarian (Horde)", "=ds=#m2#", "100%" },
-		{ 19383,"INV_Jewelry_Necklace_18","=q4=Master Dragonslayer's Medallion","=q1=#m4# =ds=#s2#" },
-		{ 19384,"INV_Jewelry_Ring_41","=q4=Master Dragonslayer's Ring","=q1=#m4# =ds=#s13#" },
-		{ 19366,"INV_Misc_Orb_03","=q4=Master Dragonslayer's Orb","=q1=#m4# =ds=#s15#" },
+		{ 19383, "INV_Jewelry_Necklace_18","=q4=Master Dragonslayer's Medallion","=q1=#m4# =ds=#s2#" },
+		{ 19384, "INV_Jewelry_Ring_41","=q4=Master Dragonslayer's Ring","=q1=#m4# =ds=#s13#" },
+		{ 19366, "INV_Misc_Orb_03","=q4=Master Dragonslayer's Orb","=q1=#m4# =ds=#s15#" },
 		{ 19360, "INV_Mace_06", "=q4=Lok'amir il Romathis", "=ds=#h3#, #w6#", "10%" },
 		{ 19363, "INV_Axe_12", "=q4=Crul'shorukh, Edge of Chaos", "=ds=#h1#, #w1#", "10%" },
 		{ 19364, "INV_Sword_50", "=q4=Ashkandi, Greatsword of the Brotherhood", "=ds=#h2#, #w10#", "10%" },
 		{ 19356, "INV_Staff_06", "=q4=Staff of the Shadow Flame", "=ds=#w9#", "10%" },
-		{ 0,"","","" },
 		{ 19375, "INV_Helmet_52", "=q4=Mish'undare, Circlet of the Mind Flayer", "=ds=#s1#, #a1#", "20%" },
 		{ 19377, "INV_Jewelry_Necklace_17", "=q4=Prestor's Talisman of Connivery", "=ds=#s2#", "20%" },
 		{ 19378, "INV_Misc_Cape_20", "=q4=Cloak of the Brood Lord", "=ds=#s4#", "20%" },
@@ -1452,7 +1451,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 19382, "INV_Jewelry_Ring_42", "=q4=Pure Elementium Band", "=ds=#s13#", "20%" },
 		{ 19379, "INV_Stone_15", "=q4=Neltharion's Tear", "=ds=#s14#", "20%" },
 		{ 0,"","","" },
-		{ 17962,"INV_Misc_Bag_10_Blue","=q2=Blue Sack of Gems","=ds=#m23# =q2=#e33#", "100%" },
+		{ 36551, "Ability_Hunter_BeastCall", "=q4=Black Drake", "=ds=#e7#" },
+		{ 17962, "INV_Misc_Bag_10_Blue","=q2=Blue Sack of Gems","=ds=#m23# =q2=#e33#", "100%" },
 	};
 	BWLTrashMobs = {
 		{ 19436, "INV_Misc_Cape_11", "=q4=Cloak of Draconic Might", "=ds=#s4#", "4%" },
@@ -1957,6 +1957,8 @@ AtlasLoot_Data["AtlasLootItems"] = {
 		{ 18816, "INV_Sword_48", "=q4=Perdition's Blade", "=ds=#h1#, #w4#", "20%" },
 		{ 17104, "INV_Axe_09", "=q4=Spinal Reaper", "=ds=#h2#, #w1#", "8%" },
 		{ 17076, "INV_Sword_12", "=q4=Bonereaver's Edge", "=ds=#h2#, #w10#", "8%" },
+		{ 0,"","","" },
+		{ 92080, "Spell_Fire_FlameShock", "=q4=Molten Corehound", "=ds=#e7#" },
 	};
 	MCTrashMobs = {
 		{ 16817, "INV_Belt_22", "=q4=Girdle of Prophecy", "=ds=#s10#, #a1# =q9=#c5#", "0.3%", "", "", "", "", "", "", "", "", "", "", {{

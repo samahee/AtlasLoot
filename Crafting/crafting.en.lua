@@ -694,12 +694,13 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e25128", "INV_Potion_104", "=q1=Wizard Oil", "=ds=#sr# =so1=275 =so2=285 =so3=295 =so4=305" },
 		{ "e20024", "Spell_Holy_GreaterHeal", "=ds=Enchant Boots - Spirit", "=ds=#sr# =so1=275 =so2=295 =so3=315 =so4=335" },
 		{ "e20026", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Health", "=ds=#sr# =so1=275 =so2=295 =so3=315 =so4=335" },
+		{ "e41758", "INV_Potion_14", "=q1=Enchanted Gemstone Oil", "=ds=#sr# =so1=275 =so2=275 =so3=280 =so4=300" },
 		{ "e20016", "Spell_Holy_GreaterHeal", "=ds=Enchant Shield - Superior Spirit", "=ds=#sr# =so1=280 =so2=300 =so3=320 =so4=340" },
 		{ "e20015", "Spell_Holy_GreaterHeal", "=ds=Enchant Cloak - Superior Defense", "=ds=#sr# =so1=285 =so2=305 =so3=325 =so4=345" },
-		{ "e20029", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Icy Chill", "=ds=#sr# =so1=285 =so2=305 =so3=325 =so4=345" },
 	};
-
+	
 	EnchantingArtisan2 = {
+		{ "e20029", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Icy Chill", "=ds=#sr# =so1=285 =so2=305 =so3=325 =so4=345" },
 		{ "e27837", "Spell_Holy_GreaterHeal", "=ds=Enchant 2H Weapon - Agility", "=ds=#sr# =so1=290 =so2=310 =so3=330 =so4=350" },
 		{ "e23801", "Spell_Holy_GreaterHeal", "=ds=Enchant Bracer - Mana Regeneration", "=ds=#sr# =so1=290 =so2=310 =so3=330 =so4=350" },
 		{ "e20028", "Spell_Holy_GreaterHeal", "=ds=Enchant Chest - Major Mana", "=ds=#sr# =so1=290 =so2=310 =so3=330 =so4=350" },
@@ -729,10 +730,10 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "e25073", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Shadow Power", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 		{ "e25080", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Superior Agility", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 		{ "e25072", "Spell_Holy_GreaterHeal", "=ds=Enchant Gloves - Threat", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
-		{ "e20034", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Crusader", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 	};
-
+	
 	EnchantingArtisan3 = {
+		{ "e20034", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Crusader", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 		{ "e22750", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Healing Power", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 		{ "e20032", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Lifestealing", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
 		{ "e23804", "Spell_Holy_GreaterHeal", "=ds=Enchant Weapon - Mighty Intellect", "=ds=#sr# =so1=300 =so2=320 =so3=340 =so4=360" },
@@ -947,6 +948,7 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ 0, "", "", "" },
 		{ "e17181", "INV_Misc_Rune_05", "=q1=Enchanted Leather", "=ds=#sr# =so1=250 =so2=250 =so3=255 =so4=260" },
 		{ "e17180", "INV_Ingot_Eternium", "=q1=Enchanted Thorium", "=ds=#sr# =so1=250 =so2=250 =so3=255 =so4=260" },
+		{ "e41758", "INV_Potion_14", "=q1=Enchanted Gemstone Oil", "=ds=#sr# =so1=275 =so2=275 =so3=280 =so4=300" },
 		{ 0, "", "", "" },
 		{ "e15596", "INV_Misc_Gem_Bloodstone_01", "=q3=Smoking Heart of the Mountain", "=ds=#sr# =so1=265 =so2=285 =so3=305 =so4=325" },
 		{ 0, "", "", "" },
