@@ -6882,6 +6882,32 @@ GetSpellInfoAtlasLootDB = {
 				[2] = {2320, 3},
 			},
 		},
+		[57557] = {
+			["name"] = "Transmute: Elemental Water",
+			["requires"] = "",
+			["tools"] = {9149},
+			["castTime"] = 43,
+			["text"] = "Transmutes a Globe of Water into three Elemental Water.",
+			["craftItem"] = 7070,
+			["craftQuantityMin"] = 3,
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {7079},
+			},
+		},
+		[57555] = {
+			["name"] = "Transmute: Elemental Earth",
+			["requires"] = "",
+			["tools"] = {9149},
+			["castTime"] = 43,
+			["text"] = "Transmutes a Core of Earth into three Elemental Earth.",
+			["craftItem"] = 7067,
+			["craftQuantityMin"] = 3,
+			["craftQuantityMax"] = "",
+			["reagents"] = {
+				[1] = {7075},
+			},
+		},
 		[2329] = {
 			["name"] = "Alchemy: Elixir of Lion's Strength",
 			["requires"] = "",

@@ -110,6 +110,35 @@ AtlasLoot_MenuList = {
 	"JEWELCRAFTMENU"
 };
 
+local function strsplit(delim, str, maxNb, onlyLast)
+	-- Eliminate bad cases...
+	if string.find(str, delim) == nil then
+		return { str }
+	end
+	if maxNb == nil or maxNb < 1 then
+		maxNb = 0
+	end
+	local result = {}
+	local pat = "(.-)" .. delim .. "()"
+	local nb = 0
+	local lastPos
+	for part, pos in string.gfind(str, pat) do
+		nb = nb + 1
+		result[nb] = part
+		lastPos = pos
+		if nb == maxNb then break end
+	end
+	-- Handle the last field
+	if nb ~= maxNb then
+		result[nb+1] = string.sub(str, lastPos)
+	end
+	if onlyLast then
+		return result[nb+1]
+	else
+		return result[1], result[2]
+	end
+end
+
 --[[
 AtlasLootDefaultFrame_OnShow:
 Called whenever the loot browser is shown and sets up buttons and loot tables
@@ -2107,35 +2136,6 @@ function AtlasLootMinimapButton_SetPosition(v)
 	AtlasLootMinimapButton_UpdatePosition();
 end
 
-function strsplit(delim, str, maxNb, onlyLast)
-	-- Eliminate bad cases...
-	if string.find(str, delim) == nil then
-		return { str }
-	end
-	if maxNb == nil or maxNb < 1 then
-		maxNb = 0
-	end
-	local result = {}
-	local pat = "(.-)" .. delim .. "()"
-	local nb = 0
-	local lastPos
-	for part, pos in string.gfind(str, pat) do
-		nb = nb + 1
-		result[nb] = part
-		lastPos = pos
-		if nb == maxNb then break end
-	end
-	-- Handle the last field
-	if nb ~= maxNb then
-		result[nb+1] = string.sub(str, lastPos)
-	end
-	if onlyLast then
-		return result[nb+1]
-	else
-		return result[1], result[2]
-	end
-end
-
 --This is a multi-layer table defining the main loot listing.
 --Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 AtlasLoot_HewdropDown = {
@@ -3629,15 +3629,15 @@ function AtlasLoot_ShowContainerFrame()
 			itemButton.extraInfo = containerTable[i][j][2]
 			local _,_,quality,_,_,_,_,_,tex = GetItemInfo(itemID)
 			local icon = getglobal("AtlasLootContainerItem"..buttonIndex.."Icon")
-			local color = { r = 1, g = 1, b = 1}
+			local r, g, b = 1, 1, 1
 			if quality then
-				color.r, color.g, color.b  = GetItemQualityColor(quality)
+				r, g, b  = GetItemQualityColor(quality)
 			end
 			if not tex then
 				tex = "Interface\\Icons\\INV_Misc_QuestionMark"
 			end
 			itemButton:SetPoint("TOPLEFT", AtlasLootItemsFrameContainer, (col * 35) + 5, -(row * 35) - 5)
-			itemButton:SetBackdropBorderColor(color.r, color.g, color.b)
+			itemButton:SetBackdropBorderColor(r, g, b)
 			itemButton:SetID(itemID)
 			itemButton:Show()
 			icon:SetTexture(tex)
@@ -3674,9 +3674,9 @@ function AtlasLoot_AddContainerItemTooltip(frame ,itemID)
 		if icon:GetTexture() == "Interface\\Icons\\INV_Misc_QuestionMark" then
 			local _,_,quality,_,_,_,_,_,tex = GetItemInfo(itemID)
 			if tex and quality then
-				color.r, color.g, color.b  = GetItemQualityColor(quality)
+				local r, g, b  = GetItemQualityColor(quality)
 				icon:SetTexture(tex)
-				this:SetBackdropBorderColor(color.r, color.g, color.b)
+				this:SetBackdropBorderColor(r, g, b)
 			end
 		end
     end)
@@ -3887,111 +3887,3 @@ function AtlasLoot_GetChatLink(id)
 	local e = string.sub(d, 2)
 	return "\124"..e.."\124H"..b.."\124h["..a.."]\124h\124r"
 end
---[[
---pfUI.api.strsplit --Uses code borrowed from pfUI by Shagu
-local function AtlasLoot_strsplit(delimiter, subject)
-  if not subject then return nil end
-  local delimiter, fields = delimiter or ":", {}
-  local pattern = string.format("([^%s]+)", delimiter)
-  string.gsub(subject, pattern, function(c) fields[table.getn(fields)+1] = c end)
-  return unpack(fields)
-end
-
---Update announcing code taken from pfUI by Shagu
-local major, minor, fix = AtlasLoot_strsplit(".", tostring(GetAddOnMetadata("AtlasLoot", "Version")))
-local alreadyshown = false
-local localversion  = tonumber(major*10000 + minor*100 + fix)
-local remoteversion = tonumber(AtlasLoot_updateavailable) or 0
-local loginchannels = { "BATTLEGROUND", "RAID", "GUILD" }
-local groupchannels = { "BATTLEGROUND", "RAID" }
-
-AtlasLoot_updater = CreateFrame("Frame")
-AtlasLoot_updater:RegisterEvent("CHAT_MSG_ADDON")
-AtlasLoot_updater:RegisterEvent("CHAT_MSG_CHANNEL")
-AtlasLoot_updater:RegisterEvent("PLAYER_ENTERING_WORLD")
---AtlasLoot_updater:RegisterEvent("PARTY_MEMBERS_CHANGED") --Remove some unnecessary addon spam and allow different AtlasLoot branches to coexist
-AtlasLoot_updater:RegisterEvent("CHAT_MSG_CHANNEL_JOIN")
-
-AtlasLootUserCounter = {}
-PlayerCounter = {}
-
-AtlasLoot_updater:SetScript("OnEvent", function()
-	if event == "CHAT_MSG_ADDON" and arg1 == "AtlasLoot" then
-		local v, remoteversion, remotetitle = AtlasLoot_strsplit(":", arg2)
-		local _,title = GetAddOnInfo("AtlasLoot")
-		local remoteversion = tonumber(remoteversion)
-		if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
-		if v == "VERSION" and remoteversion and title == remotetitle then
-			if remoteversion > localversion then
-				AtlasLoot_updateavailable = remoteversion
-				if not alreadyshown then
-					DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
-					alreadyshown = true
-				end
-			end
-		end
-	end
-
-	if event == "CHAT_MSG_CHANNEL_JOIN" then
-		local name = arg2
-		if not PlayerCounter[name] then
-			PlayerCounter[name] = 1
-		end
-	end
-
-	if event == "CHAT_MSG_CHANNEL" then
-		local _,_,source = string.find(arg4,"(%d+)%.")
-		if source then
-			_,name = GetChannelName(source)
-		end
-		if not name then return end
-		if string.upper(name) == "LFT" then
-			local msg, v, remoteversion, remotetitle = AtlasLoot_strsplit(":", arg1)
-			if msg == "Atlasloot" then
-				local remoteversion = tonumber(remoteversion) or 0
-				local _,title = GetAddOnInfo("AtlasLoot")
-				if remoteversion >= 40000 then remoteversion = 0 end --Block for people using some version from another version of WoW.
-				if v == "VERSION" and remoteversion and title == remotetitle then
-					if remoteversion > localversion then
-						AtlasLoot_updateavailable = remoteversion
-						if not alreadyshown then
-							DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
-							alreadyshown = true
-						end
-					end
-				end
-				local name = arg2
-				if not AtlasLootUserCounter[name] then
-					AtlasLootUserCounter[name] = 1
-				end
-			end
-		end
-	end
-	
-	local _,title = GetAddOnInfo("AtlasLoot")
-	if event == "PARTY_MEMBERS_CHANGED" then
-		local groupsize = GetNumRaidMembers() > 0 and GetNumRaidMembers() or GetNumPartyMembers() > 0 and GetNumPartyMembers() or 0
-		if ( this.group or 0 ) < groupsize then
-			for _, chan in pairs(groupchannels) do
-				SendAddonMessage("AtlasLoot", "VERSION:" .. localversion..":"..title, chan)
-			end
-		end
-		this.group = groupsize
-	end
-
-	if event == "PLAYER_ENTERING_WORLD" then
-	  if not alreadyshown and localversion < remoteversion then
-		DEFAULT_CHAT_FRAME:AddMessage("|cffbe5eff[AtlasLoot]|r New version available! https://github.com/Otari98/AtlasLoot")
-		AtlasLoot_updateavailable = localversion
-		alreadyshown = true
-	  end
-
-	  for _, chan in pairs(loginchannels) do
-		SendAddonMessage("AtlasLoot", "VERSION:" .. localversion..":"..title, chan)
-	  end
-	  if GetChannelName("LFT") ~= 0 then
-		SendChatMessage("Atlasloot:VERSION:" .. localversion..":"..title, "CHANNEL", nil, GetChannelName("LFT"))
-	  end
-	end
-  end)
-]]

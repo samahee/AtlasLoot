@@ -395,6 +395,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s24368", "inv_potion_80", "=q1=Major Troll's Blood Potion", "=ds=#sr# =so1=290 =so2=305 =so3=325 =so4=345" },
 		{ "s17580", "inv_potion_76", "=q1=Major Mana Potion", "=ds=#sr# =so1=295 =so2=310 =so3=330 =so4=350" },
 		{ "s25146", "spell_fire_fire", "=q1=Transmute: Elemental Fire", "=ds=#sr# =so1=300 =so2=301 =so3=305 =so4=310" },
+		{ "s57555", "INV_Ore_Iron_01", "=q1=Transmute: Elemental Earth", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+		{ "s57557", "INV_Potion_03", "=q1=Transmute: Elemental Water", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 		{ "s22732", "inv_potion_47", "=q1=Major Rejuvenation Potion", "=ds=#sr# =so1=300 =so2=310 =so3=320 =so4=330" },
 		{ "s17638", "inv_potion_48", "=q1=Flask of Chromatic Resistance", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 		{ "s17636", "inv_potion_97", "=q1=Flask of Distilled Wisdom", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
@@ -465,6 +467,8 @@ AtlasLoot_Data["AtlasLootCrafting"] = {
 		{ "s17564", "spell_shadow_shadetruesight", "=q2=Transmute: Water to Undeath", "=ds=#sr# =so1=275 =so2=275 =so3=282 =so4=290" },
 		{ "s17187", "inv_misc_stonetablet_05", "=q2=Transmute: Arcanite", "=ds=#sr# =so1=275 =so2=275 =so3=282 =so4=290" },
 		{ "s25146", "spell_fire_fire", "=q1=Transmute: Elemental Fire", "=ds=#sr# =so1=300 =so2=301 =so3=305 =so4=310" },
+		{ "s57555", "INV_Ore_Iron_01", "=q1=Transmute: Elemental Earth", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
+		{ "s57557", "INV_Potion_03", "=q1=Transmute: Elemental Water", "=ds=#sr# =so1=300 =so2=315 =so3=322 =so4=330" },
 	};
 	AlchemyDefensive1 = {
 		{ "s7183", "inv_potion_63", "=q1=Elixir of Minor Defense", "=ds=#sr# =so1=1 =so2=55 =so3=75 =so4=95" },
