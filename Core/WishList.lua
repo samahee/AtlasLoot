@@ -14,35 +14,6 @@ local PURPLE = "|cff9F3FFF";
 local BLUE = "|cff0070dd";
 local ORANGE = "|cffFF8400";
 
-local function strsplit(delim, str, maxNb, onlyLast)
-	-- Eliminate bad cases...
-	if string.find(str, delim) == nil then
-		return { str }
-	end
-	if maxNb == nil or maxNb < 1 then
-		maxNb = 0
-	end
-	local result = {}
-	local pat = "(.-)" .. delim .. "()"
-	local nb = 0
-	local lastPos
-	for part, pos in string.gfind(str, pat) do
-		nb = nb + 1
-		result[nb] = part
-		lastPos = pos
-		if nb == maxNb then break end
-	end
-	-- Handle the last field
-	if nb ~= maxNb then
-		result[nb+1] = string.sub(str, lastPos)
-	end
-	if onlyLast then
-		return result[nb+1]
-	else
-		return result[1], result[2]
-	end
-end
-
 --[[
 AtlasLoot_ShowWishList()
 Displays the WishList

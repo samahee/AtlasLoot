@@ -496,11 +496,6 @@ end
 
 AtlasLootTip.HookAddonOrVariable("Tmog", function()
     local tmog = CreateFrame("Frame", nil, TmogTooltip)
-    tmog:SetScript("OnHide", function()
-        for row=1, 30 do
-            getglobal("TmogTooltipTextRight" .. row):SetText("")
-        end
-    end)
     tmog:SetScript("OnShow", function()
         AtlasLootTip.extendTooltip(TmogTooltip)
     end)
