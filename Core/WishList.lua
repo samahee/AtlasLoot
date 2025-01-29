@@ -55,14 +55,14 @@ end
 AtlasLoot_AddToWishlist(itemID, itemTexture, itemName, lootPage, sourcePage)
 Looks for an empty slot in the wishlist and slots the item in
 ]]
-function AtlasLoot_AddToWishlist(itemID, itemTexture, itemName, lootPage, sourcePage)
+function AtlasLoot_AddToWishlist(itemID, itemTexture, itemName, extraText, sourcePage)
 	for _, v in ipairs(AtlasLootCharDB["WishList"]) do
 		if v[1] == itemID then
 			DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..RED..AL[" already in the WishList!"]);
 			return;
 		end
 	end
-	table.insert(AtlasLootCharDB["WishList"], { itemID, itemTexture, itemName, lootPage, sourcePage });
+	table.insert(AtlasLootCharDB["WishList"], { itemID, itemTexture, itemName, extraText, sourcePage });
 	DEFAULT_CHAT_FRAME:AddMessage(BLUE..AL["AtlasLoot"]..": "..AtlasLoot_FixText(itemName)..GREY..AL[" added to the WishList."]);
 	AtlasLoot_WishList = AtlasLoot_CategorizeWishList(AtlasLootCharDB["WishList"]);
 end
@@ -203,7 +203,9 @@ function AtlasLoot_GetWishListSubheading(dataID)
 end
 
 function AtlasLoot_GetWishListSubheadingBoss(dataID)
-	if not AtlasLoot_TableNames then return end
+	if not AtlasLoot_TableNamesBoss then
+		return
+	end
 	local zoneID ;
 	for i, v in pairs(AtlasLoot_TableNamesBoss) do
 		for j,k in pairs(v) do
@@ -246,7 +248,7 @@ function AtlasLoot_CategorizeWishList(wlTable)
 
 	for _, v in pairs(wlTable) do
 		if v[5] and v[5] ~= "" then
-			local dataID = strsplit("|", v[5]);
+			local dataID = AtlasLoot_Strsplit("|", v[5]);
 			-- Build subheading table
 			if not subheadings[dataID] then
 				subheadings[dataID] = AtlasLoot_GetWishListSubheadingBoss(dataID);
@@ -274,7 +276,7 @@ function AtlasLoot_CategorizeWishList(wlTable)
 		-- some debug code that I've used to fix WishList errors before due to people adding drops to AtlasLoot incorrectly.
 		local box = k or "Unknown"
 		local cat = categories[k][1][5] or "Unknown"
-		local parent = GetLootTableParent(strsplit("|", cat)) or "Unknown"
+		local parent = GetLootTableParent(AtlasLoot_Strsplit("|", cat)) or "Unknown"
 		--print("box: "..box.." - cat: "..cat)
 		table.insert(result, { 0, "INV_Box_01", "=q6="..box, "=q0="..parent });
 		

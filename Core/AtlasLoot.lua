@@ -156,7 +156,11 @@ function AtlasLootDefaultFrame_OnShow()
 	--Set the item table to the loot table
 	AtlasLoot_SetItemInfoFrame(pFrame);
 	--Show the last displayed loot table
-	AtlasLoot_ShowBossLoot(AtlasLootCharDB.LastBoss, AtlasLootCharDB.LastBossText, pFrame);
+	if AtlasLootItemsFrame.refresh then
+		AtlasLoot_ShowBossLoot(AtlasLootItemsFrame.refresh[1], AtlasLootItemsFrame.refresh[3], pFrame)
+	else
+		AtlasLoot_ShowBossLoot(AtlasLootCharDB.LastBoss, AtlasLootCharDB.LastBossText, pFrame);
+	end
 end
 
 --[[
@@ -439,8 +443,11 @@ function AtlasLootDefaultFrame_OnHide()
 	end
 	AtlasLoot_Hewdrop:Close(1);
 	AtlasLoot_HewdropSubMenu:Close(1);
+	if AtlasLootItemsFrame.refresh then
+		AtlasLootCharDB.LastBoss = AtlasLootItemsFrame.refresh[1]
+		AtlasLootCharDB.LastBossText = AtlasLootItemsFrame.refresh[3]
+	end
 end
-
 --[[
 AtlasLoot_SetupForAtlas:
 This function sets up the Atlas specific XML objects
@@ -1110,6 +1117,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	elseif(dataID=="JEWELCRAFTMENU") then
 		AtlasLoot_JewelcraftingMenu();
 	else
+		AtlasLoot_QueryLootPage()
 		--Iterate through each item object and set its properties
 		for i = 1, 30, 1 do
 			--Check for a valid object (that it exists, and that it has a name)
@@ -1167,9 +1175,11 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					end
 				end
 				--This is a valid QuickLook, so show the UI objects
-				AtlasLoot_QuickLooks:Show();
-				AtlasLootQuickLooksButton:Show();
-				AtlasLootServerQueryButton:Hide();
+				if dataID ~= "SearchResult" and dataID ~= "WishList" then
+					AtlasLoot_QuickLooks:Show();
+					AtlasLootQuickLooksButton:Show();
+					AtlasLootServerQueryButton:Hide();
+				end
 				--Insert the item description
 				extra = dataSource[dataID][i][4];
 				extra = AtlasLoot_FixText(extra);
@@ -1206,13 +1216,15 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					end
 				else
 					--else show the texture
+					if strfind(dataSource[dataID][i][2], "^CLASS") then
+						local class = gsub(dataSource[dataID][i][2], "CLASS", "")
+						iconFrame:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\"..class)
+					else
 					iconFrame:SetTexture("Interface\\Icons\\"..dataSource[dataID][i][2]);
+					end
 				end
 				if iconFrame:GetTexture() == nil then
 					iconFrame:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
-					itemButton.itemTexture = "Interface\\Icons\\INV_Misc_QuestionMark";
-				else
-					itemButton.itemTexture = iconFrame:GetTexture();
 				end
 				--Set the name and description of the item
 				nameFrame:SetText(text);
@@ -1275,7 +1287,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				end
 				--Set prices for items, up to 5 different currencies can be used in combination
 				if (dataID == "SearchResult" or dataID == "WishList") and dataSource[dataID][i][5] then
-					local wishDataID, wishDataSource = strsplit("|", dataSource[dataID][i][5])
+					local wishDataID, wishDataSource = AtlasLoot_Strsplit("|", dataSource[dataID][i][5])
 					if wishDataSource == "AtlasLootRepItems" then
 						if wishDataID and AtlasLoot_IsLootTableAvailable(wishDataID) then
 							for _, v in ipairs(AtlasLoot_Data[wishDataSource][wishDataID]) do
@@ -1340,25 +1352,16 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				if itemButton.container then
 					border:Show()
 				end
-				itemButton.iteminfo = {};
 				local spellID
 				if isItem then
-					itemButton.iteminfo.idcore = dataSource[dataID][i][1];
-					_, _, _, _, _, _, _, itemButton.iteminfo.icontexture = GetItemInfo(dataSource[dataID][i][1]);
-					itemButton.storeID = dataSource[dataID][i][1];
 					itemButton.dressingroomID = dataSource[dataID][i][1];
-					itemButton.extraText = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()
 				elseif isEnchant then
 					spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					itemButton.iteminfo.idcore = dataSource[dataID][i][2];
-					_, _, _, _, _, _, _, _, itemButton.iteminfo.icontexture = GetItemInfo(dataSource[dataID][i][2]);
-					itemButton.storeID = dataSource[dataID][i][2];
 					if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
 						itemButton.dressingroomID = GetSpellInfoAtlasLootDB["enchants"][spellID]["item"];
 					else
 						itemButton.dressingroomID = spellID;
 					end
-					itemButton.extraText = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()
 					if GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= nil and GetSpellInfoAtlasLootDB["enchants"][spellID]["item"] ~= "" then
 						if not GetItemInfo(GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]) then
 							GameTooltip:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["enchants"][spellID]["item"]..":0:0:0");
@@ -1366,11 +1369,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					end
 				elseif isSpell then
 					spellID = tonumber(string.sub(dataSource[dataID][i][1], 2));
-					itemButton.iteminfo.idcore = dataSource[dataID][i][1];
-					_, _, _, _, _, _, _, _, itemButton.iteminfo.icontexture = GetItemInfo(dataSource[dataID][i][1]);
-					itemButton.storeID = dataSource[dataID][i][1];
 					itemButton.dressingroomID = GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"];
-					itemButton.extraText = getglobal("AtlasLootItem_"..i.."_Extra"):GetText()
 					if GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"] ~= "" then
 						if not GetItemInfo(GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]) then
 							GameTooltip:SetHyperlink("item:"..GetSpellInfoAtlasLootDB["craftspells"][spellID]["craftItem"]..":0:0:0");
@@ -1399,14 +1398,10 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 					local droprate = dataSource[dataID][i][5];
 					if droprate and string.find(droprate, "%%") then itemButton.droprate = droprate end
 				end
-				itemButton.i = 1;
 				itemButton:Show();
-				--If the item is not in cache, querying the server may cause a disconnect
-				--Show a red box around the item to indicate this to the user
-				if((not GetItemInfo(dataSource[dataID][i][1])) and (dataSource[dataID][i][1] ~= 0) and isItem) then
-					getglobal("AtlasLootItem_"..i.."_Unsafe"):Show();
-				else
-					getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide();
+				if MouseIsOver(itemButton) then
+					itemButton:Hide()
+					itemButton:Show()
 				end
 			else
 				getglobal("AtlasLootItem_"..i):Hide();
@@ -1447,8 +1442,8 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				--Hide navigation buttons if we click Quicklooks in Atlas
 				if AtlasFrame and AtlasFrame:IsVisible() then
 					if this.sourcePage then
-						local _, dSource = strsplit("|", this.sourcePage)
-						if dSource == "AtlasLootItems" then
+						local _, dataSource = AtlasLoot_Strsplit("|", this.sourcePage)
+						if dataSource == "AtlasLootItems" then
 							AtlasLootItemsFrame_BACK:Hide()
 							AtlasLootItemsFrame_NEXT:Hide()
 							AtlasLootItemsFrame_PREV:Hide()
@@ -1470,6 +1465,29 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 		AtlasLootItemsFrame_CloseButton:Show();
 	else
 		AtlasLootItemsFrame_CloseButton:Hide();
+	end
+	local subMenu = nil
+	local bossName = ""
+	for k in pairs(AtlasLoot_HewdropDown_SubTables) do
+		if subMenu then
+			break
+		end
+		for _, n in pairs(AtlasLoot_HewdropDown_SubTables[k]) do
+			if n[2] == dataID then
+				subMenu = AtlasLoot_HewdropDown_SubTables[k]
+				bossName = n[1]
+				break
+			end
+		end
+	end
+	if subMenu then
+		AtlasLoot_HewdropSubMenuRegister(subMenu)
+		AtlasLootDefaultFrame_SubMenu:Enable()
+		AtlasLootDefaultFrame_SelectedTable:SetText(bossName)
+		AtlasLootDefaultFrame_SelectedTable:Show()
+	else
+		AtlasLootDefaultFrame_SubMenu:Disable()
+		AtlasLootDefaultFrame_SelectedTable:Hide()
 	end
 	--Anchor the item frame where it is supposed to be
 	AtlasLoot_SetItemInfoFrame(pFrame);
@@ -1720,38 +1738,32 @@ function AtlasLoot_HewdropRegister()
 	)
 end
 
-function AtlasLoot_OpenMenu(menu_name)
+function AtlasLoot_OpenMenu(menuName)
 	AtlasLoot_QuickLooks:Hide();
 	AtlasLootQuickLooksButton:Hide();
 	AtlasLootServerQueryButton:Hide();
-	AtlasLootDefaultFrame_SelectedCategory:SetText(menu_name)
+	AtlasLootDefaultFrame_SelectedCategory:SetText(menuName)
 	AtlasLootDefaultFrame_SubMenu:Disable();
 	AtlasLootDefaultFrame_SelectedTable:SetText("");
 	AtlasLootDefaultFrame_SelectedTable:Show();
 	AtlasLootCharDB.LastBoss = this.lootpage;
-	AtlasLootCharDB.LastBossText = menu_name;
-	if menu_name == "Crafting" then
+	AtlasLootCharDB.LastBossText = menuName;
+	if menuName == "Crafting" then
 		AtlasLoot_ShowItemsFrame("CRAFTINGMENU", "dummy", "dummy", pFrame)
-		CloseDropDownMenus()
-	elseif menu_name == "PvP Rewards" then
+	elseif menuName == "PvP Rewards" then
 		AtlasLoot_ShowItemsFrame("PVPMENU", "dummy", "dummy", pFrame)
-		CloseDropDownMenus()
-	elseif menu_name == "World Events" then
+	elseif menuName == "World Events" then
 		AtlasLoot_ShowItemsFrame("WORLDEVENTMENU", "dummy", "dummy", pFrame)
-		CloseDropDownMenus()
-	elseif menu_name == "Collections" then
+	elseif menuName == "Collections" then
 		AtlasLoot_ShowItemsFrame("SETMENU", "dummy", "dummy", pFrame)
-		CloseDropDownMenus()
-	elseif menu_name == "Factions" then
+	elseif menuName == "Factions" then
 		AtlasLoot_ShowItemsFrame("REPMENU", "dummy", "dummy", pFrame)
-		CloseDropDownMenus()
-	elseif menu_name == "World Bosses" then
+	elseif menuName == "World Bosses" then
 		AtlasLoot_ShowItemsFrame("WORLDBOSSMENU", "dummy", "dummy", pFrame)
-		CloseDropDownMenus()
-	elseif menu_name == "Dungeons & Raids" then
+	elseif menuName == "Dungeons & Raids" then
 		AtlasLoot_ShowItemsFrame("DUNGEONSMENU1", "dummy", "dummy", pFrame)
-		CloseDropDownMenus()
 	end
+	CloseDropDownMenus()
 end
 
 --[[
@@ -1822,16 +1834,18 @@ AtlasLoot_NavButton_OnClick:
 Called when <-, -> or 'Back' are pressed and calls up the appropriate loot page
 ]]
 function AtlasLoot_NavButton_OnClick()
-	if AtlasLootCharDB.LastBoss == "DUNGEONSMENU1" then
-		AtlasLoot_DungeonsMenu2()
-		AtlasLootDefaultFrame_SubMenu:Disable();
-		return
-	elseif AtlasLootCharDB.LastBoss == "DUNGEONSMENU2" then
-		AtlasLoot_DungeonsMenu1()
-		AtlasLootDefaultFrame_SubMenu:Disable();
-		return
-	end
-	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[2] and AtlasLootItemsFrame.refresh[4] then
+	if AtlasLootItemsFrame.refresh and AtlasLootItemsFrame.refresh[1] and AtlasLootItemsFrame.refresh[2] and AtlasLootItemsFrame.refresh[4] then
+		if AtlasLootItemsFrame.refresh[1] == "DUNGEONSMENU1" then
+			AtlasLootItemsFrame.refresh[1] = "DUNGEONSMENU2"
+			AtlasLoot_DungeonsMenu2()
+			AtlasLootDefaultFrame_SubMenu:Disable();
+			return
+		elseif AtlasLootItemsFrame.refresh[1] == "DUNGEONSMENU2" then
+			AtlasLootItemsFrame.refresh[1] = "DUNGEONSMENU1"
+			AtlasLoot_DungeonsMenu1()
+			AtlasLootDefaultFrame_SubMenu:Disable();
+			return
+		end
 		if string.sub(this.lootpage, 1, 16) == "SearchResultPage" then
 			AtlasLoot_ShowItemsFrame("SearchResult", this.lootpage, string.format((AL["Search Result: %s"]), AtlasLootCharDB.LastSearchedText or ""), AtlasLootItemsFrame.refresh[4]);
 		elseif string.sub(this.lootpage, 1, 12) == "WishListPage" then
@@ -2136,174 +2150,198 @@ function AtlasLootMinimapButton_SetPosition(v)
 	AtlasLootMinimapButton_UpdatePosition();
 end
 
+function AtlasLoot_Strsplit(delim, str, maxNb, onlyLast)
+	-- Eliminate bad cases...
+	if string.find(str, delim) == nil then
+		return { str }
+	end
+	if maxNb == nil or maxNb < 1 then
+		maxNb = 0
+	end
+	local result = {}
+	local pat = "(.-)" .. delim .. "()"
+	local nb = 0
+	local lastPos
+	for part, pos in string.gfind(str, pat) do
+		nb = nb + 1
+		result[nb] = part
+		lastPos = pos
+		if nb == maxNb then break end
+	end
+	-- Handle the last field
+	if nb ~= maxNb then
+		result[nb+1] = string.sub(str, lastPos)
+	end
+	if onlyLast then
+		return result[nb+1]
+	else
+		return result[1], result[2]
+	end
+end
+
 --This is a multi-layer table defining the main loot listing.
 --Entries have the text to display, loot table or sub table to link to and if the link is to a loot table or sub table
 AtlasLoot_HewdropDown = {
-	[1] = {
-		[AL["Dungeons & Raids"]] = {
-			[1] = {{ AL["[13-18] Ragefire Chasm"], "RagefireChasm", "Submenu" },},
-			[2] = {{ AL["[17-24] Wailing Caverns"], "WailingCaverns", "Submenu" },},
-			[3] = {{ AL["[17-24] The Deadmines"], "Deadmines", "Submenu" },},
-			[4] = {{ AL["[22-30] Shadowfang Keep"], "ShadowfangKeep", "Submenu" },},
-			[5] = {{ AL["[23-32] Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" },},
-			[6] = {{ AL["[22-30] The Stockade"], "TheStockade", "Submenu" },},
-			[7] = {{ AL["[29-38] Gnomeregan"], "Gnomeregan", "Submenu" },},
-			[8] = {{ AL["[29-38] Razorfen Kraul"], "RazorfenKraul", "Submenu" },},
-			[9] = {{ AL["[32-38] The Crescent Grove"], "TheCrescentGrove", "Submenu" },},
-			[10] = {[AL["[27-45] Scarlet Monastery"]] = {
+	{[AL["Dungeons & Raids"]] = {
+			{{ AL["[13-18] Ragefire Chasm"], "RagefireChasm", "Submenu" },},
+			{{ AL["[17-24] Wailing Caverns"], "WailingCaverns", "Submenu" },},
+			{{ AL["[17-24] The Deadmines"], "Deadmines", "Submenu" },},
+			{{ AL["[22-30] Shadowfang Keep"], "ShadowfangKeep", "Submenu" },},
+			{{ AL["[23-32] Blackfathom Deeps"], "BlackfathomDeeps", "Submenu" },},
+			{{ AL["[22-30] The Stockade"], "TheStockade", "Submenu" },},
+			{{ AL["[29-38] Gnomeregan"], "Gnomeregan", "Submenu" },},
+			{{ AL["[29-38] Razorfen Kraul"], "RazorfenKraul", "Submenu" },},
+			{{ AL["[32-38] The Crescent Grove"], "TheCrescentGrove", "Submenu" },},
+			{[ AL["[27-45] Scarlet Monastery"]] = {
 					{ AL["[27-36] Scarlet Monastery (Graveyard)"], "SMGraveyard", "Submenu" },
 					{ AL["[28-39] Scarlet Monastery (Library)"], "SMLibrary", "Submenu" },
 					{ AL["[32-41] Scarlet Monastery (Armory)"], "SMArmory", "Submenu" },
 					{ AL["[35-45] Scarlet Monastery (Cathedral)"], "SMCathedral", "Submenu" },
 				},},
-			[11] = {{ AL["[36-46] Razorfen Downs"], "RazorfenDowns", "Submenu" },},
-			[12] = {{ AL["[40-51] Uldaman"], "Uldaman", "Submenu" },},
-			[13] = {{ AL["[42-50] Gilneas City"], "GilneasCity", "Submenu" },},
-			[14] = {{ AL["[45-55] Maraudon"], "Maraudon", "Submenu" },},
-			[15] = {{ AL["[44-54] Zul'Farrak"], "ZulFarrak", "Submenu" },},
-			[16] = {{ AL["[50-60] The Sunken Temple"], "SunkenTemple", "Submenu" },},
-			[17] = {{ AL["[50-60] Hateforge Quarry"], "HateforgeQuarry", "Submenu" },},
-			[18] = {{ AL["[52-60] Blackrock Depths"], "BlackrockDepths", "Submenu" },},
-			[19] = {[AL["[55-60] Dire Maul"]] = {
+			{{ AL["[36-46] Razorfen Downs"], "RazorfenDowns", "Submenu" },},
+			{{ AL["[40-51] Uldaman"], "Uldaman", "Submenu" },},
+			{{ AL["[42-50] Gilneas City"], "GilneasCity", "Submenu" },},
+			{{ AL["[45-55] Maraudon"], "Maraudon", "Submenu" },},
+			{{ AL["[44-54] Zul'Farrak"], "ZulFarrak", "Submenu" },},
+			{{ AL["[50-60] The Sunken Temple"], "SunkenTemple", "Submenu" },},
+			{{ AL["[50-60] Hateforge Quarry"], "HateforgeQuarry", "Submenu" },},
+			{{ AL["[52-60] Blackrock Depths"], "BlackrockDepths", "Submenu" },},
+			{[AL["[55-60] Dire Maul"]] = {
 					{ AL["[55-60] Dire Maul (East)"], "DireMaulEast", "Submenu" },
 					{ AL["[57-60] Dire Maul (West)"], "DireMaulWest", "Submenu" },
 					{ AL["[57-60] Dire Maul (North)"], "DireMaulNorth", "Submenu" },
 				},},
-			[20] = {{ AL["[58-60] Scholomance"], "Scholomance", "Submenu" },},
-			[21] = {{ AL["[58-60] Stratholme"], "Stratholme", "Submenu" },},
-			[22] = {{ AL["[55-60] Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },},
-			[23] = {{ AL["[58-60] Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },},
-			[24] = {{ AL["[58-60] Karazhan Crypt"], "KarazhanCrypt", "Submenu" },},
-			[25] = {{ AL["[60] Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" },},
-			[26] = {{ AL["[60] Stormwind Vault"], "StormwindVault", "Submenu" },},
-			[27] = {{ AL["[RAID] Zul'Gurub"], "ZulGurub", "Submenu" },},
-			[28] = {{ AL["[RAID] Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },},
-			[29] = {{ AL["[RAID] Molten Core"], "MoltenCore", "Submenu" },},
-			[30] = {{ AL["[RAID] Onyxia's Lair"], "Onyxia", "Submenu" },},
-			[31] = {{ AL["[RAID] Lower Karazhan Halls"], "LowerKara", "Submenu" },},
-			[32] = {{ AL["[RAID] Blackwing Lair"], "BlackwingLair", "Submenu" },},
-			[33] = {{ AL["[RAID] Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
-			[34] = {{ AL["[RAID] Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
-			[35] = {{ AL["[RAID] Naxxramas"], "Naxxramas", "Submenu" },},
+			{{ AL["[58-60] Scholomance"], "Scholomance", "Submenu" },},
+			{{ AL["[58-60] Stratholme"], "Stratholme", "Submenu" },},
+			{{ AL["[55-60] Lower Blackrock Spire"], "LowerBlackrock", "Submenu" },},
+			{{ AL["[58-60] Upper Blackrock Spire"], "UpperBlackrock", "Submenu" },},
+			{{ AL["[58-60] Karazhan Crypt"], "KarazhanCrypt", "Submenu" },},
+			{{ AL["[60] Caverns of Time: Black Morass"], "CavernsOfTimeBlackMorass", "Submenu" },},
+			{{ AL["[60] Stormwind Vault"], "StormwindVault", "Submenu" },},
+			{{ AL["[RAID] Zul'Gurub"], "ZulGurub", "Submenu" },},
+			{{ AL["[RAID] Ruins of Ahn'Qiraj"], "RuinsofAQ", "Submenu" },},
+			{{ AL["[RAID] Molten Core"], "MoltenCore", "Submenu" },},
+			{{ AL["[RAID] Onyxia's Lair"], "Onyxia", "Submenu" },},
+			{{ AL["[RAID] Lower Karazhan Halls"], "LowerKara", "Submenu" },},
+			{{ AL["[RAID] Blackwing Lair"], "BlackwingLair", "Submenu" },},
+			{{ AL["[RAID] Emerald Sanctum"], "EmeraldSanctum", "Submenu" },},
+			{{ AL["[RAID] Temple of Ahn'Qiraj"], "TempleofAQ", "Submenu" },},
+			{{ AL["[RAID] Naxxramas"], "Naxxramas", "Submenu" },},
 		},
 	},
-	[2] = { [AL["World Bosses"]] = {
-		[1] = {{AL["Azuregos"], "AAzuregos", "Table" },},
-		[2] = {{AL["Emeriss"], "DEmeriss", "Table" },},
-		[3] = {{AL["Lethon"], "DLethon", "Table" },},
-		[4] = {{AL["Taerar"], "DTaerar", "Table" },},
-		[5] = {{AL["Ysondre"], "DYsondre", "Table" },},
-		[6] = {{AL["Lord Kazzak"], "KKazzak", "Table" },},
-		[7] = {{AL["Nerubian Overseer"], "Nerubian", "Table" },},
-		[8] = {{AL["Dark Reaver of Karazhan"], "Reaver", "Table" },},
-		[9] = {{AL["Ostarius"], "Ostarius", "Table" },},
-		[10] = {{AL["Concavius"], "Concavius", "Table" },},
-		[11] = {{AL["Moo"], "CowKing", "Table" },},
-		[12] = {{"Cla'ckora", "Clackora", "Table"},},
+	{[AL["World Bosses"]] = {
+		{{AL["Azuregos"], "AAzuregos", "Table" },},
+		{{AL["Emeriss"], "DEmeriss", "Table" },},
+		{{AL["Lethon"], "DLethon", "Table" },},
+		{{AL["Taerar"], "DTaerar", "Table" },},
+		{{AL["Ysondre"], "DYsondre", "Table" },},
+		{{AL["Lord Kazzak"], "KKazzak", "Table" },},
+		{{AL["Nerubian Overseer"], "Nerubian", "Table" },},
+		{{AL["Dark Reaver of Karazhan"], "Reaver", "Table" },},
+		{{AL["Ostarius"], "Ostarius", "Table" },},
+		{{AL["Concavius"], "Concavius", "Table" },},
+		{{AL["Moo"], "CowKing", "Table" },},
+		{{AL["Cla'ckora"], "Clackora", "Table"},},
 		},
 	},
-
-	[3] = {[AL["PvP Rewards"]] = {
-		[1] = {{ AL["PvP Armor Sets"], "PVPSET", "Table" },},
-		[2] = {{ AL["PvP Accessories"], "PvP60Accessories1", "Table" },},
-		[3] = {{ AL["Rank 14 Weapons"], "PVPWeapons1", "Table" },},
-		[4] = {{ AL["PvP Mounts"], "PvPMountsPvP", "Table" },},
-		[5] = {{ AL["Blood Ring"], "BRRepMenu", "Table" },},
-		[6] = {{ AL["Alterac Valley"], "AVRepMenu", "Table" },},
-		[7] = {{ AL["Arathi Basin"], "ABRepMenu", "Table" },},
-		[8] = {{ AL["Warsong Gulch"], "WSGRepMenu", "Table" },},
+	{[AL["PvP Rewards"]] = {
+		{{ AL["PvP Armor Sets"], "PVPSET", "Table" },},
+		{{ AL["PvP Accessories"], "PvP60Accessories1", "Table" },},
+		{{ AL["Rank 14 Weapons"], "PVPWeapons1", "Table" },},
+		{{ AL["PvP Mounts"], "PvPMountsPvP", "Table" },},
+		{{ AL["Blood Ring"], "BRRepMenu", "Table" },},
+		{{ AL["Alterac Valley"], "AVRepMenu", "Table" },},
+		{{ AL["Arathi Basin"], "ABRepMenu", "Table" },},
+		{{ AL["Warsong Gulch"], "WSGRepMenu", "Table" },},
 		},
 	},
-	[4] = {[AL["Collections"]] = {
-			[1] = {{ AL["Sets"], "PRE60SET", "Table" },},
-			[2] = {{ AL["Zul'Gurub Sets"], "ZGSET", "Table" },},
-			[3] = {{ AL["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" },},
-			[4] = {{ AL["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" },},
-			[5] = {{ AL["Karazhan Sets"], "KARASET", "Table" },},
-			[6] = {{ AL["Dungeon 1/2 Sets"], "T0SET", "Table" },},
-			[7] = {{ AL["Tier 1 Sets"], "T1SET", "Table" },},
-			[8] = {{ AL["Tier 2 Sets"], "T2SET", "Table" },},
-			[9] = {{ AL["Tier 3 Sets"], "T3SET", "Table" },},
-			[10] = {{ AL["Legendary Items"], "Legendaries", "Table" },},
-			[11] = {{ AL["World Epics"], "WORLDEPICS", "Table" },},
-			[12] = {{ AL["Rare Pets"], "RarePets1", "Table" },},
-			[13] = {{ AL["Rare Mounts"], "RareMounts", "Table" },},
-			[14] = {{ AL["Fashion"], "DonationRewards2", "Table" },},
-			[15] = {{ AL["Tabards"], "Tabards", "Table" },},
+	{[AL["Collections"]] = {
+			{{ AL["Sets"], "PRE60SET", "Table" },},
+			{{ AL["Zul'Gurub Sets"], "ZGSET", "Table" },},
+			{{ AL["Ruins of Ahn'Qiraj Sets"], "AQ20SET", "Table" },},
+			{{ AL["Temple of Ahn'Qiraj Sets"], "AQ40SET", "Table" },},
+			{{ AL["Karazhan Sets"], "KARASET", "Table" },},
+			{{ AL["Dungeon 1/2 Sets"], "T0SET", "Table" },},
+			{{ AL["Tier 1 Sets"], "T1SET", "Table" },},
+			{{ AL["Tier 2 Sets"], "T2SET", "Table" },},
+			{{ AL["Tier 3 Sets"], "T3SET", "Table" },},
+			{{ AL["Legendary Items"], "Legendaries", "Table" },},
+			{{ AL["World Epics"], "WORLDEPICS", "Table" },},
+			{{ AL["Rare Pets"], "RarePets1", "Table" },},
+			{{ AL["Rare Mounts"], "RareMounts", "Table" },},
+			{{ AL["Fashion"], "DonationRewards2", "Table" },},
+			{{ AL["Tabards"], "Tabards", "Table" },},
 			--[15] = {{ AL["Old Mounts"], "OldMounts", "Table" },},
 			--[16] = {{ AL["Unobtainable Mounts"], "UnobMounts", "Table" },},
 			},
 		},
-	[5] = {
-		 [AL["Factions"]] = {
-			[1] = {{ AL["Argent Dawn"], "Argent1" , "Table" },},
-			[2] = {{ AL["Bloodsail Buccaneers"], "Bloodsail1", "Table" },},
-			[3] = {{ AL["Brood of Nozdormu"], "AQBroodRings", "Table" },},
-			[4] = {{ AL["Cenarion Circle"], "Cenarion1", "Table" }},
-			[5] = {{ AL["Dalaran"], "Dalaran", "Table" },},
-			[6] = {{ AL["Darkmoon Faire"], "Darkmoon", "Table" },},
-			[7] = {{ AL["Darkspear Trolls"], "DarkspearTrolls", "Table" },},
-			[8] = {{ AL["Darnassus"], "Darnassus", "Table" },},
-			[9] = {{ AL["Durotar Labor Union"], "DurotarLaborUnion", "Table" },},
-			[10] = {{ AL["Frostwolf Clan"], "Frostwolf1", "Table" },},
-			[11] = {{ AL["Gelkis Clan Centaur"], "GelkisClan1", "Table" },},
-			[12] = {{ AL["Gnomeregan Exiles"], "GnomereganExiles", "Table" },},
-			[13] = {{ AL["Hydraxian Waterlords"], "WaterLords1", "Table" },},
-			[14] = {{ AL["Ironforge"], "Ironforge", "Table" },},
-			[15] = {{ AL["Magram Clan Centaur"], "MagramClan1", "Table" },},
-			[16] = {{ AL["Orgrimmar"], "Orgrimmar", "Table" },},
-			[17] = {{ AL["Revantusk Trolls"], "Revantusk", "Table" },},
-			[18] = {{ AL["Silvermoon Remnant"], "Helf", "Table" },},
-			[19] = {{ AL["Stormpike Guard"], "Stormpike1", "Table" },},
-			[20] = {{ AL["Stormwind"], "Stormwind", "Table" },},
-			[21] = {{ AL["Thorium Brotherhood"], "Thorium1", "Table" },},
-			[22] = {{ AL["Thunder Bluff"], "ThunderBluff", "Table" },},
-			[23] = {{ AL["Timbermaw Hold"], "Timbermaw", "Table" },},
-			[24] = {{ AL["Undercity"], "Undercity", "Table" },},
-			[25] = {{ AL["Wardens of Time"], "Wardens1", "Table" },},
-			[26] = {{ AL["Wildhammer Clan"], "Wildhammer", "Table" },},
-			[27] = {{ AL["Wintersaber Trainers"], "Wintersaber1", "Table" },},
-			[28] = {{ AL["Zandalar Tribe"], "Zandalar1", "Table" },},
+	{[AL["Factions"]] = {
+			{{ AL["Argent Dawn"], "Argent1" , "Table" },},
+			{{ AL["Bloodsail Buccaneers"], "Bloodsail1", "Table" },},
+			{{ AL["Brood of Nozdormu"], "AQBroodRings", "Table" },},
+			{{ AL["Cenarion Circle"], "Cenarion1", "Table" }},
+			{{ AL["Dalaran"], "Dalaran", "Table" },},
+			{{ AL["Darkmoon Faire"], "Darkmoon", "Table" },},
+			{{ AL["Darkspear Trolls"], "DarkspearTrolls", "Table" },},
+			{{ AL["Darnassus"], "Darnassus", "Table" },},
+			{{ AL["Durotar Labor Union"], "DurotarLaborUnion", "Table" },},
+			{{ AL["Frostwolf Clan"], "Frostwolf1", "Table" },},
+			{{ AL["Gelkis Clan Centaur"], "GelkisClan1", "Table" },},
+			{{ AL["Gnomeregan Exiles"], "GnomereganExiles", "Table" },},
+			{{ AL["Hydraxian Waterlords"], "WaterLords1", "Table" },},
+			{{ AL["Ironforge"], "Ironforge", "Table" },},
+			{{ AL["Magram Clan Centaur"], "MagramClan1", "Table" },},
+			{{ AL["Orgrimmar"], "Orgrimmar", "Table" },},
+			{{ AL["Revantusk Trolls"], "Revantusk", "Table" },},
+			{{ AL["Silvermoon Remnant"], "Helf", "Table" },},
+			{{ AL["Stormpike Guard"], "Stormpike1", "Table" },},
+			{{ AL["Stormwind"], "Stormwind", "Table" },},
+			{{ AL["Thorium Brotherhood"], "Thorium1", "Table" },},
+			{{ AL["Thunder Bluff"], "ThunderBluff", "Table" },},
+			{{ AL["Timbermaw Hold"], "Timbermaw", "Table" },},
+			{{ AL["Undercity"], "Undercity", "Table" },},
+			{{ AL["Wardens of Time"], "Wardens1", "Table" },},
+			{{ AL["Wildhammer Clan"], "Wildhammer", "Table" },},
+			{{ AL["Wintersaber Trainers"], "Wintersaber1", "Table" },},
+			{{ AL["Zandalar Tribe"], "Zandalar1", "Table" },},
 		 	},
 		},
-
-	[6] = {[AL["World Events"]] = {
-			[1] = {{ AL["Abyssal Council"], "AbyssalTemplars", "Table" },},
-			[2] = {{ AL["Children's Week"], "ChildrensWeek", "Table" },},
-			[3] = {{ AL["Elemental Invasion"], "ElementalInvasion", "Table" },},
-			[4] = {{ AL["Feast of Winter Veil"], "Winterviel1", "Table" },},
-			[5] = {{ AL["Gurubashi Arena"], "GurubashiArena", "Table" },},
-			[6] = {{ AL["Hallow's End"], "Halloween1", "Table" },},
-			[7] = {{ AL["Harvest Festival"], "HarvestFestival", "Table" },},
-			[8] = {{ AL["Love is in the Air"], "Valentineday", "Table" },},
-			[9] = {{ AL["Lunar Festival"], "LunarFestival1", "Table" },},
-			[10] = {{ AL["Midsummer Fire Festival"], "MidsummerFestival", "Table" },},
-			[11] = {{ AL["Noblegarden"], "Noblegarden", "Table" },},
-			[12] = {{ AL["Scourge Invasion"], "ScourgeInvasionEvent1", "Table" },},
-			[13] = {{ AL["Stranglethorn Fishing Extravaganza"], "FishingExtravaganza", "Table" },},
+	{[AL["World Events"]] = {
+			{{ AL["Abyssal Council"], "AbyssalTemplars", "Table" },},
+			{{ AL["Children's Week"], "ChildrensWeek", "Table" },},
+			{{ AL["Elemental Invasion"], "ElementalInvasion", "Table" },},
+			{{ AL["Feast of Winter Veil"], "Winterviel1", "Table" },},
+			{{ AL["Gurubashi Arena"], "GurubashiArena", "Table" },},
+			{{ AL["Hallow's End"], "Halloween1", "Table" },},
+			{{ AL["Harvest Festival"], "HarvestFestival", "Table" },},
+			{{ AL["Love is in the Air"], "Valentineday", "Table" },},
+			{{ AL["Lunar Festival"], "LunarFestival1", "Table" },},
+			{{ AL["Midsummer Fire Festival"], "MidsummerFestival", "Table" },},
+			{{ AL["Noblegarden"], "Noblegarden", "Table" },},
+			{{ AL["Scourge Invasion"], "ScourgeInvasionEvent1", "Table" },},
+			{{ AL["Stranglethorn Fishing Extravaganza"], "FishingExtravaganza", "Table" },},
 			},
 		},
-	[7] = {
-		[AL["Crafting"]] = {
-			[1] = { { AL["Alchemy"], "ALCHEMYMENU", "Table" }, },
-			[2] = { { (AL["Blacksmithing"]), "SMITHINGMENU", "Table" }, },
-			[3] = { { (AL["Enchanting"]), "ENCHANTINGMENU", "Table" }, },
-			[4] = { { (AL["Engineering"]), "ENGINEERINGMENU", "Table" }, },
-			[5] = { { (AL["Herbalism"]), "Herbalism1", "Table" }, },
-			[6] = { { (AL["Leatherworking"]), "LEATHERWORKINGMENU", "Table" }, },
-			[7] = { { (AL["Jewelcrafting"]), "JEWELCRAFTMENU", "Table" }, },
-			[8] = { { (AL["Mining"]), "Mining1", "Table" }, },
-			[9] = { { (AL["Tailoring"]), "TAILORINGMENU", "Table" }, },
-			[10] = { { (AL["Cooking"]), "COOKINGMENU", "Table" }, },
-			[11] = { { (AL["First Aid"]), "FirstAid1", "Table" }, },
-			[12] = { { (AL["Survival"]), "Survival1", "Table" }, },
-			[13] = { { (AL["Gardening"]), "Survival2", "Table" }, },
-			[14] = { { (AL["Poisons"]), "Poisons1", "Table" }, },
-			[15] = { { AL["Crafted Sets"], "CRAFTSET", "Table" },},
-			[16] = { { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
+	{[AL["Crafting"]] = {
+			{ { AL["Alchemy"], "ALCHEMYMENU", "Table" }, },
+			{ { (AL["Blacksmithing"]), "SMITHINGMENU", "Table" }, },
+			{ { (AL["Enchanting"]), "ENCHANTINGMENU", "Table" }, },
+			{ { (AL["Engineering"]), "ENGINEERINGMENU", "Table" }, },
+			{ { (AL["Herbalism"]), "Herbalism1", "Table" }, },
+			{ { (AL["Leatherworking"]), "LEATHERWORKINGMENU", "Table" }, },
+			{ { (AL["Jewelcrafting"]), "JEWELCRAFTMENU", "Table" }, },
+			{ { (AL["Mining"]), "Mining1", "Table" }, },
+			{ { (AL["Tailoring"]), "TAILORINGMENU", "Table" }, },
+			{ { (AL["Cooking"]), "COOKINGMENU", "Table" }, },
+			{ { (AL["First Aid"]), "FirstAid1", "Table" }, },
+			{ { (AL["Survival"]), "Survival1", "Table" }, },
+			{ { (AL["Gardening"]), "Survival2", "Table" }, },
+			{ { (AL["Poisons"]), "Poisons1", "Table" }, },
+			{ { AL["Crafted Sets"], "CRAFTSET", "Table" },},
+			{ { AL["Crafted Epic Weapons"], "CraftedWeapons1", "Table" }, },
 		},
 	},
-	[8] = {{ "Rare Spawns", "RareSpawns", "Submenu" },},
+	{{ "Rare Spawns", "RareSpawns", "Submenu" },},
 };
 
 --This table defines all the subtables needed for the full menu
@@ -2651,7 +2689,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Isalien"], "DMEIsalien" },
 		{ AL["Alzzin the Wildshaper"], "DMEAlzzin" },
 		{ AL["Trash Mobs"], "DMETrash" },
-		{ AL["Dire Maul Books"], "DMBooks" },
+		{ AL["Dire Maul Books"], "DMEBooks" },
 	},
 	["DireMaulWest"] = {
 		{ AL["Tendris Warpwood"], "DMWTendrisWarpwood" },
@@ -2663,7 +2701,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Lord Hel'nurath"].." ("..AL["Rare"]..")", "DMWHelnurath" },
 		{ AL["Prince Tortheldrin"], "DMWPrinceTortheldrin" },
 		{ AL["Trash Mobs"], "DMWTrash" },
-		{ AL["Dire Maul Books"], "DMBooks" },
+		{ AL["Dire Maul Books"], "DMWBooks" },
 	},
 	["DireMaulNorth"] = {
 		{ AL["Guard Mol'dar"], "DMNGuardMoldar" },
@@ -2676,7 +2714,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["King Gordok"], "DMNKingGordok" },
 		{ AL["Tribute Run"], "DMNTRIBUTERUN" },
 		{ AL["Trash Mobs"], "DMNTrash" },
-		{ AL["Dire Maul Books"], "DMBooks" },
+		{ AL["Dire Maul Books"], "DMNBooks" },
 	},
 	["Maraudon"] = {
 		{ AL["Noxxion"], "MaraNoxxion" },
@@ -2793,13 +2831,12 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Taerar"], "DTaerar" },
 		{ AL["Ysondre"], "DYsondre" },
 		{ AL["Lord Kazzak"], "KKazzak"},
-		--{ "Turtlhu, the Black Turtle of Doom", "Turtlhu" },
 		{ AL["Nerubian Overseer"], "Nerubian" },
 		{ AL["Dark Reaver of Karazhan"], "Reaver" },
 		{ AL["Ostarius"], "Ostarius" },
 		{ AL["Concavius"], "Concavius" },
 		{ AL["Moo"], "CowKing" },
-		{ "Cla'ckora", "Clackora" },
+		{ AL["Cla'ckora"], "Clackora" },
 	},
 	["RareSpawns"] = {
 		{ "|cffffffff[17]|cffffd200 Earthcaller Rezengal |cffffffff(Stonetalon)", "EarthcallerRezengal" },
@@ -2840,292 +2877,291 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ "|cffffffff[??]|cffffd200 Widow of the Woods |cffffffff(Gilneas)", "WidowoftheWoods" },
 		{ "|cffffffff[??]|cffffd200 M-0L1Y |cffffffff(???)", "M0L1Y" },
 	},
-	["AbyssalCouncil"] = {
-		{ AL["Abyssal Council"].." - "..AL["Templars"], "AbyssalTemplars" },
-		{ AL["Abyssal Council"].." - "..AL["Dukes"], "AbyssalDukes" },
-		{ AL["Abyssal Council"].." - "..AL["High Council"], "AbyssalLords" },
-	},
-	["Winterviel"] = {
-		{ AL["Feast of Winter Veil"], "Winterviel1"},
-		{ AL["Feast of Winter Veil"], "Winterviel2"},
-	},
-	["Factions"] = {
-		{ AL["Argent Dawn"], "Argent1" },
-		{ AL["Bloodsail Buccaneers"], "Bloodsail1" },
-		{ AL["Brood of Nozdormu"], "AQBroodRings" },
-		{ AL["Cenarion Circle"], "Cenarion1" },
-		{ AL["Dalaran"], "Dalaran" },
-		{ AL["Darkmoon Faire"], "Darkmoon" },
-		{ AL["Darkspear Trolls"], "DarkspearTrolls" },
-		{ AL["Darnassus"], "Darnassus" },
-		{ AL["Durotar Labor Union"], "DurotarLaborUnion" },
-		{ AL["Frostwolf Clan"], "Frostwolf1" },
-		{ AL["Gelkis Clan Centaur"], "GelkisClan1" },
-		{ AL["Gnomeregan Exiles"], "GnomereganExiles" },
-		{ AL["Hydraxian Waterlords"], "WaterLords1" },
-		{ AL["Ironforge"], "Ironforge" },
-		{ AL["Magram Clan Centaur"], "MagramClan1" },
-		{ AL["Orgrimmar"], "Orgrimmar" },
-		{ AL["Revantusk Trolls"], "Revantusk" },
-		{ AL["Silvermoon Remnant"], "Helf" },
-		{ AL["Stormpike Guard"], "Stormpike1" },
-		{ AL["Stormwind"], "Stormwind" },
-		{ AL["Thorium Brotherhood"], "Thorium1" },
-		{ AL["Thunder Bluff"], "ThunderBluff" },
-		{ AL["Timbermaw Hold"], "Timbermaw" },
-		{ AL["Undercity"], "Undercity" },
-		{ AL["Wardens of Time"], "Wardens1" },
-		{ AL["Wildhammer Clan"], "Wildhammer" },
-		{ AL["Wintersaber Trainers"], "Wintersaber1" },
-		{ AL["Zandalar Tribe"], "Zandalar1" },
-	},
-	["BoEWorldEpics"] = {
-		{ AtlasLoot_TableNames["WorldEpics3"][1], "WorldEpics3" },
-		{ AtlasLoot_TableNames["WorldEpics2"][1], "WorldEpics2" },
-		{ AtlasLoot_TableNames["WorldEpics1"][1], "WorldEpics1" },
-	},
-	["CraftSetBlacksmith"] = {
-		{ AL["Steel Plate"], "SteelPlate" },
-		{ AL["Imperial Plate"], "ImperialPlate" },
-		{ AL["The Darksoul"], "TheDarksoul" },
-		{ AL["Bloodsoul Embrace"], "BloodsoulEmbrace" },
-	},
-	["CraftSetLeatherwork"] = {
-		{ AL["Grifter's Armor"], "GriftersArmor" },
-		{ AL["Primalist's Trappings"], "PrimalistsTrappings" },
-		{ AL["Volcanic Armor"], "VolcanicArmor" },
-		{ AL["Ironfeather Armor"], "IronfeatherArmor" },
-		{ AL["Stormshroud Armor"], "StormshroudArmor" },
-		{ AL["Devilsaur Armor"], "DevilsaurArmor" },
-		{ AL["Blood Tiger Harness"], "BloodTigerH" },
-		{ AL["Primal Batskin"], "PrimalBatskin" },
-		{ AL["Red Dragon Mail"], "RedDragonM" },
-		{ AL["Green Dragon Mail"], "GreenDragonM" },
-		{ AL["Blue Dragon Mail"], "BlueDragonM" },
-		{ AL["Black Dragon Mail"], "BlackDragonM" },
-	},
-	["CraftSetTailoring"] = {
-		{ AL["Augerer's Attire"], "AugerersAttire" },
-		{ AL["Shadoweave"], "ShadoweaveSet" },
-		{ AL["Diviner's Garments"], "DivinersGarments" },
-		{ AL["Pillager's Garb"], "PillagersGarb" },
-		{ AL["Bloodvine Garb"], "BloodvineG" },
-	},
-	["DungeonSets12"] = {
-		{ "|cffffffff"..AL["Priest"], "T0Priest" },
-		{ "|cff68ccef"..AL["Mage"], "T0Mage" },
-		{ "|cff9382c9"..AL["Warlock"], "T0Warlock" },
-		{ "|cfffff468"..AL["Rogue"], "T0Rogue" },
-		{ "|cffff7c0a"..AL["Druid"], "T0Druid" },
-		{ "|cffaad372"..AL["Hunter"], "T0Hunter" },
-		{ "|cff2773ff"..AL["Shaman"], "T0Shaman" },
-		{ "|cfff48cba"..AL["Paladin"], "T0Paladin" },
-		{ "|cffc69b6d"..AL["Warrior"], "T0Warrior" },
-	},
-	["AQ20Sets"] = {
-		{ "|cffffffff"..AL["Priest"], "AQ20Priest" },
-		{ "|cff68ccef"..AL["Mage"], "AQ20Mage" },
-		{ "|cff9382c9"..AL["Warlock"], "AQ20Warlock" },
-		{ "|cfffff468"..AL["Rogue"], "AQ20Rogue" },
-		{ "|cffff7c0a"..AL["Druid"], "AQ20Druid" },
-		{ "|cffaad372"..AL["Hunter"], "AQ20Hunter" },
-		{ "|cff2773ff"..AL["Shaman"], "AQ20Shaman" },
-		{ "|cfff48cba"..AL["Paladin"], "AQ20Paladin" },
-		{ "|cffc69b6d"..AL["Warrior"], "AQ20Warrior" },
-	},
-	["AQ40Sets"] = {
-		{ "|cffffffff"..AL["Priest"], "AQ40Priest" },
-		{ "|cff68ccef"..AL["Mage"], "AQ40Mage" },
-		{ "|cff9382c9"..AL["Warlock"], "AQ40Warlock" },
-		{ "|cfffff468"..AL["Rogue"], "AQ40Rogue" },
-		{ "|cffff7c0a"..AL["Druid"], "AQ40Druid" },
-		{ "|cffaad372"..AL["Hunter"], "AQ40Hunter" },
-		{ "|cff2773ff"..AL["Shaman"], "AQ40Shaman" },
-		{ "|cfff48cba"..AL["Paladin"], "AQ40Paladin" },
-		{ "|cffc69b6d"..AL["Warrior"], "AQ40Warrior" },
-	},
-	["T1Sets"] = {
-		{ "|cffffffff"..AL["Priest"], "T1Priest" },
-		{ "|cff68ccef"..AL["Mage"], "T1Mage" },
-		{ "|cff9382c9"..AL["Warlock"], "T1Warlock" },
-		{ "|cfffff468"..AL["Rogue"], "T1Rogue" },
-		{ "|cffff7c0a"..AL["Druid"], "T1Druid" },
-		{ "|cffaad372"..AL["Hunter"], "T1Hunter" },
-		{ "|cff2773ff"..AL["Shaman"], "T1Shaman" },
-		{ "|cfff48cba"..AL["Paladin"], "T1Paladin" },
-		{ "|cffc69b6d"..AL["Warrior"], "T1Warrior" },
-	},
-	["T2Sets"] = {
-		{ "|cffffffff"..AL["Priest"], "T2Priest" },
-		{ "|cff68ccef"..AL["Mage"], "T2Mage" },
-		{ "|cff9382c9"..AL["Warlock"], "T2Warlock" },
-		{ "|cfffff468"..AL["Rogue"], "T2Rogue" },
-		{ "|cffff7c0a"..AL["Druid"], "T2Druid" },
-		{ "|cffaad372"..AL["Hunter"], "T2Hunter" },
-		{ "|cff2773ff"..AL["Shaman"], "T2Shaman" },
-		{ "|cfff48cba"..AL["Paladin"], "T2Paladin" },
-		{ "|cffc69b6d"..AL["Warrior"], "T2Warrior" },
-	},
-	["T3Sets"] = {
-		{ "|cffffffff"..AL["Priest"], "T3Priest" },
-		{ "|cff68ccef"..AL["Mage"], "T3Mage" },
-		{ "|cff9382c9"..AL["Warlock"], "T3Warlock" },
-		{ "|cfffff468"..AL["Rogue"], "T3Rogue" },
-		{ "|cffff7c0a"..AL["Druid"], "T3Druid" },
-		{ "|cffaad372"..AL["Hunter"], "T3Hunter" },
-		{ "|cff2773ff"..AL["Shaman"], "T3Shaman" },
-		{ "|cfff48cba"..AL["Paladin"], "T3Paladin" },
-		{ "|cffc69b6d"..AL["Warrior"], "T3Warrior" },
-	},
-	["ZGSets"] = {
-		{ "|cffffffff"..AL["Priest"], "ZGPriest" },
-		{ "|cff68ccef"..AL["Mage"], "ZGMage" },
-		{ "|cff9382c9"..AL["Warlock"], "ZGWarlock" },
-		{ "|cfffff468"..AL["Rogue"], "ZGRogue" },
-		{ "|cffff7c0a"..AL["Druid"], "ZGDruid" },
-		{ "|cffaad372"..AL["Hunter"], "ZGHunter" },
-		{ "|cff2773ff"..AL["Shaman"], "ZGShaman" },
-		{ "|cfff48cba"..AL["Paladin"], "ZGPaladin" },
-		{ "|cffc69b6d"..AL["Warrior"], "ZGWarrior" },
-		{ AL["Zul'Gurub Rings"], "ZGRings" },
-		{ AL["The Twin Blades of Hakkari"], "HakkariBlades" },
-		{ AL["Zul'Gurub Rings"], "ZGRings" },
-	},
-	["Pre60Sets"] = {
-		{ AL["Bloodmail Regalia"], "ScholoMail" },
-		{ AL["Cadaverous Garb"], "ScholoLeather" },
-		{ AL["Chain of the Scarlet Crusade"], "SCARLET" },
-		{ AL["Dal'Rend's Arms"], "DalRend" },
-		{ AL["Deathbone Guardian"], "ScholoPlate" },
-		{ AL["Defias Leather"], "DEADMINES" },
-		{ AL["Embrace of the Viper"], "WAILING" },
-		{ AL["Ironweave Battlesuit"], "IRONWEAVE" },
-		{ AL["Necropile Raiment"], "ScholoCloth" },
-		{ AL["Primal Blessing"], "PrimalBlessing" },
-		{ AL["Scourge Invasion"], "ScourgeInvasion" },
-		{ AL["Shard of the Gods"], "ShardOfGods" },
-		{ AL["Spider's Kiss"], "SpiderKiss" },
-		{ AL["Spirit of Eskhandar"], "SpiritofEskhandar" },
-		{ AL["The Gladiator"], "BLACKROCKD" },
-		{ AL["The Postmaster"], "STRAT" },
-
-	},
-	["BRRewards"] = {
-		{ AL["Friendly Reputation Rewards"], "BRRepFriendly" },
-		{ AL["Honored Reputation Rewards"], "BRRepHonored" },
-		{ AL["Revered Reputation Rewards"], "BRRepRevered" },
-		{ AL["Exalted Reputation Rewards"], "BRRepExalted" },
-		{ AL["Token of Blood Rewards"], "BRRepTokens" },
-	},
-	["AVRewards"] = {
-		{ AL["Friendly Reputation Rewards"], "AVRepFriendly" },
-		{ AL["Honored Reputation Rewards"], "AVRepHonored" },
-		{ AL["Revered Reputation Rewards"], "AVRepRevered" },
-		{ AL["Exalted Reputation Rewards"], "AVRepExalted" },
-		{ AL["Exalted Reputation Rewards"], "AVRepExalted" },
-		{ AL["Korrak the Bloodrager"], "AVKorrak" },
-		{ AL["Ivus & Lokholar"], "AVLokholarIvus" },
-	},
-	["ABRewards"] = {
-		{ "Arathi Basin Menu", "ABRepMenu" },
-		{ AL["Friendly Reputation Rewards"], "ABRepFriendly" },
-		{ AL["Honored Reputation Rewards"], "ABRepHonored5059" },
-		{ AL["Revered Reputation Rewards"], "ABRepRevered5059" },
-		{ AL["Exalted Reputation Rewards"], "ABRepExalted" },
-	},
-	["PvPArmorSets"] = {
-		{ AL["Priest"], "PVPPriest" },
-		{ AL["Mage"], "PVPMage" },
-		{ AL["Warlock"], "PVPWarlock" },
-		{ AL["Rogue"], "PVPRogue" },
-		{ AL["Druid"], "PVPDruid" },
-		{ AL["Hunter"], "PVPHunter" },
-		{ AL["Shaman"], "PVPShaman" },
-		{ AL["Paladin"], "PVPPaladin" },
-		{ AL["Warrior"], "PVPWarrior" },
-	},
-	["WSGRewards"] = {
-		{ "Warsong Gulch Menu", "WSGRepMenu" },
-		{ AL["Friendly Reputation Rewards"], "WSGRepFriendly" },
-		{ AL["Honored Reputation Rewards"], "WSGRepHonored5059" },
-		{ AL["Revered Reputation Rewards"], "WSGRepRevered5059" },
-		{ AL["Exalted Reputation Rewards"], "WSGRepExalted60" },
-	},
-	["Alchemy"] = {
-		{ AtlasLoot_TableNames["AlchemyApprentice1"][1], "AlchemyApprentice1" },
-		{ AtlasLoot_TableNames["AlchemyJourneyman1"][1], "AlchemyJourneyman1" },
-		{ AtlasLoot_TableNames["AlchemyExpert1"][1], "AlchemyExpert1" },
-		{ AtlasLoot_TableNames["AlchemyArtisan1"][1], "AlchemyArtisan1" },
-		{ AtlasLoot_TableNames["AlchemyHealingAndMana1"][1], "AlchemyHealingAndMana1" },
-		{ AtlasLoot_TableNames["AlchemyFlasks1"][1], "AlchemyFlasks1" },
-		{ AtlasLoot_TableNames["AlchemyTransmutes1"][1], "AlchemyTransmutes1" },
-		{ AtlasLoot_TableNames["AlchemyDefensive1"][1], "AlchemyDefensive1" },
-		{ AtlasLoot_TableNames["AlchemyOffensive1"][1], "AlchemyOffensive1" },
-		{ AtlasLoot_TableNames["AlchemyOther1"][1], "AlchemyOther1" },
-	},
-	["Blacksmithing"] = {
-		{ AtlasLoot_TableNames["SmithingApprentice1"][1], "SmithingApprentice1" },
-		{ AtlasLoot_TableNames["SmithingJourneyman1"][1], "SmithingJourneyman1" },
-		{ AtlasLoot_TableNames["SmithingExpert1"][1], "SmithingExpert1" },
-		{ AtlasLoot_TableNames["SmithingArtisan1"][1], "SmithingArtisan1" },
-		{ AtlasLoot_TableNames["Armorsmith1"][1], "Armorsmith1" },
-		{ AtlasLoot_TableNames["Weaponsmith1"][1], "Weaponsmith1" },
-		{ AtlasLoot_TableNames["Axesmith1"][1], "Axesmith1" },
-		{ AtlasLoot_TableNames["Hammersmith1"][1], "Hammersmith1" },
-		{ AtlasLoot_TableNames["Swordsmith1"][1], "Swordsmith1" },
-	},
-	["Cooking"] = {
-		{ AtlasLoot_TableNames["CookingApprentice1"][1], "CookingApprentice1" },
-		{ AtlasLoot_TableNames["CookingJourneyman1"][1], "CookingJourneyman1" },
-		{ AtlasLoot_TableNames["CookingExpert1"][1], "CookingExpert1" },
-		{ AtlasLoot_TableNames["CookingArtisan1"][1], "CookingArtisan1" },
-	},
-	["Enchanting"] = {
-		{ AtlasLoot_TableNames["EnchantingApprentice1"][1], "EnchantingApprentice1" },
-		{ AtlasLoot_TableNames["EnchantingJourneyman1"][1], "EnchantingJourneyman1" },
-		{ AtlasLoot_TableNames["EnchantingExpert1"][1], "EnchantingExpert1" },
-		{ AtlasLoot_TableNames["EnchantingArtisan1"][1], "EnchantingArtisan1" },
-		{ AtlasLoot_TableNames["EnchantingCloak1"][1], "EnchantingCloak1" },
-		{ AtlasLoot_TableNames["EnchantingChest1"][1], "EnchantingChest1" },
-		{ AtlasLoot_TableNames["EnchantingBracer1"][1], "EnchantingBracer1" },
-		{ AtlasLoot_TableNames["EnchantingGlove1"][1], "EnchantingGlove1" },
-		{ AtlasLoot_TableNames["EnchantingBoots1"][1], "EnchantingBoots1" },
-		{ AtlasLoot_TableNames["Enchanting2HWeapon1"][1], "Enchanting2HWeapon1" },
-		{ AtlasLoot_TableNames["EnchantingWeapon1"][1], "EnchantingWeapon1" },
-		{ AtlasLoot_TableNames["EnchantingShield1"][1], "EnchantingShield1" },
-		{ AtlasLoot_TableNames["EnchantingMisc1"][1], "EnchantingMisc1" },
-	},
-	["Engineering"] = {
-		{ AtlasLoot_TableNames["EngineeringApprentice1"][1], "EngineeringApprentice1" },
-		{ AtlasLoot_TableNames["EngineeringJourneyman1"][1], "EngineeringJourneyman1" },
-		{ AtlasLoot_TableNames["EngineeringExpert1"][1], "EngineeringExpert1" },
-		{ AtlasLoot_TableNames["EngineeringArtisan1"][1], "EngineeringArtisan1" },
-		{ AtlasLoot_TableNames["Gnomish1"][1], "Gnomish1" },
-		{ AtlasLoot_TableNames["Goblin1"][1], "Goblin1" },
-	},
-	["Leatherworking"] = {
-		{ AtlasLoot_TableNames["LeatherApprentice1"][1], "LeatherApprentice1" },
-		{ AtlasLoot_TableNames["LeatherJourneyman1"][1], "LeatherJourneyman1" },
-		{ AtlasLoot_TableNames["LeatherExpert1"][1], "LeatherExpert1" },
-		{ AtlasLoot_TableNames["LeatherArtisan1"][1], "LeatherArtisan1" },
-		{ AtlasLoot_TableNames["Dragonscale1"][1], "Dragonscale1" },
-		{ AtlasLoot_TableNames["Elemental1"][1], "Elemental1" },
-		{ AtlasLoot_TableNames["Tribal1"][1], "Tribal1" },
-	},
-	["Mining"] = {
-		{ AL["Mining"], "Mining1" },
-		{ AL["Smelting"], "Smelting1" },
-	},
-	["Tailoring"] = {
-		{ AtlasLoot_TableNames["TailoringApprentice1"][1], "TailoringApprentice1" },
-		{ AtlasLoot_TableNames["TailoringJourneyman1"][1], "TailoringJourneyman1" },
-		{ AtlasLoot_TableNames["TailoringExpert1"][1], "TailoringExpert1" },
-		{ AtlasLoot_TableNames["TailoringArtisan1"][1], "TailoringArtisan1" },
-	},
-	["Survival"] = {
-		{ AtlasLoot_TableNames["Survival1"][1], "Survival1" },
-		{ AtlasLoot_TableNames["Survival2"][1], "Survival2" },
-	},
+	-- ["AbyssalCouncil"] = {
+	-- 	{ AL["Abyssal Council"].." - "..AL["Templars"], "AbyssalTemplars" },
+	-- 	{ AL["Abyssal Council"].." - "..AL["Dukes"], "AbyssalDukes" },
+	-- 	{ AL["Abyssal Council"].." - "..AL["High Council"], "AbyssalLords" },
+	-- },
+	-- ["Winterviel"] = {
+	-- 	{ AL["Feast of Winter Veil"], "Winterviel1"},
+	-- 	{ AL["Feast of Winter Veil"], "Winterviel2"},
+	-- },
+	-- ["Factions"] = {
+	-- 	{ AL["Argent Dawn"], "Argent1" },
+	-- 	{ AL["Bloodsail Buccaneers"], "Bloodsail1" },
+	-- 	{ AL["Brood of Nozdormu"], "AQBroodRings" },
+	-- 	{ AL["Cenarion Circle"], "Cenarion1" },
+	-- 	{ AL["Dalaran"], "Dalaran" },
+	-- 	{ AL["Darkmoon Faire"], "Darkmoon" },
+	-- 	{ AL["Darkspear Trolls"], "DarkspearTrolls" },
+	-- 	{ AL["Darnassus"], "Darnassus" },
+	-- 	{ AL["Durotar Labor Union"], "DurotarLaborUnion" },
+	-- 	{ AL["Frostwolf Clan"], "Frostwolf1" },
+	-- 	{ AL["Gelkis Clan Centaur"], "GelkisClan1" },
+	-- 	{ AL["Gnomeregan Exiles"], "GnomereganExiles" },
+	-- 	{ AL["Hydraxian Waterlords"], "WaterLords1" },
+	-- 	{ AL["Ironforge"], "Ironforge" },
+	-- 	{ AL["Magram Clan Centaur"], "MagramClan1" },
+	-- 	{ AL["Orgrimmar"], "Orgrimmar" },
+	-- 	{ AL["Revantusk Trolls"], "Revantusk" },
+	-- 	{ AL["Silvermoon Remnant"], "Helf" },
+	-- 	{ AL["Stormpike Guard"], "Stormpike1" },
+	-- 	{ AL["Stormwind"], "Stormwind" },
+	-- 	{ AL["Thorium Brotherhood"], "Thorium1" },
+	-- 	{ AL["Thunder Bluff"], "ThunderBluff" },
+	-- 	{ AL["Timbermaw Hold"], "Timbermaw" },
+	-- 	{ AL["Undercity"], "Undercity" },
+	-- 	{ AL["Wardens of Time"], "Wardens1" },
+	-- 	{ AL["Wildhammer Clan"], "Wildhammer" },
+	-- 	{ AL["Wintersaber Trainers"], "Wintersaber1" },
+	-- 	{ AL["Zandalar Tribe"], "Zandalar1" },
+	-- },
+	-- ["BoEWorldEpics"] = {
+	-- 	{ AtlasLoot_TableNames["WorldEpics3"][1], "WorldEpics3" },
+	-- 	{ AtlasLoot_TableNames["WorldEpics2"][1], "WorldEpics2" },
+	-- 	{ AtlasLoot_TableNames["WorldEpics1"][1], "WorldEpics1" },
+	-- },
+	-- ["CraftSetBlacksmith"] = {
+	-- 	{ AL["Steel Plate"], "SteelPlate" },
+	-- 	{ AL["Imperial Plate"], "ImperialPlate" },
+	-- 	{ AL["The Darksoul"], "TheDarksoul" },
+	-- 	{ AL["Bloodsoul Embrace"], "BloodsoulEmbrace" },
+	-- },
+	-- ["CraftSetLeatherwork"] = {
+	-- 	{ AL["Grifter's Armor"], "GriftersArmor" },
+	-- 	{ AL["Primalist's Trappings"], "PrimalistsTrappings" },
+	-- 	{ AL["Volcanic Armor"], "VolcanicArmor" },
+	-- 	{ AL["Ironfeather Armor"], "IronfeatherArmor" },
+	-- 	{ AL["Stormshroud Armor"], "StormshroudArmor" },
+	-- 	{ AL["Devilsaur Armor"], "DevilsaurArmor" },
+	-- 	{ AL["Blood Tiger Harness"], "BloodTigerH" },
+	-- 	{ AL["Primal Batskin"], "PrimalBatskin" },
+	-- 	{ AL["Red Dragon Mail"], "RedDragonM" },
+	-- 	{ AL["Green Dragon Mail"], "GreenDragonM" },
+	-- 	{ AL["Blue Dragon Mail"], "BlueDragonM" },
+	-- 	{ AL["Black Dragon Mail"], "BlackDragonM" },
+	-- },
+	-- ["CraftSetTailoring"] = {
+	-- 	{ AL["Augerer's Attire"], "AugerersAttire" },
+	-- 	{ AL["Shadoweave"], "ShadoweaveSet" },
+	-- 	{ AL["Diviner's Garments"], "DivinersGarments" },
+	-- 	{ AL["Pillager's Garb"], "PillagersGarb" },
+	-- 	{ AL["Bloodvine Garb"], "BloodvineG" },
+	-- },
+	-- ["DungeonSets12"] = {
+	-- 	{ "|cffffffff"..AL["Priest"], "T0Priest" },
+	-- 	{ "|cff68ccef"..AL["Mage"], "T0Mage" },
+	-- 	{ "|cff9382c9"..AL["Warlock"], "T0Warlock" },
+	-- 	{ "|cfffff468"..AL["Rogue"], "T0Rogue" },
+	-- 	{ "|cffff7c0a"..AL["Druid"], "T0Druid" },
+	-- 	{ "|cffaad372"..AL["Hunter"], "T0Hunter" },
+	-- 	{ "|cff2773ff"..AL["Shaman"], "T0Shaman" },
+	-- 	{ "|cfff48cba"..AL["Paladin"], "T0Paladin" },
+	-- 	{ "|cffc69b6d"..AL["Warrior"], "T0Warrior" },
+	-- },
+	-- ["AQ20Sets"] = {
+	-- 	{ "|cffffffff"..AL["Priest"], "AQ20Priest" },
+	-- 	{ "|cff68ccef"..AL["Mage"], "AQ20Mage" },
+	-- 	{ "|cff9382c9"..AL["Warlock"], "AQ20Warlock" },
+	-- 	{ "|cfffff468"..AL["Rogue"], "AQ20Rogue" },
+	-- 	{ "|cffff7c0a"..AL["Druid"], "AQ20Druid" },
+	-- 	{ "|cffaad372"..AL["Hunter"], "AQ20Hunter" },
+	-- 	{ "|cff2773ff"..AL["Shaman"], "AQ20Shaman" },
+	-- 	{ "|cfff48cba"..AL["Paladin"], "AQ20Paladin" },
+	-- 	{ "|cffc69b6d"..AL["Warrior"], "AQ20Warrior" },
+	-- },
+	-- ["AQ40Sets"] = {
+	-- 	{ "|cffffffff"..AL["Priest"], "AQ40Priest" },
+	-- 	{ "|cff68ccef"..AL["Mage"], "AQ40Mage" },
+	-- 	{ "|cff9382c9"..AL["Warlock"], "AQ40Warlock" },
+	-- 	{ "|cfffff468"..AL["Rogue"], "AQ40Rogue" },
+	-- 	{ "|cffff7c0a"..AL["Druid"], "AQ40Druid" },
+	-- 	{ "|cffaad372"..AL["Hunter"], "AQ40Hunter" },
+	-- 	{ "|cff2773ff"..AL["Shaman"], "AQ40Shaman" },
+	-- 	{ "|cfff48cba"..AL["Paladin"], "AQ40Paladin" },
+	-- 	{ "|cffc69b6d"..AL["Warrior"], "AQ40Warrior" },
+	-- },
+	-- ["T1Sets"] = {
+	-- 	{ "|cffffffff"..AL["Priest"], "T1Priest" },
+	-- 	{ "|cff68ccef"..AL["Mage"], "T1Mage" },
+	-- 	{ "|cff9382c9"..AL["Warlock"], "T1Warlock" },
+	-- 	{ "|cfffff468"..AL["Rogue"], "T1Rogue" },
+	-- 	{ "|cffff7c0a"..AL["Druid"], "T1Druid" },
+	-- 	{ "|cffaad372"..AL["Hunter"], "T1Hunter" },
+	-- 	{ "|cff2773ff"..AL["Shaman"], "T1Shaman" },
+	-- 	{ "|cfff48cba"..AL["Paladin"], "T1Paladin" },
+	-- 	{ "|cffc69b6d"..AL["Warrior"], "T1Warrior" },
+	-- },
+	-- ["T2Sets"] = {
+	-- 	{ "|cffffffff"..AL["Priest"], "T2Priest" },
+	-- 	{ "|cff68ccef"..AL["Mage"], "T2Mage" },
+	-- 	{ "|cff9382c9"..AL["Warlock"], "T2Warlock" },
+	-- 	{ "|cfffff468"..AL["Rogue"], "T2Rogue" },
+	-- 	{ "|cffff7c0a"..AL["Druid"], "T2Druid" },
+	-- 	{ "|cffaad372"..AL["Hunter"], "T2Hunter" },
+	-- 	{ "|cff2773ff"..AL["Shaman"], "T2Shaman" },
+	-- 	{ "|cfff48cba"..AL["Paladin"], "T2Paladin" },
+	-- 	{ "|cffc69b6d"..AL["Warrior"], "T2Warrior" },
+	-- },
+	-- ["T3Sets"] = {
+	-- 	{ "|cffffffff"..AL["Priest"], "T3Priest" },
+	-- 	{ "|cff68ccef"..AL["Mage"], "T3Mage" },
+	-- 	{ "|cff9382c9"..AL["Warlock"], "T3Warlock" },
+	-- 	{ "|cfffff468"..AL["Rogue"], "T3Rogue" },
+	-- 	{ "|cffff7c0a"..AL["Druid"], "T3Druid" },
+	-- 	{ "|cffaad372"..AL["Hunter"], "T3Hunter" },
+	-- 	{ "|cff2773ff"..AL["Shaman"], "T3Shaman" },
+	-- 	{ "|cfff48cba"..AL["Paladin"], "T3Paladin" },
+	-- 	{ "|cffc69b6d"..AL["Warrior"], "T3Warrior" },
+	-- },
+	-- ["ZGSets"] = {
+	-- 	{ "|cffffffff"..AL["Priest"], "ZGPriest" },
+	-- 	{ "|cff68ccef"..AL["Mage"], "ZGMage" },
+	-- 	{ "|cff9382c9"..AL["Warlock"], "ZGWarlock" },
+	-- 	{ "|cfffff468"..AL["Rogue"], "ZGRogue" },
+	-- 	{ "|cffff7c0a"..AL["Druid"], "ZGDruid" },
+	-- 	{ "|cffaad372"..AL["Hunter"], "ZGHunter" },
+	-- 	{ "|cff2773ff"..AL["Shaman"], "ZGShaman" },
+	-- 	{ "|cfff48cba"..AL["Paladin"], "ZGPaladin" },
+	-- 	{ "|cffc69b6d"..AL["Warrior"], "ZGWarrior" },
+	-- 	{ AL["Zul'Gurub Rings"], "ZGRings" },
+	-- 	{ AL["The Twin Blades of Hakkari"], "HakkariBlades" },
+	-- 	{ AL["Zul'Gurub Rings"], "ZGRings" },
+	-- },
+	-- ["Pre60Sets"] = {
+	-- 	{ AL["Bloodmail Regalia"], "ScholoMail" },
+	-- 	{ AL["Cadaverous Garb"], "ScholoLeather" },
+	-- 	{ AL["Chain of the Scarlet Crusade"], "SCARLET" },
+	-- 	{ AL["Dal'Rend's Arms"], "DalRend" },
+	-- 	{ AL["Deathbone Guardian"], "ScholoPlate" },
+	-- 	{ AL["Defias Leather"], "DEADMINES" },
+	-- 	{ AL["Embrace of the Viper"], "WAILING" },
+	-- 	{ AL["Ironweave Battlesuit"], "IRONWEAVE" },
+	-- 	{ AL["Necropile Raiment"], "ScholoCloth" },
+	-- 	{ AL["Primal Blessing"], "PrimalBlessing" },
+	-- 	{ AL["Scourge Invasion"], "ScourgeInvasion" },
+	-- 	{ AL["Shard of the Gods"], "ShardOfGods" },
+	-- 	{ AL["Spider's Kiss"], "SpiderKiss" },
+	-- 	{ AL["Spirit of Eskhandar"], "SpiritofEskhandar" },
+	-- 	{ AL["The Gladiator"], "BLACKROCKD" },
+	-- 	{ AL["The Postmaster"], "STRAT" },
+	-- },
+	-- ["BRRewards"] = {
+	-- 	{ AL["Friendly Reputation Rewards"], "BRRepFriendly" },
+	-- 	{ AL["Honored Reputation Rewards"], "BRRepHonored" },
+	-- 	{ AL["Revered Reputation Rewards"], "BRRepRevered" },
+	-- 	{ AL["Exalted Reputation Rewards"], "BRRepExalted" },
+	-- 	{ AL["Token of Blood Rewards"], "BRRepTokens" },
+	-- },
+	-- ["AVRewards"] = {
+	-- 	{ AL["Friendly Reputation Rewards"], "AVRepFriendly" },
+	-- 	{ AL["Honored Reputation Rewards"], "AVRepHonored" },
+	-- 	{ AL["Revered Reputation Rewards"], "AVRepRevered" },
+	-- 	{ AL["Exalted Reputation Rewards"], "AVRepExalted" },
+	-- 	{ AL["Exalted Reputation Rewards"], "AVRepExalted" },
+	-- 	{ AL["Korrak the Bloodrager"], "AVKorrak" },
+	-- 	{ AL["Ivus & Lokholar"], "AVLokholarIvus" },
+	-- },
+	-- ["ABRewards"] = {
+	-- 	{ "Arathi Basin Menu", "ABRepMenu" },
+	-- 	{ AL["Friendly Reputation Rewards"], "ABRepFriendly" },
+	-- 	{ AL["Honored Reputation Rewards"], "ABRepHonored5059" },
+	-- 	{ AL["Revered Reputation Rewards"], "ABRepRevered5059" },
+	-- 	{ AL["Exalted Reputation Rewards"], "ABRepExalted" },
+	-- },
+	-- ["PvPArmorSets"] = {
+	-- 	{ AL["Priest"], "PVPPriest" },
+	-- 	{ AL["Mage"], "PVPMage" },
+	-- 	{ AL["Warlock"], "PVPWarlock" },
+	-- 	{ AL["Rogue"], "PVPRogue" },
+	-- 	{ AL["Druid"], "PVPDruid" },
+	-- 	{ AL["Hunter"], "PVPHunter" },
+	-- 	{ AL["Shaman"], "PVPShaman" },
+	-- 	{ AL["Paladin"], "PVPPaladin" },
+	-- 	{ AL["Warrior"], "PVPWarrior" },
+	-- },
+	-- ["WSGRewards"] = {
+	-- 	{ "Warsong Gulch Menu", "WSGRepMenu" },
+	-- 	{ AL["Friendly Reputation Rewards"], "WSGRepFriendly" },
+	-- 	{ AL["Honored Reputation Rewards"], "WSGRepHonored5059" },
+	-- 	{ AL["Revered Reputation Rewards"], "WSGRepRevered5059" },
+	-- 	{ AL["Exalted Reputation Rewards"], "WSGRepExalted60" },
+	-- },
+	-- ["Alchemy"] = {
+	-- 	{ AtlasLoot_TableNames["AlchemyApprentice1"][1], "AlchemyApprentice1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyJourneyman1"][1], "AlchemyJourneyman1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyExpert1"][1], "AlchemyExpert1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyArtisan1"][1], "AlchemyArtisan1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyHealingAndMana1"][1], "AlchemyHealingAndMana1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyFlasks1"][1], "AlchemyFlasks1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyTransmutes1"][1], "AlchemyTransmutes1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyDefensive1"][1], "AlchemyDefensive1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyOffensive1"][1], "AlchemyOffensive1" },
+	-- 	{ AtlasLoot_TableNames["AlchemyOther1"][1], "AlchemyOther1" },
+	-- },
+	-- ["Blacksmithing"] = {
+	-- 	{ AtlasLoot_TableNames["SmithingApprentice1"][1], "SmithingApprentice1" },
+	-- 	{ AtlasLoot_TableNames["SmithingJourneyman1"][1], "SmithingJourneyman1" },
+	-- 	{ AtlasLoot_TableNames["SmithingExpert1"][1], "SmithingExpert1" },
+	-- 	{ AtlasLoot_TableNames["SmithingArtisan1"][1], "SmithingArtisan1" },
+	-- 	{ AtlasLoot_TableNames["Armorsmith1"][1], "Armorsmith1" },
+	-- 	{ AtlasLoot_TableNames["Weaponsmith1"][1], "Weaponsmith1" },
+	-- 	{ AtlasLoot_TableNames["Axesmith1"][1], "Axesmith1" },
+	-- 	{ AtlasLoot_TableNames["Hammersmith1"][1], "Hammersmith1" },
+	-- 	{ AtlasLoot_TableNames["Swordsmith1"][1], "Swordsmith1" },
+	-- },
+	-- ["Cooking"] = {
+	-- 	{ AtlasLoot_TableNames["CookingApprentice1"][1], "CookingApprentice1" },
+	-- 	{ AtlasLoot_TableNames["CookingJourneyman1"][1], "CookingJourneyman1" },
+	-- 	{ AtlasLoot_TableNames["CookingExpert1"][1], "CookingExpert1" },
+	-- 	{ AtlasLoot_TableNames["CookingArtisan1"][1], "CookingArtisan1" },
+	-- },
+	-- ["Enchanting"] = {
+	-- 	{ AtlasLoot_TableNames["EnchantingApprentice1"][1], "EnchantingApprentice1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingJourneyman1"][1], "EnchantingJourneyman1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingExpert1"][1], "EnchantingExpert1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingArtisan1"][1], "EnchantingArtisan1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingCloak1"][1], "EnchantingCloak1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingChest1"][1], "EnchantingChest1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingBracer1"][1], "EnchantingBracer1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingGlove1"][1], "EnchantingGlove1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingBoots1"][1], "EnchantingBoots1" },
+	-- 	{ AtlasLoot_TableNames["Enchanting2HWeapon1"][1], "Enchanting2HWeapon1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingWeapon1"][1], "EnchantingWeapon1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingShield1"][1], "EnchantingShield1" },
+	-- 	{ AtlasLoot_TableNames["EnchantingMisc1"][1], "EnchantingMisc1" },
+	-- },
+	-- ["Engineering"] = {
+	-- 	{ AtlasLoot_TableNames["EngineeringApprentice1"][1], "EngineeringApprentice1" },
+	-- 	{ AtlasLoot_TableNames["EngineeringJourneyman1"][1], "EngineeringJourneyman1" },
+	-- 	{ AtlasLoot_TableNames["EngineeringExpert1"][1], "EngineeringExpert1" },
+	-- 	{ AtlasLoot_TableNames["EngineeringArtisan1"][1], "EngineeringArtisan1" },
+	-- 	{ AtlasLoot_TableNames["Gnomish1"][1], "Gnomish1" },
+	-- 	{ AtlasLoot_TableNames["Goblin1"][1], "Goblin1" },
+	-- },
+	-- ["Leatherworking"] = {
+	-- 	{ AtlasLoot_TableNames["LeatherApprentice1"][1], "LeatherApprentice1" },
+	-- 	{ AtlasLoot_TableNames["LeatherJourneyman1"][1], "LeatherJourneyman1" },
+	-- 	{ AtlasLoot_TableNames["LeatherExpert1"][1], "LeatherExpert1" },
+	-- 	{ AtlasLoot_TableNames["LeatherArtisan1"][1], "LeatherArtisan1" },
+	-- 	{ AtlasLoot_TableNames["Dragonscale1"][1], "Dragonscale1" },
+	-- 	{ AtlasLoot_TableNames["Elemental1"][1], "Elemental1" },
+	-- 	{ AtlasLoot_TableNames["Tribal1"][1], "Tribal1" },
+	-- },
+	-- ["Mining"] = {
+	-- 	{ AL["Mining"], "Mining1" },
+	-- 	{ AL["Smelting"], "Smelting1" },
+	-- },
+	-- ["Tailoring"] = {
+	-- 	{ AtlasLoot_TableNames["TailoringApprentice1"][1], "TailoringApprentice1" },
+	-- 	{ AtlasLoot_TableNames["TailoringJourneyman1"][1], "TailoringJourneyman1" },
+	-- 	{ AtlasLoot_TableNames["TailoringExpert1"][1], "TailoringExpert1" },
+	-- 	{ AtlasLoot_TableNames["TailoringArtisan1"][1], "TailoringArtisan1" },
+	-- },
+	-- ["Survival"] = {
+	-- 	{ AtlasLoot_TableNames["Survival1"][1], "Survival1" },
+	-- 	{ AtlasLoot_TableNames["Survival2"][1], "Survival2" },
+	-- },
 };
 
 --------------------------------------------------------------------------------
@@ -3219,21 +3255,11 @@ function AtlasLootItem_OnEnter()
 						if( this.droprate ~= nil) then
 							AtlasLootTooltip:AddLine(AL["Drop Rate: "]..this.droprate, 1, 1, 0);
 						end
-						--QuestTest_TooltipUpdate(AtlasLootTooltip,"item:"..this.itemID..":0:0:0")
-						AtlasLootTooltip:Show();
 					else
-						--[[AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
-						AtlasLootTooltip:ClearLines();
-						AtlasLootTooltip:AddLine(RED..AL["Item Unavailable"], nil, nil, nil, 1);
-						AtlasLootTooltip:AddLine(AL["ItemID:"].." "..this.itemID, nil, nil, nil, 1);
-						AtlasLootTooltip:AddLine(AL["This item is unsafe.  To view this item without the risk of disconnection, you need to have first seen it in the game world. This is a restriction enforced by Blizzard since Patch 1.10."], nil, nil, nil, 1);
-						AtlasLootTooltip:AddLine(" ");
-						AtlasLootTooltip:AddLine(AL["You can right-click to attempt to query the server.  You may be disconnected."], nil, nil, nil, 1);
-						AtlasLootTooltip:Show();]]
 						AtlasLoot_QueryLootPage()
 						getglobal("AtlasLootItem_"..id.."_Unsafe"):Hide();
-						AtlasLootTooltip:Show();
 					end
+					AtlasLootTooltip:Show();
 				end
 			end
 		elseif isEnchant then
@@ -3365,7 +3391,7 @@ function AtlasLootItem_OnClick(arg1)
 	local color = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 1, 10);
 	local id = this:GetID();
 	local name = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 11);
-	local texture = strsplit("\\", getglobal("AtlasLootItem_"..this:GetID().."_Icon"):GetTexture(), 0, true)
+	local texture = AtlasLoot_Strsplit("\\", getglobal("AtlasLootItem_"..this:GetID().."_Icon"):GetTexture(), 0, true)
 	local dataID = AtlasLootItemsFrame.refresh[1]
 	local dataSource = AtlasLootItemsFrame.refresh[2]
 	local bossName = AtlasLootItemsFrame.refresh[3]
@@ -3440,7 +3466,7 @@ function AtlasLootItem_OnClick(arg1)
 				AtlasLoot_AddToWishlist(this.itemID, texture, this.itemIDName, this.itemIDExtra, dataID.."|"..dataSource);
 			end
 		elseif((dataID == "SearchResult" or dataID == "WishList") and this.sourcePage) then
-			local dataID, dataSource = strsplit("|", this.sourcePage);
+			local dataID, dataSource = AtlasLoot_Strsplit("|", this.sourcePage);
 			if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, AtlasLoot_TableNames[dataID][1], framePoint);
 			end
@@ -3449,11 +3475,7 @@ function AtlasLootItem_OnClick(arg1)
 		end
 	elseif isEnchant then
 		if IsShiftKeyDown() then
-			--[[if ChatFrameEditBox:IsVisible() then
-				ChatFrameEditBox:Insert(color.."|Henchant:"..string.sub(this.itemID, 2)..":0:0:0|h["..name.."]|h|r");
-			else]]
-				AtlasLoot_SayItemReagents(this.itemID)
-			--end
+			AtlasLoot_SayItemReagents(this.itemID)
 		elseif(IsAltKeyDown() and (this.itemID ~= 0)) then
 			if dataID == "WishList" then
 				AtlasLoot_DeleteFromWishList(this.itemID);
@@ -3465,7 +3487,7 @@ function AtlasLootItem_OnClick(arg1)
 		elseif(IsControlKeyDown()) then
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0");
 		elseif((dataID == "SearchResult" or dataID == "WishList") and this.sourcePage) then
-			local dataID, dataSource = strsplit("|", this.sourcePage);
+			local dataID, dataSource = AtlasLoot_Strsplit("|", this.sourcePage);
 			if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName, framePoint);
 			end
@@ -3529,8 +3551,8 @@ function AtlasLootItem_OnClick(arg1)
 		elseif(IsControlKeyDown()) then
 			DressUpItemLink("item:"..this.dressingroomID..":0:0:0");
 		elseif((dataID == "SearchResult" or dataID == "WishList") and this.sourcePage) then
-			local d1, d2 = strsplit("|", this.sourcePage);
-			if(d1 and d2 and AtlasLoot_IsLootTableAvailable(d1)) then
+			local dataID, dataSource = AtlasLoot_Strsplit("|", this.sourcePage);
+			if(dataID and dataSource and AtlasLoot_IsLootTableAvailable(dataID)) then
 				AtlasLoot_ShowItemsFrame(dataID, dataSource, bossName, framePoint);
 			end
 		end
@@ -3692,6 +3714,11 @@ function AtlasLoot_ContainerItem_OnClick(arg1)
 	local _, _, _, color = GetItemQualityColor(quality)
 	tex = string.gsub(tex, "Interface\\Icons\\", "")
 	local extra = this.extraInfo
+	local lootpage, dataSource
+	if lastSelectedButton then
+		lootpage = lastSelectedButton.lootpage
+		dataSource = lastSelectedButton.dataSource
+	end
 	if IsShiftKeyDown() and arg1 == "LeftButton" then
 		if AtlasLootCharDB.AllLinks then
 			if WIM_EditBoxInFocus then
@@ -3703,7 +3730,9 @@ function AtlasLoot_ContainerItem_OnClick(arg1)
 	elseif(IsControlKeyDown() and name) then
 		DressUpItemLink(link);
 	elseif(IsAltKeyDown() and (itemID ~= 0)) then
-		if AtlasLootItemsFrame.refresh then
+		if lootpage then
+			AtlasLoot_AddToWishlist(itemID, tex, name, extra, lootpage.."|"..dataSource)
+		elseif AtlasLootItemsFrame.refresh then
 			local dataID = AtlasLootItemsFrame.refresh[1]
 			local dataSource = AtlasLootItemsFrame.refresh[2]
 			if dataID == "WishList" then
@@ -3722,14 +3751,15 @@ AtlasLoot_QueryLootPage()
 Querys all valid items on the current loot page.
 ]]
 function AtlasLoot_QueryLootPage()
-	local i=1;
-	while i<31 do
+	for i = 1, 30 do
 		local button = getglobal("AtlasLootItem_"..i);
 		local queryitem = button.itemID;
-		if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and (string.sub(queryitem, 1, 1) ~= "s") and (string.sub(queryitem, 1, 1) ~= "e") then
-			GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0");
+		if (queryitem) and (queryitem ~= nil) and (queryitem ~= "") and (queryitem ~= 0) and
+			(string.sub(queryitem, 1, 1) ~= "s") and (string.sub(queryitem, 1, 1) ~= "e") then
+			if not GetItemInfo(queryitem) then
+				GameTooltip:SetHyperlink("item:"..queryitem..":0:0:0");
+			end
 		end
-		i=i+1;
 	end
 end
 

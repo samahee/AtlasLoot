@@ -336,55 +336,55 @@ function AtlasLootPVPSetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff"..AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest")
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest")
 	AtlasLootMenuItem_3.lootpage="PVPPriest";
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef"..AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage="PVPMage";
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9"..AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage="PVPWarlock";
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468"..AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue")
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue")
 	AtlasLootMenuItem_6.lootpage="PVPRogue";
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a"..AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid")
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid")
 	AtlasLootMenuItem_7.lootpage="PVPDruid";
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372"..AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter")
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter")
 	AtlasLootMenuItem_18.lootpage="PVPHunter";
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff"..AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage="PVPShaman";
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba"..AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin")
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin")
 	AtlasLootMenuItem_20.lootpage="PVPPaladin";
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d"..AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior")
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior")
 	AtlasLootMenuItem_21.lootpage="PVPWarrior";
 	AtlasLootMenuItem_21:Show();
 end

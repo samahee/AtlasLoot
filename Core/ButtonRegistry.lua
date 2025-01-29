@@ -3449,7 +3449,8 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Azuregos"];
 		Next_Page = "DEmeriss";
 		Next_Title = AL["Emeriss"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["DEmeriss"] = {
 		Title = AL["Emeriss"];
@@ -3457,7 +3458,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Lethon"];
 		Prev_Page = "AAzuregos";
 		Prev_Title = AL["Azuregos"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["DLethon"] = {
 		Title = AL["Lethon"];
@@ -3465,7 +3467,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Taerar"];
 		Prev_Page = "DEmeriss";
 		Prev_Title = AL["Emeriss"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["DTaerar"] = {
 		Title = AL["Taerar"];
@@ -3473,7 +3476,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Ysondre"];
 		Prev_Page = "DLethon";
 		Prev_Title = AL["Lethon"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["DYsondre"] = {
 		Title = AL["Ysondre"];
@@ -3481,7 +3485,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Lord Kazzak"];
 		Prev_Page = "DTaerar";
 		Prev_Title = AL["Taerar"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["KKazzak"] = {
 		Title = AL["Lord Kazzak"];
@@ -3489,14 +3494,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Nerubian Overseer"];
 		Prev_Page = "DYsondre";
 		Prev_Title = AL["Ysondre"];
-		Back_Page = "WORLDBOSSMENU"
-	};
-	["Turtlhu"] = {
-		Title = AL["Turtlhu, the Black Turtle of Doom"];
-		Next_Page = "Nerubian";
-		Next_Title = AL["Nerubian Overseer"];
-		Prev_Page = "KKazzak";
-		Prev_Title = AL["Lord Kazzak"];
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["Nerubian"] = {
 		Title = AL["Nerubian Overseer"];
@@ -3504,7 +3503,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Dark Reaver of Karazhan"];
 		Prev_Page = "KKazzak";
 		Prev_Title = AL["Lord Kazzak"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["Reaver"] = {
 		Title = AL["Dark Reaver of Karazhan"];
@@ -3512,7 +3512,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Ostarius"];
 		Prev_Page = "Nerubian";
 		Prev_Title = AL["Nerubian Overseer"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["Ostarius"] = {
 		Title = AL["Ostarius"];
@@ -3520,7 +3521,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Concavius"];
 		Prev_Page = "Reaver";
 		Prev_Title = AL["Dark Reaver of Karazhan"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["Concavius"] = {
 		Title = AL["Concavius"];
@@ -3528,7 +3530,8 @@ AtlasLoot_ButtonRegistry = {
 		Next_Title = AL["Moo"];
 		Prev_Page = "Ostarius";
 		Prev_Title = AL["Ostarius"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["CowKing"] = {
 		Title = AL["Moo"];
@@ -3536,13 +3539,15 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Title = AL["Concavius"];
 		Next_Page = "Clackora";
 		Next_Title = AL["Cla'ckora"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	["Clackora"] = {
 		Title = AL["Cla'ckora"];
 		Prev_Page = "CowKing";
 		Prev_Title = AL["Moo"];
-		Back_Page = "WORLDBOSSMENU"
+		Back_Page = "WORLDBOSSMENU",
+		Back_Title = AL["World Bosses"]
 	};
 	--Rare Spawns
 	["EarthcallerRezengal"] = {
@@ -3793,8 +3798,6 @@ AtlasLoot_ButtonRegistry = {
 		Prev_Page = "WidowoftheWoods";
 		Prev_Title = AL["Widow of the Woods"];
 	};
-
-
 	--WoW Factions
 	["Argent1"] = {
 		Title = AL["Argent Dawn"] .. ": " .. AL["Token Hand-Ins"];

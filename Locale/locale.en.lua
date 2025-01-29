@@ -1284,7 +1284,6 @@ AL:RegisterTranslations("enUS", function() return {
 	["Ysondre"] = true,
 	["Moo"] = true,
 	["Nerubian Overseer"] = true,
-	["Turtlhu, the Black Turtle of Doom"] = true,
 	["Dark Reaver of Karazhan"] = true,
 	["Ostarius"] = true,
 	["Concavius"] = true,
@@ -1609,5 +1608,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["Tier 3.5"] = true,
 	["Karazhan Sets"] = true,
 	["Cla'ckora"] = true,
-	} 
+	["Hinterlands"] = true,
+	["Duskwood"] = true,
+	}
 end)

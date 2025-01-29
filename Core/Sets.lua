@@ -3,21 +3,20 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 local ORANGE = "|cffFF8400";
 local data = AtlasLoot_Data["AtlasLootSetItems"]
 
-local classCoords = {
-	["warrior"] = { 0, 0.25, 0, 0.25 },
-	["mage"] = { 0.25, 0.5, 0, 0.25 },
-	["rogue"] = { 0.5, 0.745, 0, 0.25 },
-	["druid"] = { 0.75, 0.99, 0, 0.25 },
-	["hunter"] = { 0, 0.25, 0.25, 0.5 },
-	["shaman"] = { 0.25, 0.50, 0.25, 0.5 },
-	["priest"] = { 0.50, 0.75, 0.25, 0.5 },
-	["warlock"] = { 0.75, 0.99, 0.25, 0.5 },
-	["paladin"] = { 0, 0.25, 0.5, 0.75 },
-}
-
-function AtlasLoot_SetClassIcon(object, class)
-	object:SetTexture("Interface\\Glues\\CharacterCreate\\UI-CharacterCreate-Classes")
-	object:SetTexCoord(unpack(classCoords[class]))
+function AtlasLoot_GetDataSource(dataID)
+	local source = nil
+	for k in pairs(AtlasLoot_Data) do
+		if source then
+			break
+		end
+		for i in pairs(AtlasLoot_Data[k]) do
+			if i == dataID then
+				source = k
+				break
+			end
+		end
+	end
+	return source
 end
 
 function AtlasLoot_PrepMenu(backPage, title)
@@ -26,10 +25,12 @@ function AtlasLoot_PrepMenu(backPage, title)
 		getglobal("AtlasLootItem_" .. i.."Border"):Hide()
 	end
 	for i = 1, 30, 1 do
+		local button = getglobal("AtlasLootMenuItem_" .. i)
 		getglobal("AtlasLootMenuItem_" .. i.."Border"):Hide()
-		getglobal("AtlasLootMenuItem_" .. i):Hide();
-		getglobal("AtlasLootMenuItem_" .. i).isheader = false;
-		getglobal("AtlasLootMenuItem_" .. i).container = nil
+		button:Hide();
+		button.isheader = false;
+		button.container = nil
+		button.dataSource = nil
 		getglobal("AtlasLootMenuItem_" .. i .. "_Icon"):SetTexCoord(0, 1, 0, 1)
 	end
 	if backPage then
@@ -279,7 +280,9 @@ function AtlasLootPRE60SetMenu()
 	AtlasLootMenuItem_23.container = data.SpiritofEskhandarC
 	AtlasLootMenuItem_23:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -290,63 +293,63 @@ function AtlasLootZGSetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest")
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest")
 	AtlasLootMenuItem_3.lootpage = "ZGPriest";
 	AtlasLootMenuItem_3.container = data.ZGPriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage = "ZGMage";
 	AtlasLootMenuItem_4.container = data.ZGMageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "ZGWarlock";
 	AtlasLootMenuItem_5.container = data.ZGWarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue")
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue")
 	AtlasLootMenuItem_6.lootpage = "ZGRogue";
 	AtlasLootMenuItem_6.container = data.ZGRogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid")
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid")
 	AtlasLootMenuItem_7.lootpage = "ZGDruid";
 	AtlasLootMenuItem_7.container = data.ZGDruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter")
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter")
 	AtlasLootMenuItem_18.lootpage = "ZGHunter";
 	AtlasLootMenuItem_18.container = data.ZGHunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "ZGShaman";
 	AtlasLootMenuItem_19.container = data.ZGShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin")
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin")
 	AtlasLootMenuItem_20.lootpage = "ZGPaladin";
 	AtlasLootMenuItem_20.container = data.ZGPaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior")
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior")
 	AtlasLootMenuItem_21.lootpage = "ZGWarrior";
 	AtlasLootMenuItem_21.container = data.ZGWarriorC
 	AtlasLootMenuItem_21:Show();
@@ -372,7 +375,9 @@ function AtlasLootZGSetMenu()
 	AtlasLootMenuItem_25.container = data.HakkariBladesC
 	AtlasLootMenuItem_25:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -383,68 +388,70 @@ function AtlasLootAQ40SetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest")
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest")
 	AtlasLootMenuItem_3.lootpage = "AQ40Priest";
 	AtlasLootMenuItem_3.container = data.AQ40PriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage = "AQ40Mage";
 	AtlasLootMenuItem_4.container = data.AQ40MageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "AQ40Warlock";
 	AtlasLootMenuItem_5.container = data.AQ40WarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue");
 	AtlasLootMenuItem_6.lootpage = "AQ40Rogue";
 	AtlasLootMenuItem_6.container = data.AQ40RogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid");
 	AtlasLootMenuItem_7.lootpage = "AQ40Druid";
 	AtlasLootMenuItem_7.container = data.AQ40DruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter");
 	AtlasLootMenuItem_18.lootpage = "AQ40Hunter";
 	AtlasLootMenuItem_18.container = data.AQ40HunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "AQ40Shaman";
 	AtlasLootMenuItem_19.container = data.AQ40ShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin");
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin");
 	AtlasLootMenuItem_20.lootpage = "AQ40Paladin";
 	AtlasLootMenuItem_20.container = data.AQ40PaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior");
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior");
 	AtlasLootMenuItem_21.lootpage = "AQ40Warrior";
 	AtlasLootMenuItem_21.container = data.AQ40WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -455,68 +462,70 @@ function AtlasLootAQ20SetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest");
 	AtlasLootMenuItem_3.lootpage = "AQ20Priest";
 	AtlasLootMenuItem_3.container = data.AQ20PriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage = "AQ20Mage";
 	AtlasLootMenuItem_4.container = data.AQ20MageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "AQ20Warlock";
 	AtlasLootMenuItem_5.container = data.AQ20WarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue");
 	AtlasLootMenuItem_6.lootpage = "AQ20Rogue";
 	AtlasLootMenuItem_6.container = data.AQ20RogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid");
 	AtlasLootMenuItem_7.lootpage = "AQ20Druid";
 	AtlasLootMenuItem_7.container = data.AQ20DruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter");
 	AtlasLootMenuItem_18.lootpage = "AQ20Hunter";
 	AtlasLootMenuItem_18.container = data.AQ20HunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "AQ20Shaman";
 	AtlasLootMenuItem_19.container = data.AQ20ShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin");
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin");
 	AtlasLootMenuItem_20.lootpage = "AQ20Paladin";
 	AtlasLootMenuItem_20.container = data.AQ20PaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior");
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior");
 	AtlasLootMenuItem_21.lootpage = "AQ20Warrior";
 	AtlasLootMenuItem_21.container = data.AQ20WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -527,68 +536,70 @@ function AtlasLootT0SetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest");
 	AtlasLootMenuItem_3.lootpage = "T0Priest";
 	AtlasLootMenuItem_3.container = data.T0PriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage");
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage");
 	AtlasLootMenuItem_4.lootpage = "T0Mage";
 	AtlasLootMenuItem_4.container = data.T0MageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "T0Warlock";
 	AtlasLootMenuItem_5.container = data.T0WarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue")
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue")
 	AtlasLootMenuItem_6.lootpage = "T0Rogue";
 	AtlasLootMenuItem_6.container = data.T0RogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid")
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid")
 	AtlasLootMenuItem_7.lootpage = "T0Druid";
 	AtlasLootMenuItem_7.container = data.T0DruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter")
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter")
 	AtlasLootMenuItem_18.lootpage = "T0Hunter";
 	AtlasLootMenuItem_18.container = data.T0HunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "T0Shaman";
 	AtlasLootMenuItem_19.container = data.T0ShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin")
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin")
 	AtlasLootMenuItem_20.lootpage = "T0Paladin";
 	AtlasLootMenuItem_20.container = data.T0PaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior")
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior")
 	AtlasLootMenuItem_21.lootpage = "T0Warrior";
 	AtlasLootMenuItem_21.container = data.T0WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -599,68 +610,70 @@ function AtlasLootT1SetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest");
 	AtlasLootMenuItem_3.lootpage = "T1Priest";
 	AtlasLootMenuItem_3.container = data.T1PriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage = "T1Mage";
 	AtlasLootMenuItem_4.container = data.T1MageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "T1Warlock";
 	AtlasLootMenuItem_5.container = data.T1WarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue");
 	AtlasLootMenuItem_6.lootpage = "T1Rogue";
 	AtlasLootMenuItem_6.container = data.T1RogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid");
 	AtlasLootMenuItem_7.lootpage = "T1Druid";
 	AtlasLootMenuItem_7.container = data.T1DruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter");
 	AtlasLootMenuItem_18.lootpage = "T1Hunter";
 	AtlasLootMenuItem_18.container = data.T1HunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "T1Shaman";
 	AtlasLootMenuItem_19.container = data.T1ShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin");
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin");
 	AtlasLootMenuItem_20.lootpage = "T1Paladin";
 	AtlasLootMenuItem_20.container = data.T1PaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior");
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior");
 	AtlasLootMenuItem_21.lootpage = "T1Warrior";
 	AtlasLootMenuItem_21.container = data.T1WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -671,68 +684,70 @@ function AtlasLootT2SetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest");
 	AtlasLootMenuItem_3.lootpage = "T2Priest";
 	AtlasLootMenuItem_3.container = data.T2PriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage = "T2Mage";
 	AtlasLootMenuItem_4.container = data.T2MageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "T2Warlock";
 	AtlasLootMenuItem_5.container = data.T2WarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue");
 	AtlasLootMenuItem_6.lootpage = "T2Rogue";
 	AtlasLootMenuItem_6.container = data.T2RogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid");
 	AtlasLootMenuItem_7.lootpage = "T2Druid";
 	AtlasLootMenuItem_7.container = data.T2DruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter");
 	AtlasLootMenuItem_18.lootpage = "T2Hunter";
 	AtlasLootMenuItem_18.container = data.T2HunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "T2Shaman";
 	AtlasLootMenuItem_19.container = data.T2ShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin");
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin");
 	AtlasLootMenuItem_20.lootpage = "T2Paladin";
 	AtlasLootMenuItem_20.container = data.T2PaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior");
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior");
 	AtlasLootMenuItem_21.lootpage = "T2Warrior";
 	AtlasLootMenuItem_21.container = data.T2WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -743,68 +758,70 @@ function AtlasLootT3SetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest");
 	AtlasLootMenuItem_3.lootpage = "T3Priest";
 	AtlasLootMenuItem_3.container = data.T3PriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage = "T3Mage";
 	AtlasLootMenuItem_4.container = data.T3MageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "T3Warlock";
 	AtlasLootMenuItem_5.container = data.T3WarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue");
 	AtlasLootMenuItem_6.lootpage = "T3Rogue";
 	AtlasLootMenuItem_6.container = data.T3RogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid");
 	AtlasLootMenuItem_7.lootpage = "T3Druid";
 	AtlasLootMenuItem_7.container = data.T3DruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter");
 	AtlasLootMenuItem_18.lootpage = "T3Hunter";
 	AtlasLootMenuItem_18.container = data.T3HunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "T3Shaman";
 	AtlasLootMenuItem_19.container = data.T3ShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin");
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin");
 	AtlasLootMenuItem_20.lootpage = "T3Paladin";
 	AtlasLootMenuItem_20.container = data.T3PaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior");
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior");
 	AtlasLootMenuItem_21.lootpage = "T3Warrior";
 	AtlasLootMenuItem_21.container = data.T3WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end
@@ -815,68 +832,70 @@ function AtlasLoot_Kara40SetMenu()
 	--Priest
 	AtlasLootMenuItem_3_Name:SetText("|cffffffff" .. AL["Priest"]);
 	AtlasLootMenuItem_3_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_3_Icon, "priest");
+	AtlasLootMenuItem_3_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\priest");
 	AtlasLootMenuItem_3.lootpage = "T35Priest";
 	AtlasLootMenuItem_3.container = data.T35PriestC
 	AtlasLootMenuItem_3:Show();
 	--Mage
 	AtlasLootMenuItem_4_Name:SetText("|cff68ccef" .. AL["Mage"]);
 	AtlasLootMenuItem_4_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_4_Icon, "mage")
+	AtlasLootMenuItem_4_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\mage")
 	AtlasLootMenuItem_4.lootpage = "T35Mage";
 	AtlasLootMenuItem_4.container = data.T35MageC
 	AtlasLootMenuItem_4:Show();
 	--Warlock
 	AtlasLootMenuItem_5_Name:SetText("|cff9382c9" .. AL["Warlock"]);
 	AtlasLootMenuItem_5_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_5_Icon, "warlock")
+	AtlasLootMenuItem_5_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warlock")
 	AtlasLootMenuItem_5.lootpage = "T35Warlock";
 	AtlasLootMenuItem_5.container = data.T35WarlockC
 	AtlasLootMenuItem_5:Show();
 	--Rogue
 	AtlasLootMenuItem_6_Name:SetText("|cfffff468" .. AL["Rogue"]);
 	AtlasLootMenuItem_6_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_6_Icon, "rogue");
+	AtlasLootMenuItem_6_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\rogue");
 	AtlasLootMenuItem_6.lootpage = "T35Rogue";
 	AtlasLootMenuItem_6.container = data.T35RogueC
 	AtlasLootMenuItem_6:Show();
 	--Druid
 	AtlasLootMenuItem_7_Name:SetText("|cffff7c0a" .. AL["Druid"]);
 	AtlasLootMenuItem_7_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_7_Icon, "druid");
+	AtlasLootMenuItem_7_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\druid");
 	AtlasLootMenuItem_7.lootpage = "T35Druid";
 	AtlasLootMenuItem_7.container = data.T35DruidC
 	AtlasLootMenuItem_7:Show();
 	--Hunter
 	AtlasLootMenuItem_18_Name:SetText("|cffaad372" .. AL["Hunter"]);
 	AtlasLootMenuItem_18_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_18_Icon, "hunter");
+	AtlasLootMenuItem_18_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\hunter");
 	AtlasLootMenuItem_18.lootpage = "T35Hunter";
 	AtlasLootMenuItem_18.container = data.T35HunterC
 	AtlasLootMenuItem_18:Show();
 	--Shaman
 	AtlasLootMenuItem_19_Name:SetText("|cff2773ff" .. AL["Shaman"]);
 	AtlasLootMenuItem_19_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_19_Icon, "shaman")
+	AtlasLootMenuItem_19_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\shaman")
 	AtlasLootMenuItem_19.lootpage = "T35Shaman";
 	AtlasLootMenuItem_19.container = data.T35ShamanC
 	AtlasLootMenuItem_19:Show();
 	--Paladin
 	AtlasLootMenuItem_20_Name:SetText("|cfff48cba" .. AL["Paladin"]);
 	AtlasLootMenuItem_20_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_20_Icon, "paladin");
+	AtlasLootMenuItem_20_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\paladin");
 	AtlasLootMenuItem_20.lootpage = "T35Paladin";
 	AtlasLootMenuItem_20.container = data.T35PaladinC
 	AtlasLootMenuItem_20:Show();
 	--Warrior
 	AtlasLootMenuItem_21_Name:SetText("|cffc69b6d" .. AL["Warrior"]);
 	AtlasLootMenuItem_21_Extra:SetText("");
-	AtlasLoot_SetClassIcon(AtlasLootMenuItem_21_Icon, "warrior");
+	AtlasLootMenuItem_21_Icon:SetTexture("Interface\\AddOns\\AtlasLoot\\Images\\warrior");
 	AtlasLootMenuItem_21.lootpage = "T35Warrior";
 	AtlasLootMenuItem_21.container = data.T35WarriorC
 	AtlasLootMenuItem_21:Show();
 	for i = 1, 30 do
-		if getglobal("AtlasLootMenuItem_"..i).container then
+		local button = getglobal("AtlasLootMenuItem_" .. i)
+		button.dataSource = AtlasLoot_GetDataSource(button.lootpage)
+		if button.container then
 			getglobal("AtlasLootMenuItem_"..i.."Border"):Show()
 		end
 	end

@@ -4,6 +4,7 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 -- Text replacement function
 --------------------------------------------------------------------------------
 function AtlasLoot_FixText(text)
+	local gsub = string.gsub
 	--Armour class
 	text = gsub(text, "#a1#", AL["Cloth"]);
 	text = gsub(text, "#a2#", AL["Leather"]);
@@ -150,7 +151,6 @@ function AtlasLoot_FixText(text)
 	text = gsub(text, "#st4#", AL["Mijan"]);
 	text = gsub(text, "#st5#", AL["Zolo"]);
 	text = gsub(text, "#st6#", AL["Zul'Lor"]);
-
 
 	-- Misc phrases and mod specific stuff
 	text = gsub(text, "#m1#", AL["Classes"]);
@@ -653,14 +653,14 @@ function AtlasLoot_FixText(text)
 	text = gsub(text, "#z5#", AL["UBRS"]);
 	
 	--Currency Icons
-	text = gsub(text, "#gold#", "Interface\\AddOns\\AtlasLoot\\Images\\gold");
-	text = gsub(text, "#silver#", "Interface\\AddOns\\AtlasLoot\\Images\\silver");
-	text = gsub(text, "#copper#", "Interface\\AddOns\\AtlasLoot\\Images\\bronze");
-	text = gsub(text, "#wsg#", "Interface\\Icons\\INV_Misc_Rune_07");
-	text = gsub(text, "#ab#", "Interface\\Icons\\INV_Jewelry_Amulet_07");
-	text = gsub(text, "#av#", "Interface\\Icons\\INV_Jewelry_Necklace_21");
-	text = gsub(text, "#horde#", "Interface\\AddOns\\AtlasLoot\\Images\\Horde");
-	text = gsub(text, "#alliance#", "Interface\\AddOns\\AtlasLoot\\Images\\Alliance");
+	-- text = gsub(text, "#gold#", "Interface\\AddOns\\AtlasLoot\\Images\\gold");
+	-- text = gsub(text, "#silver#", "Interface\\AddOns\\AtlasLoot\\Images\\silver");
+	-- text = gsub(text, "#copper#", "Interface\\AddOns\\AtlasLoot\\Images\\bronze");
+	-- text = gsub(text, "#wsg#", "Interface\\Icons\\INV_Misc_Rune_07");
+	-- text = gsub(text, "#ab#", "Interface\\Icons\\INV_Jewelry_Amulet_07");
+	-- text = gsub(text, "#av#", "Interface\\Icons\\INV_Jewelry_Necklace_21");
+	-- text = gsub(text, "#horde#", "Interface\\AddOns\\AtlasLoot\\Images\\Horde");
+	-- text = gsub(text, "#alliance#", "Interface\\AddOns\\AtlasLoot\\Images\\Alliance");
 	text = gsub(text, "#darkmoon#", "Interface\\Icons\\INV_Misc_Ticket_Darkmoon_01");
 	text = gsub(text, "#ccombat#", "Interface\\Icons\\INV_Jewelry_Talisman_06");
 	text = gsub(text, "#ctactical#", "Interface\\Icons\\INV_Jewelry_Amulet_02");

@@ -546,6 +546,10 @@
 					<OnClick>
 						AtlasLoot_ShowWishList();
 						CloseDropDownMenus();
+						AtlasLootDefaultFrame_SubMenu:Disable()
+						AtlasLootDefaultFrame_SelectedTable:Hide()
+						AtlasLootQuickLooksButton:Hide()
+						AtlasLoot_QuickLooks:Hide()
 					</OnClick>
 					<OnShow>
 						local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
