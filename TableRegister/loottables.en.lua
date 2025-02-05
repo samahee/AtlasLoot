@@ -396,7 +396,7 @@ AtlasLoot_TableNames = {
 	["SWVBlackBride"] = { AL["Stormwind Vault"].." - "..AL["Black Bride"], "AtlasLootItems" },
 	["SWVDamian"] = { AL["Stormwind Vault"].." - "..AL["Damian"], "AtlasLootItems" },
 	["SWVVolkanCruelblade"] = { AL["Stormwind Vault"].." - "..AL["Volkan Cruelblade"], "AtlasLootItems" },
-	["SWVVaultArmoryEquipment"] = { AL["Stormwind Vault"].." - "..AL["Arc'tiras / Vault Armory Equipment"], "AtlasLootItems" },
+	["SWVVaultArmoryEquipment"] = { AL["Stormwind Vault"].." - "..AL["Arc'tiras"], "AtlasLootItems" },
 	["SWVTrash"] = { AL["Stormwind Vault"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	--Temple of Ahn'Qiraj
 	["AQ40Skeram"] = { AL["Temple of Ahn'Qiraj"].." - "..AL["The Prophet Skeram"], "AtlasLootItems" },
@@ -494,7 +494,6 @@ AtlasLoot_TableNames = {
 	--Emerald Sanctum
 	["ESErennius"] = { AL["Emerald Sanctum"].." - "..AL["Erennius"], "AtlasLootItems" },
 	["ESSolnius1"] = { AL["Emerald Sanctum"].." - "..AL["Solnius the Awakener"], "AtlasLootItems" },
-	["ESSolnius2"] = { AL["Emerald Sanctum"].." - "..AL["Solnius the Awakener"], "AtlasLootItems" },
 	["ESHardMode"] = { AL["Emerald Sanctum"].." - "..AL["Favor of Erennius"], "AtlasLootItems" },
 	["ESTrash"] = { AL["Emerald Sanctum"].." - "..AL["Trash Mobs"], "AtlasLootItems" },
 	--Lower Karazhan Halls
@@ -1200,7 +1199,7 @@ AtlasLoot_TableNamesBoss = {
 		["SWVBlackBride"] = { AL["Black Bride"], "AtlasLootItems" },
 		["SWVDamian"] = { AL["Damian"], "AtlasLootItems" },
 		["SWVVolkanCruelblade"] = { AL["Volkan Cruelblade"], "AtlasLootItems" },
-		["SWVVaultArmoryEquipment"] = { AL["Arc'tiras / Vault Armory Equipment"], "AtlasLootItems" },
+		["SWVVaultArmoryEquipment"] = { AL["Arc'tiras"], "AtlasLootItems" },
 		["SWVTrash"] = { AL["Trash Mobs"], "AtlasLootItems" },
 	},
 	["The Deadmines"] = {
@@ -1592,7 +1591,6 @@ AtlasLoot_TableNamesBoss = {
 	["Emerald Sanctum"] = {
 		["ESErennius"] = { AL["Erennius"], "AtlasLootItems" },
 		["ESSolnius1"] = { AL["Solnius the Awakener"], "AtlasLootItems" },
-		["ESSolnius2"] = { AL["Solnius the Awakener (Page 2)"], "AtlasLootItems" },
 		["ESHardMode"] = { AL["Favor of Erennius (ES Hard Mode)"], "AtlasLootItems" },
 		["ESTrash"] = { AL["Trash Mobs"], "AtlasLootItems" },
 	},

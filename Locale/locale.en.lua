@@ -884,7 +884,7 @@ AL:RegisterTranslations("enUS", function() return {
 	["Black Bride"] = true,
 	["Damian"] = true,
 	["Volkan Cruelblade"] = true,
-	["Arc'tiras / Vault Armory Equipment"] = true,
+	["Arc'tiras"] = true,
 	["[17-24] The Deadmines"] = "|cffffffff[17-24]|cffffd200 The Deadmines",
 	["The Deadmines"] = true,
 	["Pusillin"] = true,

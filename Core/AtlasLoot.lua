@@ -2416,7 +2416,7 @@ AtlasLoot_HewdropDown_SubTables = {
 		{ AL["Black Bride"], "SWVBlackBride" },
 		{ AL["Damian"], "SWVDamian" },
 		{ AL["Volkan Cruelblade"], "SWVVolkanCruelblade" },
-		{ AL["Arc'tiras / Vault Armory Equipment"], "SWVVaultArmoryEquipment" },
+		{ AL["Arc'tiras"], "SWVVaultArmoryEquipment" },
 		{ AL["Trash Mobs"], "SWVTrash" },
 	},
 	["BlackwingLair"] = {
@@ -2781,7 +2781,6 @@ AtlasLoot_HewdropDown_SubTables = {
 	["EmeraldSanctum"] = {
 		{ AL["Erennius"], "ESErennius" },
 		{ AL["Solnius the Awakener"], "ESSolnius1" },
-		{ AL["Solnius the Awakener (Page 2)"], "ESSolnius2" },
 		{ AL["Favor of Erennius (ES Hard Mode)"], "ESHardMode" },
 		{ AL["Trash Mobs"], "ESTrash" },
 	},
@@ -3298,6 +3297,7 @@ function AtlasLootItem_OnEnter()
 			if ( AtlasLootCharDB.ItemIDs ) then
 				if spellID < 100000 then
 					AtlasLootTooltip:AddLine(AL["SpellID:"].." "..spellID, nil, nil, nil, 1);
+				-- Mining spells HACK
 				elseif spellID >= 100000 and spellID <= 100005 then
 					AtlasLootTooltip:AddLine(AL["SpellID:"].." 2575", nil, nil, nil, 1);
 				elseif spellID >= 100006 and spellID <= 100007 then

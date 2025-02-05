@@ -21163,7 +21163,7 @@ GetSpellInfoAtlasLootDB = {
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {2592, 3},
+				[1] = {4306, 3},
 				[2] = {2838, 3},
 			},
 		},
@@ -21734,8 +21734,8 @@ GetSpellInfoAtlasLootDB = {
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {4306, 4},
-				[2] = {7912, 4},
+				[1] = {4338, 3},
+				[2] = {7912, 3},
 			},
 		},
 		[41233] = {
@@ -21749,6 +21749,7 @@ GetSpellInfoAtlasLootDB = {
 			["craftQuantityMax"] = "",
 			["reagents"] = {
 				[1] = {7911, 2},
+				[2] = {6037 ,2}
 			},
 		},
 		[41237] = {
@@ -21761,8 +21762,8 @@ GetSpellInfoAtlasLootDB = {
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {3858, 4},
-				[2] = {55153, 4},
+				[1] = {3858, 3},
+				[2] = {55153, 3},
 			},
 		},
 		[41601] = {
@@ -22283,8 +22284,8 @@ GetSpellInfoAtlasLootDB = {
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {10620, 5},
-				[2] = {55154, 5},
+				[1] = {10620, 3},
+				[2] = {55154, 3},
 			},
 		},
 		[41087] = {
@@ -22394,8 +22395,8 @@ GetSpellInfoAtlasLootDB = {
 			["craftQuantityMin"] = "",
 			["craftQuantityMax"] = "",
 			["reagents"] = {
-				[1] = {14047, 5},
-				[2] = {12365, 5},
+				[1] = {14047, 3},
+				[2] = {12365, 3},
 			},
 		},
 		[41714] = {

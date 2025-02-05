@@ -750,14 +750,14 @@ AtlasLoot_ButtonRegistry = {
 	["SWVVolkanCruelblade"] = {
 		Title = AL["Volkan Cruelblade"];
 		Next_Page = "SWVVaultArmoryEquipment";
-		Next_Title = AL["Arc'tiras / Vault Armory Equipment"];
+		Next_Title = AL["Arc'tiras"];
 		Prev_Page = "SWVDamian";
 		Prev_Title = AL["Damian"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
 	["SWVVaultArmoryEquipment"] = {
-		Title = AL["Arc'tiras / Vault Armory Equipment"];
+		Title = AL["Arc'tiras"];
 		Prev_Page = "SWVVolkanCruelblade";
 		Prev_Title = AL["Volkan Cruelblade"];
 		Next_Page = "SWVTrash";
@@ -768,7 +768,7 @@ AtlasLoot_ButtonRegistry = {
 	["SWVTrash"] = {
 		Title = AL["Trash Mobs"];
 		Prev_Page = "SWVVaultArmoryEquipment";
-		Prev_Title = AL["Arc'tiras / Vault Armory Equipment"];
+		Prev_Title = AL["Arc'tiras"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -3337,19 +3337,10 @@ AtlasLoot_ButtonRegistry = {
 	};
 	["ESSolnius1"] = {
 		Title = AL["Solnius the Awakener"];
-		Next_Page = "ESSolnius2";
-		Next_Title = AL["Solnius the Awakener (Page 2)"];
-		Prev_Page = "ESErennius";
-		Prev_Title = AL["Erennius"];
-		Back_Page = "DUNGEONSMENU2";
-		Back_Title = AL["Dungeons & Raids"];
-	};
-	["ESSolnius2"] = {
-		Title = AL["Solnius the Awakener (Page 2)"];
 		Next_Page = "ESHardMode";
 		Next_Title = AL["Favor of Erennius (ES Hard Mode)"];
-		Prev_Page = "ESSolnius1";
-		Prev_Title = AL["Solnius the Awakener"];
+		Prev_Page = "ESErennius";
+		Prev_Title = AL["Erennius"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
 	};
@@ -3357,7 +3348,7 @@ AtlasLoot_ButtonRegistry = {
 		Title = AL["Favor of Erennius (ES Hard Mode)"];
 		Next_Page = "ESTrash";
 		Next_Title = AL["Trash Mobs"];
-		Prev_Page = "ESSolnius2";
+		Prev_Page = "ESSolnius1";
 		Prev_Title = AL["Solnius the Awakener"];
 		Back_Page = "DUNGEONSMENU2";
 		Back_Title = AL["Dungeons & Raids"];
