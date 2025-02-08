@@ -665,6 +665,7 @@ AtlasLootBossButtons = {
 		"SWVDamian";
 		"SWVVolkanCruelblade";
 		"SWVVaultArmoryEquipment";
+		"";
 		"SWVTrash";
 	};
 	HateforgeQuarry = {
