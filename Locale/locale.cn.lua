@@ -1,4 +1,4 @@
-﻿-- [[
+-- [[
 -- Last Updated: 7/9/2008
 -- Initial translation by: 560889223
 -- Maintained by: Diablohu

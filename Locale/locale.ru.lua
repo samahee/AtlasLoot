@@ -1,4 +1,4 @@
-﻿-- Translation by StingerSoft (Eritnull aka Шептун)
+-- Translation by StingerSoft (Eritnull aka Шептун)
 local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 AL:RegisterTranslations("ruRU", function() return {

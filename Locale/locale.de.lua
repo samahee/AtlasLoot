@@ -1,4 +1,4 @@
-﻿local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
+local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 
 AL:RegisterTranslations("deDE", function() return {
 	--Text strings for UI objects

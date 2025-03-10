@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 -- Translated and maintained by Arith Hsu (arithmandarjp at yahoo.co.jp)
 -- Last Updated: Mar. 25, 2008
 --]]

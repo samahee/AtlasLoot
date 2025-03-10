@@ -4,690 +4,690 @@ local AL = AceLibrary("AceLocale-2.2"):new("AtlasLoot");
 GetSpellInfoAtlasLootDB = {
 	["enchants"] = {
 		[41758] = {
-			["name"] = "마법이 부여된 보석 오일",
+			["name"] = "Enchanted Gemstone Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_14",
 			["item"] = 55248,
 		},
 		[7418] = {
-			["name"] = "손목보호구 마법부여 - 최하급 생명력",
+			["name"] = "Enchant Bracer - Minor Health",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7420] = {
-			["name"] = "가슴보호구 마법부여 - 최하급 생명력",
+			["name"] = "Enchant Chest - Minor Health",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7421] = {
-			["name"] = "룬문자 구리마법막대",
+			["name"] = "Runed Copper Rod",
 			["icon"] = "Interface\\Icons\\INV_Staff_Goldfeathered_01",
 			["item"] = 6218,
 		},
 		[7426] = {
-			["name"] = "가슴보호구 마법부여 - 최하급 흡수",
+			["name"] = "Enchant Chest - Minor Absorption",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7428] = {
-			["name"] = "손목보호구 마법부여 - 최하급 회피",
+			["name"] = "Enchant Bracer - Minor Deflection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7443] = {
-			["name"] = "가슴보호구 마법부여 - 최하급 마나",
+			["name"] = "Enchant Chest - Minor Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7454] = {
-			["name"] = "망토 마법부여 - 최하급 저항력",
+			["name"] = "Enchant Cloak - Minor Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7457] = {
-			["name"] = "손목보호구 마법부여 - 최하급 체력",
+			["name"] = "Enchant Bracer - Minor Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7745] = {
-			["name"] = "양손 무기 마법부여 - 최하급 충격",
+			["name"] = "Enchant 2H Weapon - Minor Impact",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7748] = {
-			["name"] = "가슴보호구 마법부여 - 하급 생명력",
+			["name"] = "Enchant Chest - Lesser Health",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7766] = {
-			["name"] = "손목보호구 마법부여 - 최하급 정신력",
+			["name"] = "Enchant Bracer - Minor Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7771] = {
-			["name"] = "망토 마법부여 - 최하급 보호",
+			["name"] = "Enchant Cloak - Minor Protection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7776] = {
-			["name"] = "가슴보호구 마법부여 - 하급 마나",
+			["name"] = "Enchant Chest - Lesser Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7779] = {
-			["name"] = "손목보호구 마법부여 - 최하급 민첩성",
+			["name"] = "Enchant Bracer - Minor Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7782] = {
-			["name"] = "손목보호구 마법부여 - 최하급 힘",
+			["name"] = "Enchant Bracer - Minor Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7786] = {
-			["name"] = "무기 마법부여 - 최하급 야수 사냥 전문화",
+			["name"] = "Enchant Weapon - Minor Beastslayer",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7788] = {
-			["name"] = "무기 마법부여 - 최하급 공격력",
+			["name"] = "Enchant Weapon - Minor Striking",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7793] = {
-			["name"] = "양손 무기 마법부여 - 하급 지능",
+			["name"] = "Enchant 2H Weapon - Lesser Intellect",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7795] = {
-			["name"] = "룬문자 은마법막대",
+			["name"] = "Runed Silver Rod",
 			["icon"] = "Interface\\Icons\\INV_Staff_01",
 			["item"] = 6339,
 		},
 		[7857] = {
-			["name"] = "가슴보호구 마법부여 - 생명력",
+			["name"] = "Enchant Chest - Health",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7859] = {
-			["name"] = "손목보호구 마법부여 - 하급 정신력",
+			["name"] = "Enchant Bracer - Lesser Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7861] = {
-			["name"] = "망토 마법부여 - 하급 화염 저항력",
+			["name"] = "Enchant Cloak - Lesser Fire Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7863] = {
-			["name"] = "장화 마법부여 - 최하급 체력",
+			["name"] = "Enchant Boots - Minor Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[7867] = {
-			["name"] = "장화 마법부여 - 최하급 민첩성",
+			["name"] = "Enchant Boots - Minor Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13378] = {
-			["name"] = "방패 마법부여 - 최하급 체력",
+			["name"] = "Enchant Shield - Minor Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13380] = {
-			["name"] = "양손 무기 마법부여 - 하급 정신력",
+			["name"] = "Enchant 2H Weapon - Lesser Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13419] = {
-			["name"] = "망토 마법부여 - 최하급 민첩성",
+			["name"] = "Enchant Cloak - Minor Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13421] = {
-			["name"] = "망토 마법부여 - 하급 보호",
+			["name"] = "Enchant Cloak - Lesser Protection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13464] = {
-			["name"] = "방패 마법부여 - 하급 보호",
+			["name"] = "Enchant Shield - Lesser Protection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13485] = {
-			["name"] = "방패 마법부여 - 하급 정신력",
+			["name"] = "Enchant Shield - Lesser Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13501] = {
-			["name"] = "손목보호구 마법부여 - 하급 체력",
+			["name"] = "Enchant Bracer - Lesser Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13503] = {
-			["name"] = "무기 마법부여 - 하급 공격력",
+			["name"] = "Enchant Weapon - Lesser Striking",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13522] = {
-			["name"] = "망토 마법부여 - 하급 암흑 저항력",
+			["name"] = "Enchant Cloak - Lesser Shadow Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13529] = {
-			["name"] = "양손 무기 마법부여 - 하급 충격",
+			["name"] = "Enchant 2H Weapon - Lesser Impact",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13536] = {
-			["name"] = "손목보호구 마법부여 - 하급 힘",
+			["name"] = "Enchant Bracer - Lesser Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13538] = {
-			["name"] = "가슴보호구 마법부여 - 하급 흡수",
+			["name"] = "Enchant Chest - Lesser Absorption",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13607] = {
-			["name"] = "가슴보호구 마법부여 - 마나",
+			["name"] = "Enchant Chest - Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13612] = {
-			["name"] = "장갑 마법부여 - 채광",
+			["name"] = "Enchant Gloves - Mining",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13617] = {
-			["name"] = "장갑 마법부여 - 약초 채집",
+			["name"] = "Enchant Gloves - Herbalism",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13620] = {
-			["name"] = "장갑 마법부여 - 낚시",
+			["name"] = "Enchant Gloves - Fishing",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13622] = {
-			["name"] = "손목보호구 마법부여 - 하급 지능",
+			["name"] = "Enchant Bracer - Lesser Intellect",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13626] = {
-			["name"] = "가슴보호구 마법부여 - 최하급 능력치",
+			["name"] = "Enchant Chest - Minor Stats",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13628] = {
-			["name"] = "룬문자 금마법막대",
+			["name"] = "Runed Golden Rod",
 			["icon"] = "Interface\\Icons\\INV_Staff_10",
 			["item"] = 11130,
 		},
 		[13631] = {
-			["name"] = "방패 마법부여 - 하급 체력",
+			["name"] = "Enchant Shield - Lesser Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13635] = {
-			["name"] = "망토 마법부여 - 보호",
+			["name"] = "Enchant Cloak - Defense",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13637] = {
-			["name"] = "장화 마법부여 - 하급 민첩성",
+			["name"] = "Enchant Boots - Lesser Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13640] = {
-			["name"] = "가슴보호구 마법부여 - 상급 생명력",
+			["name"] = "Enchant Chest - Greater Health",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13642] = {
-			["name"] = "손목보호구 마법부여 - 정신력",
+			["name"] = "Enchant Bracer - Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13644] = {
-			["name"] = "장화 마법부여 - 하급 체력",
+			["name"] = "Enchant Boots - Lesser Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13646] = {
-			["name"] = "손목보호구 마법부여 - 하급 회피",
+			["name"] = "Enchant Bracer - Lesser Deflection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13648] = {
-			["name"] = "손목보호구 마법부여 - 체력",
+			["name"] = "Enchant Bracer - Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13653] = {
-			["name"] = "무기 마법부여 - 하급 야수 사냥 전문화",
+			["name"] = "Enchant Weapon - Lesser Beastslayer",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13655] = {
-			["name"] = "무기 마법부여 - 하급 정령 사냥 전문화",
+			["name"] = "Enchant Weapon - Lesser Elemental Slayer",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13657] = {
-			["name"] = "망토 마법부여 - 화염 저항력",
+			["name"] = "Enchant Cloak - Fire Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13659] = {
-			["name"] = "방패 마법부여 - 정신력",
+			["name"] = "Enchant Shield - Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13661] = {
-			["name"] = "손목보호구 마법부여 - 힘",
+			["name"] = "Enchant Bracer - Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13663] = {
-			["name"] = "가슴보호구 마법부여 - 상급 마나",
+			["name"] = "Enchant Chest - Greater Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13687] = {
-			["name"] = "장화 마법부여 - 하급 정신력",
+			["name"] = "Enchant Boots - Lesser Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13689] = {
-			["name"] = "방패 마법부여 - 하급 방어",
+			["name"] = "Enchant Shield - Lesser Block",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13693] = {
-			["name"] = "무기 마법부여 - 공격력",
+			["name"] = "Enchant Weapon - Striking",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13695] = {
-			["name"] = "양손 무기 마법부여 - 충격",
+			["name"] = "Enchant 2H Weapon - Impact",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13698] = {
-			["name"] = "장갑 마법부여 - 무두질",
+			["name"] = "Enchant Gloves - Skinning",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13700] = {
-			["name"] = "가슴보호구 마법부여 - 하급 능력치",
+			["name"] = "Enchant Chest - Lesser Stats",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13702] = {
-			["name"] = "룬문자 진은마법막대",
+			["name"] = "Runed Truesilver Rod",
 			["icon"] = "Interface\\Icons\\INV_Staff_11",
 			["item"] = 11145,
 		},
 		[13746] = {
-			["name"] = "망토 마법부여 - 상급 보호",
+			["name"] = "Enchant Cloak - Greater Defense",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13794] = {
-			["name"] = "망토 마법부여 - 저항력",
+			["name"] = "Enchant Cloak - Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13815] = {
-			["name"] = "장갑 마법부여 - 민첩성",
+			["name"] = "Enchant Gloves - Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13817] = {
-			["name"] = "방패 마법부여 - 체력",
+			["name"] = "Enchant Shield - Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13822] = {
-			["name"] = "손목보호구 마법부여 - 지능",
+			["name"] = "Enchant Bracer - Intellect",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13836] = {
-			["name"] = "장화 마법부여 - 체력",
+			["name"] = "Enchant Boots - Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13841] = {
-			["name"] = "장갑 마법부여 - 채광 숙련",
+			["name"] = "Enchant Gloves - Advanced Mining",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13846] = {
-			["name"] = "손목보호구 마법부여 - 상급 정신력",
+			["name"] = "Enchant Bracer - Greater Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13858] = {
-			["name"] = "가슴보호구 마법부여 - 최상급 생명력",
+			["name"] = "Enchant Chest - Superior Health",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13868] = {
-			["name"] = "장갑 마법부여 - 약초 채집 숙련",
+			["name"] = "Enchant Gloves - Advanced Herbalism",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13882] = {
-			["name"] = "망토 마법부여 - 하급 민첩성",
+			["name"] = "Enchant Cloak - Lesser Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13887] = {
-			["name"] = "장갑 마법부여 - 힘",
+			["name"] = "Enchant Gloves - Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13890] = {
-			["name"] = "장화 마법부여 - 최하급 속도",
+			["name"] = "Enchant Boots - Minor Speed",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13898] = {
-			["name"] = "무기 마법부여 - 불타는 무기",
+			["name"] = "Enchant Weapon - Fiery Weapon",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13905] = {
-			["name"] = "방패 마법부여 - 상급 정신력",
+			["name"] = "Enchant Shield - Greater Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13915] = {
-			["name"] = "무기 마법부여 - 악마 사냥 전문화",
+			["name"] = "Enchant Weapon - Demonslaying",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13917] = {
-			["name"] = "가슴보호구 마법부여 - 최상급 마나",
+			["name"] = "Enchant Chest - Superior Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13931] = {
-			["name"] = "손목보호구 마법부여 - 회피",
+			["name"] = "Enchant Bracer - Deflection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13933] = {
-			["name"] = "방패 마법부여 - 냉기 저항",
+			["name"] = "Enchant Shield - Frost Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13935] = {
-			["name"] = "장화 마법부여 - 민첩성",
+			["name"] = "Enchant Boots - Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13937] = {
-			["name"] = "양손 무기 마법부여 - 상급 충격",
+			["name"] = "Enchant 2H Weapon - Greater Impact",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13939] = {
-			["name"] = "손목보호구 마법부여 - 상급 힘",
+			["name"] = "Enchant Bracer - Greater Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13941] = {
-			["name"] = "가슴보호구 마법부여 - 능력치",
+			["name"] = "Enchant Chest - Stats",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13943] = {
-			["name"] = "무기 마법부여 - 상급 공격력",
+			["name"] = "Enchant Weapon - Greater Striking",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13945] = {
-			["name"] = "손목보호구 마법부여 - 상급 체력",
+			["name"] = "Enchant Bracer - Greater Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13947] = {
-			["name"] = "장갑 마법부여 - 숙련된 조련술",
+			["name"] = "Enchant Gloves - Riding Skill",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[13948] = {
-			["name"] = "장갑 마법부여 - 최하급 신속",
+			["name"] = "Enchant Gloves - Minor Haste",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[14293] = {
-			["name"] = "하급 마술봉",
+			["name"] = "Lesser Magic Wand",
 			["icon"] = "Interface\\Icons\\INV_Staff_02",
 			["item"] = 11287,
 		},
 		[14807] = {
-			["name"] = "상급 마술봉",
+			["name"] = "Greater Magic Wand",
 			["icon"] = "Interface\\Icons\\INV_Staff_07",
 			["item"] = 11288,
 		},
 		[14809] = {
-			["name"] = "신비한 하급 마술봉",
+			["name"] = "Lesser Mystic Wand",
 			["icon"] = "Interface\\Icons\\INV_Staff_02",
 			["item"] = 11289,
 		},
 		[14810] = {
-			["name"] = "신비한 상급 마술봉",
+			["name"] = "Greater Mystic Wand",
 			["icon"] = "Interface\\Icons\\INV_Wand_07",
 			["item"] = 11290,
 		},
 		[15596] = {
-			["name"] = "연기나는 산의 정수",
+			["name"] = "Smoking Heart of the Mountain",
 			["icon"] = "Interface\\Icons\\INV_Misc_Gem_Bloodstone_01",
 			["item"] = 11811,
 		},
 		[17180] = {
-			["name"] = "마력 깃든 토륨",
+			["name"] = "Enchanted Thorium",
 			["icon"] = "Interface\\Icons\\INV_Ingot_Eternium",
 			["item"] = 12655,
 		},
 		[17181] = {
-			["name"] = "마력 깃든 가죽",
+			["name"] = "Enchanted Leather",
 			["icon"] = "Interface\\Icons\\INV_Misc_Rune_05",
 			["item"] = 12810,
 		},
 		[20008] = {
-			["name"] = "손목보호구 마법부여 - 상급 지능",
+			["name"] = "Enchant Bracer - Greater Intellect",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20009] = {
-			["name"] = "손목보호구 마법부여 - 최상급 정신력",
+			["name"] = "Enchant Bracer - Superior Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20010] = {
-			["name"] = "손목보호구 마법부여 - 최상급 힘",
+			["name"] = "Enchant Bracer - Superior Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20011] = {
-			["name"] = "손목보호구 마법부여 - 최상급 체력",
+			["name"] = "Enchant Bracer - Superior Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20012] = {
-			["name"] = "장갑 마법부여 - 상급 민첩",
+			["name"] = "Enchant Gloves - Greater Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20013] = {
-			["name"] = "장갑 마법부여 - 상급 힘",
+			["name"] = "Enchant Gloves - Greater Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20014] = {
-			["name"] = "망토 마법부여 - 상급 저항",
+			["name"] = "Enchant Cloak - Greater Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20015] = {
-			["name"] = "망토 마법부여 - 최상급 보호",
+			["name"] = "Enchant Cloak - Superior Defense",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20016] = {
-			["name"] = "방패 마법부여 - 최상급 정신력",
+			["name"] = "Enchant Shield - Superior Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20017] = {
-			["name"] = "방패 마법부여 - 상급 체력",
+			["name"] = "Enchant Shield - Greater Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20020] = {
-			["name"] = "장화 마법부여 - 상급 체력",
+			["name"] = "Enchant Boots - Greater Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20023] = {
-			["name"] = "장화 마법부여 - 상급 민첩",
+			["name"] = "Enchant Boots - Greater Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20024] = {
-			["name"] = "장화 마법부여 - 정신력",
+			["name"] = "Enchant Boots - Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20025] = {
-			["name"] = "가슴보호구 마법부여 - 상급 능력치",
+			["name"] = "Enchant Chest - Greater Stats",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20026] = {
-			["name"] = "가슴보호구 마법부여 - 일급 생명력",
+			["name"] = "Enchant Chest - Major Health",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20028] = {
-			["name"] = "가슴보호구 마법부여 - 일급 마나",
+			["name"] = "Enchant Chest - Major Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20029] = {
-			["name"] = "무기 마법부여 - 빙결",
+			["name"] = "Enchant Weapon - Icy Chill",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20030] = {
-			["name"] = "양손 무기 마법부여 - 최상급 충격",
+			["name"] = "Enchant 2H Weapon - Superior Impact",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20031] = {
-			["name"] = "무기 마법부여 - 최상급 공격력",
+			["name"] = "Enchant Weapon - Superior Striking",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20032] = {
-			["name"] = "무기 마법부여 - 생명력 흡수",
+			["name"] = "Enchant Weapon - Lifestealing",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20033] = {
-			["name"] = "무기 마법부여 - 부정의 무기",
+			["name"] = "Enchant Weapon - Unholy Weapon",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20034] = {
-			["name"] = "무기 마법부여 - 성전사",
+			["name"] = "Enchant Weapon - Crusader",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20035] = {
-			["name"] = "양손 무기 마법부여 - 일급 정신력",
+			["name"] = "Enchant 2H Weapon - Major Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20036] = {
-			["name"] = "양손 무기 마법부여 - 일급 지능",
+			["name"] = "Enchant 2H Weapon - Major Intellect",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[20051] = {
-			["name"] = "룬문자 아케이나이트 마법막대",
+			["name"] = "Runed Arcanite Rod",
 			["icon"] = "Interface\\Icons\\INV_Wand_09",
 			["item"] = 16207,
 		},
 		[21931] = {
-			["name"] = "무기 마법부여 - 한겨울 추위",
+			["name"] = "Enchant Weapon - Winter's Might",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[22749] = {
-			["name"] = "무기 마법부여 - 주문 강화",
+			["name"] = "Enchant Weapon - Spell Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[22750] = {
-			["name"] = "무기 마법부여 - 치유 강화",
+			["name"] = "Enchant Weapon - Healing Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[23799] = {
-			["name"] = "무기 마법부여 - 힘",
+			["name"] = "Enchant Weapon - Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[23800] = {
-			["name"] = "무기 마법부여 - 민첩성",
+			["name"] = "Enchant Weapon - Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[23801] = {
-			["name"] = "손목보호구 마법부여 - 마나 재생",
+			["name"] = "Enchant Bracer - Mana Regeneration",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[23802] = {
-			["name"] = "손목보호구 마법부여 - 치유 강화",
+			["name"] = "Enchant Bracer - Healing Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[23803] = {
-			["name"] = "무기 마법부여 - 강한 정신력",
+			["name"] = "Enchant Weapon - Mighty Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[23804] = {
-			["name"] = "무기 마법부여 - 뛰어난 지능",
+			["name"] = "Enchant Weapon - Mighty Intellect",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25072] = {
-			["name"] = "장갑 마법부여 - 위협",
+			["name"] = "Enchant Gloves - Threat",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25073] = {
-			["name"] = "장갑 마법부여 - 암흑 마법 강화",
+			["name"] = "Enchant Gloves - Shadow Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25074] = {
-			["name"] = "장갑 마법부여 - 냉기 마법 강화",
+			["name"] = "Enchant Gloves - Frost Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25078] = {
-			["name"] = "장갑 마법부여 - 화염 마법 강화",
+			["name"] = "Enchant Gloves - Fire Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25079] = {
-			["name"] = "장갑 마법부여 - 치유 마법 강화",
+			["name"] = "Enchant Gloves - Healing Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25080] = {
-			["name"] = "장갑 마법부여 - 최상급 민첩",
+			["name"] = "Enchant Gloves - Superior Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25081] = {
-			["name"] = "망토 마법부여 - 상급 화염 저항력",
+			["name"] = "Enchant Cloak - Greater Fire Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25082] = {
-			["name"] = "망토 마법부여 - 상급 자연 저항력",
+			["name"] = "Enchant Cloak - Greater Nature Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25083] = {
-			["name"] = "망토 마법부여 - 은신",
+			["name"] = "Enchant Cloak - Stealth",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25084] = {
-			["name"] = "망토 마법부여 - 미묘함",
+			["name"] = "Enchant Cloak - Subtlety",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25086] = {
-			["name"] = "망토 마법부여 - 회피",
+			["name"] = "Enchant Cloak - Dodge",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[25124] = {
-			["name"] = "최하급 마술사 오일",
+			["name"] = "Minor Wizard Oil",
 			["icon"] = "Interface\\Icons\\INV_Poison_MindNumbing",
 			["item"] = 20744,
 			["extra"] = "|cffffffff5 Charges",
 		},
 		[25125] = {
-			["name"] = "최하급 마나 오일",
+			["name"] = "Minor Mana Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_98",
 			["item"] = 20745,
 			["extra"] = "|cffffffff5 Charges",
 		},
 		[25126] = {
-			["name"] = "하급 마술사 오일",
+			["name"] = "Lesser Wizard Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_103",
 			["item"] = 20746,
 			["extra"] = "|cffffffff5 Charges",
 		},
 		[25127] = {
-			["name"] = "하급 마나 오일",
+			["name"] = "Lesser Mana Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_99",
 			["item"] = 20747,
 			["extra"] = "|cffffffff5 Charges",
 		},
 		[25128] = {
-			["name"] = "마술사 오일",
+			["name"] = "Wizard Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_104",
 			["item"] = 20750,
 			["extra"] = "|cffffffff5 Charges",
 		},
 		[25129] = {
-			["name"] = "반짝이는 마술사 오일",
+			["name"] = "Brilliant Wizard Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_105",
 			["item"] = 20749,
 			["extra"] = "|cffffffff5 Charges",
 		},
 		[25130] = {
-			["name"] = "반짝이는 마나 오일",
+			["name"] = "Brilliant Mana Oil",
 			["icon"] = "Interface\\Icons\\INV_Potion_100",
 			["item"] = 20748,
 			["extra"] = "|cffffffff5 Charges",
 		},
 		[27837] = {
-			["name"] = "양손 무기 마법부여 - 민첩성",
+			["name"] = "Enchant 2H Weapon - Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[57030] = {
-			["name"] = "손목보호구 마법부여 - 상급 민첩성",
+			["name"] = "Enchant Bracer - Greater Agility",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[57028] = {
-			["name"] = "손목보호구 마법부여 - 주문 강화",
+			["name"] = "Enchant Bracer - Spell Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[57142] = {
-			["name"] = "장화 마법부여 - 상급 정신력",
+			["name"] = "Enchant Boots - Greater Spirit",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[57518] = {
-			["name"] = "영원한 꿈돌 조각",
+			["name"] = "Eternal Dreamstone Shard",
 			["icon"] = "Interface\\Icons\\inv_misc_gem_pearl_04",
 		},
-		[57127] = {
-			["name"] = "장화 마법부여 - 최상급 체력",
+		[57127] = { 
+			["name"] = "Enchant Boots - Superior Stamina",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57148] = {
-			["name"] = "장화 마법부여 - 흡혈",
+		[57148] = { 
+			["name"] = "Enchant Boots - Vampirism",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57144] = {
-			["name"] = "손목보호구 마법부여 - 상급 반사",
+		[57144] = { 
+			["name"] = "Enchant Bracer - Greater Deflection",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57119] = {
-			["name"] = "가슴보호구 마법부여 - 강력한 마나",
+		[57119] = { 
+			["name"] = "Enchant Chest - Mighty Mana",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[57117] = {
-			["name"] = "망토 마법부여 - 상급 비전 저항력",
+		[57117] = { 
+			["name"] = "Enchant Cloak - Greater Arcane Resistance",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[46601] = {
-			["name"] = "장갑 마법부여 - 비전 마법 강화",
+		[46601] = { 
+			["name"] = "Enchant Gloves - Arcane Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[46602] = {
-			["name"] = "장갑 마법부여 - 자연 마법 강화",
+		[46602] = { 
+			["name"] = "Enchant Gloves - Nature Power",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
-		[46086] = {
-			["name"] = "장갑 마법부여 - 일급 힘",
+		[46086] = { 
+			["name"] = "Enchant Gloves - Major Strength",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 		[57146] = {
-			["name"] = "손목보호구 마법부여 - 흡혈",
+			["name"] = "Enchant Bracer - Vampirism",
 			["icon"] = "Interface\\Icons\\Spell_Holy_GreaterHeal",
 		},
 	},
@@ -6268,7 +6268,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {7910, 2},
 				[4] = {14341, 2},
 			},
-		},
+		},		
 		[57024] = {
 			["name"] = "Tailoring: Windbinder Gloves",
 			["requires"] = "",
@@ -12482,7 +12482,7 @@ GetSpellInfoAtlasLootDB = {
 			["reagents"] = {
 				[1] = {2841, 4},
 			},
-		},
+		},		
 		[3491] = {
 			["name"] = "Blacksmithing: Big Bronze Knife",
 			["requires"] = AL["Anvil"],
@@ -15342,7 +15342,7 @@ GetSpellInfoAtlasLootDB = {
 				[5] = {12644, 8},
 				[6] = {12800, 2},
 			},
-		},
+		},		
 		[16654] = {
 			["name"] = "Blacksmithing: Radiant Gloves",
 			["requires"] = AL["Anvil"],
@@ -18870,7 +18870,7 @@ GetSpellInfoAtlasLootDB = {
 				[3] = {7082, 2},
 				[4] = {7076},
 			},
-		},
+		},		
 		[24850] = {
 			["name"] = "Leatherworking: Sandstalker Gauntlets",
 			["requires"] = "",
